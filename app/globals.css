@@ -151,62 +151,15 @@ body {
   -webkit-mask-image: radial-gradient(ellipse 65% 65% at center, black 0%, transparent 75%);
 }
 
-/* Hero interactive background (components/home/HeroBackground.tsx): dark
-   radial/linear base, two drifting aurora ribbons, a canvas particle
-   network (drawn by the component itself), a periodic diagonal light beam,
-   film grain and a vignette. Colors intentionally use the reference
-   design's literal, slightly-off-brand greens (#29FF42/#7CFF8E/#1FA82E,
-   near-black #030605/#061511) rather than the site's --background/--brand-
-   aqua tokens — a richer, darker one-off treatment scoped to this effect. */
+/* Hero interactive background (components/home/HeroBackground.tsx): solid
+   black base, a canvas particle network (drawn by the component itself), a
+   periodic diagonal light beam, film grain and a vignette. Beam/grain colors
+   intentionally use the reference design's literal, slightly-off-brand
+   greens (#29FF42/rgba(150,255,140,...)) rather than the site's
+   --background/--brand-aqua tokens — a richer, darker one-off treatment
+   scoped to this effect. */
 .hero-bg-base {
-  background:
-    radial-gradient(ellipse 90% 70% at 50% 15%, rgba(41, 255, 66, 0.12), transparent 60%),
-    linear-gradient(180deg, #030605 0%, #061511 45%, #030605 100%);
-}
-
-.hero-aurora {
-  position: absolute;
-  inset: -20% -10%;
-  filter: blur(70px) saturate(160%);
-  opacity: 0.4;
-  mix-blend-mode: screen;
-}
-
-.hero-ribbon {
-  position: absolute;
-  width: 140%;
-  height: 340px;
-  border-radius: 50%;
-  background: linear-gradient(90deg, transparent, #29FF42 30%, #7CFF8E 50%, #1FA82E 70%, transparent);
-  animation: hero-drift 28s ease-in-out infinite;
-}
-
-.hero-ribbon-1 {
-  top: 0%;
-  left: -20%;
-  opacity: 0.3;
-  transform: rotate(-8deg);
-}
-
-.hero-ribbon-2 {
-  top: 60%;
-  left: -30%;
-  opacity: 0.18;
-  transform: rotate(4deg);
-  animation-duration: 34s;
-  animation-delay: -10s;
-}
-
-@keyframes hero-drift {
-  0% {
-    transform: translateX(-4%) rotate(-8deg) scaleY(1);
-  }
-  50% {
-    transform: translateX(4%) rotate(-4deg) scaleY(1.15);
-  }
-  100% {
-    transform: translateX(-4%) rotate(-8deg) scaleY(1);
-  }
+  background: #040806;
 }
 
 .hero-beam {
@@ -296,12 +249,8 @@ body {
     animation: none;
   }
 
-  .hero-ribbon,
   .hero-beam {
     animation: none;
-  }
-
-  .hero-beam {
     opacity: 0;
   }
 }

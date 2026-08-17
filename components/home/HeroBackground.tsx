@@ -14,9 +14,9 @@ const MAX_DIST = 150;
 const MOUSE_RADIUS = 180;
 
 /**
- * Layered interactive Hero background: dark radial/linear base, two
- * drifting aurora ribbons, a canvas particle network that reacts to the
- * pointer, a periodic diagonal light beam, film grain and a vignette.
+ * Layered interactive Hero background: solid black base, a canvas particle
+ * network that reacts to the pointer, a periodic diagonal light beam, film
+ * grain and a vignette.
  *
  * Ported from the supplied reference design (colors/animation/canvas logic)
  * and adapted to: size itself to the Hero section rather than the full
@@ -192,10 +192,6 @@ export function HeroBackground() {
   return (
     <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
       <div className="hero-bg-base absolute inset-0" />
-      <div className="hero-aurora">
-        <div className="hero-ribbon hero-ribbon-1" />
-        <div className="hero-ribbon hero-ribbon-2" />
-      </div>
       <canvas ref={canvasRef} className="absolute inset-0 block h-full w-full" />
       <div className="hero-beam" />
       <div className="hero-grain absolute inset-0" />
