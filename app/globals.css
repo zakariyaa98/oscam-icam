@@ -1,0 +1,307 @@
+@import "tailwindcss";
+
+:root {
+  --background: #141414;
+  --background-elevated: #1f1f1f;
+  --foreground: #ffffff;
+  --muted: #b3b3b3;
+  --border: #2a2a2a;
+
+  /* Brand accent — Deutschland IPTV green. Variable names kept as "aqua" to avoid
+     a sitewide class-name rename (bg-aqua/text-aqua/etc. stay valid Tailwind
+     utilities); only the color values changed. */
+  --brand-aqua: #4BEB1E;
+  --brand-aqua-dim: #1F5C0C;
+  --brand-aqua-soft: #8FF56B;
+  --brand-black: #000000;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-elevated: var(--background-elevated);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+
+  --color-aqua: var(--brand-aqua);
+  --color-aqua-dim: var(--brand-aqua-dim);
+  --color-aqua-soft: var(--brand-aqua-soft);
+  --color-black: var(--brand-black);
+
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-manrope);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-manrope), Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: var(--brand-aqua);
+  color: #000000;
+}
+
+.text-gradient-aqua {
+  background: linear-gradient(90deg, #8FF56B 0%, #4BEB1E 55%, #1F5C0C 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-noise {
+  background-image: radial-gradient(
+      circle at 20% 20%,
+      rgba(75, 235, 30, 0.1),
+      transparent 40%
+    ),
+    radial-gradient(circle at 80% 0%, rgba(75, 235, 30, 0.07), transparent 45%);
+}
+
+.glass-panel {
+  background: rgba(11, 16, 13, 0.6);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+.animate-fade-up-delay-1 {
+  animation: fade-up 0.7s ease-out both;
+  animation-delay: 0.12s;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fade-up 0.7s ease-out both;
+  animation-delay: 0.24s;
+}
+
+.animate-fade-up-delay-3 {
+  animation: fade-up 0.7s ease-out both;
+  animation-delay: 0.36s;
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(75, 235, 30, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(75, 235, 30, 0);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2.4s ease-out infinite;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee-scroll 40s linear infinite;
+}
+
+/* Same keyframe, played backwards — gives a left-to-right strip without a
+   second, near-duplicate @keyframes block. */
+.animate-marquee-reverse {
+  animation: marquee-scroll 40s linear infinite reverse;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+}
+
+.marquee-fade {
+  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+}
+
+/* Editorial features list (Features section): each row's optional hover
+   background photo fades in as a soft, edge-less blob rather than a hard
+   rectangle — keeps it feeling like ambient light, never a card. */
+.feature-bg-mask {
+  mask-image: radial-gradient(ellipse 65% 65% at center, black 0%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 65% 65% at center, black 0%, transparent 75%);
+}
+
+/* Hero interactive background (components/home/HeroBackground.tsx): dark
+   radial/linear base, two drifting aurora ribbons, a canvas particle
+   network (drawn by the component itself), a periodic diagonal light beam,
+   film grain and a vignette. Colors intentionally use the reference
+   design's literal, slightly-off-brand greens (#29FF42/#7CFF8E/#1FA82E,
+   near-black #030605/#061511) rather than the site's --background/--brand-
+   aqua tokens — a richer, darker one-off treatment scoped to this effect. */
+.hero-bg-base {
+  background:
+    radial-gradient(ellipse 90% 70% at 50% 15%, rgba(41, 255, 66, 0.12), transparent 60%),
+    linear-gradient(180deg, #030605 0%, #061511 45%, #030605 100%);
+}
+
+.hero-aurora {
+  position: absolute;
+  inset: -20% -10%;
+  filter: blur(70px) saturate(160%);
+  opacity: 0.4;
+  mix-blend-mode: screen;
+}
+
+.hero-ribbon {
+  position: absolute;
+  width: 140%;
+  height: 340px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, transparent, #29FF42 30%, #7CFF8E 50%, #1FA82E 70%, transparent);
+  animation: hero-drift 28s ease-in-out infinite;
+}
+
+.hero-ribbon-1 {
+  top: 0%;
+  left: -20%;
+  opacity: 0.3;
+  transform: rotate(-8deg);
+}
+
+.hero-ribbon-2 {
+  top: 60%;
+  left: -30%;
+  opacity: 0.18;
+  transform: rotate(4deg);
+  animation-duration: 34s;
+  animation-delay: -10s;
+}
+
+@keyframes hero-drift {
+  0% {
+    transform: translateX(-4%) rotate(-8deg) scaleY(1);
+  }
+  50% {
+    transform: translateX(4%) rotate(-4deg) scaleY(1.15);
+  }
+  100% {
+    transform: translateX(-4%) rotate(-8deg) scaleY(1);
+  }
+}
+
+.hero-beam {
+  position: absolute;
+  top: -50%;
+  left: -30%;
+  width: 120px;
+  height: 220%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(150, 255, 140, 0.1),
+    rgba(150, 255, 140, 0.22),
+    rgba(150, 255, 140, 0.1),
+    transparent
+  );
+  transform: rotate(18deg);
+  animation: hero-sweep 9s ease-in-out infinite;
+}
+
+@keyframes hero-sweep {
+  0% {
+    left: -30%;
+  }
+  45% {
+    left: 110%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+
+.hero-grain {
+  opacity: 0.045;
+  mix-blend-mode: overlay;
+  background-repeat: repeat;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.hero-vignette {
+  background: radial-gradient(ellipse at 50% 40%, transparent 30%, rgba(0, 0, 0, 0.78) 100%);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 {
+  transition-delay: 0.08s;
+}
+
+.reveal-delay-2 {
+  transition-delay: 0.16s;
+}
+
+.reveal-delay-3 {
+  transition-delay: 0.24s;
+}
+
+.reveal-delay-4 {
+  transition-delay: 0.32s;
+}
+
+.reveal-delay-5 {
+  transition-delay: 0.4s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .animate-fade-up,
+  .animate-pulse-glow,
+  .animate-marquee,
+  .animate-marquee-reverse {
+    animation: none;
+  }
+
+  .hero-ribbon,
+  .hero-beam {
+    animation: none;
+  }
+
+  .hero-beam {
+    opacity: 0;
+  }
+}
