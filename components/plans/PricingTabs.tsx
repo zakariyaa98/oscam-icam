@@ -29,7 +29,7 @@ export function PricingTabs() {
               onClick={() => setActiveId(duration.id)}
               className={`rounded-full px-4 py-2.5 text-sm font-semibold transition-all duration-300 sm:px-5 ${
                 isActive
-                  ? "bg-aqua text-black shadow-[0_0_20px_rgba(83,189,50,0.35)]"
+                  ? "bg-aqua text-black shadow-[0_0_20px_rgba(125,221,95,0.35)]"
                   : "text-muted hover:text-foreground"
               }`}
             >
