@@ -17,11 +17,10 @@ type BaseProps = {
 };
 
 const variantClasses: Record<ButtonVariant, string> = {
-  // Solid brand-green fill: even the softened #7DDD5F is high-luminance, so it
-  // needs dark (not white) text on top to stay readable — see globals.css
-  // contrast note.
+  // Solid brand-green fill: #4BEB1E is a high-luminance color, so it needs dark
+  // (not white) text on top to stay readable — see globals.css contrast note.
   primary:
-    "bg-aqua text-black hover:bg-aqua-soft shadow-[0_0_0_1px_rgba(125,221,95,0.4)] hover:shadow-[0_0_30px_rgba(125,221,95,0.35)]",
+    "bg-aqua text-black hover:bg-aqua-soft shadow-[0_0_0_1px_rgba(75,235,30,0.4)] hover:shadow-[0_0_30px_rgba(75,235,30,0.35)]",
   secondary:
     "bg-background-elevated text-foreground border border-border hover:border-aqua/60 hover:text-aqua",
   outline:

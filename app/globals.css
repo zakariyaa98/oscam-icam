@@ -9,13 +9,10 @@
 
   /* Brand accent — Deutschland IPTV green. Variable names kept as "aqua" to avoid
      a sitewide class-name rename (bg-aqua/text-aqua/etc. stay valid Tailwind
-     utilities); only the color values changed. Softened from the original
-     neon #4BEB1E/#1F5C0C/#8FF56B (same ~106° hue, lightened and saturation
-     brought down from ~84% to ~65%) so solid CTA buttons read as a calmer,
-     lighter green while staying clearly on-brand. */
-  --brand-aqua: #7DDD5F;
-  --brand-aqua-dim: #2F7619;
-  --brand-aqua-soft: #ADEA9A;
+     utilities); only the color values changed. */
+  --brand-aqua: #4BEB1E;
+  --brand-aqua-dim: #1F5C0C;
+  --brand-aqua-soft: #8FF56B;
   --brand-black: #000000;
 }
 
