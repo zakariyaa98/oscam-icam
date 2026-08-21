@@ -25,9 +25,9 @@ export function LatestMovies() {
     <section className="overflow-hidden border-b border-border py-20 sm:py-28">
       <Container className="flex flex-col items-center gap-14">
         <SectionHeading
-          eyebrow="Neuheiten"
-          title="Die neuesten Filme & Serien bei Deutschland IPTV"
-          description="Genießen Sie Zugriff auf die aktuellsten Blockbuster und Erfolgsserien, direkt auf Ihren Geräten."
+          eyebrow="Neu im Katalog"
+          title="Was gerade läuft, läuft auch bei uns"
+          description="Aktuelle Blockbuster und gefragte Serien, sobald sie verfügbar sind — kein separates Abo, keine Wartezeit."
         />
       </Container>
 
@@ -40,7 +40,7 @@ export function LatestMovies() {
             >
               <Image
                 src={movie.src}
-                alt={`${movie.title} streamen mit Deutschland IPTV`}
+                alt={`${movie.title} streamen mit Sub Zero IPTV`}
                 width={200}
                 height={300}
                 sizes="200px"

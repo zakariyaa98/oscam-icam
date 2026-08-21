@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/Button";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { WHATSAPP_DEFAULT_LINK } from "@/lib/whatsapp";
 
-const TELEGRAM_LINK = "https://t.me/+971505743472";
+const TELEGRAM_LINK = "https://t.me/+33753411326";
 
 export function ContactCTA() {
   return (
@@ -16,11 +16,11 @@ export function ContactCTA() {
           />
           <div className="relative flex flex-col items-center gap-6">
             <h2 className="max-w-xl text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-              Bereit für Premium-Streaming ohne Kompromisse?
+              Fragen? Wir hören zu, statt Sie warten zu lassen.
             </h2>
             <p className="max-w-lg text-base leading-relaxed text-muted sm:text-lg">
-              Schreiben Sie uns jetzt und erhalten Sie innerhalb weniger Minuten eine persönliche
-              Empfehlung für den passenden Tarif.
+              Schreiben Sie uns jetzt — meist innerhalb weniger Minuten erhalten Sie eine
+              persönliche Empfehlung für das passende Abo.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
               <Button

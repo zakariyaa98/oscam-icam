@@ -29,7 +29,7 @@ export function BlogList({ posts }: { posts: BlogPost[] }) {
               aria-pressed={isActive}
               className={`rounded-full border px-4 py-2 text-sm font-medium tracking-tight transition-all duration-300 ease-out ${
                 isActive
-                  ? "border-aqua bg-aqua text-black shadow-[0_0_20px_rgba(75,235,30,0.35)]"
+                  ? "border-aqua bg-aqua text-black shadow-[0_0_20px_rgba(26,159,255,0.35)]"
                   : "border-border bg-background-elevated text-muted hover:border-aqua/50 hover:text-foreground"
               }`}
             >

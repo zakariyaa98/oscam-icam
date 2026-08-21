@@ -94,8 +94,8 @@ export function StreamingCategories() {
     <section className="overflow-hidden border-b border-border py-20 sm:py-28">
       <Container className="flex flex-col items-center gap-14">
         <SectionHeading
-          title="Eine neue Welt des Streamings"
-          description="Erleben Sie Top-Unterhaltung und Live-Sport in 4K mit Deutschland IPTV — Premium-TV, wo auch immer Sie sind."
+          title="Für jede Stimmung das passende Programm"
+          description="Von Blockbustern über Serienmarathons bis zum Nachmittag mit den Kleinen — ein Katalog, viele Wege hinein."
         />
       </Container>
 
@@ -113,7 +113,7 @@ export function StreamingCategories() {
 
               <div className="marquee-fade w-full overflow-hidden">
                 <div
-                  className={`marquee-track animate-${strip.direction} flex w-max gap-3 rounded-2xl border border-aqua/15 bg-background-elevated/40 p-3 shadow-[0_0_30px_rgba(75,235,30,0.06)] sm:gap-4 sm:p-4`}
+                  className={`marquee-track animate-${strip.direction} flex w-max gap-3 rounded-2xl border border-aqua/15 bg-background-elevated/40 p-3 shadow-[0_0_30px_rgba(26,159,255,0.06)] sm:gap-4 sm:p-4`}
                 >
                   {trackItems.map((item, itemIndex) => (
                     <div

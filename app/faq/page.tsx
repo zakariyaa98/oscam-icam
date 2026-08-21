@@ -6,26 +6,26 @@ import { ContactCTA } from "@/components/sections/ContactCTA";
 import { faqCategories } from "@/lib/faq-data";
 
 export const metadata: Metadata = {
-  title: "IPTV FAQ – Häufige Fragen | Deutschland IPTV",
+  title: "Häufige Fragen zu IPTV | Sub Zero IPTV",
   description:
-    "Antworten auf häufige Fragen zu Deutschland IPTV: Abo, unterstützte Geräte, Installation, Zahlung, Laufzeiten und Problemlösungen.",
+    "Wie funktioniert IPTV, welche Geräte werden unterstützt und wie läuft der Test ab? Antworten auf die wichtigsten Fragen zu Sub Zero IPTV.",
   alternates: {
     canonical: "/faq",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "Deutschland IPTV",
+    siteName: "Sub Zero IPTV",
     url: "/faq",
-    title: "IPTV FAQ | Deutschland IPTV",
-    description: "Antworten auf häufige Fragen zu Abo, Geräten, Installation und Support.",
-    images: [{ url: "https://deutschland-iptv.online/opengraph-image", width: 1200, height: 630 }],
+    title: "Häufige Fragen zu IPTV | Sub Zero IPTV",
+    description: "Antworten auf die wichtigsten Fragen zu Abo, Geräten, Installation und Support.",
+    images: [{ url: "https://sub-zeroiptv.xyz/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://deutschland-iptv.online/opengraph-image"],
-    title: "IPTV FAQ | Deutschland IPTV",
-    description: "Antworten auf häufige Fragen zu Abo, Geräten, Installation und Support.",
+    images: ["https://sub-zeroiptv.xyz/opengraph-image"],
+    title: "Häufige Fragen zu IPTV | Sub Zero IPTV",
+    description: "Antworten auf die wichtigsten Fragen zu Abo, Geräten, Installation und Support.",
   },
 };
 
@@ -58,8 +58,8 @@ export default function FaqPage() {
           <SectionHeading
             as="h1"
             eyebrow="FAQ"
-            title="Häufig gestellte Fragen"
-            description="Finden Sie Antworten zu Abo, Geräten, Zahlung und Support. Ihre Frage ist nicht dabei? Kontaktieren Sie uns direkt."
+            title="Fragen? Wahrscheinlich schon beantwortet."
+            description="Von der Einrichtung bis zum passenden Abo — hier finden Sie die Antworten, die uns am häufigsten erreichen. Nichts dabei? Schreiben Sie uns direkt."
           />
 
           <div className="flex w-full max-w-3xl flex-col gap-12">

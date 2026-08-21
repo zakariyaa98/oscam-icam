@@ -15,36 +15,36 @@ type Feature = {
 const features: Feature[] = [
   {
     number: "01",
-    title: "HD, Full HD & 4K",
-    description: "Kristallklares Streaming ohne Kompromisse.",
+    title: "Scharf bis ins letzte Detail",
+    description: "HD, Full HD oder 4K — Sie entscheiden, das Bild bleibt immer klar.",
   },
   {
     number: "02",
-    title: "Tausende IPTV Sender",
-    description: "Live-TV aus Deutschland und der ganzen Welt.",
+    title: "Ein Abo, tausende Sender",
+    description: "Deutsche und internationale Programme in einer einzigen Übersicht.",
     image: "/images/dashbord.png",
   },
   {
     number: "03",
-    title: "Filme & Serien",
-    description: "Große Auswahl an Filmen und Serien auf Abruf.",
+    title: "Filmabend, wann Sie wollen",
+    description: "Eine große VOD-Bibliothek wartet, ganz ohne festen Sendeplan.",
     image: "/images/filme%20pictures/Filme1.jpg",
   },
   {
     number: "04",
-    title: "Elektronischer EPG",
-    description: "Alle Sendungen und Startzeiten übersichtlich im Blick.",
+    title: "Der Programmführer denkt mit",
+    description: "Alle Sendetermine auf einen Blick, statt endlosem Zappen.",
   },
   {
     number: "05",
-    title: "Schnelle & stabile Server",
-    description: "Flüssiges Streaming mit kurzen Ladezeiten.",
+    title: "Server, die mitziehen",
+    description: "Kurze Ladezeiten und ein Stream, der stabil bleibt.",
     image: "/images/internet-speed.png",
   },
   {
     number: "06",
-    title: "Persönlicher Kundenservice",
-    description: "Wir sind bei Fragen schnell für dich erreichbar.",
+    title: "Support, der wirklich hilft",
+    description: "Fragen landen bei einem Menschen, nicht in einer Warteschleife.",
   },
 ];
 
@@ -53,8 +53,8 @@ export function Features() {
     <section className="border-b border-border py-20 sm:py-28">
       <Container className="flex flex-col items-center gap-16">
         <SectionHeading
-          title="Warum Deutschland IPTV?"
-          description="Alles, was du für dein perfektes Streaming-Erlebnis brauchst."
+          title="Was Sie von Sub Zero IPTV erwarten dürfen"
+          description="Sechs Dinge, die den Unterschied zwischen einem gewöhnlichen Streaming-Abo und einem wirklich guten ausmachen."
         />
 
         <div className="w-full columns-1 lg:columns-2 lg:gap-x-20">

@@ -6,27 +6,27 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
 export const metadata: Metadata = {
-  title: "IPTV für Android TV – Installation & Anleitung",
+  title: "IPTV auf Android TV & Android-Box: maximale Flexibilität",
   description:
-    "IPTV auf Android TV und Android-Boxen nutzen: Kompatibilität, Installation und Tipps für flüssiges Streaming mit Deutschland IPTV.",
-  keywords: ["IPTV für Android TV", "IPTV Android TV", "IPTV auf Android TV", "IPTV Android"],
+    "Voller Play-Store-Zugriff, direkte APK-Installation: So läuft Sub Zero IPTV auf Android TV und Android-Boxen.",
+  keywords: ["IPTV Android TV", "IPTV Deutschland", "IPTV Abonnement"],
   alternates: {
     canonical: "/iptv-android-tv",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "Deutschland IPTV",
+    siteName: "Sub Zero IPTV",
     url: "/iptv-android-tv",
-    title: "IPTV für Android TV – Installation & Anleitung",
-    description: "Deutschland IPTV auf Android TV und Android-Boxen installieren — mit Tipps zur richtigen Hardware.",
-    images: [{ url: "https://deutschland-iptv.online/images/android-tv-box.png" }],
+    title: "IPTV auf Android TV & Android-Box: maximale Flexibilität",
+    description: "Sub Zero IPTV auf Android TV und Android-Boxen einrichten — mit Hinweisen zur passenden Hardware.",
+    images: [{ url: "https://sub-zeroiptv.xyz/images/android-tv-box.png" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://deutschland-iptv.online/images/android-tv-box.png"],
-    title: "IPTV für Android TV – Installation & Anleitung",
-    description: "Deutschland IPTV auf Android TV und Android-Boxen installieren — mit Tipps zur richtigen Hardware.",
+    images: ["https://sub-zeroiptv.xyz/images/android-tv-box.png"],
+    title: "IPTV auf Android TV & Android-Box: maximale Flexibilität",
+    description: "Sub Zero IPTV auf Android TV und Android-Boxen einrichten — mit Hinweisen zur passenden Hardware.",
   },
 };
 
@@ -40,8 +40,8 @@ export default function IptvAndroidTvPage() {
           <SectionHeading
             as="h1"
             eyebrow="Android TV"
-            title="IPTV für Android TV und Android-Boxen"
-            description="Die flexibelste Plattform für IPTV: voller Zugriff auf den Play Store und direkte APK-Installation."
+            title="Die flexibelste Plattform für IPTV"
+            description="Voller Play-Store-Zugriff und direkte APK-Installation — ideal für alle, die volle Kontrolle über die App-Wahl möchten."
           />
 
           <div className="mx-auto flex w-full max-w-3xl flex-col gap-10">
@@ -54,14 +54,14 @@ export default function IptvAndroidTvPage() {
 
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                Android TV im Vergleich zur generischen Android-Box
+                Android TV oder generische Android-Box?
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                „Android TV“ bezeichnet Googles offizielles Betriebssystem für Fernseher und
+                Android TV ist Googles offizielles Betriebssystem für Fernseher und
                 Streaming-Boxen, mit einheitlicher Oberfläche und Play-Store-Zertifizierung.
-                Günstigere „Android-Boxen“ anderer Hersteller laufen oft mit einer angepassten
-                Android-Version ohne die offizielle TV-Oberfläche — IPTV Apps lassen sich darauf
-                aber meist trotzdem problemlos per APK installieren.
+                Günstigere Android-Boxen anderer Hersteller laufen oft mit einer angepassten
+                Version ohne die offizielle TV-Oberfläche — IPTV Apps lassen sich aber meist
+                trotzdem problemlos per APK installieren.
               </p>
             </section>
 
@@ -72,26 +72,22 @@ export default function IptvAndroidTvPage() {
               <p className="text-base leading-relaxed text-muted">
                 Die Leistung unterscheidet sich stark zwischen den Modellen. Für ein flüssiges
                 Erlebnis empfehlen wir mindestens 2 GB RAM und ein aktuelles Android TV OS mit
-                zuverlässigem HEVC-Decoder — besonders wichtig für 4K-Inhalte und Sport mit hoher
+                zuverlässigem HEVC-Decoder — besonders wichtig für 4K und Sport mit hoher
                 Bildrate.
               </p>
             </section>
 
             <section className="flex flex-col gap-4">
-              <h2 className="text-2xl font-semibold tracking-tight text-foreground">Installation</h2>
+              <h2 className="text-2xl font-semibold tracking-tight text-foreground">Installation in wenigen Schritten</h2>
               <p className="text-base leading-relaxed text-muted">
-                Laden Sie eine IPTV App wie TiviMate oder IBO Player aus dem Play Store oder per
-                APK herunter, geben Sie Ihre Deutschland IPTV Zugangsdaten ein, und die
-                Senderliste lädt automatisch. Die ausführliche Schritt-für-Schritt-Anleitung
-                finden Sie unter{" "}
+                App wie TiviMate oder IBO Player aus dem Play Store oder per APK laden, Sub Zero
+                IPTV Zugangsdaten eingeben — die Senderliste lädt automatisch. Die ausführliche
+                Anleitung finden Sie unter{" "}
                 <Link href="/blog/iptv-device-setup-guide" className="text-aqua underline underline-offset-4">
                   IPTV auf Ihren Geräten einrichten
                 </Link>
                 , oder einen App-Vergleich in{" "}
-                <Link
-                  href="/blog/tivimate-vs-ibo-player"
-                  className="text-aqua underline underline-offset-4"
-                >
+                <Link href="/blog/tivimate-vs-ibo-player" className="text-aqua underline underline-offset-4">
                   TiviMate vs. IBO Player
                 </Link>
                 .
@@ -101,15 +97,12 @@ export default function IptvAndroidTvPage() {
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">Andere Geräte im Vergleich</h2>
               <p className="text-base leading-relaxed text-muted">
-                Nicht sicher, ob Android TV das Richtige für Sie ist? Einen direkten Vergleich mit
-                Fire TV Stick und Apple TV finden Sie in{" "}
-                <Link
-                  href="/blog/best-iptv-devices-2026"
-                  className="text-aqua underline underline-offset-4"
-                >
+                Nicht sicher, ob Android TV das Richtige für Sie ist? Ein direkter Vergleich mit
+                Fire TV Stick und Apple TV steht in{" "}
+                <Link href="/blog/best-iptv-devices-2026" className="text-aqua underline underline-offset-4">
                   Die besten Geräte für IPTV
                 </Link>
-                . Deutschland IPTV läuft genauso zuverlässig auf einem{" "}
+                . Sub Zero IPTV läuft ebenso zuverlässig auf einem{" "}
                 <Link href="/iptv-fire-tv-stick" className="text-aqua underline underline-offset-4">
                   Fire TV Stick
                 </Link>{" "}

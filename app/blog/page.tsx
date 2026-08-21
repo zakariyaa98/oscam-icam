@@ -6,26 +6,26 @@ import { BlogList } from "@/components/blog/BlogList";
 import { blogPosts } from "@/lib/blog-posts";
 
 export const metadata: Metadata = {
-  title: "Blog – IPTV Wissenshub",
+  title: "IPTV Ratgeber & Anleitungen – Blog",
   description:
-    "Aktuelle Artikel rund um IPTV Streaming: Einrichtungsanleitungen, Geräte, Vorteile und Branchentrends — verständlich erklärt von Deutschland IPTV.",
+    "Einrichtungsanleitungen, Geräte-Vergleiche und Antworten auf die häufigsten IPTV Fragen — verständlich erklärt von Sub Zero IPTV.",
   alternates: {
     canonical: "/blog",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "Deutschland IPTV",
+    siteName: "Sub Zero IPTV",
     url: "/blog",
-    title: "Blog | Deutschland IPTV",
-    description: "Aktuelle Artikel rund um IPTV Streaming — verständlich erklärt von Deutschland IPTV.",
-    images: [{ url: "https://deutschland-iptv.online/opengraph-image", width: 1200, height: 630 }],
+    title: "Blog | Sub Zero IPTV",
+    description: "Aktuelle Artikel rund um IPTV Streaming — verständlich erklärt von Sub Zero IPTV.",
+    images: [{ url: "https://sub-zeroiptv.xyz/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://deutschland-iptv.online/opengraph-image"],
-    title: "Blog | Deutschland IPTV",
-    description: "Aktuelle Artikel rund um IPTV Streaming — verständlich erklärt von Deutschland IPTV.",
+    images: ["https://sub-zeroiptv.xyz/opengraph-image"],
+    title: "Blog | Sub Zero IPTV",
+    description: "Aktuelle Artikel rund um IPTV Streaming — verständlich erklärt von Sub Zero IPTV.",
   },
 };
 
@@ -39,8 +39,8 @@ export default function BlogPage() {
           <SectionHeading
             as="h1"
             eyebrow="Blog"
-            title="IPTV Wissenshub"
-            description="Praktische Anleitungen, Hintergründe und Trends rund um IPTV Streaming — verständlich erklärt."
+            title="Alles, was Sie über IPTV wissen sollten"
+            description="Praktische Anleitungen, Geräte-Vergleiche und Antworten auf die Fragen, die uns am häufigsten erreichen."
           />
 
           <BlogList posts={blogPosts} />

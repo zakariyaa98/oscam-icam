@@ -7,26 +7,26 @@ import { ContactCTA } from "@/components/sections/ContactCTA";
 import { WHATSAPP_DEFAULT_LINK } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Rückerstattungsrichtlinie | Deutschland IPTV",
+  title: "Rückerstattungsrichtlinie | Sub Zero IPTV",
   description:
-    "Erfahren Sie, innerhalb welcher Frist und unter welchen Bedingungen Sie bei Deutschland IPTV eine Rückerstattung beantragen können.",
+    "Frist und Bedingungen für Rückerstattungen bei Sub Zero IPTV — verständlich erklärt, ohne Kleingedrucktes.",
   alternates: {
     canonical: "/refund-policy",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "Deutschland IPTV",
+    siteName: "Sub Zero IPTV",
     url: "/refund-policy",
-    title: "Rückerstattungsrichtlinie | Deutschland IPTV",
-    description: "Frist, Bedingungen und Ablauf für Rückerstattungsanfragen bei Deutschland IPTV.",
-    images: [{ url: "https://deutschland-iptv.online/opengraph-image", width: 1200, height: 630 }],
+    title: "Rückerstattungsrichtlinie | Sub Zero IPTV",
+    description: "Frist, Bedingungen und Ablauf für Rückerstattungsanfragen bei Sub Zero IPTV.",
+    images: [{ url: "https://sub-zeroiptv.xyz/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://deutschland-iptv.online/opengraph-image"],
-    title: "Rückerstattungsrichtlinie | Deutschland IPTV",
-    description: "Frist, Bedingungen und Ablauf für Rückerstattungsanfragen bei Deutschland IPTV.",
+    images: ["https://sub-zeroiptv.xyz/opengraph-image"],
+    title: "Rückerstattungsrichtlinie | Sub Zero IPTV",
+    description: "Frist, Bedingungen und Ablauf für Rückerstattungsanfragen bei Sub Zero IPTV.",
   },
 };
 
@@ -43,7 +43,7 @@ export default function RefundPolicyPage() {
             as="h1"
             eyebrow="Rechtliches"
             title="Rückerstattungsrichtlinie"
-            description="Wir möchten, dass Sie mit Deutschland IPTV zufrieden sind. Diese Seite erklärt, wann und wie Sie eine Rückerstattung beantragen können."
+            description="Wir möchten, dass Sie mit Sub Zero IPTV zufrieden sind. Diese Seite erklärt, wann und wie Sie eine Rückerstattung beantragen können."
           />
 
           <div className="mx-auto flex w-full max-w-3xl flex-col gap-10">
@@ -182,8 +182,8 @@ export default function RefundPolicyPage() {
               <h2 className="text-xl font-semibold text-foreground">Kontakt</h2>
               <p className="text-sm leading-relaxed text-muted">
                 Bei Fragen zu Ihrer Rückerstattung erreichen Sie uns unter{" "}
-                <a href="mailto:zerotv.support@gmail.com" className="text-aqua underline underline-offset-4">
-                  zerotv.support@gmail.com
+                <a href="mailto:contactipm3tv@gmail.com" className="text-aqua underline underline-offset-4">
+                  contactipm3tv@gmail.com
                 </a>{" "}
                 oder über unsere{" "}
                 <Link href="/contact" className="text-aqua underline underline-offset-4">

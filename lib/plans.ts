@@ -19,11 +19,11 @@ export type FeaturedPlan = {
 };
 
 export const homeFeatures: string[] = [
-  "30.000+ Live-TV-Sender und Sportevents weltweit",
-  "Herausragende Qualität in Full HD, 4K und Ultra HD für das beste Streaming-Erlebnis",
-  "70.000+ Filme und Serien auf Abruf (VOD)",
-  "Elektronischer Programmführer (EPG) inklusive",
-  "24/7 Kundenservice — schnell, professionell und zuverlässig",
+  "30.000+ Live-Sender, inklusive aller wichtigen Sportevents weltweit",
+  "Bildqualität in Full HD, 4K und Ultra HD, ohne Qualitätsabstriche",
+  "70.000+ Filme und Serien jederzeit auf Abruf (VOD)",
+  "Elektronischer Programmführer (EPG) automatisch inklusive",
+  "Support-Team 24/7 erreichbar — auf Deutsch, ohne Warteschleife",
 ];
 
 export const featuredPlans: FeaturedPlan[] = [
@@ -32,7 +32,7 @@ export const featuredPlans: FeaturedPlan[] = [
     duration: "6 Monate",
     price: "30€",
     whatsappLink: buildWhatsAppLink(
-      "Hallo Deutschland IPTV Support,\nich interessiere mich für den 6-Monats-Tarif (ab 30€)."
+      "Hallo Sub Zero IPTV Support,\nich interessiere mich für den 6-Monats-Tarif (ab 30€)."
     ),
   },
   {
@@ -42,7 +42,7 @@ export const featuredPlans: FeaturedPlan[] = [
     badge: "🔥 Am beliebtesten",
     featured: true,
     whatsappLink: buildWhatsAppLink(
-      "Hallo Deutschland IPTV Support,\nich interessiere mich für den 1-Jahres-Tarif (ab 40€)."
+      "Hallo Sub Zero IPTV Support,\nich interessiere mich für den 1-Jahres-Tarif (ab 40€)."
     ),
   },
   {
@@ -51,7 +51,7 @@ export const featuredPlans: FeaturedPlan[] = [
     price: "70€",
     badge: "💎 Bester Wert",
     whatsappLink: buildWhatsAppLink(
-      "Hallo Deutschland IPTV Support,\nich interessiere mich für den 2-Jahres-Tarif (ab 70€)."
+      "Hallo Sub Zero IPTV Support,\nich interessiere mich für den 2-Jahres-Tarif (ab 70€)."
     ),
   },
 ];
@@ -78,12 +78,12 @@ export type PricingDuration = {
 };
 
 export const pricingFeatures: string[] = [
-  "30.000+ TV-Sender",
-  "Full HD • 4K • Ultra HD Qualität",
-  "70.000+ Filme und Serien (VOD)",
-  "Kompatibel mit: Smart TV, Android TV, Fire TV Stick, Apple TV, MAG, PC und Smartphone",
-  "Schnelle Aktivierung",
-  "24/7 Support",
+  "30.000+ Sender in einer Übersicht",
+  "Bildqualität in Full HD, 4K und Ultra HD",
+  "70.000+ Filme und Serien auf Abruf (VOD)",
+  "Läuft auf Smart TV, Android TV, Fire TV Stick, Apple TV, MAG, PC und Smartphone",
+  "Zugang meist noch am selben Tag",
+  "Support-Team rund um die Uhr erreichbar",
 ];
 
 function buildTiers(
@@ -97,7 +97,7 @@ function buildTiers(
     originalPrice,
     price,
     whatsappLink: buildWhatsAppLink(
-      `Hallo Deutschland IPTV Support,\nich interessiere mich für den Tarif "${durationLabel}" mit ${devices} Gerät${
+      `Hallo Sub Zero IPTV Support,\nich interessiere mich für den Tarif "${durationLabel}" mit ${devices} Gerät${
         devices > 1 ? "en" : ""
       } (${price}€).`
     ),

@@ -11,8 +11,8 @@ export function FAQPreview() {
     <section className="border-b border-border bg-background-elevated/40 py-20 sm:py-28">
       <Container className="flex flex-col items-center gap-14">
         <SectionHeading
-          eyebrow="Häufig gestellte Fragen"
-          title="Antworten auf die wichtigsten Fragen"
+          eyebrow="Gut zu wissen"
+          title="Die Fragen, die uns am häufigsten erreichen"
         />
 
         <div className="flex w-full max-w-3xl flex-col gap-4">

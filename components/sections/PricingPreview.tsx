@@ -10,9 +10,9 @@ export function PricingPreview() {
     <section className="border-b border-border py-20 sm:py-28">
       <Container className="flex flex-col items-center gap-14">
         <SectionHeading
-          eyebrow="Tarife"
-          title="Transparente Preise, keine Überraschungen"
-          description="Wählen Sie die Laufzeit, die zu Ihnen passt. Je länger die Laufzeit, desto besser der Preis."
+          eyebrow="Abonnements"
+          title="Ein fairer Preis für jede Laufzeit"
+          description="Kurz reinschnuppern oder langfristig sparen — Sie entscheiden, wie lange Sie sich binden möchten."
         />
 
         <div className="grid w-full items-start gap-8 pt-4 lg:grid-cols-3">
@@ -24,7 +24,7 @@ export function PricingPreview() {
         </div>
 
         <Button href="/plans" variant="outline">
-          Alle Tarife ansehen →
+          Alle Abonnements vergleichen →
         </Button>
       </Container>
     </section>

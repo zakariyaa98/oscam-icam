@@ -3,24 +3,24 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 const reasons = [
   {
-    title: "Zuverlässige Qualität",
+    title: "Server, die auch bei Anpfiff nicht schlappmachen",
     description:
-      "Unsere Server sind auf konstante Stabilität ausgelegt — selbst bei Live-Sportereignissen mit hoher Nachfrage.",
+      "Unsere Infrastruktur ist auf konstante Auslastung ausgelegt — auch dann, wenn Millionen gleichzeitig einschalten.",
   },
   {
-    title: "Transparente Preise",
+    title: "Ein Preis, keine Überraschungen danach",
     description:
-      "Keine versteckten Kosten, keine Überraschungen. Sie wissen von Anfang an genau, was Sie bekommen.",
+      "Was auf der Tarifseite steht, ist der Preis, den Sie zahlen. Keine versteckten Gebühren, kein Kleingedrucktes.",
   },
   {
-    title: "Schnelle Aktivierung",
+    title: "Zugang meist in wenigen Minuten",
     description:
-      "Nach Bestätigung Ihrer Bestellung erhalten Sie Ihre Zugangsdaten meist innerhalb weniger Minuten.",
+      "Nach Bestätigung Ihrer Bestellung erhalten Sie Ihre Zugangsdaten üblicherweise noch am selben Tag.",
   },
   {
-    title: "Support, der antwortet",
+    title: "Ein echter Mensch antwortet auf WhatsApp",
     description:
-      "Unser Team ist auf WhatsApp erreichbar und hilft Ihnen persönlich bei Einrichtung und allen Fragen.",
+      "Kein Ticket-System, kein Warten in der Warteschleife — unser Team antwortet Ihnen direkt und persönlich.",
   },
 ];
 
@@ -43,11 +43,12 @@ export function WhyChooseUs() {
       <Container className="relative z-10 grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <div className="flex max-w-xl flex-col gap-4">
           <h2 className="text-3xl font-bold tracking-tight text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.7)] sm:text-4xl lg:text-5xl">
-            Ein Streaming-Partner, dem Sie vertrauen können
+            Was Sub Zero IPTV wirklich anders macht
           </h2>
           <p className="text-base leading-relaxed text-white/80 drop-shadow-[0_1px_12px_rgba(0,0,0,0.6)] sm:text-lg">
-            Wir haben Deutschland IPTV für Nutzer entwickelt, die Premium-Qualität, Zuverlässigkeit und echten
-            Support erwarten — ganz ohne Kompromisse.
+            Nicht die längste Senderliste entscheidet über ein gutes IPTV Erlebnis, sondern das,
+            was im Hintergrund passiert: stabile Server, ehrliche Preise und ein Team, das
+            erreichbar bleibt, wenn Sie es brauchen.
           </p>
         </div>
 
@@ -64,9 +65,9 @@ export function WhyChooseUs() {
                 <span aria-hidden className="absolute -inset-1.5 rounded-full border border-aqua/15" />
                 <span
                   aria-hidden
-                  className="absolute inset-0 rounded-full border border-aqua/60 shadow-[0_0_18px_rgba(75,235,30,0.5),inset_0_0_12px_rgba(75,235,30,0.25)]"
+                  className="absolute inset-0 rounded-full border border-aqua/60 shadow-[0_0_18px_rgba(26,159,255,0.5),inset_0_0_12px_rgba(26,159,255,0.25)]"
                 />
-                <span className="relative text-base font-bold text-aqua drop-shadow-[0_0_6px_rgba(75,235,30,0.65)]">
+                <span className="relative text-base font-bold text-aqua drop-shadow-[0_0_6px_rgba(26,159,255,0.65)]">
                   {index + 1}
                 </span>
               </span>

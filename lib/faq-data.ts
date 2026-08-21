@@ -10,76 +10,87 @@ export type FaqCategory = {
 
 export const faqCategories: FaqCategory[] = [
   {
-    category: "Abo & Bestellung",
+    category: "Einstieg",
     items: [
       {
-        question: "Wie funktioniert ein IPTV Abo bei Deutschland IPTV?",
+        question: "Was ist Sub Zero IPTV?",
         answer:
-          "Sie wählen eine Laufzeit (6 Monate, 1 Jahr oder 2 Jahre), kontaktieren uns über WhatsApp, und nach der Bestätigung erhalten Sie Ihre persönlichen Zugangsdaten samt Einrichtungsanleitung für Ihr Gerät.",
+          "Sub Zero IPTV ist ein Streaming-Abo, das Live-TV, Sport, Filme und Serien über Ihre Internetverbindung liefert — statt über Kabel oder Satellit. Sie erhalten persönliche Zugangsdaten, die Sie in einer App auf Ihrem Gerät hinterlegen.",
       },
       {
-        question: "Wie lange dauert die Aktivierung?",
+        question: "Wie funktioniert IPTV grundsätzlich?",
         answer:
-          "Ihr Zugang wird in der Regel innerhalb weniger Minuten nach Zahlungsbestätigung aktiviert. In seltenen Fällen kann es bis zu einigen Stunden dauern.",
+          "IPTV überträgt Fernsehprogramme als Datenstrom über das Internet. Statt eines Tuners genügt eine stabile Verbindung und eine kompatible App, die Sender, Programmführer und Filmbibliothek lädt.",
       },
       {
-        question: "Kann ich meinen Tarif später verlängern oder wechseln?",
+        question: "Wie funktioniert der kostenlose Test?",
         answer:
-          "Ja. Sie können Ihr Abo jederzeit über WhatsApp verlängern oder auf einen längeren Tarif upgraden, um von besseren Preisen zu profitieren.",
+          "Schreiben Sie uns über WhatsApp, und wir richten Ihnen einen kurzen Testzugang ein, damit Sie Bildqualität und Senderauswahl vorab in Ruhe prüfen können.",
       },
     ],
   },
   {
-    category: "Geräte & Einrichtung",
+    category: "Geräte",
     items: [
       {
         question: "Welche Geräte werden unterstützt?",
         answer:
-          "Deutschland IPTV funktioniert auf Smart TVs (Samsung, LG), Android TV, Fire TV Stick, Apple TV, iPhone, Android-Smartphones sowie PC und Laptop.",
+          "Smart TV (Samsung, LG), Android TV, Fire TV Stick, iPhone, Android-Smartphones sowie PC und Laptop — Sie brauchen kein zusätzliches Gerät, wenn eines davon schon vorhanden ist.",
       },
       {
-        question: "Benötige ich zusätzliche Hardware?",
+        question: "Funktioniert es auf Samsung Smart TV?",
         answer:
-          "Nein. Eine stabile Internetverbindung und ein kompatibles Gerät reichen aus. Für ältere Fernseher empfehlen wir einen Fire TV Stick oder eine Android-Box.",
+          "Ja. Über den integrierten Samsung App Store installieren Sie eine kompatible App, geben Ihre Zugangsdaten ein, und die Senderliste lädt automatisch.",
       },
       {
-        question: "Wie installiere ich die App auf meinem Gerät?",
+        question: "Funktioniert es auch auf LG-Fernsehern?",
         answer:
-          "Nach Ihrer Bestellung erhalten Sie eine Schritt-für-Schritt-Anleitung passend zu Ihrem Gerät, inklusive App-Empfehlung und Hilfe bei der Eingabe Ihrer Zugangsdaten.",
+          "Ja, über den LG Content Store (webOS) nach demselben Prinzip wie bei Samsung — App installieren, anmelden, loslegen.",
+      },
+      {
+        question: "Wie funktioniert die Einrichtung auf dem Fire TV Stick?",
+        answer:
+          "App aus dem Amazon App Store installieren, mit Ihren Zugangsdaten anmelden — in der Regel ist der Stick in wenigen Minuten startklar.",
       },
     ],
   },
   {
-    category: "Zahlung & Support",
+    category: "Funktionen",
     items: [
       {
-        question: "Welche Zahlungsmethoden werden akzeptiert?",
+        question: "Ist ein Programmführer (EPG) enthalten?",
         answer:
-          "Die Zahlungsdetails teilen wir Ihnen individuell über WhatsApp mit. Wir bieten flexible und sichere Zahlungsoptionen.",
+          "Ja, der elektronische Programmführer ist automatisch Teil jedes Abos und zeigt Ihnen das aktuelle und kommende Programm über alle Sender hinweg.",
       },
       {
-        question: "Welche Laufzeiten stehen zur Verfügung?",
-        answer: "Wir bieten Tarife mit 6 Monaten, 1 Jahr und 2 Jahren Laufzeit — je länger die Laufzeit, desto besser der Preis.",
-      },
-      {
-        question: "Wie erreiche ich den Kundenservice?",
+        question: "Sind auch Filme und Serien auf Abruf verfügbar?",
         answer:
-          "Unser Support-Team ist über WhatsApp und E-Mail erreichbar und hilft schnell bei Fragen zu Einrichtung, Zahlung oder technischen Problemen.",
+          "Ja, neben dem Live-Programm steht eine umfangreiche VOD-Bibliothek zur Verfügung, jederzeit abrufbar in derselben App.",
       },
     ],
   },
   {
-    category: "Problembehebung",
+    category: "Abo & Support",
     items: [
       {
-        question: "Was tue ich bei Bild- oder Verbindungsproblemen?",
+        question: "Wie schnell wird der Zugang aktiviert?",
         answer:
-          "Prüfen Sie zunächst Ihre Internetgeschwindigkeit (mindestens 10 Mbit/s empfohlen), starten Sie die App neu und stellen Sie sicher, dass kein VPN aktiv ist. Bestehen die Probleme weiterhin, hilft Ihnen unser Support-Team direkt weiter.",
+          "Meist innerhalb weniger Minuten nach Zahlungsbestätigung. In Ausnahmefällen kann es bis zu einigen Stunden dauern.",
       },
       {
-        question: "Was mache ich, wenn Sender nicht laden?",
+        question: "Welche Abonnementoptionen gibt es?",
         answer:
-          "Das liegt meist an einer instabilen Verbindung oder einer veralteten App-Version. Ein Neustart der App und ein Aktualisieren der Senderliste löst das Problem in den meisten Fällen.",
+          "Sie wählen zwischen 6 Monaten, 1 Jahr oder 2 Jahren Laufzeit — je länger die Laufzeit, desto günstiger der Preis pro Monat. Details finden Sie auf unserer Tarifseite.",
+      },
+      {
+        question: "Wie kann ich den Support kontaktieren?",
+        answer:
+          "Am schnellsten über WhatsApp. Alternativ erreichen Sie uns per E-Mail — beide Kanäle finden Sie auf unserer Kontaktseite.",
+      },
+      {
+        question: "Was tue ich bei Verbindungsproblemen?",
+        answer:
+          "Prüfen Sie zunächst Ihre Internetgeschwindigkeit (mindestens 10 Mbit/s empfohlen) und starten Sie die App neu. Hilft das nicht, ist unser Support-Team direkt für Sie da.",
       },
     ],
   },

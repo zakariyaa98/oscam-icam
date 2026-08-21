@@ -6,25 +6,25 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
 export const metadata: Metadata = {
-  title: "AGB – Allgemeine Geschäftsbedingungen | Deutschland IPTV",
+  title: "AGB – Allgemeine Geschäftsbedingungen | Sub Zero IPTV",
   description:
-    "Allgemeine Geschäftsbedingungen von Deutschland IPTV: Nutzung des Dienstes, Abo und Zahlung, Haftung, geistiges Eigentum und geltendes Recht.",
+    "Die Bedingungen für die Nutzung von Sub Zero IPTV: Abo, Zahlung, Haftung, geistiges Eigentum und geltendes Recht auf einen Blick.",
   alternates: {
     canonical: "/terms",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "Deutschland IPTV",
+    siteName: "Sub Zero IPTV",
     url: "/terms",
-    title: "AGB – Allgemeine Geschäftsbedingungen | Deutschland IPTV",
+    title: "AGB – Allgemeine Geschäftsbedingungen | Sub Zero IPTV",
     description: "Nutzung des Dienstes, Abo und Zahlung, Haftung, geistiges Eigentum und geltendes Recht.",
-    images: [{ url: "https://deutschland-iptv.online/opengraph-image", width: 1200, height: 630 }],
+    images: [{ url: "https://sub-zeroiptv.xyz/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://deutschland-iptv.online/opengraph-image"],
-    title: "AGB – Allgemeine Geschäftsbedingungen | Deutschland IPTV",
+    images: ["https://sub-zeroiptv.xyz/opengraph-image"],
+    title: "AGB – Allgemeine Geschäftsbedingungen | Sub Zero IPTV",
     description: "Nutzung des Dienstes, Abo und Zahlung, Haftung, geistiges Eigentum und geltendes Recht.",
   },
 };
@@ -40,7 +40,7 @@ export default function TermsPage() {
             as="h1"
             eyebrow="Rechtliches"
             title="Allgemeine Geschäftsbedingungen"
-            description="Diese AGB regeln die Nutzung von Deutschland IPTV. Mit der Bestellung eines Abos erkennen Sie die folgenden Bedingungen an."
+            description="Diese AGB regeln die Nutzung von Sub Zero IPTV. Mit der Bestellung eines Abos erkennen Sie die folgenden Bedingungen an."
           />
 
           <div className="mx-auto flex w-full max-w-3xl flex-col gap-10">
@@ -51,7 +51,7 @@ export default function TermsPage() {
                 1. Geltungsbereich und Leistungsbeschreibung
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Deutschland IPTV stellt seinen Kunden im Rahmen eines zeitlich befristeten Abos Zugang zu einem
+                Sub Zero IPTV stellt seinen Kunden im Rahmen eines zeitlich befristeten Abos Zugang zu einem
                 IPTV Streaming-Dienst zur Verfügung, bestehend aus Live-Sendern, einer VOD-Bibliothek sowie einem
                 elektronischen Programmführer (EPG). Diese AGB gelten für jede Nutzung unseres Dienstes durch
                 Verbraucher und Unternehmer gleichermaßen, soweit nicht ausdrücklich anders angegeben.
@@ -102,7 +102,7 @@ export default function TermsPage() {
               </h2>
               <p className="text-base leading-relaxed text-muted">
                 Alle Inhalte, Marken, Logos und die Gestaltung unserer Website sowie unseres Dienstes sind
-                Eigentum von Deutschland IPTV oder der jeweiligen Rechteinhaber und urheberrechtlich geschützt.
+                Eigentum von Sub Zero IPTV oder der jeweiligen Rechteinhaber und urheberrechtlich geschützt.
                 Mit dem Abschluss eines Abos erhält der Kunde ein einfaches, nicht übertragbares Nutzungsrecht zum
                 persönlichen Streamen der Inhalte — darüber hinaus werden keine Rechte eingeräumt.
               </p>
@@ -159,8 +159,8 @@ export default function TermsPage() {
               <h2 className="text-xl font-semibold text-foreground">10. Kontakt</h2>
               <p className="text-sm leading-relaxed text-muted">
                 Fragen zu diesen AGB richten Sie bitte an{" "}
-                <a href="mailto:zerotv.support@gmail.com" className="text-aqua underline underline-offset-4">
-                  zerotv.support@gmail.com
+                <a href="mailto:contactipm3tv@gmail.com" className="text-aqua underline underline-offset-4">
+                  contactipm3tv@gmail.com
                 </a>{" "}
                 oder über unsere{" "}
                 <Link href="/contact" className="text-aqua underline underline-offset-4">

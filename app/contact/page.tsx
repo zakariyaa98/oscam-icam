@@ -7,45 +7,43 @@ import { ContactForm } from "@/components/sections/ContactForm";
 import { WHATSAPP_DEFAULT_LINK } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Kontakt | Deutschland IPTV",
+  title: "Kontakt | Sub Zero IPTV",
   description:
-    "Kontaktieren Sie Deutschland IPTV über WhatsApp oder E-Mail. Unser Support-Team hilft Ihnen schnell und persönlich bei jeder Frage rund um Ihr IPTV Abo.",
+    "Fragen zu Sub Zero IPTV? Schreiben Sie uns auf WhatsApp oder per E-Mail — unser Support-Team antwortet persönlich und meist innerhalb weniger Minuten.",
   alternates: {
     canonical: "/contact",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "Deutschland IPTV",
+    siteName: "Sub Zero IPTV",
     url: "/contact",
-    title: "Kontakt | Deutschland IPTV",
-    description:
-      "Kontaktieren Sie Deutschland IPTV über WhatsApp oder E-Mail. Unser Support-Team hilft Ihnen schnell und persönlich.",
-    images: [{ url: "https://deutschland-iptv.online/opengraph-image", width: 1200, height: 630 }],
+    title: "Kontakt | Sub Zero IPTV",
+    description: "Schreiben Sie uns auf WhatsApp oder per E-Mail — unser Team antwortet persönlich.",
+    images: [{ url: "https://sub-zeroiptv.xyz/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://deutschland-iptv.online/opengraph-image"],
-    title: "Kontakt | Deutschland IPTV",
-    description:
-      "Kontaktieren Sie Deutschland IPTV über WhatsApp oder E-Mail. Unser Support-Team hilft Ihnen schnell und persönlich.",
+    images: ["https://sub-zeroiptv.xyz/opengraph-image"],
+    title: "Kontakt | Sub Zero IPTV",
+    description: "Schreiben Sie uns auf WhatsApp oder per E-Mail — unser Team antwortet persönlich.",
   },
 };
 
 const contactChannels = [
   {
     label: "WhatsApp",
-    value: "+971 50 574 3472",
+    value: "+33 7 53 41 13 26",
     href: WHATSAPP_DEFAULT_LINK,
     external: true,
-    description: "Schnellste Antwortzeit — ideal für Bestellungen und dringende Fragen.",
+    description: "Der schnellste Weg zu uns — ideal, wenn es um eine Bestellung oder eine dringende Frage geht.",
   },
   {
     label: "E-Mail",
-    value: "zerotv.support@gmail.com",
-    href: "mailto:zerotv.support@gmail.com",
+    value: "contactipm3tv@gmail.com",
+    href: "mailto:contactipm3tv@gmail.com",
     external: false,
-    description: "Für ausführliche Anfragen, oder wenn Sie lieber alles in Ruhe aufschreiben möchten.",
+    description: "Für alles, was etwas mehr Platz zum Erklären braucht.",
   },
 ];
 
@@ -59,8 +57,8 @@ export default function ContactPage() {
           <SectionHeading
             as="h1"
             eyebrow="Kontakt"
-            title="Wir sind für Sie da"
-            description="Ob Frage zur Einrichtung, zum passenden Tarif oder zu Ihrer Bestellung — unser Team antwortet schnell und persönlich."
+            title="Du hast Fragen? Wir sind für dich da."
+            description="Ob es um die Einrichtung geht, um das passende Abo oder einfach um eine offene Frage — schreiben Sie uns, und wir kümmern uns persönlich darum."
           />
 
           <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr]">

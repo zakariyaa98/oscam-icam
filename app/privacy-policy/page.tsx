@@ -6,25 +6,25 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
 export const metadata: Metadata = {
-  title: "Datenschutzerklärung | Deutschland IPTV",
+  title: "Datenschutzerklärung | Sub Zero IPTV",
   description:
-    "Datenschutzerklärung von Deutschland IPTV: welche Daten wir erheben, wie wir sie verwenden, mit wem wir sie teilen und welche Rechte Sie nach der DSGVO haben.",
+    "Welche Daten Sub Zero IPTV erhebt, wie wir sie verwenden, mit wem wir sie teilen und welche Rechte Ihnen nach der DSGVO zustehen.",
   alternates: {
     canonical: "/privacy-policy",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "Deutschland IPTV",
+    siteName: "Sub Zero IPTV",
     url: "/privacy-policy",
-    title: "Datenschutzerklärung | Deutschland IPTV",
+    title: "Datenschutzerklärung | Sub Zero IPTV",
     description: "Welche Daten wir erheben, wie wir sie verwenden und welche Rechte Sie nach der DSGVO haben.",
-    images: [{ url: "https://deutschland-iptv.online/opengraph-image", width: 1200, height: 630 }],
+    images: [{ url: "https://sub-zeroiptv.xyz/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://deutschland-iptv.online/opengraph-image"],
-    title: "Datenschutzerklärung | Deutschland IPTV",
+    images: ["https://sub-zeroiptv.xyz/opengraph-image"],
+    title: "Datenschutzerklärung | Sub Zero IPTV",
     description: "Welche Daten wir erheben, wie wir sie verwenden und welche Rechte Sie nach der DSGVO haben.",
   },
 };
@@ -51,10 +51,10 @@ export default function PrivacyPolicyPage() {
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">Verantwortlicher</h2>
               <p className="text-base leading-relaxed text-muted">
-                Verantwortlich für die Datenverarbeitung im Sinne der DSGVO ist Deutschland IPTV. Bei Fragen zum
+                Verantwortlich für die Datenverarbeitung im Sinne der DSGVO ist Sub Zero IPTV. Bei Fragen zum
                 Datenschutz erreichen Sie uns unter{" "}
-                <a href="mailto:zerotv.support@gmail.com" className="text-aqua underline underline-offset-4">
-                  zerotv.support@gmail.com
+                <a href="mailto:contactipm3tv@gmail.com" className="text-aqua underline underline-offset-4">
+                  contactipm3tv@gmail.com
                 </a>
                 .
               </p>
@@ -214,8 +214,8 @@ export default function PrivacyPolicyPage() {
               </ul>
               <p className="text-base leading-relaxed text-muted">
                 Zur Ausübung dieser Rechte genügt eine formlose Nachricht an{" "}
-                <a href="mailto:zerotv.support@gmail.com" className="text-aqua underline underline-offset-4">
-                  zerotv.support@gmail.com
+                <a href="mailto:contactipm3tv@gmail.com" className="text-aqua underline underline-offset-4">
+                  contactipm3tv@gmail.com
                 </a>
                 .
               </p>
@@ -269,8 +269,8 @@ export default function PrivacyPolicyPage() {
               </h2>
               <p className="text-sm leading-relaxed text-muted">
                 Bei Fragen zu dieser Datenschutzerklärung oder zur Ausübung Ihrer Rechte erreichen Sie uns unter{" "}
-                <a href="mailto:zerotv.support@gmail.com" className="text-aqua underline underline-offset-4">
-                  zerotv.support@gmail.com
+                <a href="mailto:contactipm3tv@gmail.com" className="text-aqua underline underline-offset-4">
+                  contactipm3tv@gmail.com
                 </a>{" "}
                 oder über unsere{" "}
                 <Link href="/contact" className="text-aqua underline underline-offset-4">

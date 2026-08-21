@@ -18,8 +18,8 @@ export function LiveSports() {
       <Container className="flex flex-col items-center gap-14">
         <SectionHeading
           eyebrow="Live-Sport"
-          title="Die größten Sportereignisse live in Top-Qualität erleben"
-          description="Verfolgen Sie die packendsten Sportereignisse der Welt live mit. Fußball, Basketball, Baseball, Tennis, Motorsport und vieles mehr — in Full HD und 4K auf all Ihren Geräten."
+          title="Kein Anpfiff verpasst, keine Ausrede mehr"
+          description="Fußball, Basketball, Tennis, Motorsport und viele weitere Disziplinen live verfolgen — in Full HD und 4K, auf dem Gerät Ihrer Wahl."
         />
 
         <div className="grid w-full grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3">
@@ -31,7 +31,7 @@ export function LiveSports() {
             >
               <Image
                 src={sport.image}
-                alt={`${sport.title} live in Full HD und 4K mit Deutschland IPTV`}
+                alt={`${sport.title} live in Full HD und 4K mit Sub Zero IPTV`}
                 fill
                 loading="lazy"
                 decoding="async"

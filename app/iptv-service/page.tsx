@@ -7,64 +7,52 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
 export const metadata: Metadata = {
-  title: "IPTV Service – TV ohne Kabelanschluss erklärt",
+  title: "Was ist IPTV? Der IPTV Service einfach erklärt",
   description:
-    "IPTV Service einfach erklärt: wie es funktioniert, die Vorteile gegenüber Kabel-TV und worauf Sie bei der Anbieterwahl achten sollten. Jetzt informieren.",
-  keywords: [
-    "IPTV Service",
-    "IPTV Dienst",
-    "was ist IPTV",
-    "TV über Internet schauen",
-    "IPTV ohne Kabel",
-    "Premium IPTV",
-  ],
+    "IPTV verständlich erklärt: wie der Service funktioniert, was ihn von Kabel-TV unterscheidet und worauf Sie bei der Anbieterwahl achten sollten.",
+  keywords: ["IPTV Deutschland", "was ist IPTV", "IPTV Abonnement", "IPTV Premium"],
   alternates: {
     canonical: "/iptv-service",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "Deutschland IPTV",
+    siteName: "Sub Zero IPTV",
     url: "/iptv-service",
-    title: "IPTV Service – TV ohne Kabelanschluss erklärt",
-    description:
-      "Wie IPTV funktioniert, die Vorteile und wie Sie den richtigen Anbieter wählen — verständlich erklärt von Deutschland IPTV.",
-    images: [{ url: "https://deutschland-iptv.online/images/streaming-technologie.png" }],
+    title: "Was ist IPTV? Der IPTV Service einfach erklärt",
+    description: "Wie IPTV funktioniert und worauf es bei der Anbieterwahl ankommt — verständlich erklärt.",
+    images: [{ url: "https://sub-zeroiptv.xyz/images/streaming-technologie.png" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://deutschland-iptv.online/images/streaming-technologie.png"],
-    title: "IPTV Service – TV ohne Kabelanschluss erklärt",
-    description:
-      "Wie IPTV funktioniert, die Vorteile und wie Sie den richtigen Anbieter wählen — verständlich erklärt von Deutschland IPTV.",
+    images: ["https://sub-zeroiptv.xyz/images/streaming-technologie.png"],
+    title: "Was ist IPTV? Der IPTV Service einfach erklärt",
+    description: "Wie IPTV funktioniert und worauf es bei der Anbieterwahl ankommt — verständlich erklärt.",
   },
 };
 
 const faqItems = [
   {
-    question: "Was ist IPTV und wie funktioniert es?",
+    question: "Was genau ist ein IPTV Service?",
     answer:
-      "IPTV (Internet Protocol Television) überträgt TV-Inhalte über Ihre bestehende Internetverbindung statt über Kabel, Satellit oder terrestrischen Empfang. Sie benötigen lediglich ein internetfähiges Gerät und eine IPTV App, um Live-TV, einen EPG und eine VOD-Bibliothek zu erhalten.",
+      "Ein Dienst, der Fernsehprogramme über Ihre Internetverbindung liefert, statt über Kabel, Satellit oder Antenne. Sie benötigen lediglich ein internetfähiges Gerät und eine passende App.",
   },
   {
-    question: "Benötige ich eine Mindestvertragslaufzeit für IPTV?",
-    answer:
-      "Nein. Deutschland IPTV bietet flexible Tarife mit 6 Monaten, 1 Jahr oder 2 Jahren Laufzeit ohne automatische Verlängerung.",
+    question: "Muss ich mich langfristig binden?",
+    answer: "Nein. Sub Zero IPTV bietet Laufzeiten von 6 Monaten bis 2 Jahren, ohne automatische Verlängerung.",
   },
   {
-    question: "Wie schnell wird mein IPTV Zugang aktiviert?",
-    answer:
-      "In der Regel erhalten Sie Ihre Zugangsdaten innerhalb weniger Minuten nach Bestätigung Ihrer Bestellung über WhatsApp.",
+    question: "Wie lange dauert die Aktivierung meines Zugangs?",
+    answer: "In der Regel wenige Minuten nach Bestätigung Ihrer Bestellung über WhatsApp.",
   },
   {
-    question: "Funktioniert IPTV mit jeder Internetverbindung?",
+    question: "Reicht meine Internetverbindung dafür aus?",
     answer:
-      "Für flüssiges HD-Streaming empfehlen wir mindestens 10 Mbit/s, für 4K-Inhalte idealerweise 25 Mbit/s oder mehr — die meisten modernen Breitbandanschlüsse erfüllen das problemlos.",
+      "Für HD genügen meist 10 Mbit/s, für 4K empfehlen wir 25 Mbit/s oder mehr — die meisten Haushalte erfüllen das problemlos.",
   },
   {
     question: "Ist IPTV legal?",
-    answer:
-      "Die Nutzung eines IPTV Dienstes mit ordnungsgemäß lizenzierten Inhalten ist legal. Achten Sie auf einen Anbieter, der transparent, vertrauenswürdig ist und ein legitimes Geschäftsmodell hat.",
+    answer: "Ja, solange der Anbieter über ordnungsgemäß lizenzierte Inhalte verfügt.",
   },
 ];
 
@@ -74,53 +62,43 @@ const faqJsonLd = {
   mainEntity: faqItems.map((item) => ({
     "@type": "Question",
     name: item.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: item.answer,
-    },
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
   })),
 };
 
 export default function IptvServicePage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
-      <Breadcrumbs
-        items={[{ label: "Startseite", href: "/" }, { label: "IPTV Service", href: "/iptv-service" }]}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <Breadcrumbs items={[{ label: "Startseite", href: "/" }, { label: "IPTV Service", href: "/iptv-service" }]} />
 
       <section className="py-16 sm:py-24">
         <Container className="flex flex-col items-center gap-14">
           <SectionHeading
             as="h1"
-            eyebrow="IPTV Service"
-            title="IPTV — modernes Fernsehen ohne Kabelanschluss"
-            description="Alles Wichtige über IPTV auf einen Blick — verständlich erklärt, mit direkten Links zu ausführlichen Guides."
+            eyebrow="Grundlagen"
+            title="IPTV in drei Minuten verstanden"
+            description="Kein Techniker-Termin, keine Satellitenschüssel — nur eine App und eine Internetverbindung. Hier ist, was dahintersteckt."
           />
 
           <div className="mx-auto flex w-full max-w-3xl flex-col gap-10">
             <div className="flex flex-col gap-4 text-base leading-relaxed text-muted">
               <p>
-                IPTV (Internet Protocol Television) hat sich zu einer modernen Alternative zu
-                klassischem Kabel- und Satelliten-TV entwickelt. Statt an feste Sendezeiten und
-                einen physischen Anschluss gebunden zu sein, streamen Sie Live-TV, Filme und
-                Serien direkt über Ihre bestehende Internetverbindung — auf Ihrem Smart TV,
-                Smartphone, Tablet oder PC. Wer komplett auf Kabel verzichten möchte, findet in
-                unserem Artikel{" "}
+                IPTV steht für Internet Protocol Television: Statt über Kabel, Satellit oder
+                Antenne läuft das Programm als Datenstrom über Ihre bestehende
+                Internetverbindung — auf Smart TV, Smartphone, Tablet oder PC. Wer ganz auf Kabel
+                verzichten möchte, findet die einzelnen Schritte in unserem Artikel{" "}
                 <Link href="/blog/iptv-vs-cable-tv" className="text-aqua underline underline-offset-4">
                   IPTV vs. Kabel-TV
-                </Link>{" "}
-                die einzelnen Schritte.
+                </Link>
+                .
               </p>
               <p>
-                Deutschland IPTV bündelt Tausende Sender sowie eine umfangreiche VOD-Bibliothek in
-                einem einzigen Abo, mit stabilen Servern und persönlichem Support. Eine
-                ausführliche Anleitung finden Sie in unserem{" "}
+                Sub Zero IPTV bündelt Tausende Sender sowie eine umfangreiche Filmbibliothek in
+                einem Abo, mit stabilen Servern und Support auf Deutsch. Eine ausführliche
+                Einführung finden Sie in unserem{" "}
                 <Link href="/blog/iptv-guide-2026" className="text-aqua underline underline-offset-4">
-                  vollständigen IPTV Guide 2026
+                  IPTV Ratgeber 2026
                 </Link>
                 .
               </p>
@@ -128,14 +106,13 @@ export default function IptvServicePage() {
 
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                Was ist IPTV und wie funktioniert es?
+                Wie IPTV im Alltag funktioniert
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Technisch gesehen erhalten Sie nach der Anmeldung persönliche Zugangsdaten oder
-                eine Playlist-URL, mit denen eine IPTV App die verfügbaren Sender, den
-                elektronischen Programmführer (EPG) und oft auch eine Bibliothek an Filmen und
-                Serien lädt. Im Kern funktioniert IPTV wie digitaler TV-Empfang, der vollständig
-                über das offene Internet läuft — ganz ohne Antenne oder Kabelanschluss.
+                Nach der Anmeldung erhalten Sie Zugangsdaten oder eine Playlist-URL. Eine App auf
+                Ihrem Gerät lädt damit automatisch die verfügbaren Sender, den elektronischen
+                Programmführer (EPG) und meist auch eine Bibliothek an Filmen und Serien — im
+                Kern digitaler TV-Empfang, der vollständig über das Internet läuft.
               </p>
               <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl border border-border">
                 <Image
@@ -152,29 +129,26 @@ export default function IptvServicePage() {
 
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                Deutschland IPTV auf einen Blick
+                Was im Sub Zero IPTV Abo steckt
               </h2>
               <ul className="flex flex-col gap-3 text-base leading-relaxed text-muted">
                 <li>30.000+ Sender in HD, Full HD und 4K</li>
-                <li>Filme und Serien (VOD) inklusive</li>
-                <li>Elektronischer Programmführer (EPG) für volle Übersicht</li>
+                <li>Filme und Serien auf Abruf (VOD)</li>
+                <li>Elektronischer Programmführer für volle Übersicht</li>
                 <li>Kompatibel mit Smart TV, Fire TV Stick, Android TV, iPhone, Android und PC</li>
-                <li>Persönlicher Kundenservice über WhatsApp</li>
+                <li>Support-Team auf Deutsch, direkt über WhatsApp erreichbar</li>
               </ul>
             </section>
 
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                IPTV im Vergleich zu Kabel- und Satelliten-TV
+                IPTV gegenüber Kabel und Satellit
               </h2>
               <p className="text-base leading-relaxed text-muted">
                 Klassisches Kabel- oder Satelliten-TV bindet Sie an einen festen Anschluss, oft
-                mit separater Empfangsgebühr und begrenzter Senderauswahl. IPTV dagegen läuft über
-                Ihre bereits vorhandene Internetverbindung, bietet ein deutlich größeres Angebot
-                an Sendern und Inhalten und funktioniert unabhängig von einem einzelnen Gerät —
-                vom Wohnzimmer-TV bis zum Smartphone unterwegs. Einen vollständigen
-                Kostenvergleich und die technischen Voraussetzungen für den Umstieg finden Sie in
-                unserem Artikel{" "}
+                mit separater Gebühr und begrenzter Senderauswahl. IPTV läuft über Ihre bereits
+                vorhandene Internetverbindung und funktioniert unabhängig von einem einzelnen
+                Gerät. Details zum Umstieg finden Sie in unserem Artikel{" "}
                 <Link href="/blog/iptv-vs-cable-tv" className="text-aqua underline underline-offset-4">
                   IPTV vs. Kabel-TV
                 </Link>
@@ -184,36 +158,29 @@ export default function IptvServicePage() {
 
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                Den passenden IPTV Anbieter finden
+                Bevor Sie sich für einen Anbieter entscheiden
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Nicht jeder Anbieter liefert die gleiche Qualität. Serverstabilität, transparente
-                Preise und echter Kundenservice machen den Unterschied. Unser Ratgeber{" "}
+                Nicht jeder Anbieter liefert dieselbe Qualität. Serverstabilität, transparente
+                Preise und echter Support machen den Unterschied. Unsere Seite{" "}
                 <Link href="/iptv-providers" className="text-aqua underline underline-offset-4">
                   IPTV Anbieter
                 </Link>{" "}
-                erklärt genau, worauf Sie achten sollten, und{" "}
+                zeigt, worauf Sie achten sollten, und{" "}
                 <Link href="/best-iptv-service" className="text-aqua underline underline-offset-4">
                   Bester IPTV Anbieter
                 </Link>{" "}
-                vergleicht die wichtigsten Qualitätskriterien. Unser Artikel{" "}
-                <Link
-                  href="/blog/best-iptv-providers-2026"
-                  className="text-aqua underline underline-offset-4"
-                >
-                  Beste IPTV Anbieter 2026
-                </Link>{" "}
-                bietet zusätzlich einen direkten Anbietervergleich mit Checkliste.
+                fasst die wichtigsten Qualitätskriterien zusammen.
               </p>
             </section>
 
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                IPTV auf Ihren Geräten nutzen
+                Einrichtung auf Ihrem Gerät
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Deutschland IPTV läuft auf nahezu jedem internetfähigen Gerät. Ausführliche
-                Einrichtungsanleitungen finden Sie für{" "}
+                Sub Zero IPTV läuft auf nahezu jedem internetfähigen Gerät. Anleitungen finden Sie
+                für den{" "}
                 <Link href="/iptv-fire-tv-stick" className="text-aqua underline underline-offset-4">
                   Fire TV Stick
                 </Link>
@@ -230,7 +197,7 @@ export default function IptvServicePage() {
             </section>
 
             <section className="flex flex-col gap-5 rounded-3xl border border-border bg-background-elevated p-7">
-              <h2 className="text-xl font-semibold text-foreground">Häufig gestellte Fragen zu IPTV</h2>
+              <h2 className="text-xl font-semibold text-foreground">Häufig gestellte Fragen</h2>
               <div className="flex flex-col gap-4">
                 {faqItems.map((item) => (
                   <details key={item.question} className="group rounded-xl border border-border bg-background p-5">

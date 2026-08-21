@@ -5,9 +5,9 @@ import { HeroBackground } from "@/components/home/HeroBackground";
 import { WHATSAPP_FREE_TRIAL_LINK } from "@/lib/whatsapp";
 
 const stats = [
-  { value: "20.000+", label: "Sender & Kanäle" },
-  { value: "4K", label: "Ultra HD Streaming" },
-  { value: "24/7", label: "Persönlicher Support" },
+  { value: "20.000+", label: "Sender in einem Abo" },
+  { value: "4K", label: "Streaming in Top-Qualität" },
+  { value: "24/7", label: "Support auf Deutsch" },
 ];
 
 export function Hero() {
@@ -19,20 +19,21 @@ export function Hero() {
         <div className="flex w-full flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
           <div className="flex max-w-2xl flex-col items-center gap-6 lg:items-start lg:text-left">
             <span className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-aqua/30 bg-aqua/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-aqua">
-              Premium IPTV aus Deutschland
+              Sub Zero IPTV
             </span>
             <h1 className="animate-fade-up-delay-1 text-gradient-aqua text-4xl font-bold leading-[1.1] tracking-tight drop-shadow-[0_2px_24px_rgba(0,0,0,0.55)] sm:text-5xl lg:text-6xl">
-              IPTV Deutschland – Live-TV neu gedacht: grenzenlos, glasklar, sofort.
+              Dein IPTV-Erlebnis. Einfach. Stabil. Premium.
             </h1>
             <p className="animate-fade-up-delay-2 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-              Deutschland IPTV bringt Ihnen Tausende Sender, Filme und Serien in HD, Full HD und 4K —
-              auf jedem Gerät, ohne Wartezeit, mit einem Support, der wirklich weiterhilft.
+              Live-TV, Sport, Filme und Serien in HD, Full HD und 4K — gebündelt in einem Abo,
+              eingerichtet in wenigen Minuten und begleitet von einem Support-Team, das wirklich
+              auf Deutsch antwortet.
             </p>
           </div>
 
           <div className="animate-fade-up-delay-3 flex shrink-0 flex-col gap-4 sm:flex-row">
             <Button href="/plans" variant="primary" className="px-8 py-4 text-base">
-              Tarife ansehen
+              Abonnements ansehen
             </Button>
             <Button
               href={WHATSAPP_FREE_TRIAL_LINK}
@@ -43,7 +44,7 @@ export function Hero() {
               <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5" aria-hidden="true">
                 <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.3-1.39a9.9 9.9 0 0 0 4.69 1.19h.01c5.46 0 9.9-4.45 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Z" />
               </svg>
-              Kostenlosen Test anfragen
+              Kostenlosen Test starten
             </Button>
           </div>
         </div>

@@ -13,7 +13,7 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
       "@type": "ListItem",
       position: index + 1,
       name: item.label,
-      item: `https://deutschland-iptv.online${item.href}`,
+      item: `https://sub-zeroiptv.xyz${item.href}`,
     })),
   };
 

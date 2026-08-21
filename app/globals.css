@@ -7,12 +7,14 @@
   --muted: #b3b3b3;
   --border: #2a2a2a;
 
-  /* Brand accent — Deutschland IPTV green. Variable names kept as "aqua" to avoid
-     a sitewide class-name rename (bg-aqua/text-aqua/etc. stay valid Tailwind
-     utilities); only the color values changed. */
-  --brand-aqua: #4BEB1E;
-  --brand-aqua-dim: #1F5C0C;
-  --brand-aqua-soft: #8FF56B;
+  /* Brand accent — Sub Zero IPTV blue (#1A9FFF). Variable names kept as "aqua" to
+     avoid a sitewide class-name rename (bg-aqua/text-aqua/etc. stay valid Tailwind
+     utilities); only the color values changed. "-dim" is the same blue tuned dark
+     enough to read on white surfaces (pricing cards); "-soft" is a lighter tint
+     used for hover states. */
+  --brand-aqua: #1A9FFF;
+  --brand-aqua-dim: #0B5FB8;
+  --brand-aqua-soft: #5CBBFF;
   --brand-black: #000000;
 }
 
@@ -48,7 +50,7 @@ body {
 }
 
 .text-gradient-aqua {
-  background: linear-gradient(90deg, #8FF56B 0%, #4BEB1E 55%, #1F5C0C 100%);
+  background: linear-gradient(90deg, #5CBBFF 0%, #1A9FFF 55%, #0B5FB8 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -57,10 +59,10 @@ body {
 .bg-noise {
   background-image: radial-gradient(
       circle at 20% 20%,
-      rgba(75, 235, 30, 0.1),
+      rgba(26, 159, 255, 0.1),
       transparent 40%
     ),
-    radial-gradient(circle at 80% 0%, rgba(75, 235, 30, 0.07), transparent 45%);
+    radial-gradient(circle at 80% 0%, rgba(26, 159, 255, 0.07), transparent 45%);
 }
 
 .glass-panel {
@@ -102,10 +104,10 @@ body {
 @keyframes pulse-glow {
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgba(75, 235, 30, 0.35);
+    box-shadow: 0 0 0 0 rgba(26, 159, 255, 0.35);
   }
   50% {
-    box-shadow: 0 0 0 12px rgba(75, 235, 30, 0);
+    box-shadow: 0 0 0 12px rgba(26, 159, 255, 0);
   }
 }
 
@@ -154,12 +156,10 @@ body {
 /* Hero interactive background (components/home/HeroBackground.tsx): solid
    black base, a canvas particle network (drawn by the component itself), a
    periodic diagonal light beam, film grain and a vignette. Beam/grain colors
-   intentionally use the reference design's literal, slightly-off-brand
-   greens (#29FF42/rgba(150,255,140,...)) rather than the site's
-   --background/--brand-aqua tokens — a richer, darker one-off treatment
-   scoped to this effect. */
+   use a richer, darker one-off blue treatment scoped to this effect rather
+   than the flat --brand-aqua token, to keep the hero cinematic. */
 .hero-bg-base {
-  background: #040806;
+  background: #02050a;
 }
 
 .hero-beam {
@@ -171,9 +171,9 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(150, 255, 140, 0.1),
-    rgba(150, 255, 140, 0.22),
-    rgba(150, 255, 140, 0.1),
+    rgba(120, 190, 255, 0.1),
+    rgba(120, 190, 255, 0.22),
+    rgba(120, 190, 255, 0.1),
     transparent
   );
   transform: rotate(18deg);

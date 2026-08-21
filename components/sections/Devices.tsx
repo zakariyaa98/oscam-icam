@@ -22,8 +22,8 @@ export function Devices() {
         <ScrollReveal className="flex flex-col items-start gap-6">
           <SectionHeading
             align="left"
-            title="Zu Hause auf jedem Gerät"
-            description="Die Deutschland IPTV App hebt Ihr Streaming-Erlebnis auf die nächste Stufe: eine intuitive Oberfläche mit sofortigem Zugriff auf Live-TV, Filme und Serien — geräteübergreifend synchronisiert, ganz ohne zusätzliche Hardware."
+            title="Ein Zugang, jedes Wohnzimmer"
+            description="Ob Fernseher, Smartphone oder Laptop: Ihr Sub Zero IPTV Zugang funktioniert überall gleich — eine Oberfläche, sofortiger Zugriff, keine zusätzliche Hardware nötig."
           />
 
           <div className="flex flex-wrap gap-2.5">
@@ -46,7 +46,7 @@ export function Devices() {
           <div className="relative overflow-hidden rounded-3xl border border-border shadow-2xl">
             <Image
               src="/images/smart7.jpg"
-              alt="Deutschland IPTV Streaming-App auf mehreren Geräten"
+              alt="Sub Zero IPTV Streaming-App auf mehreren Geräten"
               width={640}
               height={720}
               sizes="(max-width: 1024px) 90vw, 480px"

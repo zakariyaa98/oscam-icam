@@ -11,9 +11,9 @@ import { FAQPreview } from "@/components/sections/FAQPreview";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
 export const metadata: Metadata = {
-  title: "IPTV Deutschland – Anbieter für Live-TV & Streaming",
+  title: "Sub Zero IPTV – Premium IPTV für Deutschland",
   description:
-    "IPTV Deutschland: Tausende Sender, Filme und Serien in HD, Full HD und 4K. Deutschland IPTV ist Ihr IPTV Anbieter mit stabilen Servern und persönlichem Support.",
+    "Live-TV, Sport, Filme und Serien in HD, Full HD und 4K — gebündelt in einem Abo. Sub Zero IPTV: stabile Server, faire Preise, Support auf Deutsch.",
   alternates: {
     canonical: "/",
   },
@@ -29,11 +29,11 @@ export default function Home() {
     <>
       <Hero />
       <StreamingCategories />
+      <PricingPreview />
       <Features />
       <WhyChooseUs />
       <LatestMovies />
       <Devices />
-      <PricingPreview />
       <LiveSports />
       <FAQPreview />
       <ContactCTA />

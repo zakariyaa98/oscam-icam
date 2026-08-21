@@ -11,7 +11,7 @@ import { TopicCluster } from "@/components/blog/TopicCluster";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 import { blogPosts, getBlogPostBySlug, getRelatedPosts } from "@/lib/blog-posts";
 
-const SITE_URL = "https://deutschland-iptv.online";
+const SITE_URL = "https://sub-zeroiptv.xyz";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -79,7 +79,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       type: "article",
       locale: "de_DE",
-      siteName: "Deutschland IPTV",
+      siteName: "Sub Zero IPTV",
       url: `/blog/${post.slug}`,
       title: post.seoTitle,
       description: post.metaDescription,
@@ -125,12 +125,12 @@ export default async function BlogPostPage({ params }: PageProps) {
     articleSection: post.category,
     author: {
       "@type": "Organization",
-      name: "Deutschland IPTV",
+      name: "Sub Zero IPTV",
       url: SITE_URL,
     },
     publisher: {
       "@type": "Organization",
-      name: "Deutschland IPTV",
+      name: "Sub Zero IPTV",
       url: SITE_URL,
       logo: {
         "@type": "ImageObject",

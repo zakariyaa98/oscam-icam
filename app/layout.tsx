@@ -12,27 +12,27 @@ const manrope = Manrope({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-const siteUrl = "https://deutschland-iptv.online";
+const siteUrl = "https://sub-zeroiptv.xyz";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Deutschland IPTV – IPTV Anbieter für Deutschland",
-    template: "%s | Deutschland IPTV",
+    default: "Sub Zero IPTV – Premium IPTV für Deutschland",
+    template: "%s | Sub Zero IPTV",
   },
   description:
-    "Deutschland IPTV ist Ihr IPTV Anbieter für Deutschland: Tausende Sender, Filme und Serien in HD, Full HD und 4K – auf jedem Gerät, mit stabilen Servern und persönlichem Support.",
+    "Live-TV, Sport, Filme und Serien in HD, Full HD und 4K — gebündelt in einem Abo. Sub Zero IPTV: stabile Server, faire Preise, Support auf Deutsch.",
   keywords: [
     "IPTV Deutschland",
-    "IPTV Anbieter",
     "IPTV Anbieter Deutschland",
-    "IPTV Abo",
-    "IPTV Streaming",
-    "IPTV Live TV",
-    "IPTV Service",
-    "bester IPTV Anbieter",
     "IPTV kaufen",
-    "IPTV Sender",
+    "IPTV Abonnement",
+    "IPTV Premium",
+    "IPTV 4K",
+    "IPTV Smart TV",
+    "IPTV Fire TV Stick",
+    "beste IPTV Anbieter",
+    "IPTV testen",
   ],
   alternates: {
     canonical: "/",
@@ -41,16 +41,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     url: siteUrl,
-    siteName: "Deutschland IPTV",
-    title: "Deutschland IPTV – IPTV Anbieter für Deutschland",
+    siteName: "Sub Zero IPTV",
+    title: "Sub Zero IPTV – Premium IPTV für Deutschland",
     description:
-      "Tausende Sender, Filme und Serien in HD, Full HD und 4K. Stabile Server, faire Preise, persönlicher Support.",
+      "Live-TV, Sport, Filme und Serien in HD, Full HD und 4K. Stabile Server, faire Preise, Support auf Deutsch.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Deutschland IPTV – IPTV Anbieter für Deutschland",
+    title: "Sub Zero IPTV – Premium IPTV für Deutschland",
     description:
-      "Tausende Sender, Filme und Serien in HD, Full HD und 4K. Stabile Server, faire Preise, persönlicher Support.",
+      "Live-TV, Sport, Filme und Serien in HD, Full HD und 4K. Stabile Server, faire Preise, Support auf Deutsch.",
   },
   robots: {
     index: true,
@@ -65,7 +65,7 @@ const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": `${siteUrl}/#organization`,
-  name: "Deutschland IPTV",
+  name: "Sub Zero IPTV",
   url: siteUrl,
   logo: {
     "@type": "ImageObject",
@@ -74,10 +74,10 @@ const organizationJsonLd = {
     height: 512,
   },
   description:
-    "IPTV Anbieter aus Deutschland mit Tausenden Sendern, Filmen und Serien in HD, Full HD und 4K.",
+    "Premium IPTV Abo für Deutschland: Live-TV, Sport, Filme und Serien in HD, Full HD und 4K, gebündelt auf einem Zugang.",
   contactPoint: {
     "@type": "ContactPoint",
-    email: "zerotv.support@gmail.com",
+    email: "contactipm3tv@gmail.com",
     contactType: "customer support",
     areaServed: "DE",
     availableLanguage: ["German"],
@@ -88,7 +88,7 @@ const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": `${siteUrl}/#website`,
-  name: "Deutschland IPTV",
+  name: "Sub Zero IPTV",
   url: siteUrl,
   inLanguage: "de-DE",
   publisher: { "@id": `${siteUrl}/#organization` },

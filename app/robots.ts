@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/api/",
     },
-    sitemap: "https://deutschland-iptv.online/sitemap.xml",
+    sitemap: "https://sub-zeroiptv.xyz/sitemap.xml",
   };
 }
