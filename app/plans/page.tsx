@@ -19,11 +19,11 @@ export const metadata: Metadata = {
     url: "/plans",
     title: "IPTV Abonnement & Preise | Sub Zero IPTV",
     description: "Von 1 Monat bis 2 Jahre Laufzeit, 1 bis 3 Geräte gleichzeitig — jetzt vergleichen.",
-    images: [{ url: "https://sub-zeroiptv.xyz/opengraph-image", width: 1200, height: 630 }],
+    images: [{ url: "https://www.sub-zeroiptv.xyz/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://sub-zeroiptv.xyz/opengraph-image"],
+    images: ["https://www.sub-zeroiptv.xyz/opengraph-image"],
     title: "IPTV Abonnement & Preise | Sub Zero IPTV",
     description: "Von 1 Monat bis 2 Jahre Laufzeit, 1 bis 3 Geräte gleichzeitig — jetzt vergleichen.",
   },

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blog-posts";
 
-const siteUrl = "https://sub-zeroiptv.xyz";
+const siteUrl = "https://www.sub-zeroiptv.xyz";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [

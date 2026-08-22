@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     url: "/iptv-fire-tv-stick",
     title: "IPTV auf dem Fire TV Stick: startklar in Minuten",
     description: "Wie Sub Zero IPTV auf dem Amazon Fire TV Stick läuft — vom Auspacken bis zum ersten Sender.",
-    images: [{ url: "https://sub-zeroiptv.xyz/images/fire-tv-stick.png" }],
+    images: [{ url: "https://www.sub-zeroiptv.xyz/images/fire-tv-stick.png" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://sub-zeroiptv.xyz/images/fire-tv-stick.png"],
+    images: ["https://www.sub-zeroiptv.xyz/images/fire-tv-stick.png"],
     title: "IPTV auf dem Fire TV Stick: startklar in Minuten",
     description: "Wie Sub Zero IPTV auf dem Amazon Fire TV Stick läuft — vom Auspacken bis zum ersten Sender.",
   },

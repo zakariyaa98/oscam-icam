@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     url: "/iptv-providers",
     title: "IPTV Anbieter Deutschland: Seriös von unseriös unterscheiden",
     description: "Warnzeichen und Vertrauenssignale bei der Anbieterwahl — mit Checkliste.",
-    images: [{ url: "https://sub-zeroiptv.xyz/images/streaming-app.png" }],
+    images: [{ url: "https://www.sub-zeroiptv.xyz/images/streaming-app.png" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://sub-zeroiptv.xyz/images/streaming-app.png"],
+    images: ["https://www.sub-zeroiptv.xyz/images/streaming-app.png"],
     title: "IPTV Anbieter Deutschland: Seriös von unseriös unterscheiden",
     description: "Warnzeichen und Vertrauenssignale bei der Anbieterwahl — mit Checkliste.",
   },

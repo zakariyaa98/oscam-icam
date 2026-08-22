@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     url: "/iptv-service",
     title: "Was ist IPTV? Der IPTV Service einfach erklärt",
     description: "Wie IPTV funktioniert und worauf es bei der Anbieterwahl ankommt — verständlich erklärt.",
-    images: [{ url: "https://sub-zeroiptv.xyz/images/streaming-technologie.png" }],
+    images: [{ url: "https://www.sub-zeroiptv.xyz/images/streaming-technologie.png" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://sub-zeroiptv.xyz/images/streaming-technologie.png"],
+    images: ["https://www.sub-zeroiptv.xyz/images/streaming-technologie.png"],
     title: "Was ist IPTV? Der IPTV Service einfach erklärt",
     description: "Wie IPTV funktioniert und worauf es bei der Anbieterwahl ankommt — verständlich erklärt.",
   },
