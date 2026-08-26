@@ -150,6 +150,10 @@ export const blogPosts: BlogPost[] = [
     readingTimeMinutes: 6,
     category: "IPTV Ratgeber",
     gradient: "aurora",
+    image: {
+      src: "/images/NETTFLEX-FIMS.jpg",
+      alt: "IPTV Live-TV-Oberfläche mit Sendern, Sport und Programmführer",
+    },
     intro: [
       "Drei Buchstaben, eine Frage, die uns fast täglich erreicht: Was ist IPTV eigentlich? Kurz gesagt steckt dahinter nichts anderes als Fernsehen über das Internet — ohne Satellitenschüssel, ohne Kabelanschluss, ohne feste Sendezeiten.",
       "In diesem Artikel klären wir die Grundlagen, ohne unnötigen Technik-Jargon: was IPTV ist, wie es im Alltag funktioniert und für wen sich der Umstieg lohnt.",
@@ -222,6 +226,10 @@ export const blogPosts: BlogPost[] = [
     updatedAt: "2026-08-19",
     readingTimeMinutes: 6,
     gradient: "circuit",
+    image: {
+      src: "/images/CONNICTED.jpg",
+      alt: "Router, Smart TV und Smartphone kabellos für IPTV verbunden",
+    },
     intro: [
       "Neue Technik wirkt oft komplizierter, als sie ist — bei IPTV gilt das ganz besonders. In der Praxis läuft die Einrichtung fast immer auf drei Schritte hinaus: App installieren, Zugangsdaten eingeben, loslegen. Diese Anleitung zeigt, wie das auf Ihrem Gerät konkret aussieht.",
     ],
@@ -292,6 +300,10 @@ export const blogPosts: BlogPost[] = [
     updatedAt: "2026-08-19",
     readingTimeMinutes: 5,
     gradient: "signal",
+    image: {
+      src: "/images/smart7.jpg",
+      alt: "IPTV Startbildschirm mit Streaming-Apps auf einem Smart TV",
+    },
     intro: [
       "Ein moderner Smart TV ist eigentlich schon alles, was Sie für IPTV brauchen — kein zusätzliches Gerät, kein Kabelsalat. Damit das Bild dabei auch wirklich überzeugt, lohnen sich ein paar kleine Anpassungen.",
     ],
@@ -342,6 +354,10 @@ export const blogPosts: BlogPost[] = [
     updatedAt: "2026-08-19",
     readingTimeMinutes: 5,
     gradient: "midnight",
+    image: {
+      src: "/images/premium-home-cinema.webp",
+      alt: "Edles Heimkino als Sinnbild für die Vorteile von IPTV",
+    },
     intro: [
       "Der Wechsel zu IPTV wird selten spontan getroffen — meist stehen ein paar ganz konkrete Frustpunkte mit dem alten Anschluss dahinter. Vier Gründe tauchen dabei besonders häufig auf.",
     ],
@@ -398,6 +414,10 @@ export const blogPosts: BlogPost[] = [
     updatedAt: "2026-08-19",
     readingTimeMinutes: 5,
     gradient: "horizon",
+    image: {
+      src: "/images/WATCH-TV.jpg",
+      alt: "Moderner Fernseher mit Streaming-Inhalten als Sinnbild für Fernsehtrends 2026",
+    },
     intro: [
       "Zuschauer erwarten heute etwas anderes als noch vor wenigen Jahren: weniger Verwaltungsaufwand, mehr Bildqualität, mehr Flexibilität. Drei Entwicklungen prägen diesen Wandel besonders deutlich.",
     ],
