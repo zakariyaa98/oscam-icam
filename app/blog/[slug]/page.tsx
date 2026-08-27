@@ -11,7 +11,7 @@ import { TopicCluster } from "@/components/blog/TopicCluster";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 import { blogPosts, getBlogPostBySlug, getRelatedPosts } from "@/lib/blog-posts";
 
-const SITE_URL = "https://www.sub-zeroiptv.xyz";
+const SITE_URL = "https://sub-zeroiptv.xyz";
 
 type PageProps = {
   params: Promise<{ slug: string }>;

@@ -20,11 +20,11 @@ export const metadata: Metadata = {
     url: "/refund-policy",
     title: "Rückerstattungsrichtlinie | Sub Zero IPTV",
     description: "Frist, Bedingungen und Ablauf für Rückerstattungsanfragen bei Sub Zero IPTV.",
-    images: [{ url: "https://www.sub-zeroiptv.xyz/opengraph-image", width: 1200, height: 630 }],
+    images: [{ url: "https://sub-zeroiptv.xyz/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://www.sub-zeroiptv.xyz/opengraph-image"],
+    images: ["https://sub-zeroiptv.xyz/opengraph-image"],
     title: "Rückerstattungsrichtlinie | Sub Zero IPTV",
     description: "Frist, Bedingungen und Ablauf für Rückerstattungsanfragen bei Sub Zero IPTV.",
   },

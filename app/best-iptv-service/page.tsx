@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     url: "/best-iptv-service",
     title: "Bester IPTV Anbieter: 6 Kriterien, die wirklich zählen",
     description: "Sechs konkrete Qualitätskriterien, an denen sich ein guter IPTV Anbieter erkennen lässt.",
-    images: [{ url: "https://www.sub-zeroiptv.xyz/images/streaming-tipps.png" }],
+    images: [{ url: "https://sub-zeroiptv.xyz/images/streaming-tipps.png" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://www.sub-zeroiptv.xyz/images/streaming-tipps.png"],
+    images: ["https://sub-zeroiptv.xyz/images/streaming-tipps.png"],
     title: "Bester IPTV Anbieter: 6 Kriterien, die wirklich zählen",
     description: "Sechs konkrete Qualitätskriterien, an denen sich ein guter IPTV Anbieter erkennen lässt.",
   },

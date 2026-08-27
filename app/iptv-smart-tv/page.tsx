@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     url: "/iptv-smart-tv",
     title: "IPTV Samsung & LG Smart TV: Installation ohne Zusatzgerät",
     description: "So läuft Sub Zero IPTV direkt auf Ihrem Samsung- oder LG-Fernseher.",
-    images: [{ url: "https://www.sub-zeroiptv.xyz/images/dashbord.png" }],
+    images: [{ url: "https://sub-zeroiptv.xyz/images/dashbord.png" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://www.sub-zeroiptv.xyz/images/dashbord.png"],
+    images: ["https://sub-zeroiptv.xyz/images/dashbord.png"],
     title: "IPTV Samsung & LG Smart TV: Installation ohne Zusatzgerät",
     description: "So läuft Sub Zero IPTV direkt auf Ihrem Samsung- oder LG-Fernseher.",
   },

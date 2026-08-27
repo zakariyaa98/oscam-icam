@@ -20,11 +20,11 @@ export const metadata: Metadata = {
     url: "/iptv-android-tv",
     title: "IPTV auf Android TV & Android-Box: maximale Flexibilität",
     description: "Sub Zero IPTV auf Android TV und Android-Boxen einrichten — mit Hinweisen zur passenden Hardware.",
-    images: [{ url: "https://www.sub-zeroiptv.xyz/images/android-tv-box.png" }],
+    images: [{ url: "https://sub-zeroiptv.xyz/images/android-tv-box.png" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://www.sub-zeroiptv.xyz/images/android-tv-box.png"],
+    images: ["https://sub-zeroiptv.xyz/images/android-tv-box.png"],
     title: "IPTV auf Android TV & Android-Box: maximale Flexibilität",
     description: "Sub Zero IPTV auf Android TV und Android-Boxen einrichten — mit Hinweisen zur passenden Hardware.",
   },

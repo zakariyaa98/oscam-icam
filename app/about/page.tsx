@@ -19,11 +19,11 @@ export const metadata: Metadata = {
     url: "/about",
     title: "Über uns | Sub Zero IPTV",
     description: "Was Sub Zero IPTV bietet und worauf wir bei unserem Service Wert legen.",
-    images: [{ url: "https://www.sub-zeroiptv.xyz/opengraph-image", width: 1200, height: 630 }],
+    images: [{ url: "https://sub-zeroiptv.xyz/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://www.sub-zeroiptv.xyz/opengraph-image"],
+    images: ["https://sub-zeroiptv.xyz/opengraph-image"],
     title: "Über uns | Sub Zero IPTV",
     description: "Was Sub Zero IPTV bietet und worauf wir bei unserem Service Wert legen.",
   },

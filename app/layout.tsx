@@ -12,7 +12,7 @@ const manrope = Manrope({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-const siteUrl = "https://www.sub-zeroiptv.xyz";
+const siteUrl = "https://sub-zeroiptv.xyz";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
