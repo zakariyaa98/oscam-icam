@@ -32,7 +32,7 @@ export const featuredPlans: FeaturedPlan[] = [
     duration: "6 Monate",
     price: "30€",
     whatsappLink: buildWhatsAppLink(
-      "Hallo Sub Zero IPTV Support,\nich interessiere mich für den 6-Monats-Tarif (ab 30€)."
+      "Hallo IPTV TV Support,\nich interessiere mich für den 6-Monats-Tarif (ab 30€)."
     ),
   },
   {
@@ -42,7 +42,7 @@ export const featuredPlans: FeaturedPlan[] = [
     badge: "🔥 Am beliebtesten",
     featured: true,
     whatsappLink: buildWhatsAppLink(
-      "Hallo Sub Zero IPTV Support,\nich interessiere mich für den 1-Jahres-Tarif (ab 40€)."
+      "Hallo IPTV TV Support,\nich interessiere mich für den 1-Jahres-Tarif (ab 40€)."
     ),
   },
   {
@@ -51,7 +51,7 @@ export const featuredPlans: FeaturedPlan[] = [
     price: "70€",
     badge: "💎 Bester Wert",
     whatsappLink: buildWhatsAppLink(
-      "Hallo Sub Zero IPTV Support,\nich interessiere mich für den 2-Jahres-Tarif (ab 70€)."
+      "Hallo IPTV TV Support,\nich interessiere mich für den 2-Jahres-Tarif (ab 70€)."
     ),
   },
 ];
@@ -97,7 +97,7 @@ function buildTiers(
     originalPrice,
     price,
     whatsappLink: buildWhatsAppLink(
-      `Hallo Sub Zero IPTV Support,\nich interessiere mich für den Tarif "${durationLabel}" mit ${devices} Gerät${
+      `Hallo IPTV TV Support,\nich interessiere mich für den Tarif "${durationLabel}" mit ${devices} Gerät${
         devices > 1 ? "en" : ""
       } (${price}€).`
     ),

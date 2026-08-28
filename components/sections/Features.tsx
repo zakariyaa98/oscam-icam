@@ -53,7 +53,7 @@ export function Features() {
     <section className="border-b border-border py-20 sm:py-28">
       <Container className="flex flex-col items-center gap-16">
         <SectionHeading
-          title="Was Sie von Sub Zero IPTV erwarten dürfen"
+          title="Was Sie von IPTV TV erwarten dürfen"
           description="Sechs Dinge, die den Unterschied zwischen einem gewöhnlichen Streaming-Abo und einem wirklich guten ausmachen."
         />
 

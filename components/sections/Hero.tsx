@@ -19,10 +19,10 @@ export function Hero() {
         <div className="flex w-full flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
           <div className="flex max-w-2xl flex-col items-center gap-6 lg:items-start lg:text-left">
             <span className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-aqua/30 bg-aqua/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-aqua">
-              Sub Zero IPTV
+              IPTV TV
             </span>
             <h1 className="animate-fade-up-delay-1 text-gradient-aqua text-4xl font-bold leading-[1.1] tracking-tight drop-shadow-[0_2px_24px_rgba(0,0,0,0.55)] sm:text-5xl lg:text-6xl">
-              Dein IPTV-Erlebnis. Einfach. Stabil. Premium.
+              IPTV TV — Ihr IPTV Anbieter für Deutschland
             </h1>
             <p className="animate-fade-up-delay-2 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
               Live-TV, Sport, Filme und Serien in HD, Full HD und 4K — gebündelt in einem Abo,

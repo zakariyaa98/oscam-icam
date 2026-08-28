@@ -6,25 +6,25 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
 export const metadata: Metadata = {
-  title: "Datenschutzerklärung | Sub Zero IPTV",
+  title: "Datenschutzerklärung | IPTV TV",
   description:
-    "Welche Daten Sub Zero IPTV erhebt, wie wir sie verwenden, mit wem wir sie teilen und welche Rechte Ihnen nach der DSGVO zustehen.",
+    "Welche Daten IPTV TV erhebt, wie wir sie verwenden, mit wem wir sie teilen und welche Rechte Ihnen nach der DSGVO zustehen.",
   alternates: {
     canonical: "/privacy-policy",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "Sub Zero IPTV",
+    siteName: "IPTV TV",
     url: "/privacy-policy",
-    title: "Datenschutzerklärung | Sub Zero IPTV",
+    title: "Datenschutzerklärung | IPTV TV",
     description: "Welche Daten wir erheben, wie wir sie verwenden und welche Rechte Sie nach der DSGVO haben.",
-    images: [{ url: "https://sub-zeroiptv.xyz/opengraph-image", width: 1200, height: 630 }],
+    images: [{ url: "https://iptv-tv.shop/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://sub-zeroiptv.xyz/opengraph-image"],
-    title: "Datenschutzerklärung | Sub Zero IPTV",
+    images: ["https://iptv-tv.shop/opengraph-image"],
+    title: "Datenschutzerklärung | IPTV TV",
     description: "Welche Daten wir erheben, wie wir sie verwenden und welche Rechte Sie nach der DSGVO haben.",
   },
 };
@@ -46,12 +46,12 @@ export default function PrivacyPolicyPage() {
           />
 
           <div className="mx-auto flex w-full max-w-3xl flex-col gap-10">
-            <p className="text-xs text-muted">Stand: 16. August 2026</p>
+            <p className="text-xs text-muted">Stand: 28. August 2026</p>
 
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">Verantwortlicher</h2>
               <p className="text-base leading-relaxed text-muted">
-                Verantwortlich für die Datenverarbeitung im Sinne der DSGVO ist Sub Zero IPTV. Bei Fragen zum
+                Verantwortlich für die Datenverarbeitung im Sinne der DSGVO ist IPTV TV. Bei Fragen zum
                 Datenschutz erreichen Sie uns unter{" "}
                 <a href="mailto:contactipm3tv@gmail.com" className="text-aqua underline underline-offset-4">
                   contactipm3tv@gmail.com

@@ -6,25 +6,25 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
 export const metadata: Metadata = {
-  title: "AGB – Allgemeine Geschäftsbedingungen | Sub Zero IPTV",
+  title: "AGB – Allgemeine Geschäftsbedingungen | IPTV TV",
   description:
-    "Die Bedingungen für die Nutzung von Sub Zero IPTV: Abo, Zahlung, Haftung, geistiges Eigentum und geltendes Recht auf einen Blick.",
+    "Die Bedingungen für die Nutzung von IPTV TV: Abo, Zahlung, Haftung, geistiges Eigentum und geltendes Recht auf einen Blick.",
   alternates: {
     canonical: "/terms",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "Sub Zero IPTV",
+    siteName: "IPTV TV",
     url: "/terms",
-    title: "AGB – Allgemeine Geschäftsbedingungen | Sub Zero IPTV",
+    title: "AGB – Allgemeine Geschäftsbedingungen | IPTV TV",
     description: "Nutzung des Dienstes, Abo und Zahlung, Haftung, geistiges Eigentum und geltendes Recht.",
-    images: [{ url: "https://sub-zeroiptv.xyz/opengraph-image", width: 1200, height: 630 }],
+    images: [{ url: "https://iptv-tv.shop/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://sub-zeroiptv.xyz/opengraph-image"],
-    title: "AGB – Allgemeine Geschäftsbedingungen | Sub Zero IPTV",
+    images: ["https://iptv-tv.shop/opengraph-image"],
+    title: "AGB – Allgemeine Geschäftsbedingungen | IPTV TV",
     description: "Nutzung des Dienstes, Abo und Zahlung, Haftung, geistiges Eigentum und geltendes Recht.",
   },
 };
@@ -40,18 +40,18 @@ export default function TermsPage() {
             as="h1"
             eyebrow="Rechtliches"
             title="Allgemeine Geschäftsbedingungen"
-            description="Diese AGB regeln die Nutzung von Sub Zero IPTV. Mit der Bestellung eines Abos erkennen Sie die folgenden Bedingungen an."
+            description="Diese AGB regeln die Nutzung von IPTV TV. Mit der Bestellung eines Abos erkennen Sie die folgenden Bedingungen an."
           />
 
           <div className="mx-auto flex w-full max-w-3xl flex-col gap-10">
-            <p className="text-xs text-muted">Stand: 16. August 2026</p>
+            <p className="text-xs text-muted">Stand: 28. August 2026</p>
 
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
                 1. Geltungsbereich und Leistungsbeschreibung
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Sub Zero IPTV stellt seinen Kunden im Rahmen eines zeitlich befristeten Abos Zugang zu einem
+                IPTV TV stellt seinen Kunden im Rahmen eines zeitlich befristeten Abos Zugang zu einem
                 IPTV Streaming-Dienst zur Verfügung, bestehend aus Live-Sendern, einer VOD-Bibliothek sowie einem
                 elektronischen Programmführer (EPG). Diese AGB gelten für jede Nutzung unseres Dienstes durch
                 Verbraucher und Unternehmer gleichermaßen, soweit nicht ausdrücklich anders angegeben.
@@ -102,7 +102,7 @@ export default function TermsPage() {
               </h2>
               <p className="text-base leading-relaxed text-muted">
                 Alle Inhalte, Marken, Logos und die Gestaltung unserer Website sowie unseres Dienstes sind
-                Eigentum von Sub Zero IPTV oder der jeweiligen Rechteinhaber und urheberrechtlich geschützt.
+                Eigentum von IPTV TV oder der jeweiligen Rechteinhaber und urheberrechtlich geschützt.
                 Mit dem Abschluss eines Abos erhält der Kunde ein einfaches, nicht übertragbares Nutzungsrecht zum
                 persönlichen Streamen der Inhalte — darüber hinaus werden keine Rechte eingeräumt.
               </p>

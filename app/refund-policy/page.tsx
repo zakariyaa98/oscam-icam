@@ -7,26 +7,26 @@ import { ContactCTA } from "@/components/sections/ContactCTA";
 import { WHATSAPP_DEFAULT_LINK } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Rückerstattungsrichtlinie | Sub Zero IPTV",
+  title: "Rückerstattungsrichtlinie | IPTV TV",
   description:
-    "Frist und Bedingungen für Rückerstattungen bei Sub Zero IPTV — verständlich erklärt, ohne Kleingedrucktes.",
+    "Frist und Bedingungen für Rückerstattungen bei IPTV TV — verständlich erklärt, ohne Kleingedrucktes.",
   alternates: {
     canonical: "/refund-policy",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "Sub Zero IPTV",
+    siteName: "IPTV TV",
     url: "/refund-policy",
-    title: "Rückerstattungsrichtlinie | Sub Zero IPTV",
-    description: "Frist, Bedingungen und Ablauf für Rückerstattungsanfragen bei Sub Zero IPTV.",
-    images: [{ url: "https://sub-zeroiptv.xyz/opengraph-image", width: 1200, height: 630 }],
+    title: "Rückerstattungsrichtlinie | IPTV TV",
+    description: "Frist, Bedingungen und Ablauf für Rückerstattungsanfragen bei IPTV TV.",
+    images: [{ url: "https://iptv-tv.shop/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://sub-zeroiptv.xyz/opengraph-image"],
-    title: "Rückerstattungsrichtlinie | Sub Zero IPTV",
-    description: "Frist, Bedingungen und Ablauf für Rückerstattungsanfragen bei Sub Zero IPTV.",
+    images: ["https://iptv-tv.shop/opengraph-image"],
+    title: "Rückerstattungsrichtlinie | IPTV TV",
+    description: "Frist, Bedingungen und Ablauf für Rückerstattungsanfragen bei IPTV TV.",
   },
 };
 
@@ -43,11 +43,11 @@ export default function RefundPolicyPage() {
             as="h1"
             eyebrow="Rechtliches"
             title="Rückerstattungsrichtlinie"
-            description="Wir möchten, dass Sie mit Sub Zero IPTV zufrieden sind. Diese Seite erklärt, wann und wie Sie eine Rückerstattung beantragen können."
+            description="Wir möchten, dass Sie mit IPTV TV zufrieden sind. Diese Seite erklärt, wann und wie Sie eine Rückerstattung beantragen können."
           />
 
           <div className="mx-auto flex w-full max-w-3xl flex-col gap-10">
-            <p className="text-xs text-muted">Stand: 16. August 2026</p>
+            <p className="text-xs text-muted">Stand: 28. August 2026</p>
 
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">

@@ -7,25 +7,25 @@ import { ContactForm } from "@/components/sections/ContactForm";
 import { WHATSAPP_DEFAULT_LINK } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Kontakt | Sub Zero IPTV",
+  title: "Kontakt | IPTV TV",
   description:
-    "Fragen zu Sub Zero IPTV? Schreiben Sie uns auf WhatsApp oder per E-Mail — unser Support-Team antwortet persönlich und meist innerhalb weniger Minuten.",
+    "Fragen zu IPTV TV? Schreiben Sie uns auf WhatsApp oder per E-Mail — unser Support-Team antwortet persönlich und meist innerhalb weniger Minuten.",
   alternates: {
     canonical: "/contact",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "Sub Zero IPTV",
+    siteName: "IPTV TV",
     url: "/contact",
-    title: "Kontakt | Sub Zero IPTV",
+    title: "Kontakt | IPTV TV",
     description: "Schreiben Sie uns auf WhatsApp oder per E-Mail — unser Team antwortet persönlich.",
-    images: [{ url: "https://sub-zeroiptv.xyz/opengraph-image", width: 1200, height: 630 }],
+    images: [{ url: "https://iptv-tv.shop/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://sub-zeroiptv.xyz/opengraph-image"],
-    title: "Kontakt | Sub Zero IPTV",
+    images: ["https://iptv-tv.shop/opengraph-image"],
+    title: "Kontakt | IPTV TV",
     description: "Schreiben Sie uns auf WhatsApp oder per E-Mail — unser Team antwortet persönlich.",
   },
 };

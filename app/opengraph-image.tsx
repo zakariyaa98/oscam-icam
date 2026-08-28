@@ -47,11 +47,11 @@ export default function Image() {
             </svg>
           </div>
           <div style={{ display: "flex", fontSize: 84, fontWeight: 700, color: "#FFFFFF" }}>
-            Sub Zero&nbsp;<span style={{ color: "#1A9FFF" }}>IPTV</span>
+            IPTV&nbsp;<span style={{ color: "#1A9FFF" }}>TV</span>
           </div>
         </div>
         <div style={{ display: "flex", marginTop: 28, fontSize: 32, color: "#A0A0A0" }}>
-          Premium IPTV Streaming Service
+          Premium IPTV Anbieter für Deutschland
         </div>
       </div>
     ),

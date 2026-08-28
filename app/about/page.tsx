@@ -6,26 +6,26 @@ import { Button } from "@/components/ui/Button";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
 export const metadata: Metadata = {
-  title: "Über uns | Sub Zero IPTV",
+  title: "Über uns | IPTV TV",
   description:
-    "Sub Zero IPTV in Kürze: was unser Service bietet, welche Geräte er unterstützt und warum unser Support den Unterschied macht.",
+    "IPTV TV in Kürze: was unser Service bietet, welche Geräte er unterstützt und warum unser Support den Unterschied macht.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "Sub Zero IPTV",
+    siteName: "IPTV TV",
     url: "/about",
-    title: "Über uns | Sub Zero IPTV",
-    description: "Was Sub Zero IPTV bietet und worauf wir bei unserem Service Wert legen.",
-    images: [{ url: "https://sub-zeroiptv.xyz/opengraph-image", width: 1200, height: 630 }],
+    title: "Über uns | IPTV TV",
+    description: "Was IPTV TV bietet und worauf wir bei unserem Service Wert legen.",
+    images: [{ url: "https://iptv-tv.shop/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://sub-zeroiptv.xyz/opengraph-image"],
-    title: "Über uns | Sub Zero IPTV",
-    description: "Was Sub Zero IPTV bietet und worauf wir bei unserem Service Wert legen.",
+    images: ["https://iptv-tv.shop/opengraph-image"],
+    title: "Über uns | IPTV TV",
+    description: "Was IPTV TV bietet und worauf wir bei unserem Service Wert legen.",
   },
 };
 
@@ -59,7 +59,7 @@ export default function AboutPage() {
             as="h1"
             eyebrow="Über uns"
             title="Streaming, das einfach funktioniert"
-            description="Sub Zero IPTV bündelt Live-TV, Sport, Filme und Serien in einem Abo — mit dem Anspruch, dass Einrichtung und Support genauso unkompliziert bleiben wie das Zuschauen selbst."
+            description="IPTV TV bündelt Live-TV, Sport, Filme und Serien in einem Abo — mit dem Anspruch, dass Einrichtung und Support genauso unkompliziert bleiben wie das Zuschauen selbst."
           />
 
           <div className="mx-auto flex w-full max-w-3xl flex-col gap-10">
@@ -67,7 +67,7 @@ export default function AboutPage() {
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">Worauf wir Wert legen</h2>
               <p className="text-base leading-relaxed text-muted">
                 Ein Streaming-Dienst sollte sich nicht wie ein Kompromiss anfühlen. Statt vieler
-                einzelner Apps für Live-TV, Sport und Filme bündelt Sub Zero IPTV alles in einer
+                einzelner Apps für Live-TV, Sport und Filme bündelt IPTV TV alles in einer
                 Oberfläche — verfügbar auf dem Gerät, das Sie ohnehin schon nutzen.
               </p>
               <p className="text-base leading-relaxed text-muted">
@@ -79,7 +79,7 @@ export default function AboutPage() {
 
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                Was Sub Zero IPTV ausmacht
+                Was IPTV TV ausmacht
               </h2>
               <div className="grid gap-5 sm:grid-cols-2">
                 {reasons.map((reason) => (

@@ -12,27 +12,27 @@ const manrope = Manrope({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-const siteUrl = "https://sub-zeroiptv.xyz";
+const siteUrl = "https://iptv-tv.shop";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Sub Zero IPTV – Premium IPTV für Deutschland",
-    template: "%s | Sub Zero IPTV",
+    default: "IPTV TV – Premium IPTV Anbieter für Deutschland",
+    template: "%s | IPTV TV",
   },
   description:
-    "Live-TV, Sport, Filme und Serien in HD, Full HD und 4K — gebündelt in einem Abo. Sub Zero IPTV: stabile Server, faire Preise, Support auf Deutsch.",
+    "Live-TV, Sport, Filme und Serien in HD, Full HD und 4K — gebündelt in einem Abo. IPTV TV: stabile Server, faire Preise, Support auf Deutsch.",
   keywords: [
+    "IPTV TV",
     "IPTV Deutschland",
-    "IPTV Anbieter Deutschland",
+    "IPTV Anbieter",
+    "IPTV Shop",
     "IPTV kaufen",
+    "IPTV Anbieter Deutschland",
     "IPTV Abonnement",
-    "IPTV Premium",
-    "IPTV 4K",
+    "IPTV Streaming",
     "IPTV Smart TV",
     "IPTV Fire TV Stick",
-    "beste IPTV Anbieter",
-    "IPTV testen",
   ],
   alternates: {
     canonical: "/",
@@ -41,14 +41,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     url: siteUrl,
-    siteName: "Sub Zero IPTV",
-    title: "Sub Zero IPTV – Premium IPTV für Deutschland",
+    siteName: "IPTV TV",
+    title: "IPTV TV – Premium IPTV Anbieter für Deutschland",
     description:
       "Live-TV, Sport, Filme und Serien in HD, Full HD und 4K. Stabile Server, faire Preise, Support auf Deutsch.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sub Zero IPTV – Premium IPTV für Deutschland",
+    title: "IPTV TV – Premium IPTV Anbieter für Deutschland",
     description:
       "Live-TV, Sport, Filme und Serien in HD, Full HD und 4K. Stabile Server, faire Preise, Support auf Deutsch.",
   },
@@ -65,7 +65,7 @@ const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": `${siteUrl}/#organization`,
-  name: "Sub Zero IPTV",
+  name: "IPTV TV",
   url: siteUrl,
   logo: {
     "@type": "ImageObject",
@@ -88,7 +88,7 @@ const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": `${siteUrl}/#website`,
-  name: "Sub Zero IPTV",
+  name: "IPTV TV",
   url: siteUrl,
   inLanguage: "de-DE",
   publisher: { "@id": `${siteUrl}/#organization` },

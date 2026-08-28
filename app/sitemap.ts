@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blog-posts";
 
-const siteUrl = "https://sub-zeroiptv.xyz";
+const siteUrl = "https://iptv-tv.shop";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
@@ -16,10 +16,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/iptv-smart-tv`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${siteUrl}/iptv-fire-tv-stick`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${siteUrl}/iptv-android-tv`, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${siteUrl}/about`, lastModified: "2026-08-16", changeFrequency: "yearly", priority: 0.6 },
-    { url: `${siteUrl}/privacy-policy`, lastModified: "2026-08-16", changeFrequency: "yearly", priority: 0.5 },
-    { url: `${siteUrl}/terms`, lastModified: "2026-08-16", changeFrequency: "yearly", priority: 0.5 },
-    { url: `${siteUrl}/refund-policy`, lastModified: "2026-08-16", changeFrequency: "yearly", priority: 0.5 },
+    { url: `${siteUrl}/about`, lastModified: "2026-08-28", changeFrequency: "yearly", priority: 0.6 },
+    { url: `${siteUrl}/privacy-policy`, lastModified: "2026-08-28", changeFrequency: "yearly", priority: 0.5 },
+    { url: `${siteUrl}/terms`, lastModified: "2026-08-28", changeFrequency: "yearly", priority: 0.5 },
+    { url: `${siteUrl}/refund-policy`, lastModified: "2026-08-28", changeFrequency: "yearly", priority: 0.5 },
   ];
 
   const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({

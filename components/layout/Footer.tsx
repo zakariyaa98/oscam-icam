@@ -31,7 +31,7 @@ export function Footer() {
         <div className="flex flex-col gap-4">
           <BrandLogo />
           <p className="max-w-sm text-sm leading-relaxed text-muted">
-            Sub Zero IPTV ist Ihr IPTV Anbieter für Deutschland — stabile Server, Tausende Sender
+            IPTV TV ist Ihr IPTV Anbieter für Deutschland — stabile Server, Tausende Sender
             und persönlicher Support, sieben Tage die Woche.
           </p>
         </div>
@@ -67,7 +67,7 @@ export function Footer() {
 
       <div className="border-t border-border">
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-2 px-5 py-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-10">
-          <p>© {new Date().getFullYear()} Sub Zero IPTV. Alle Rechte vorbehalten.</p>
+          <p>© {new Date().getFullYear()} IPTV TV. Alle Rechte vorbehalten.</p>
           <p>contactipm3tv@gmail.com</p>
         </div>
       </div>

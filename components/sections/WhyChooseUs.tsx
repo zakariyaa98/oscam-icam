@@ -43,7 +43,7 @@ export function WhyChooseUs() {
       <Container className="relative z-10 grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <div className="flex max-w-xl flex-col gap-4">
           <h2 className="text-3xl font-bold tracking-tight text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.7)] sm:text-4xl lg:text-5xl">
-            Was Sub Zero IPTV wirklich anders macht
+            Was IPTV TV wirklich anders macht
           </h2>
           <p className="text-base leading-relaxed text-white/80 drop-shadow-[0_1px_12px_rgba(0,0,0,0.6)] sm:text-lg">
             Nicht die längste Senderliste entscheidet über ein gutes IPTV Erlebnis, sondern das,

@@ -8,25 +8,25 @@ import { ContactCTA } from "@/components/sections/ContactCTA";
 export const metadata: Metadata = {
   title: "IPTV auf Android TV & Android-Box: maximale Flexibilität",
   description:
-    "Voller Play-Store-Zugriff, direkte APK-Installation: So läuft Sub Zero IPTV auf Android TV und Android-Boxen.",
-  keywords: ["IPTV Android TV", "IPTV Deutschland", "IPTV Abonnement"],
+    "Voller Play-Store-Zugriff, direkte APK-Installation: So läuft IPTV TV auf Android TV und Android-Boxen.",
+  keywords: ["IPTV Android TV", "IPTV auf Android TV", "IPTV Deutschland", "IPTV Player"],
   alternates: {
     canonical: "/iptv-android-tv",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "Sub Zero IPTV",
+    siteName: "IPTV TV",
     url: "/iptv-android-tv",
     title: "IPTV auf Android TV & Android-Box: maximale Flexibilität",
-    description: "Sub Zero IPTV auf Android TV und Android-Boxen einrichten — mit Hinweisen zur passenden Hardware.",
-    images: [{ url: "https://sub-zeroiptv.xyz/images/android-tv-box.png" }],
+    description: "IPTV TV auf Android TV und Android-Boxen einrichten — mit Hinweisen zur passenden Hardware.",
+    images: [{ url: "https://iptv-tv.shop/images/android-tv-box.png" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://sub-zeroiptv.xyz/images/android-tv-box.png"],
+    images: ["https://iptv-tv.shop/images/android-tv-box.png"],
     title: "IPTV auf Android TV & Android-Box: maximale Flexibilität",
-    description: "Sub Zero IPTV auf Android TV und Android-Boxen einrichten — mit Hinweisen zur passenden Hardware.",
+    description: "IPTV TV auf Android TV und Android-Boxen einrichten — mit Hinweisen zur passenden Hardware.",
   },
 };
 
@@ -80,15 +80,11 @@ export default function IptvAndroidTvPage() {
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">Installation in wenigen Schritten</h2>
               <p className="text-base leading-relaxed text-muted">
-                App wie TiviMate oder IBO Player aus dem Play Store oder per APK laden, Sub Zero
-                IPTV Zugangsdaten eingeben — die Senderliste lädt automatisch. Die ausführliche
-                Anleitung finden Sie unter{" "}
-                <Link href="/blog/iptv-device-setup-guide" className="text-aqua underline underline-offset-4">
-                  IPTV auf Ihren Geräten einrichten
-                </Link>
-                , oder einen App-Vergleich in{" "}
-                <Link href="/blog/tivimate-vs-ibo-player" className="text-aqua underline underline-offset-4">
-                  TiviMate vs. IBO Player
+                App wie TiviMate oder IBO Player aus dem Play Store oder per APK laden, IPTV
+                TV Zugangsdaten eingeben — die Senderliste lädt automatisch. Einen ausführlichen
+                Vergleich gängiger Player-Apps finden Sie in unserem Artikel{" "}
+                <Link href="/blog/iptv-player-vergleich" className="text-aqua underline underline-offset-4">
+                  IPTV Player im Vergleich
                 </Link>
                 .
               </p>
@@ -97,12 +93,8 @@ export default function IptvAndroidTvPage() {
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">Andere Geräte im Vergleich</h2>
               <p className="text-base leading-relaxed text-muted">
-                Nicht sicher, ob Android TV das Richtige für Sie ist? Ein direkter Vergleich mit
-                Fire TV Stick und Apple TV steht in{" "}
-                <Link href="/blog/best-iptv-devices-2026" className="text-aqua underline underline-offset-4">
-                  Die besten Geräte für IPTV
-                </Link>
-                . Sub Zero IPTV läuft ebenso zuverlässig auf einem{" "}
+                Nicht sicher, ob Android TV das Richtige für Sie ist? IPTV TV läuft ebenso
+                zuverlässig auf einem{" "}
                 <Link href="/iptv-fire-tv-stick" className="text-aqua underline underline-offset-4">
                   Fire TV Stick
                 </Link>{" "}

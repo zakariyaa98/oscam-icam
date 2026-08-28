@@ -11,7 +11,7 @@ import { TopicCluster } from "@/components/blog/TopicCluster";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 import { blogPosts, getBlogPostBySlug, getRelatedPosts } from "@/lib/blog-posts";
 
-const SITE_URL = "https://sub-zeroiptv.xyz";
+const SITE_URL = "https://iptv-tv.shop";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -33,22 +33,7 @@ function subsectionId(sectionHeading: string, subHeading: string) {
 }
 
 const relatedLandingPages: Record<string, { href: string; label: string }> = {
-  "iptv-guide-2026": { href: "/iptv-service", label: "IPTV Service" },
-  "what-is-iptv-guide": { href: "/iptv-service", label: "IPTV Service" },
-  "iptv-device-setup-guide": { href: "/iptv-fire-tv-stick", label: "IPTV Fire TV Stick" },
-  "iptv-smart-tv-guide": { href: "/iptv-smart-tv", label: "IPTV Smart TV" },
-  "benefits-of-iptv": { href: "/best-iptv-service", label: "Bester IPTV Anbieter" },
-  "streaming-trends-2026": { href: "/iptv-service", label: "IPTV Service" },
-  "best-iptv-devices-2026": { href: "/iptv-android-tv", label: "IPTV Android TV" },
-  "fix-iptv-buffering-vpn-dns": { href: "/iptv-providers", label: "IPTV Anbieter" },
-  "tivimate-vs-ibo-player": { href: "/iptv-smart-tv", label: "IPTV Smart TV" },
-  "sports-streaming-4k-guide": { href: "/best-iptv-service", label: "Bester IPTV Anbieter" },
-  "iptv-troubleshooting-guide": { href: "/iptv-providers", label: "IPTV Anbieter" },
-  "iptv-vs-cable-tv": { href: "/iptv-service", label: "IPTV Service" },
-  "iptv-fire-tv-stick-setup-guide": { href: "/iptv-fire-tv-stick", label: "IPTV Fire TV Stick" },
-  "best-iptv-providers-2026": { href: "/iptv-providers", label: "IPTV Anbieter" },
-  "how-to-buy-iptv": { href: "/iptv-providers", label: "IPTV Anbieter" },
-  "iptv-channels-guide": { href: "/iptv-service", label: "IPTV Service" },
+  "iptv-player-vergleich": { href: "/iptv-android-tv", label: "IPTV Android TV" },
 };
 
 export function generateStaticParams() {
@@ -79,7 +64,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       type: "article",
       locale: "de_DE",
-      siteName: "Sub Zero IPTV",
+      siteName: "IPTV TV",
       url: `/blog/${post.slug}`,
       title: post.seoTitle,
       description: post.metaDescription,
@@ -125,12 +110,12 @@ export default async function BlogPostPage({ params }: PageProps) {
     articleSection: post.category,
     author: {
       "@type": "Organization",
-      name: "Sub Zero IPTV",
+      name: "IPTV TV",
       url: SITE_URL,
     },
     publisher: {
       "@type": "Organization",
-      name: "Sub Zero IPTV",
+      name: "IPTV TV",
       url: SITE_URL,
       logo: {
         "@type": "ImageObject",

@@ -8,24 +8,24 @@ import { blogPosts } from "@/lib/blog-posts";
 export const metadata: Metadata = {
   title: "IPTV Ratgeber & Anleitungen – Blog",
   description:
-    "Einrichtungsanleitungen, Geräte-Vergleiche und Antworten auf die häufigsten IPTV Fragen — verständlich erklärt von Sub Zero IPTV.",
+    "Einrichtungsanleitungen, Geräte-Vergleiche und Antworten auf die häufigsten IPTV Fragen — verständlich erklärt von IPTV TV.",
   alternates: {
     canonical: "/blog",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "Sub Zero IPTV",
+    siteName: "IPTV TV",
     url: "/blog",
-    title: "Blog | Sub Zero IPTV",
-    description: "Aktuelle Artikel rund um IPTV Streaming — verständlich erklärt von Sub Zero IPTV.",
-    images: [{ url: "https://sub-zeroiptv.xyz/opengraph-image", width: 1200, height: 630 }],
+    title: "Blog | IPTV TV",
+    description: "Aktuelle Artikel rund um IPTV Streaming — verständlich erklärt von IPTV TV.",
+    images: [{ url: "https://iptv-tv.shop/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://sub-zeroiptv.xyz/opengraph-image"],
-    title: "Blog | Sub Zero IPTV",
-    description: "Aktuelle Artikel rund um IPTV Streaming — verständlich erklärt von Sub Zero IPTV.",
+    images: ["https://iptv-tv.shop/opengraph-image"],
+    title: "Blog | IPTV TV",
+    description: "Aktuelle Artikel rund um IPTV Streaming — verständlich erklärt von IPTV TV.",
   },
 };
 

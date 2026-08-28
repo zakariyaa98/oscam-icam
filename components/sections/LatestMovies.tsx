@@ -40,7 +40,7 @@ export function LatestMovies() {
             >
               <Image
                 src={movie.src}
-                alt={`${movie.title} streamen mit Sub Zero IPTV`}
+                alt={`${movie.title} streamen mit IPTV TV`}
                 width={200}
                 height={300}
                 sizes="200px"

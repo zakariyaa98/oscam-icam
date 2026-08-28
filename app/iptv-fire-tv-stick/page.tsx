@@ -9,25 +9,25 @@ import { ContactCTA } from "@/components/sections/ContactCTA";
 export const metadata: Metadata = {
   title: "IPTV auf dem Fire TV Stick: startklar in Minuten",
   description:
-    "Der Fire TV Stick gehört zu den beliebtesten IPTV Geräten. So läuft Sub Zero IPTV darauf — von der App-Wahl bis zum ersten Sender.",
-  keywords: ["IPTV Fire TV Stick", "IPTV Deutschland", "IPTV Abonnement"],
+    "Der Fire TV Stick gehört zu den beliebtesten IPTV Geräten. So läuft IPTV TV darauf — von der App-Wahl bis zum ersten Sender.",
+  keywords: ["IPTV Fire TV Stick", "IPTV auf Fire TV", "IPTV Deutschland", "IPTV Abonnement"],
   alternates: {
     canonical: "/iptv-fire-tv-stick",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "Sub Zero IPTV",
+    siteName: "IPTV TV",
     url: "/iptv-fire-tv-stick",
     title: "IPTV auf dem Fire TV Stick: startklar in Minuten",
-    description: "Wie Sub Zero IPTV auf dem Amazon Fire TV Stick läuft — vom Auspacken bis zum ersten Sender.",
-    images: [{ url: "https://sub-zeroiptv.xyz/images/fire-tv-stick.png" }],
+    description: "Wie IPTV TV auf dem Amazon Fire TV Stick läuft — vom Auspacken bis zum ersten Sender.",
+    images: [{ url: "https://iptv-tv.shop/images/fire-tv-stick.png" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://sub-zeroiptv.xyz/images/fire-tv-stick.png"],
+    images: ["https://iptv-tv.shop/images/fire-tv-stick.png"],
     title: "IPTV auf dem Fire TV Stick: startklar in Minuten",
-    description: "Wie Sub Zero IPTV auf dem Amazon Fire TV Stick läuft — vom Auspacken bis zum ersten Sender.",
+    description: "Wie IPTV TV auf dem Amazon Fire TV Stick läuft — vom Auspacken bis zum ersten Sender.",
   },
 };
 
@@ -110,11 +110,11 @@ export default function IptvFireTvStickPage() {
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">So geht die Einrichtung</h2>
               <p className="text-base leading-relaxed text-muted">
-                App über den integrierten Store oder eine Downloader-App installieren, Sub Zero
-                IPTV Zugangsdaten oder Playlist-URL eingeben — fertig. Die vollständige Anleitung
-                mit App-Vergleich finden Sie in unserem Artikel{" "}
-                <Link href="/blog/iptv-fire-tv-stick-setup-guide" className="text-aqua underline underline-offset-4">
-                  IPTV auf dem Fire TV Stick installieren
+                App über den integrierten Store oder eine Downloader-App installieren, IPTV
+                TV Zugangsdaten oder Playlist-URL eingeben — fertig. Einen Vergleich gängiger
+                Player-Apps finden Sie in unserem Artikel{" "}
+                <Link href="/blog/iptv-player-vergleich" className="text-aqua underline underline-offset-4">
+                  IPTV Player im Vergleich
                 </Link>
                 .
               </p>
@@ -124,18 +124,14 @@ export default function IptvFireTvStickPage() {
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">Welches Modell passt zu Ihnen?</h2>
               <p className="text-base leading-relaxed text-muted">
                 Für Full-HD-Sender reicht der Standard-Stick meist aus. Für 4K empfehlen wir den
-                Fire TV Stick 4K oder 4K Max. Einen Vergleich mit weiteren Geräten finden Sie in{" "}
-                <Link href="/blog/best-iptv-devices-2026" className="text-aqua underline underline-offset-4">
-                  Die besten Geräte für IPTV
-                </Link>
-                .
+                Fire TV Stick 4K oder 4K Max.
               </p>
             </section>
 
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">Nicht das richtige Gerät?</h2>
               <p className="text-base leading-relaxed text-muted">
-                Sub Zero IPTV funktioniert genauso gut auf{" "}
+                IPTV TV funktioniert genauso gut auf{" "}
                 <Link href="/iptv-smart-tv" className="text-aqua underline underline-offset-4">
                   Samsung- und LG-Smart-TVs
                 </Link>{" "}

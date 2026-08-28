@@ -7,26 +7,26 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
 export const metadata: Metadata = {
-  title: "IPTV Anbieter Deutschland: Seriös von unseriös unterscheiden",
+  title: "IPTV Anbieter: Seriös von unseriös unterscheiden",
   description:
-    "Warnzeichen und Vertrauenssignale bei der Wahl eines IPTV Anbieters in Deutschland — mit Checkliste für Ihre Entscheidung.",
-  keywords: ["IPTV Anbieter Deutschland", "IPTV Deutschland", "IPTV Vergleich", "IPTV Bewertungen"],
+    "IPTV Anbieter in Deutschland vergleichen: Warnzeichen und Vertrauenssignale bei der Anbieterwahl — mit Checkliste für Ihre Entscheidung.",
+  keywords: ["IPTV Anbieter", "IPTV Anbieter Deutschland", "IPTV TV Anbieter", "IPTV Service"],
   alternates: {
     canonical: "/iptv-providers",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "Sub Zero IPTV",
+    siteName: "IPTV TV",
     url: "/iptv-providers",
-    title: "IPTV Anbieter Deutschland: Seriös von unseriös unterscheiden",
+    title: "IPTV Anbieter: Seriös von unseriös unterscheiden",
     description: "Warnzeichen und Vertrauenssignale bei der Anbieterwahl — mit Checkliste.",
-    images: [{ url: "https://sub-zeroiptv.xyz/images/streaming-app.png" }],
+    images: [{ url: "https://iptv-tv.shop/images/streaming-app.png" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://sub-zeroiptv.xyz/images/streaming-app.png"],
-    title: "IPTV Anbieter Deutschland: Seriös von unseriös unterscheiden",
+    images: ["https://iptv-tv.shop/images/streaming-app.png"],
+    title: "IPTV Anbieter: Seriös von unseriös unterscheiden",
     description: "Warnzeichen und Vertrauenssignale bei der Anbieterwahl — mit Checkliste.",
   },
 };
@@ -141,7 +141,7 @@ export default function IptvProvidersPage() {
                 ))}
               </ul>
               <p className="text-base leading-relaxed text-muted">
-                Genau nach diesen Grundsätzen ist Sub Zero IPTV aufgebaut: transparente{" "}
+                Genau nach diesen Grundsätzen ist IPTV TV aufgebaut: transparente{" "}
                 <Link href="/plans" className="text-aqua underline underline-offset-4">
                   Abonnements
                 </Link>{" "}
@@ -164,13 +164,9 @@ export default function IptvProvidersPage() {
                 ))}
               </ul>
               <p className="text-sm leading-relaxed text-muted">
-                Weitere Kriterien im Detail finden Sie unter{" "}
+                Weitere Qualitätskriterien im Detail finden Sie unter{" "}
                 <Link href="/best-iptv-service" className="text-aqua underline underline-offset-4">
                   Bester IPTV Anbieter
-                </Link>
-                , und einen direkten Vergleich in unserem Artikel{" "}
-                <Link href="/blog/best-iptv-providers-2026" className="text-aqua underline underline-offset-4">
-                  Beste IPTV Anbieter 2026
                 </Link>
                 .
               </p>

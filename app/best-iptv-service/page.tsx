@@ -9,23 +9,23 @@ import { ContactCTA } from "@/components/sections/ContactCTA";
 export const metadata: Metadata = {
   title: "Bester IPTV Anbieter: 6 Kriterien, die wirklich zählen",
   description:
-    "Was unterscheidet den besten IPTV Anbieter von einem mittelmäßigen? Sechs konkrete Qualitätskriterien statt leerer Marketingversprechen.",
-  keywords: ["beste IPTV Anbieter", "IPTV Premium", "IPTV 4K", "IPTV Deutschland"],
+    "Was unterscheidet einen guten IPTV Anbieter von einem mittelmäßigen? Sechs konkrete Qualitätskriterien statt leerer Marketingversprechen.",
+  keywords: ["bester IPTV Anbieter", "IPTV Premium", "IPTV 4K", "IPTV Streaming"],
   alternates: {
     canonical: "/best-iptv-service",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "Sub Zero IPTV",
+    siteName: "IPTV TV",
     url: "/best-iptv-service",
     title: "Bester IPTV Anbieter: 6 Kriterien, die wirklich zählen",
     description: "Sechs konkrete Qualitätskriterien, an denen sich ein guter IPTV Anbieter erkennen lässt.",
-    images: [{ url: "https://sub-zeroiptv.xyz/images/streaming-tipps.png" }],
+    images: [{ url: "https://iptv-tv.shop/images/streaming-tipps.png" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://sub-zeroiptv.xyz/images/streaming-tipps.png"],
+    images: ["https://iptv-tv.shop/images/streaming-tipps.png"],
     title: "Bester IPTV Anbieter: 6 Kriterien, die wirklich zählen",
     description: "Sechs konkrete Qualitätskriterien, an denen sich ein guter IPTV Anbieter erkennen lässt.",
   },
@@ -142,10 +142,10 @@ export default function BestIptvServicePage() {
               <p className="text-base leading-relaxed text-muted">
                 Ein strukturierter Vergleich zahlt sich immer mehr aus als eine Entscheidung nach
                 dem Preis allein. Prüfen Sie Serverstabilität, Senderauswahl,
-                Gerätekompatibilität und Support-Reaktionszeit gemeinsam. Eine ausführliche
-                Checkliste finden Sie in unserem Artikel{" "}
-                <Link href="/blog/best-iptv-providers-2026" className="text-aqua underline underline-offset-4">
-                  Beste IPTV Anbieter 2026
+                Gerätekompatibilität und Support-Reaktionszeit gemeinsam — eine ausführliche
+                Checkliste dazu finden Sie auf unserer Seite{" "}
+                <Link href="/iptv-providers" className="text-aqua underline underline-offset-4">
+                  IPTV Anbieter
                 </Link>
                 .
               </p>
@@ -153,7 +153,7 @@ export default function BestIptvServicePage() {
 
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                Sub Zero IPTV im Alltag
+                IPTV TV im Alltag
               </h2>
               <p className="text-base leading-relaxed text-muted">
                 Vergleichen Sie unsere{" "}

@@ -31,7 +31,7 @@ export function LiveSports() {
             >
               <Image
                 src={sport.image}
-                alt={`${sport.title} live in Full HD und 4K mit Sub Zero IPTV`}
+                alt={`${sport.title} live in Full HD und 4K mit IPTV TV`}
                 fill
                 loading="lazy"
                 decoding="async"

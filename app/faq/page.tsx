@@ -6,25 +6,25 @@ import { ContactCTA } from "@/components/sections/ContactCTA";
 import { faqCategories } from "@/lib/faq-data";
 
 export const metadata: Metadata = {
-  title: "Häufige Fragen zu IPTV | Sub Zero IPTV",
+  title: "Häufige Fragen zu IPTV | IPTV TV",
   description:
-    "Wie funktioniert IPTV, welche Geräte werden unterstützt und wie läuft der Test ab? Antworten auf die wichtigsten Fragen zu Sub Zero IPTV.",
+    "Wie funktioniert IPTV, welche Geräte werden unterstützt und wie läuft der Test ab? Antworten auf die wichtigsten Fragen zu IPTV TV.",
   alternates: {
     canonical: "/faq",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "Sub Zero IPTV",
+    siteName: "IPTV TV",
     url: "/faq",
-    title: "Häufige Fragen zu IPTV | Sub Zero IPTV",
+    title: "Häufige Fragen zu IPTV | IPTV TV",
     description: "Antworten auf die wichtigsten Fragen zu Abo, Geräten, Installation und Support.",
-    images: [{ url: "https://sub-zeroiptv.xyz/opengraph-image", width: 1200, height: 630 }],
+    images: [{ url: "https://iptv-tv.shop/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://sub-zeroiptv.xyz/opengraph-image"],
-    title: "Häufige Fragen zu IPTV | Sub Zero IPTV",
+    images: ["https://iptv-tv.shop/opengraph-image"],
+    title: "Häufige Fragen zu IPTV | IPTV TV",
     description: "Antworten auf die wichtigsten Fragen zu Abo, Geräten, Installation und Support.",
   },
 };

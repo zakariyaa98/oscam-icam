@@ -7,26 +7,26 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
 export const metadata: Metadata = {
-  title: "Was ist IPTV? Der IPTV Service einfach erklärt",
+  title: "IPTV Deutschland: Der IPTV Service einfach erklärt",
   description:
-    "IPTV verständlich erklärt: wie der Service funktioniert, was ihn von Kabel-TV unterscheidet und worauf Sie bei der Anbieterwahl achten sollten.",
-  keywords: ["IPTV Deutschland", "was ist IPTV", "IPTV Abonnement", "IPTV Premium"],
+    "IPTV Deutschland verständlich erklärt: wie der Service funktioniert, was ihn von Kabel-TV unterscheidet und worauf Sie bei der Anbieterwahl achten sollten.",
+  keywords: ["IPTV Deutschland", "IPTV Anbieter Deutschland", "IPTV TV Deutschland", "IPTV Fernsehen", "was ist IPTV"],
   alternates: {
     canonical: "/iptv-service",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "Sub Zero IPTV",
+    siteName: "IPTV TV",
     url: "/iptv-service",
-    title: "Was ist IPTV? Der IPTV Service einfach erklärt",
+    title: "IPTV Deutschland: Der IPTV Service einfach erklärt",
     description: "Wie IPTV funktioniert und worauf es bei der Anbieterwahl ankommt — verständlich erklärt.",
-    images: [{ url: "https://sub-zeroiptv.xyz/images/streaming-technologie.png" }],
+    images: [{ url: "https://iptv-tv.shop/images/streaming-technologie.png" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://sub-zeroiptv.xyz/images/streaming-technologie.png"],
-    title: "Was ist IPTV? Der IPTV Service einfach erklärt",
+    images: ["https://iptv-tv.shop/images/streaming-technologie.png"],
+    title: "IPTV Deutschland: Der IPTV Service einfach erklärt",
     description: "Wie IPTV funktioniert und worauf es bei der Anbieterwahl ankommt — verständlich erklärt.",
   },
 };
@@ -39,7 +39,7 @@ const faqItems = [
   },
   {
     question: "Muss ich mich langfristig binden?",
-    answer: "Nein. Sub Zero IPTV bietet Laufzeiten von 6 Monaten bis 2 Jahren, ohne automatische Verlängerung.",
+    answer: "Nein. IPTV TV bietet Laufzeiten von 6 Monaten bis 2 Jahren, ohne automatische Verlängerung.",
   },
   {
     question: "Wie lange dauert die Aktivierung meines Zugangs?",
@@ -76,8 +76,8 @@ export default function IptvServicePage() {
         <Container className="flex flex-col items-center gap-14">
           <SectionHeading
             as="h1"
-            eyebrow="Grundlagen"
-            title="IPTV in drei Minuten verstanden"
+            eyebrow="IPTV Deutschland"
+            title="IPTV Deutschland: in drei Minuten verstanden"
             description="Kein Techniker-Termin, keine Satellitenschüssel — nur eine App und eine Internetverbindung. Hier ist, was dahintersteckt."
           />
 
@@ -86,19 +86,16 @@ export default function IptvServicePage() {
               <p>
                 IPTV steht für Internet Protocol Television: Statt über Kabel, Satellit oder
                 Antenne läuft das Programm als Datenstrom über Ihre bestehende
-                Internetverbindung — auf Smart TV, Smartphone, Tablet oder PC. Wer ganz auf Kabel
-                verzichten möchte, findet die einzelnen Schritte in unserem Artikel{" "}
-                <Link href="/blog/iptv-vs-cable-tv" className="text-aqua underline underline-offset-4">
-                  IPTV vs. Kabel-TV
-                </Link>
-                .
+                Internetverbindung — auf Smart TV, Smartphone, Tablet oder PC. So funktioniert
+                IPTV in Deutschland heute für die meisten Haushalte, ganz ohne zusätzlichen
+                Techniker-Termin.
               </p>
               <p>
-                Sub Zero IPTV bündelt Tausende Sender sowie eine umfangreiche Filmbibliothek in
-                einem Abo, mit stabilen Servern und Support auf Deutsch. Eine ausführliche
-                Einführung finden Sie in unserem{" "}
-                <Link href="/blog/iptv-guide-2026" className="text-aqua underline underline-offset-4">
-                  IPTV Ratgeber 2026
+                IPTV TV bündelt Tausende Sender sowie eine umfangreiche Filmbibliothek in
+                einem Abo, mit stabilen Servern und Support auf Deutsch. Weitere Artikel rund um
+                IPTV finden Sie in unserem{" "}
+                <Link href="/blog" className="text-aqua underline underline-offset-4">
+                  Blog
                 </Link>
                 .
               </p>
@@ -129,7 +126,7 @@ export default function IptvServicePage() {
 
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                Was im Sub Zero IPTV Abo steckt
+                Was im IPTV TV Abo steckt
               </h2>
               <ul className="flex flex-col gap-3 text-base leading-relaxed text-muted">
                 <li>30.000+ Sender in HD, Full HD und 4K</li>
@@ -148,11 +145,8 @@ export default function IptvServicePage() {
                 Klassisches Kabel- oder Satelliten-TV bindet Sie an einen festen Anschluss, oft
                 mit separater Gebühr und begrenzter Senderauswahl. IPTV läuft über Ihre bereits
                 vorhandene Internetverbindung und funktioniert unabhängig von einem einzelnen
-                Gerät. Details zum Umstieg finden Sie in unserem Artikel{" "}
-                <Link href="/blog/iptv-vs-cable-tv" className="text-aqua underline underline-offset-4">
-                  IPTV vs. Kabel-TV
-                </Link>
-                .
+                Gerät — ein Umzug oder Anbieterwechsel bedeutet für den Fernsehempfang praktisch
+                keinen zusätzlichen Aufwand.
               </p>
             </section>
 
@@ -179,7 +173,7 @@ export default function IptvServicePage() {
                 Einrichtung auf Ihrem Gerät
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Sub Zero IPTV läuft auf nahezu jedem internetfähigen Gerät. Anleitungen finden Sie
+                IPTV TV läuft auf nahezu jedem internetfähigen Gerät. Anleitungen finden Sie
                 für den{" "}
                 <Link href="/iptv-fire-tv-stick" className="text-aqua underline underline-offset-4">
                   Fire TV Stick

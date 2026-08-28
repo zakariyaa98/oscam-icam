@@ -23,7 +23,7 @@ export function Devices() {
           <SectionHeading
             align="left"
             title="Ein Zugang, jedes Wohnzimmer"
-            description="Ob Fernseher, Smartphone oder Laptop: Ihr Sub Zero IPTV Zugang funktioniert überall gleich — eine Oberfläche, sofortiger Zugriff, keine zusätzliche Hardware nötig."
+            description="Ob Fernseher, Smartphone oder Laptop: Ihr IPTV TV Zugang funktioniert überall gleich — eine Oberfläche, sofortiger Zugriff, keine zusätzliche Hardware nötig."
           />
 
           <div className="flex flex-wrap gap-2.5">
@@ -46,7 +46,7 @@ export function Devices() {
           <div className="relative overflow-hidden rounded-3xl border border-border shadow-2xl">
             <Image
               src="/images/smart7.jpg"
-              alt="Sub Zero IPTV Streaming-App auf mehreren Geräten"
+              alt="IPTV TV Streaming-App auf mehreren Geräten"
               width={640}
               height={720}
               sizes="(max-width: 1024px) 90vw, 480px"

@@ -13,9 +13,9 @@ export const faqCategories: FaqCategory[] = [
     category: "Einstieg",
     items: [
       {
-        question: "Was ist Sub Zero IPTV?",
+        question: "Was ist IPTV TV?",
         answer:
-          "Sub Zero IPTV ist ein Streaming-Abo, das Live-TV, Sport, Filme und Serien über Ihre Internetverbindung liefert — statt über Kabel oder Satellit. Sie erhalten persönliche Zugangsdaten, die Sie in einer App auf Ihrem Gerät hinterlegen.",
+          "IPTV TV ist ein Streaming-Abo, das Live-TV, Sport, Filme und Serien über Ihre Internetverbindung liefert — statt über Kabel oder Satellit. Sie erhalten persönliche Zugangsdaten, die Sie in einer App auf Ihrem Gerät hinterlegen.",
       },
       {
         question: "Wie funktioniert IPTV grundsätzlich?",

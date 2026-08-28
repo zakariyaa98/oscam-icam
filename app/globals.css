@@ -7,7 +7,7 @@
   --muted: #b3b3b3;
   --border: #2a2a2a;
 
-  /* Brand accent — Sub Zero IPTV blue (#1A9FFF). Variable names kept as "aqua" to
+  /* Brand accent — IPTV TV blue (#1A9FFF). Variable names kept as "aqua" to
      avoid a sitewide class-name rename (bg-aqua/text-aqua/etc. stay valid Tailwind
      utilities); only the color values changed. "-dim" is the same blue tuned dark
      enough to read on white surfaces (pricing cards); "-soft" is a lighter tint

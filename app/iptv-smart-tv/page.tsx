@@ -10,24 +10,24 @@ export const metadata: Metadata = {
   title: "IPTV Samsung & LG Smart TV: Installation ohne Zusatzgerät",
   description:
     "IPTV direkt auf dem Smart TV nutzen, ganz ohne Stick oder Box: Installation auf Samsung- und LG-Fernsehern in wenigen Schritten.",
-  keywords: ["IPTV Smart TV", "IPTV Samsung", "IPTV Deutschland"],
+  keywords: ["IPTV Smart TV", "IPTV auf Smart TV", "IPTV Samsung", "IPTV Deutschland"],
   alternates: {
     canonical: "/iptv-smart-tv",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "Sub Zero IPTV",
+    siteName: "IPTV TV",
     url: "/iptv-smart-tv",
     title: "IPTV Samsung & LG Smart TV: Installation ohne Zusatzgerät",
-    description: "So läuft Sub Zero IPTV direkt auf Ihrem Samsung- oder LG-Fernseher.",
-    images: [{ url: "https://sub-zeroiptv.xyz/images/dashbord.png" }],
+    description: "So läuft IPTV TV direkt auf Ihrem Samsung- oder LG-Fernseher.",
+    images: [{ url: "https://iptv-tv.shop/images/dashbord.png" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://sub-zeroiptv.xyz/images/dashbord.png"],
+    images: ["https://iptv-tv.shop/images/dashbord.png"],
     title: "IPTV Samsung & LG Smart TV: Installation ohne Zusatzgerät",
-    description: "So läuft Sub Zero IPTV direkt auf Ihrem Samsung- oder LG-Fernseher.",
+    description: "So läuft IPTV TV direkt auf Ihrem Samsung- oder LG-Fernseher.",
   },
 };
 
@@ -68,7 +68,7 @@ export default function IptvSmartTvPage() {
             as="h1"
             eyebrow="Smart TV"
             title="IPTV auf Samsung & LG: kein Zusatzgerät nötig"
-            description="Ihr Fernseher bringt schon alles mit, was Sie brauchen. So richten Sie Sub Zero IPTV direkt ein."
+            description="Ihr Fernseher bringt schon alles mit, was Sie brauchen. So richten Sie IPTV TV direkt ein."
           />
 
           <div className="mx-auto flex w-full max-w-3xl flex-col gap-10">
@@ -100,7 +100,7 @@ export default function IptvSmartTvPage() {
               <div className="flex flex-col gap-3 rounded-2xl border border-border bg-background-elevated p-6">
                 <h3 className="text-lg font-semibold text-foreground">Samsung (Tizen)</h3>
                 <p className="text-sm leading-relaxed text-muted">
-                  App direkt aus dem Samsung App Store laden, öffnen, die von Sub Zero IPTV
+                  App direkt aus dem Samsung App Store laden, öffnen, die von IPTV TV
                   bereitgestellten Zugangsdaten eingeben — die Senderliste lädt automatisch.
                 </p>
               </div>
@@ -118,10 +118,10 @@ export default function IptvSmartTvPage() {
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">Für ein stabileres Bild</h2>
               <p className="text-base leading-relaxed text-muted">
                 Eine LAN-Verbindung statt WLAN sowie das Deaktivieren unnötiger
-                Bildverarbeitungsfunktionen verbessern die Stabilität spürbar. Weitere
-                Optimierungstipps finden Sie in unserem Artikel{" "}
-                <Link href="/blog/iptv-smart-tv-guide" className="text-aqua underline underline-offset-4">
-                  IPTV auf dem Smart TV nutzen
+                Bildverarbeitungsfunktionen verbessern die Stabilität spürbar. Welche App-Wahl
+                sich für Ihr Gerät eignet, lesen Sie in unserem Artikel{" "}
+                <Link href="/blog/iptv-player-vergleich" className="text-aqua underline underline-offset-4">
+                  IPTV Player im Vergleich
                 </Link>
                 .
               </p>
@@ -142,7 +142,7 @@ export default function IptvSmartTvPage() {
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">Kein Smart TV zur Hand?</h2>
               <p className="text-base leading-relaxed text-muted">
-                Sub Zero IPTV läuft genauso zuverlässig auf einem{" "}
+                IPTV TV läuft genauso zuverlässig auf einem{" "}
                 <Link href="/iptv-fire-tv-stick" className="text-aqua underline underline-offset-4">
                   Fire TV Stick
                 </Link>{" "}

@@ -14,6 +14,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: "/api/",
       },
     ],
-    sitemap: "https://sub-zeroiptv.xyz/sitemap.xml",
+    sitemap: "https://iptv-tv.shop/sitemap.xml",
   };
 }
