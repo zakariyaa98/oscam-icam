@@ -30,6 +30,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <PricingPreview />
 
       <section className="border-b border-border py-16 sm:py-20">
         <Container className="grid gap-10 lg:grid-cols-2">
@@ -67,7 +68,6 @@ export default function Home() {
       </section>
 
       <StreamingCategories />
-      <PricingPreview />
       <Features />
       <WhyChooseUs />
       <LatestMovies />
