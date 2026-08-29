@@ -56,6 +56,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    google: "leQRi6F3XMHopdXHnus_EypwdyFwB2-5lUnS-0xOjc8",
+  },
 };
 
 // Sitewide entity graph, emitted once on every page (not per-route) so Google and
