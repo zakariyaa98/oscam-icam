@@ -155,14 +155,28 @@ body {
   -webkit-mask-image: radial-gradient(ellipse 65% 65% at center, black 0%, transparent 75%);
 }
 
-/* Hero interactive background (components/home/HeroBackground.tsx): solid
-   black base, a canvas particle network (drawn by the component itself), a
-   periodic diagonal light beam, film grain and a vignette. Beam/grain colors
-   use a muted, understated red treatment scoped to this effect rather than
-   the flat --brand-aqua token, kept deliberately subtle to stay premium
-   rather than cyberpunk/neon. */
+/* Hero background (components/home/HeroBackground.tsx): solid black base, a
+   cinematic poster grid built from the project's own existing movie/series/
+   sport images, a dark scrim gradient, a periodic diagonal light beam, film
+   grain and a vignette. Beam/scrim colors use a muted, understated red
+   treatment scoped to this effect rather than the flat --brand-aqua token,
+   kept deliberately subtle to stay premium rather than cyberpunk/neon. */
 .hero-bg-base {
   background: #050505;
+}
+
+/* Darkens the poster grid heavily on the left, where the Hero text sits, and
+   lets it read more clearly toward the right — plus a soft red atmospheric
+   glow positioned off-center for mood, not as a dominant color. */
+.hero-poster-scrim {
+  background: radial-gradient(ellipse 60% 60% at 78% 35%, rgba(227, 6, 19, 0.12), transparent 60%),
+    linear-gradient(
+      100deg,
+      rgba(5, 5, 5, 0.97) 0%,
+      rgba(5, 5, 5, 0.93) 32%,
+      rgba(5, 5, 5, 0.62) 58%,
+      rgba(5, 5, 5, 0.32) 100%
+    );
 }
 
 .hero-beam {

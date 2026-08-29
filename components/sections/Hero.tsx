@@ -15,23 +15,21 @@ export function Hero() {
     <section className="relative overflow-hidden border-b border-border">
       <HeroBackground />
 
-      <Container className="relative z-10 flex flex-col items-center gap-14 py-20 text-center sm:py-28 lg:py-32">
-        <div className="flex w-full flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
-          <div className="flex max-w-2xl flex-col items-center gap-6 lg:items-start lg:text-left">
-            <span className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-aqua/30 bg-aqua/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-aqua">
-              IPTV TV
-            </span>
-            <h1 className="animate-fade-up-delay-1 text-4xl font-bold leading-[1.1] tracking-tight text-foreground drop-shadow-[0_2px_24px_rgba(0,0,0,0.55)] sm:text-5xl lg:text-6xl">
-              IPTV TV — Ihr IPTV Anbieter für <span className="text-aqua">Deutschland</span>
-            </h1>
-            <p className="animate-fade-up-delay-2 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-              Live-TV, Sport, Filme und Serien in HD, Full HD und 4K — gebündelt in einem Abo,
-              eingerichtet in wenigen Minuten und begleitet von einem Support-Team, das wirklich
-              auf Deutsch antwortet.
-            </p>
-          </div>
+      <Container className="relative z-10 flex flex-col items-center gap-14 py-20 text-center sm:py-28 lg:items-start lg:py-32 lg:text-left">
+        <div className="flex max-w-2xl flex-col items-center gap-6 lg:items-start">
+          <span className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-aqua/30 bg-aqua/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-aqua">
+            IPTV TV
+          </span>
+          <h1 className="animate-fade-up-delay-1 text-4xl font-bold leading-[1.1] tracking-tight text-foreground drop-shadow-[0_2px_24px_rgba(0,0,0,0.55)] sm:text-5xl lg:text-6xl">
+            IPTV TV — Ihr IPTV Anbieter für <span className="text-aqua">Deutschland</span>
+          </h1>
+          <p className="animate-fade-up-delay-2 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
+            Live-TV, Sport, Filme und Serien in HD, Full HD und 4K — gebündelt in einem Abo,
+            eingerichtet in wenigen Minuten und begleitet von einem Support-Team, das wirklich
+            auf Deutsch antwortet.
+          </p>
 
-          <div className="animate-fade-up-delay-3 flex shrink-0 flex-col gap-4 sm:flex-row">
+          <div className="animate-fade-up-delay-3 flex flex-col gap-4 pt-2 sm:flex-row">
             <Button href="/plans" variant="primary" className="px-8 py-4 text-base">
               Abonnements ansehen
             </Button>
