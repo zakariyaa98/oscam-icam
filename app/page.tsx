@@ -31,6 +31,14 @@ export default function Home() {
     <>
       <Hero />
       <PricingPreview />
+      <StreamingCategories />
+      <Features />
+      <WhyChooseUs />
+      <LatestMovies />
+      <Devices />
+      <LiveSports />
+      <FAQPreview />
+      <ContactCTA />
 
       <section className="border-b border-border py-16 sm:py-20">
         <Container className="grid gap-10 lg:grid-cols-2">
@@ -66,15 +74,6 @@ export default function Home() {
           </div>
         </Container>
       </section>
-
-      <StreamingCategories />
-      <Features />
-      <WhyChooseUs />
-      <LatestMovies />
-      <Devices />
-      <LiveSports />
-      <FAQPreview />
-      <ContactCTA />
     </>
   );
 }
