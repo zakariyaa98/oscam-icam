@@ -1,14 +1,21 @@
+import Image from "next/image";
+
 type BrandLogoProps = {
   className?: string;
-  textClassName?: string;
 };
 
-// Text-only wordmark — no icon/symbol. "IPTV" in the neutral foreground
-// color, "TV" in the brand blue, per the Black + #1A9FFF identity.
-export function BrandLogo({ className, textClassName = "text-lg" }: BrandLogoProps) {
+// Official brand logo — fixed image asset, do not recreate/redesign/crop.
+// Intrinsic size is 800x200; width/height below preserve that 4:1 ratio
+// while `w-auto` lets the height classes drive responsive scaling.
+export function BrandLogo({ className }: BrandLogoProps) {
   return (
-    <span className={`font-display font-bold tracking-tight ${textClassName} ${className ?? ""}`}>
-      <span className="text-foreground">IPTV</span> <span className="text-aqua">TV</span>
-    </span>
+    <Image
+      src="/IPTV TV -Ihr IPTV Anbieter für Deutschland-800x200.png"
+      alt="IPTV TV – Ihr IPTV Anbieter für Deutschland"
+      width={800}
+      height={200}
+      priority
+      className={`h-8 w-auto sm:h-9 ${className ?? ""}`}
+    />
   );
 }
