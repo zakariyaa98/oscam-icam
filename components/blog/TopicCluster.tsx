@@ -62,7 +62,7 @@ export function TopicCluster({ post, allPosts }: TopicClusterProps) {
       <p className="text-sm leading-relaxed text-muted">
         Dieser Artikel ist Teil unserer Reihe {clusterLabel}. Die vollständige Übersicht finden
         Sie in unserem Hauptleitfaden{" "}
-        <Link href={`/blog/${pillar.slug}`} className="text-aqua underline underline-offset-4 hover:text-aqua-dim">
+        <Link href={`/blog/${pillar.slug}`} className="text-aqua underline underline-offset-4 hover:text-aqua-soft">
           {pillar.title}
         </Link>
         .

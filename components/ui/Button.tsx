@@ -17,22 +17,25 @@ type BaseProps = {
 };
 
 const variantClasses: Record<ButtonVariant, string> = {
-  // Solid brand-blue fill: dark text keeps the strongest contrast against
-  // #1A9FFF (7.5:1 vs. 2.8:1 for white) — see globals.css contrast note.
+  // Solid brand-red fill: white text keeps the strongest contrast against the
+  // deep #E30613 red (black text would be nearly unreadable on a color this dark).
   primary:
-    "bg-aqua text-black hover:bg-aqua-soft shadow-[0_0_0_1px_rgba(26,159,255,0.4)] hover:shadow-[0_0_30px_rgba(26,159,255,0.35)]",
+    "bg-aqua text-white hover:bg-aqua-soft shadow-[0_0_0_1px_rgba(227,6,19,0.4)] hover:shadow-[0_0_30px_rgba(227,6,19,0.35)]",
   secondary:
     "bg-background-elevated text-foreground border border-border hover:border-aqua/60 hover:text-aqua",
+  // Transparent secondary CTA: a neutral gray border by default, brand red only
+  // appears on hover (border + subtle glow) so it reads as secondary, not competing
+  // with the primary red button.
   outline:
-    "bg-transparent text-foreground border border-aqua/50 hover:bg-aqua/10 hover:border-aqua",
+    "bg-transparent text-foreground border border-border hover:bg-aqua/10 hover:border-aqua hover:shadow-[0_0_20px_rgba(227,6,19,0.25)]",
   whatsapp: "bg-[#25D366] text-black hover:brightness-110",
   "whatsapp-white":
     "bg-white text-black hover:bg-white/90 shadow-[0_0_0_1px_rgba(255,255,255,0.35)] hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]",
   telegram: "bg-white text-gray-900 hover:bg-gray-100",
   // Outline treatment for use ON WHITE CARDS: the sitewide "outline" variant defaults to
   // white text (text-foreground), which disappears against a white surface — this variant
-  // uses dark text instead. It also borrows the darker "aqua-dim" brand-blue shade rather
-  // than the bright primary blue, which is too light-toned to read clearly on white.
+  // uses dark text instead. It also borrows the deep "aqua-dim" red shade rather than the
+  // vivid primary red, which is too intense for a border/text treatment on white.
   "outline-dark":
     "bg-transparent text-[#111111] border border-aqua-dim/60 hover:bg-aqua-dim/10 hover:border-aqua-dim hover:text-aqua-dim",
 };

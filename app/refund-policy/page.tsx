@@ -126,7 +126,7 @@ export default function RefundPolicyPage() {
               </h2>
               <ol className="flex flex-col gap-2.5 text-base leading-relaxed text-muted">
                 <li className="flex items-start gap-3">
-                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-aqua text-xs font-bold text-black">
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-aqua text-xs font-bold text-white">
                     1
                   </span>
                   <span>
@@ -146,13 +146,13 @@ export default function RefundPolicyPage() {
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-aqua text-xs font-bold text-black">
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-aqua text-xs font-bold text-white">
                     2
                   </span>
                   <span>Teilen Sie uns Ihre Bestelldaten und den Grund der Rückerstattung mit</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-aqua text-xs font-bold text-black">
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-aqua text-xs font-bold text-white">
                     3
                   </span>
                   <span>
@@ -161,7 +161,7 @@ export default function RefundPolicyPage() {
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-aqua text-xs font-bold text-black">
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-aqua text-xs font-bold text-white">
                     4
                   </span>
                   <span>Ist keine Lösung möglich, bestätigen wir die Rückerstattung und veranlassen sie</span>

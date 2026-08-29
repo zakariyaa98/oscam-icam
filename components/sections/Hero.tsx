@@ -21,8 +21,8 @@ export function Hero() {
             <span className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-aqua/30 bg-aqua/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-aqua">
               IPTV TV
             </span>
-            <h1 className="animate-fade-up-delay-1 text-gradient-aqua text-4xl font-bold leading-[1.1] tracking-tight drop-shadow-[0_2px_24px_rgba(0,0,0,0.55)] sm:text-5xl lg:text-6xl">
-              IPTV TV — Ihr IPTV Anbieter für Deutschland
+            <h1 className="animate-fade-up-delay-1 text-4xl font-bold leading-[1.1] tracking-tight text-foreground drop-shadow-[0_2px_24px_rgba(0,0,0,0.55)] sm:text-5xl lg:text-6xl">
+              IPTV TV — Ihr IPTV Anbieter für <span className="text-aqua">Deutschland</span>
             </h1>
             <p className="animate-fade-up-delay-2 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
               Live-TV, Sport, Filme und Serien in HD, Full HD und 4K — gebündelt in einem Abo,

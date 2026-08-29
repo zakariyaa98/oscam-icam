@@ -86,8 +86,8 @@ export function HeroBackground() {
           const dy = a.y - b.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < MAX_DIST) {
-            const alpha = (1 - dist / MAX_DIST) * 0.35;
-            ctx!.strokeStyle = `rgba(26,159,255,${alpha})`;
+            const alpha = (1 - dist / MAX_DIST) * 0.25;
+            ctx!.strokeStyle = `rgba(227,6,19,${alpha})`;
             ctx!.lineWidth = 0.6;
             ctx!.beginPath();
             ctx!.moveTo(a.x, a.y);
@@ -100,9 +100,9 @@ export function HeroBackground() {
       for (const n of nodes) {
         ctx!.beginPath();
         ctx!.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-        ctx!.fillStyle = "rgba(140,200,255,0.9)";
-        ctx!.shadowColor = "rgba(26,159,255,0.8)";
-        ctx!.shadowBlur = 6;
+        ctx!.fillStyle = "rgba(255,110,110,0.75)";
+        ctx!.shadowColor = "rgba(227,6,19,0.6)";
+        ctx!.shadowBlur = 5;
         ctx!.fill();
       }
       ctx!.shadowBlur = 0;

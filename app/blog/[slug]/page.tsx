@@ -226,7 +226,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                     <li key={section.heading} className="flex flex-col gap-1.5">
                       <a
                         href={`#${slugify(section.heading)}`}
-                        className="text-aqua underline underline-offset-4 hover:text-aqua-dim"
+                        className="text-aqua underline underline-offset-4 hover:text-aqua-soft"
                       >
                         {section.heading}
                       </a>
@@ -249,7 +249,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                   <li>
                     <a
                       href="#faq"
-                      className="text-aqua underline underline-offset-4 hover:text-aqua-dim"
+                      className="text-aqua underline underline-offset-4 hover:text-aqua-soft"
                     >
                       Häufig gestellte Fragen (FAQ)
                     </a>
@@ -394,7 +394,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                         href={source.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-aqua underline underline-offset-4 hover:text-aqua-dim"
+                        className="text-aqua underline underline-offset-4 hover:text-aqua-soft"
                       >
                         {source.label}
                       </a>

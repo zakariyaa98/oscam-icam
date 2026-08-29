@@ -65,9 +65,9 @@ export function WhyChooseUs() {
                 <span aria-hidden className="absolute -inset-1.5 rounded-full border border-aqua/15" />
                 <span
                   aria-hidden
-                  className="absolute inset-0 rounded-full border border-aqua/60 shadow-[0_0_18px_rgba(26,159,255,0.5),inset_0_0_12px_rgba(26,159,255,0.25)]"
+                  className="absolute inset-0 rounded-full border border-aqua/60 shadow-[0_0_18px_rgba(227,6,19,0.5),inset_0_0_12px_rgba(227,6,19,0.25)]"
                 />
-                <span className="relative text-base font-bold text-aqua drop-shadow-[0_0_6px_rgba(26,159,255,0.65)]">
+                <span className="relative text-base font-bold text-aqua drop-shadow-[0_0_6px_rgba(227,6,19,0.65)]">
                   {index + 1}
                 </span>
               </span>

@@ -113,7 +113,7 @@ export function StreamingCategories() {
 
               <div className="marquee-fade w-full overflow-hidden">
                 <div
-                  className={`marquee-track animate-${strip.direction} flex w-max gap-3 rounded-2xl border border-aqua/15 bg-background-elevated/40 p-3 shadow-[0_0_30px_rgba(26,159,255,0.06)] sm:gap-4 sm:p-4`}
+                  className={`marquee-track animate-${strip.direction} flex w-max gap-3 rounded-2xl border border-aqua/15 bg-background-elevated/40 p-3 shadow-[0_0_30px_rgba(227,6,19,0.06)] sm:gap-4 sm:p-4`}
                 >
                   {trackItems.map((item, itemIndex) => (
                     <div

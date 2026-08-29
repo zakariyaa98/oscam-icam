@@ -31,7 +31,7 @@ export function FormattedText({ text }: { text: string }) {
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-aqua underline underline-offset-4 hover:text-aqua-dim"
+          className="text-aqua underline underline-offset-4 hover:text-aqua-soft"
         >
           {label}
         </a>
@@ -39,7 +39,7 @@ export function FormattedText({ text }: { text: string }) {
         <Link
           key={`link-${key++}`}
           href={href}
-          className="text-aqua underline underline-offset-4 hover:text-aqua-dim"
+          className="text-aqua underline underline-offset-4 hover:text-aqua-soft"
         >
           {label}
         </Link>

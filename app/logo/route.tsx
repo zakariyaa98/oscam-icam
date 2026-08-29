@@ -25,8 +25,8 @@ export async function GET() {
         }}
       >
         <svg width="320" height="320" viewBox="0 0 48 48" fill="none">
-          <circle cx="24" cy="24" r="15" stroke="#1A9FFF" strokeWidth="2" opacity="0.9" />
-          <path d="M20 17.5 30.5 24 20 30.5V17.5Z" fill="#1A9FFF" />
+          <circle cx="24" cy="24" r="15" stroke="#E30613" strokeWidth="2" opacity="0.9" />
+          <path d="M20 17.5 30.5 24 20 30.5V17.5Z" fill="#E30613" />
         </svg>
       </div>
     ),

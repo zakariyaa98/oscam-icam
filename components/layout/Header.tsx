@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { BrandLogo } from "@/components/logo/BrandLogo";
 import { Button } from "@/components/ui/Button";
@@ -15,6 +16,7 @@ const navLinks = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-lg">
@@ -24,15 +26,27 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Hauptnavigation">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-muted transition-colors hover:text-aqua"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                aria-current={isActive ? "page" : undefined}
+                className={`relative pb-1 text-sm font-medium transition-colors hover:text-aqua ${
+                  isActive ? "text-foreground" : "text-muted"
+                }`}
+              >
+                {link.label}
+                {isActive ? (
+                  <span
+                    aria-hidden
+                    className="absolute -bottom-0.5 left-0 h-0.5 w-full rounded-full bg-aqua"
+                  />
+                ) : null}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="hidden lg:block">
@@ -63,16 +77,22 @@ export function Header() {
           aria-label="Mobile Navigation"
           className="flex flex-col gap-1 border-t border-border bg-background px-5 py-4 lg:hidden"
         >
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="rounded-lg px-3 py-3 text-sm font-medium text-muted transition-colors hover:bg-background-elevated hover:text-aqua"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                aria-current={isActive ? "page" : undefined}
+                className={`rounded-lg border-l-2 px-3 py-3 text-sm font-medium transition-colors hover:bg-background-elevated hover:text-aqua ${
+                  isActive ? "border-aqua text-foreground" : "border-transparent text-muted"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
           <Button href="/plans" variant="primary" className="mt-2 w-full">
             Jetzt starten
           </Button>

@@ -1,20 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #141414;
-  --background-elevated: #1f1f1f;
+  --background: #050505;
+  --background-elevated: #121212;
   --foreground: #ffffff;
   --muted: #b3b3b3;
-  --border: #2a2a2a;
+  --border: #262626;
 
-  /* Brand accent — IPTV TV blue (#1A9FFF). Variable names kept as "aqua" to
+  /* Brand accent — IPTV TV red (#E30613). Variable names kept as "aqua" to
      avoid a sitewide class-name rename (bg-aqua/text-aqua/etc. stay valid Tailwind
-     utilities); only the color values changed. "-dim" is the same blue tuned dark
-     enough to read on white surfaces (pricing cards); "-soft" is a lighter tint
-     used for hover states. */
-  --brand-aqua: #1A9FFF;
-  --brand-aqua-dim: #0B5FB8;
-  --brand-aqua-soft: #5CBBFF;
+     utilities); only the color values changed. "-soft" is the brighter red used
+     for hover states (buttons and links alike — hover always brightens, never
+     dims, so it stays legible against the near-black background). "-dim" is a
+     deep, muted red reserved for surfaces that need a quieter accent (decorative
+     gradients, accents on white/light surfaces) rather than the vivid primary. */
+  --brand-aqua: #E30613;
+  --brand-aqua-dim: #8C0F1D;
+  --brand-aqua-soft: #FF1A2D;
   --brand-black: #000000;
 }
 
@@ -46,11 +48,11 @@ body {
 
 ::selection {
   background: var(--brand-aqua);
-  color: #000000;
+  color: #ffffff;
 }
 
 .text-gradient-aqua {
-  background: linear-gradient(90deg, #5CBBFF 0%, #1A9FFF 55%, #0B5FB8 100%);
+  background: linear-gradient(90deg, #FF1A2D 0%, #E30613 55%, #8C0F1D 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -59,10 +61,10 @@ body {
 .bg-noise {
   background-image: radial-gradient(
       circle at 20% 20%,
-      rgba(26, 159, 255, 0.1),
+      rgba(227, 6, 19, 0.08),
       transparent 40%
     ),
-    radial-gradient(circle at 80% 0%, rgba(26, 159, 255, 0.07), transparent 45%);
+    radial-gradient(circle at 80% 0%, rgba(227, 6, 19, 0.06), transparent 45%);
 }
 
 .glass-panel {
@@ -104,10 +106,10 @@ body {
 @keyframes pulse-glow {
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgba(26, 159, 255, 0.35);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.35);
   }
   50% {
-    box-shadow: 0 0 0 12px rgba(26, 159, 255, 0);
+    box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
   }
 }
 
@@ -156,10 +158,11 @@ body {
 /* Hero interactive background (components/home/HeroBackground.tsx): solid
    black base, a canvas particle network (drawn by the component itself), a
    periodic diagonal light beam, film grain and a vignette. Beam/grain colors
-   use a richer, darker one-off blue treatment scoped to this effect rather
-   than the flat --brand-aqua token, to keep the hero cinematic. */
+   use a muted, understated red treatment scoped to this effect rather than
+   the flat --brand-aqua token, kept deliberately subtle to stay premium
+   rather than cyberpunk/neon. */
 .hero-bg-base {
-  background: #02050a;
+  background: #050505;
 }
 
 .hero-beam {
@@ -171,9 +174,9 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(120, 190, 255, 0.1),
-    rgba(120, 190, 255, 0.22),
-    rgba(120, 190, 255, 0.1),
+    rgba(227, 6, 19, 0.06),
+    rgba(227, 6, 19, 0.12),
+    rgba(227, 6, 19, 0.06),
     transparent
   );
   transform: rotate(18deg);
