@@ -8,32 +8,76 @@ type StripItem = { src: string; alt: string };
 // Every path below points at a real file inside the four asset folders you
 // provided (spaces URL-encoded as %20) — nothing invented, nothing outside
 // those folders. Folder name is "serian pictures" on disk (not "serien").
-const filmeItems: StripItem[] = Array.from({ length: 10 }, (_, i) => ({
-  src: `/images/filme%20pictures/Filme${i + 1}.jpg`,
-  alt: `Filmposter ${i + 1}`,
-}));
+// ALT text below was written after visually inspecting every file, so each
+// one names what's actually on the poster/logo rather than a generic
+// "Filmposter N" placeholder.
+const filmeItems: StripItem[] = [
+  { src: "/images/filme%20pictures/Filme1.jpg", alt: "The Dark Knight Filmplakat mit brennendem Fledermaus-Symbol" },
+  { src: "/images/filme%20pictures/Filme2.jpg", alt: "John Wick Kapitel 4 Filmposter mit Keanu Reeves" },
+  { src: "/images/filme%20pictures/Filme3.jpg", alt: "Avengers Filmposter mit mehreren Marvel-Superhelden" },
+  { src: "/images/filme%20pictures/Filme4.jpg", alt: "Interstellar Filmplakat mit Astronaut im Schnee" },
+  { src: "/images/filme%20pictures/Filme5.jpg", alt: "Inception Filmposter mit Leonardo DiCaprio und Ensemble" },
+  { src: "/images/filme%20pictures/Filme6.jpg", alt: "Joker Filmplakat mit Clown-Maske in Nahaufnahme" },
+  { src: "/images/filme%20pictures/Filme7.jpg", alt: "Fast X Filmposter mit dem Fast-and-Furious-Cast" },
+  { src: "/images/filme%20pictures/Filme8.jpg", alt: "Fantasy-Filmplakat mit Elfen und goldenem Ring-Emblem" },
+  { src: "/images/filme%20pictures/Filme9.jpg", alt: "Venom Filmposter mit der Marvel-Antiheldenfigur" },
+  { src: "/images/filme%20pictures/Filme10.jpg", alt: "Spider-Man Filmplakat beim Sprung über die Stadt" },
+];
 
 // File #5 in this folder is actually named "Serirn5.jpg" (typo in the source
 // asset) rather than "Serien5.jpg" — kept exactly as-is since that's the real
 // filename on disk.
-const serienItems: StripItem[] = [1, 2, 3, 4, 6, 7, 8, 9, 10].map((n) => ({
-  src: `/images/serian%20pictures/Serien${n}.jpg`,
-  alt: `Serienposter ${n}`,
-}));
-serienItems.splice(4, 0, { src: "/images/serian%20pictures/Serirn5.jpg", alt: "Serienposter 5" });
+const serienItems: StripItem[] = [
+  { src: "/images/serian%20pictures/Serien1.jpg", alt: "The Walking Dead Serienplakat mit Reiter auf verlassener Straße" },
+  { src: "/images/serian%20pictures/Serien2.jpg", alt: "Stranger Things Serienposter mit vier Freunden auf Fahrrädern" },
+  { src: "/images/serian%20pictures/Serien3.jpg", alt: "The Last of Us Serienplakat mit den beiden Hauptfiguren" },
+  { src: "/images/serian%20pictures/Serien4.jpg", alt: "Lucifer Serienposter mit Hauptfigur auf brennendem Thron" },
+  { src: "/images/serian%20pictures/Serirn5.jpg", alt: "Game of Thrones Serienplakat mit dem Eisernen Thron" },
+  { src: "/images/serian%20pictures/Serien6.jpg", alt: "Lost Serienposter mit der Besetzung am Strand" },
+  { src: "/images/serian%20pictures/Serien7.jpg", alt: "House of the Dragon Serienplakat mit zwei Königinnen" },
+  { src: "/images/serian%20pictures/Serien8.jpg", alt: "Peaky Blinders Serienposter mit Silhouette in Schiebermütze" },
+  { src: "/images/serian%20pictures/Serien9.jpg", alt: "La Casa de Papel Serienplakat mit roten Overalls und Masken" },
+  { src: "/images/serian%20pictures/Serien10.jpg", alt: "Vikings Serienposter mit Nahaufnahme von Auge und Schwert" },
+];
 
-const kinderItems: StripItem[] = Array.from({ length: 10 }, (_, i) => ({
-  src: `/images/kinder%20pictures/Kinder${i + 1}.jpg`,
-  alt: `Kinderprogramm ${i + 1}`,
-}));
+const kinderItems: StripItem[] = [
+  { src: "/images/kinder%20pictures/Kinder1.jpg", alt: "Frozen II Filmplakat mit Elsa, Anna und Olaf" },
+  { src: "/images/kinder%20pictures/Kinder2.jpg", alt: "The Smurfs Filmposter mit der blauen Schlumpf-Familie" },
+  { src: "/images/kinder%20pictures/Kinder3.jpg", alt: "The Boss Baby Filmplakat mit Baby im Anzug" },
+  { src: "/images/kinder%20pictures/Kinder4.jpg", alt: "The Good Dinosaur Filmposter mit Junge auf Dinosaurier" },
+  { src: "/images/kinder%20pictures/Kinder5.jpg", alt: "Trolls Band Together Filmplakat mit bunten Trollfiguren" },
+  { src: "/images/kinder%20pictures/Kinder6.jpg", alt: "Toy Story 2 Filmposter mit Buzz, Woody und Jessie" },
+  { src: "/images/kinder%20pictures/Kinder7.jpg", alt: "Cars Filmplakat mit Rennwagen Lightning McQueen" },
+  { src: "/images/kinder%20pictures/Kinder8.jpg", alt: "Tangled Filmposter mit Laternen am Nachthimmel" },
+  { src: "/images/kinder%20pictures/Kinder9.jpg", alt: "Minions Filmplakat mit drei gelben Comicfiguren" },
+  { src: "/images/kinder%20pictures/Kinder10.jpg", alt: "SpongeBob Schwammkopf Serienposter mit SpongeBob und Patrick" },
+];
 
 // This folder's numbering has a gap — #17 doesn't exist on disk — so it's
-// simply skipped rather than guessed at.
-const sportNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 19, 20, 21];
-const sportItems: StripItem[] = sportNumbers.map((n) => ({
-  src: `/images/sport%20picture/Sport${n}.jpg`,
-  alt: `Sportbild ${n}`,
-}));
+// simply skipped rather than guessed at. Every file here is an official
+// league/competition logo (not an action photo) — described as such below.
+const sportItems: StripItem[] = [
+  { src: "/images/sport%20picture/Sport1.jpg", alt: "Logo der spanischen Fußballliga LaLiga" },
+  { src: "/images/sport%20picture/Sport2.jpg", alt: "Logo der französischen Fußballliga Ligue 1" },
+  { src: "/images/sport%20picture/Sport3.jpg", alt: "Logo der UEFA Euro Fußball-Europameisterschaft" },
+  { src: "/images/sport%20picture/Sport4.jpg", alt: "Logo der UEFA Nations League" },
+  { src: "/images/sport%20picture/Sport5.jpg", alt: "Logo der UEFA Europa League" },
+  { src: "/images/sport%20picture/Sport6.jpg", alt: "Logo der UEFA Champions League" },
+  { src: "/images/sport%20picture/Sport7.jpg", alt: "Logo der italienischen Fußballliga Serie A" },
+  { src: "/images/sport%20picture/Sport8.jpg", alt: "Logo der deutschen Fußball-Bundesliga" },
+  { src: "/images/sport%20picture/Sport9.jpg", alt: "Logo des FIFA World Cup" },
+  { src: "/images/sport%20picture/Sport10.jpg", alt: "Logo des FIFA Club World Cup" },
+  { src: "/images/sport%20picture/Sport11.jpg", alt: "Logo der englischen Premier League" },
+  { src: "/images/sport%20picture/Sport12.jpg", alt: "Logo des Africa Cup of Nations der CAF" },
+  { src: "/images/sport%20picture/Sport13.jpg", alt: "Logo der portugiesischen Liga Portugal" },
+  { src: "/images/sport%20picture/Sport14.jpg", alt: "Logo der niederländischen Eredivisie" },
+  { src: "/images/sport%20picture/Sport15.jpg", alt: "Logo der Basketball-Liga NBA" },
+  { src: "/images/sport%20picture/Sport16.jpg", alt: "Logo der Kampfsportorganisation UFC" },
+  { src: "/images/sport%20picture/Sport18.jpg", alt: "Logo der Kampfsportliga ONE Championship" },
+  { src: "/images/sport%20picture/Sport19.jpg", alt: "Logo der Formel 1" },
+  { src: "/images/sport%20picture/Sport20.jpg", alt: "Olympische Ringe als Symbol der Olympischen Spiele" },
+  { src: "/images/sport%20picture/Sport21.jpg", alt: "Logo der Tennisturniere von Wimbledon" },
+];
 
 // Cycles a list until it comfortably exceeds one screen width, so the
 // "render the sequence twice, scroll one copy's width" loop below never

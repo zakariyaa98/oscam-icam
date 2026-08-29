@@ -46,7 +46,7 @@ export function Devices() {
           <div className="relative overflow-hidden rounded-3xl border border-border shadow-2xl">
             <Image
               src="/images/smart7.jpg"
-              alt="IPTV TV Streaming-App auf mehreren Geräten"
+              alt="IPTV TV Streaming-Oberfläche auf einem Smart TV im Wohnzimmer"
               width={640}
               height={720}
               sizes="(max-width: 1024px) 90vw, 480px"
