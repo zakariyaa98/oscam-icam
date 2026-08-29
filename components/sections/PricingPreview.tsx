@@ -1,10 +1,13 @@
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Button } from "@/components/ui/Button";
-import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { FeaturedPlanCard } from "@/components/plans/FeaturedPlanCard";
-import { featuredPlans } from "@/lib/plans";
+import { PricingTabs } from "@/components/plans/PricingTabs";
 
+// Reuses the exact same duration-tab + pricing-card system already built for
+// /plans (components/plans/PricingTabs + PricingCard, backed by
+// lib/plans.ts) — same data, same prices, same features, same WhatsApp
+// purchase links. Nothing pricing-related is duplicated; only the Home
+// section's presentation changed from a static 3-plan preview to the full
+// premium tabbed comparison.
 export function PricingPreview() {
   return (
     <section className="border-b border-border py-20 sm:py-28">
@@ -15,17 +18,7 @@ export function PricingPreview() {
           description="Kurz reinschnuppern oder langfristig sparen — Sie entscheiden, wie lange Sie sich binden möchten."
         />
 
-        <div className="grid w-full items-start gap-8 pt-4 lg:grid-cols-3">
-          {featuredPlans.map((plan, index) => (
-            <ScrollReveal key={plan.id} delay={((index % 3) + 1) as 1 | 2 | 3} className="grid h-full">
-              <FeaturedPlanCard plan={plan} />
-            </ScrollReveal>
-          ))}
-        </div>
-
-        <Button href="/plans" variant="outline">
-          Alle Abonnements vergleichen →
-        </Button>
+        <PricingTabs />
       </Container>
     </section>
   );
