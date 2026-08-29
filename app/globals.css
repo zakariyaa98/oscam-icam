@@ -220,6 +220,46 @@ body {
   background: radial-gradient(ellipse at 50% 40%, transparent 30%, rgba(0, 0, 0, 0.78) 100%);
 }
 
+/* Continuous, very subtle Ken Burns-style breathing zoom on every poster tile
+   — kept slow (22s) and in a narrow scale range so it reads as "the wall is
+   alive" rather than a moving/zooming carousel. The minimum scale (1.12) is
+   comfortably above what's needed to cover a tilted tile's corners, so the
+   zoom never reveals an edge. Each tile gets a negative animation-delay (set
+   inline, per cell) so tiles don't breathe in unison either. */
+@keyframes hero-poster-kenburns {
+  0%,
+  100% {
+    transform: scale(1.12);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.hero-poster-img {
+  animation: hero-poster-kenburns 22s ease-in-out infinite;
+}
+
+/* A newly-mounted "incoming" poster layer stacks on top of the current one
+   and dissolves in — the layer underneath just stays put, so this reads as a
+   true crossfade without either image ever touching zero opacity ("blinking
+   to black"). Keep this animation's duration in sync with CROSSFADE_MS in
+   HeroBackground.tsx. Re-declares the full `animation` shorthand (rather
+   than adding a second class) so both this fade and the continuous zoom run
+   together on the same element. */
+@keyframes hero-poster-fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-poster-fade-in {
+  animation: hero-poster-fadein 1.8s ease-out forwards, hero-poster-kenburns 22s ease-in-out infinite;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -269,5 +309,10 @@ body {
   .hero-beam {
     animation: none;
     opacity: 0;
+  }
+
+  .hero-poster-img,
+  .hero-poster-fade-in {
+    animation: none;
   }
 }
