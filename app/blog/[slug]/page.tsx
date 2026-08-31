@@ -36,6 +36,7 @@ const relatedLandingPages: Record<string, { href: string; label: string }> = {
   "iptv-player-vergleich": { href: "/iptv-android-tv", label: "IPTV Android TV" },
   "iptv-enigma2-installieren": { href: "/iptv-providers", label: "IPTV Anbieter" },
   "iptv-smarters-pro-installieren": { href: "/iptv-smart-tv", label: "IPTV Smart TV" },
+  "iptv-formuler-installieren": { href: "/iptv-android-tv", label: "IPTV Android TV" },
 };
 
 export function generateStaticParams() {
