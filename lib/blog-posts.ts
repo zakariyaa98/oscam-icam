@@ -1516,6 +1516,326 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "ibo-player-iptv-installieren",
+    title: "IPTV mit IBO Player und IBO Pro einrichten – Anleitung für Smart TV & mehr",
+    seoTitle: "IBO Player & IBO Pro installieren – IPTV Anleitung",
+    metaDescription:
+      "IBO Player und IBO Pro installieren und einrichten: Anleitung für Samsung, LG, Android TV, Google TV und Fire TV Stick – inklusive Troubleshooting und FAQ.",
+    excerpt:
+      "So installieren und richten Sie IBO Player und IBO Pro auf Samsung, LG, Android TV, Google TV und Fire TV Stick ein – inklusive Troubleshooting.",
+    publishedAt: "2026-09-01",
+    readingTimeMinutes: 13,
+    category: "Anleitungen",
+    gradient: "aurora",
+    image: {
+      src: "/images/streaming-app.png",
+      alt: "IBO Player Kachel auf dem Startbildschirm eines Smart TV",
+    },
+    toc: true,
+    tldr: [
+      "IBO Player und IBO Pro sind Player-Apps, mit denen sich eine M3U-Playlist oder ein Xtream-Codes-Zugang auf Smart TV, Android TV, Google TV und Fire TV Stick nutzen lässt.",
+      "Beide Apps liefern selbst keine Sender — Sie benötigen einen eigenen, rechtmäßig bereitgestellten IPTV-Zugang bei einem seriösen IPTV Anbieter.",
+      "Die Installation unterscheidet sich je nach Plattform: Samsung und LG nutzen den herstellereigenen App Store, Android TV, Google TV und Fire TV laufen über Google Play, den Amazon App Store oder per APK.",
+      "IBO Pro richtet sich an Nutzer, die mehr Kontrolle über Wiedergabe- und Verbindungseinstellungen wünschen, arbeitet im Kern aber nach demselben Prinzip wie IBO Player.",
+      "Die meisten Probleme — leere Senderliste, fehlendes EPG, Verbindungsfehler — lassen sich durch Prüfen der Zugangsdaten, einen Neustart der App oder eine stabilere Internetverbindung lösen.",
+    ],
+    keywords: [
+      "IBO Player",
+      "IBO Pro",
+      "IBO Player installieren",
+      "IBO Pro installieren",
+      "IPTV Smart TV",
+      "IPTV installieren",
+      "IPTV einrichten",
+      "IPTV App",
+      "IPTV Anbieter Deutschland",
+      "IPTV kaufen",
+    ],
+    intro: [
+      "Wer auf der Suche nach einer flexiblen Player-App für Smart TV, Android TV oder Fire TV Stick ist, stößt früher oder später auf den IBO Player und dessen erweiterte Variante IBO Pro. Beide Apps zählen zu den verbreiteten Werkzeugen, um eine bestehende IPTV-Playlist oder einen Xtream-Codes-Zugang komfortabel auf dem Fernseher darzustellen — mit Senderübersicht, elektronischem Programmführer (EPG) und, je nach Anbieter, einer zusätzlichen Video-on-Demand-Bibliothek.",
+      "Wichtig zu verstehen: Weder IBO Player noch IBO Pro sind selbst ein IPTV Anbieter. Die Apps zeigen ausschließlich das an, was in einem eingetragenen, rechtmäßig bereitgestellten Zugang enthalten ist — sie liefern keine eigenen Sender und ersetzen keinen Vertrag mit einem Anbieter. Diese Anleitung erklärt Schritt für Schritt, wie Sie IBO Player und IBO Pro auf Samsung- und LG-Fernsehern, Android TV, Google TV sowie Fire TV Stick installieren, wie sich beide Apps unterscheiden und was bei typischen Problemen zu tun ist.",
+    ],
+    sections: [
+      {
+        heading: "Was ist der IBO Player?",
+        body: [
+          "Der IBO Player ist eine IPTV App zur Wiedergabe von IPTV-Inhalten, die auf mehreren Plattformen verfügbar ist und sich vor allem durch eine aufgeräumte, für Fernbedienungen optimierte Oberfläche auszeichnet. Nach der Eingabe einer Playlist-URL oder eines Xtream-Codes-Zugangs baut die App daraus eine Senderliste mit Kategorien, einem Programmführer und — sofern vom Anbieter bereitgestellt — einem Bereich für Filme und Serien auf.",
+          "Innerhalb eines typischen IPTV-Setups übernimmt der IBO Player damit die Rolle der Anzeige- und Bedienoberfläche, während die eigentlichen Inhalte, deren Qualität und Verfügbarkeit vollständig von Ihrem IPTV Anbieter abhängen. Diese Trennung zwischen App und Dienst ist bei jeder Player-Software wichtig zu verstehen, unabhängig davon, ob Sie IBO Player, IBO Pro oder eine andere Anwendung nutzen.",
+        ],
+      },
+      {
+        heading: "IBO Player vs. IBO Pro – Was ist der Unterschied?",
+        body: [
+          "Auf den ersten Blick unterscheiden sich IBO Player und IBO Pro kaum: Beide Apps folgen demselben Grundprinzip aus Playlist- bzw. Xtream-Codes-Eingabe, Senderliste und Programmführer. IBO Pro richtet sich dabei etwas stärker an Nutzer, die zusätzliche Einstellmöglichkeiten bei Wiedergabe, Pufferung und Verbindungsverwaltung wünschen, während der klassische IBO Player auf eine möglichst einfache, reduzierte Bedienung setzt.",
+          "Für die meisten Haushalte spielt die Wahl zwischen beiden Varianten eine untergeordnete Rolle, da die Kernfunktion — Zugangsdaten eintragen und Sender anzeigen — bei beiden identisch abläuft. Wer bereits Erfahrung mit IPTV-Playern hat und gezielt an einzelnen Wiedergabeparametern feilen möchte, ist mit IBO Pro tendenziell besser bedient.",
+        ],
+        table: {
+          headers: ["Merkmal", "IBO Player", "IBO Pro"],
+          rows: [
+            ["Zielgruppe", "Einsteiger und Nutzer, die eine einfache Oberfläche bevorzugen", "Nutzer mit Interesse an zusätzlichen Einstellungsmöglichkeiten"],
+            ["Grundfunktion", "M3U-Playlist oder Xtream Codes laden, Sender anzeigen", "M3U-Playlist oder Xtream Codes laden, Sender anzeigen"],
+            ["Einstellungsoptionen", "Reduziert und übersichtlich", "Umfangreicher, u. a. bei Puffer und Verbindung"],
+            ["Verfügbare Plattformen", "Smart TV, Android TV, Fire TV je nach Version", "Smart TV, Android TV, Fire TV je nach Version"],
+          ],
+          caption: "Allgemeiner Überblick ohne Wertung — der tatsächliche Funktionsumfang kann je nach App-Version variieren.",
+        },
+      },
+      {
+        heading: "Was braucht man für die Einrichtung?",
+        body: [
+          "Bevor Sie IBO Player oder IBO Pro installieren, sollten folgende Punkte vorbereitet sein, damit die Einrichtung ohne Unterbrechung gelingt:",
+        ],
+        list: [
+          "Ein kompatibles Gerät: Smart TV, Android TV Box, Google TV, Fire TV Stick oder ein ähnliches Streaming-Gerät.",
+          "Die App IBO Player oder IBO Pro, installiert über den passenden App Store oder als APK-Datei.",
+          "Zugangsdaten eines rechtmäßig bereitgestellten IPTV-Zugangs: entweder eine M3U-Playlist-URL oder Xtream-Codes-Daten (Server, Benutzername, Passwort).",
+          "Eine stabile Internetverbindung, idealerweise per LAN-Kabel bei stationären Geräten.",
+          "Grundlegende Netzwerkkenntnisse für den Fall, dass DNS- oder Router-Einstellungen angepasst werden müssen.",
+        ],
+      },
+      {
+        heading: "IBO Player auf Smart TV installieren",
+        body: [
+          "Die konkrete Installation von IBO Player unterscheidet sich je nach Gerät und Betriebssystem spürbar. Die folgenden Abschnitte zeigen den allgemeinen Ablauf für die verbreitetsten Plattformen — abhängig von der App-Version können einzelne Menübezeichnungen abweichen.",
+        ],
+        image: {
+          src: "/images/streaming-geraete.png",
+          alt: "IBO Player Oberfläche mit Senderübersicht und Programmführer auf dem Fernseher",
+        },
+        subsections: [
+          {
+            heading: "IBO Player auf Samsung Smart TV",
+            body: [
+              "Auf Samsung-Fernsehern mit Tizen-Betriebssystem öffnen Sie zunächst den Samsung App Store direkt über die Startbildschirm-Leiste. Suchen Sie dort nach „IBO Player“, bestätigen Sie die Installation und starten Sie die App anschließend über das Startmenü. Ist die App im Store eines bestimmten Modells nicht gelistet, kann alternativ eine Installation über einen USB-Stick in Betracht gezogen werden, sofern das jeweilige Samsung-Modell dies unterstützt.",
+            ],
+          },
+          {
+            heading: "IBO Player auf LG Smart TV",
+            body: [
+              "Bei LG-Fernsehern mit webOS führt der Weg über den LG Content Store. Öffnen Sie den Store, suchen Sie nach „IBO Player“ und installieren Sie die App wie jede andere Anwendung auch. Nach dem ersten Start fragt die App nach der gewünschten Zugangsart — M3U-Playlist oder Xtream Codes —, die Sie anschließend mit den Daten Ihres IPTV Anbieters ausfüllen.",
+            ],
+          },
+          {
+            heading: "IBO Player auf Android TV",
+            body: [
+              "Auf Android TV Boxen sowie kompatiblen Fernsehern mit Android-TV-Betriebssystem installieren Sie IBO Player in der Regel über den Google Play Store. Ist die App dort für Ihr Gerät nicht verfügbar, lässt sie sich alternativ per APK-Datei über einen Dateimanager oder USB-Stick installieren — dafür muss zuvor die Installation aus unbekannten Quellen in den Android-Einstellungen aktiviert werden.",
+            ],
+          },
+          {
+            heading: "IBO Player auf Google TV",
+            body: [
+              "Google TV baut auf derselben technischen Basis wie Android TV auf, bringt jedoch eine überarbeitete, stärker auf Inhalte-Empfehlungen ausgerichtete Oberfläche mit. Die Installation von IBO Player läuft entsprechend nahezu identisch über den Google Play Store ab; nach der Installation erscheint die App zusätzlich in der App-Übersicht der Google-TV-Oberfläche.",
+            ],
+          },
+          {
+            heading: "IBO Player auf Fire TV / Fire TV Stick",
+            body: [
+              "Auf einem Fire TV Stick suchen Sie IBO Player über den integrierten Amazon App Store. Ist die App dort nicht gelistet, hilft häufig die kostenlose App „Downloader“, mit der sich die passende APK-Datei direkt auf dem Gerät herunterladen und installieren lässt. Aktivieren Sie dafür zunächst unter den Geräteeinstellungen die Installation von Apps aus unbekannten Quellen.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "IBO Pro installieren und einrichten",
+        body: [
+          "Die Installation von IBO Pro läuft technisch nahezu identisch zum klassischen IBO Player ab: App aus dem passenden Store oder per APK installieren, öffnen und die gewünschte Zugangsart auswählen. Der Unterschied zeigt sich vor allem im Einstellungsmenü, das bei IBO Pro tendenziell mehr Optionen für Puffergröße, Verbindungsverhalten und Wiedergabeparameter bereithält.",
+          "Nach der Installation führt Sie IBO Pro durch denselben Grundablauf wie IBO Player: Zugangsdaten Ihres IPTV Anbieters eintragen, warten, bis Senderliste und Programmführer laden, und anschließend häufig genutzte Sender als Favoriten markieren. Nutzer, die bereits mit IBO Player vertraut sind, finden sich in der Oberfläche von IBO Pro daher in der Regel schnell zurecht.",
+          "Da sich Menübezeichnungen und Funktionsumfang je nach App-Version unterscheiden können, lohnt sich bei Unsicherheiten ein Blick in die Einstellungen der jeweils installierten Version — nicht jede Option ist in jeder Ausgabe identisch benannt oder verfügbar.",
+        ],
+        image: {
+          src: "/images/dashbord.png",
+          alt: "IBO Pro Menü mit Kategorien und Wiedergabeeinstellungen",
+        },
+      },
+      {
+        heading: "IBO Player auf mehreren Geräten nutzen",
+        body: [
+          "Sowohl IBO Player als auch IBO Pro lassen sich grundsätzlich auf mehreren Geräten parallel installieren — etwa auf dem Hauptfernseher im Wohnzimmer und zusätzlich auf einem Fire TV Stick am Zweitgerät. Ob ein Zugang gleichzeitig auf mehreren Geräten aktiv genutzt werden kann, hängt jedoch nicht von der App, sondern von der Anzahl der im jeweiligen IPTV-Tarif enthaltenen gleichzeitigen Verbindungen ab.",
+          "Wer regelmäßig zwischen Smart TV, Android TV Box und einem mobilen Gerät wechselt, sollte diesen Punkt bereits bei der Wahl des passenden IPTV Anbieters berücksichtigen, um spätere Einschränkungen zu vermeiden.",
+        ],
+        image: {
+          src: "/images/fire-tv-stick.png",
+          alt: "Fire TV Stick als kompaktes Gerät zur Nutzung von IBO Player am Zweitfernseher",
+        },
+      },
+      {
+        heading: "IPTV mit IBO Player einrichten",
+        body: [
+          "Sobald IBO Player oder IBO Pro installiert ist, fehlt nur noch die Verknüpfung mit Ihrem eigenen, rechtmäßig bereitgestellten IPTV-Zugang. Beide Apps unterstützen dafür in der Regel zwei gängige Zugangsarten.",
+          "Bei einer M3U-Playlist wählen Sie beim ersten Start die Option zum Hinzufügen einer Playlist per URL und fügen den von Ihrem Anbieter erhaltenen Link ein. Nach dem Speichern lädt die App die Senderliste automatisch — je nach Senderanzahl kann dieser Vorgang beim ersten Mal einige Sekunden dauern.",
+          "Bei einem Xtream-Codes-Zugang tragen Sie stattdessen drei Angaben ein: Serveradresse, Benutzername und Passwort. Diese Zugangsart liefert häufig zusätzlich strukturierte Kategorien und einen automatisch verknüpften Programmführer.",
+          "Da IBO Player und IBO Pro regelmäßig aktualisiert werden, können sich Bezeichnungen einzelner Menüpunkte zwischen App-Versionen leicht unterscheiden. Grundsätzlich finden sich die Optionen zum Hinzufügen eines Zugangs aber stets im Start- oder Einstellungsmenü der App.",
+          "Falls Sie noch keinen passenden IPTV-Zugang besitzen und IPTV kaufen möchten: Im [IPTV Shop](/plans) von [IPTV TV](/) finden Sie Informationen zu Abonnements, die sich sowohl per M3U-Playlist als auch per Xtream Codes API in IBO Player oder IBO Pro einrichten lassen. Unser Support berät Sie vorab gerne dazu, welche Zugangsart für Ihr Gerät am besten passt.",
+        ],
+      },
+      {
+        heading: "IBO Player funktioniert nicht – häufige Probleme",
+        body: [
+          "Wie bei jeder IPTV Player App treten auch bei IBO Player und IBO Pro gelegentlich Probleme auf, die sich in den meisten Fällen mit wenigen Handgriffen lösen lassen. Diese Schritte helfen erfahrungsgemäß zuerst:",
+        ],
+        list: [
+          "Anwendung und Gerät neu starten – viele kleinere Aussetzer verschwinden bereits nach einem einfachen Neustart.",
+          "IBO Player oder IBO Pro auf die neueste Version aktualisieren, sofern eine Aktualisierung im jeweiligen Store verfügbar ist.",
+          "Service-Informationen beim IPTV Anbieter prüfen, etwa ob der Zugang noch aktiv und die Serveradresse unverändert ist.",
+          "Internetverbindung testen und nach Möglichkeit eine LAN-Verbindung statt WLAN nutzen.",
+        ],
+        image: {
+          src: "/images/troubleshooting.png",
+          alt: "Ladesymbol auf dem Fernsehbildschirm als Symbolbild für die Fehlersuche bei IBO Player",
+        },
+        subsections: [
+          {
+            heading: "App erscheint nicht im Store",
+            body: [
+              "Ist IBO Player oder IBO Pro im App Store eines bestimmten Fernsehers nicht auffindbar, kann das an regionalen Einschränkungen des jeweiligen Stores liegen. Prüfen Sie in diesem Fall, ob eine Installation per APK-Datei für Ihr Gerät möglich ist.",
+            ],
+          },
+          {
+            heading: "Playlist lädt nicht",
+            body: [
+              "Prüfen Sie zunächst, ob die eingetragene M3U-URL vollständig und ohne zusätzliche Leerzeichen übernommen wurde. Häufig hilft zudem ein manuelles Neuladen der Playlist in den App-Einstellungen.",
+            ],
+          },
+          {
+            heading: "Sender laden nicht oder Senderliste bleibt leer",
+            body: [
+              "Bleibt die Senderliste trotz erfolgreicher Verbindung leer, kann ein aktiver Kategorie-Filter die Ursache sein. Setzen Sie Filter probeweise zurück und aktualisieren Sie die Liste erneut.",
+            ],
+          },
+          {
+            heading: "Verbindungsprobleme",
+            body: [
+              "Lässt sich grundsätzlich keine Verbindung zum Server herstellen, prüfen Sie zunächst die Internetverbindung des Geräts sowie, ob der eingetragene Server aktuell erreichbar ist.",
+            ],
+          },
+          {
+            heading: "EPG erscheint nicht",
+            body: [
+              "Fehlt der Programmführer, ist häufig keine oder eine falsche XMLTV-Adresse hinterlegt. Bei Xtream-Codes-Zugängen wird das EPG in der Regel automatisch mitgeliefert; bei M3U-Playlists muss die EPG-Adresse teils manuell in den Einstellungen ergänzt werden.",
+            ],
+          },
+          {
+            heading: "App stürzt ab oder reagiert nicht",
+            body: [
+              "Stürzt die App wiederholt ab, hilft häufig ein Update auf die neueste Version über den jeweiligen App Store sowie ein vollständiger Neustart des Geräts.",
+            ],
+          },
+          {
+            heading: "Falsche Zugangsdaten",
+            body: [
+              "Ein fehlgeschlagener Login liegt in den meisten Fällen an einem Tippfehler bei Serveradresse, Benutzername oder Passwort. Kopieren Sie die Daten nach Möglichkeit direkt aus der Nachricht Ihres Anbieters, statt sie manuell abzutippen.",
+            ],
+          },
+          {
+            heading: "Netzwerk- und DNS-Probleme",
+            body: [
+              "Halten Verbindungsaussetzer trotz stabiler Internetleitung an, kann testweise ein Wechsel der DNS-Server in den Netzwerkeinstellungen des Geräts helfen. Eine LAN-Verbindung liefert zudem meist konstantere Ergebnisse als WLAN.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "IPTV auf Smart TV – welche Lösung passt zu mir?",
+        body: [
+          "Neben IBO Player und IBO Pro gibt es weitere Wege, IPTV auf dem Fernseher zu nutzen. Welche Lösung sich am besten eignet, hängt vor allem vom vorhandenen Gerät und den persönlichen Vorlieben bei der Bedienung ab.",
+          "Für die meisten Haushalte ist der eigene Smart TV die naheliegendste Wahl, da keine zusätzliche Hardware notwendig ist. Wer bereits eine Android TV Box, ein Google TV Gerät oder einen Fire TV Stick besitzt, kann IBO Player oder IBO Pro dort ebenso einrichten. Eine ausführliche, geräteorientierte Anleitung finden Sie zusätzlich auf unseren Seiten zu [IPTV Smart TV](/iptv-smart-tv), [Android TV](/iptv-android-tv) und [Fire TV Stick](/iptv-fire-tv-stick).",
+        ],
+        table: {
+          headers: ["Gerät", "Typischer Zugang zu IBO Player", "Besonderheit"],
+          rows: [
+            ["Samsung Smart TV", "Samsung App Store", "Keine zusätzliche Hardware nötig"],
+            ["LG Smart TV", "LG Content Store", "Einfache Bedienung über die webOS-Oberfläche"],
+            ["Android TV", "Google Play Store oder APK", "Große Auswahl an zusätzlichen Streaming-Apps"],
+            ["Google TV", "Google Play Store", "Überarbeitete Oberfläche mit Inhalte-Empfehlungen"],
+            ["Fire TV Stick", "Amazon App Store oder Downloader-App", "Kompakt, einfache Ersteinrichtung"],
+            ["IPTV Box / Receiver", "Vorinstallierte oder nachrüstbare Player-Apps", "Oft leistungsstärkere Hardware für große Senderlisten"],
+          ],
+          caption: "Allgemeine Einordnung ohne Wertung — die passende Wahl hängt von vorhandener Hardware und persönlichen Vorlieben ab.",
+        },
+        image: {
+          src: "/images/android-tv-box.png",
+          alt: "Android TV Box mit Fernbedienung als Beispiel für ein IBO Player kompatibles Gerät",
+        },
+      },
+      {
+        heading: "IPTV Anbieter in Deutschland auswählen",
+        body: [
+          "Die beste Player-App bringt wenig, wenn der zugrunde liegende IPTV Anbieter nicht zuverlässig arbeitet. Bei der Auswahl eines IPTV Anbieters in Deutschland lohnt sich ein Blick auf mehrere Kriterien gleichzeitig, statt sich allein am Preis zu orientieren.",
+        ],
+        list: [
+          "Servicestabilität: verlässliche Server und ein Streaming-Erlebnis ohne wiederkehrende Ausfälle.",
+          "Gerätekompatibilität: Unterstützung für Smart TV, Android TV, Google TV, Fire TV Stick und weitere gängige Player wie IBO Player oder IBO Pro.",
+          "EPG: ein zuverlässig gepflegter elektronischer Programmführer für eine übersichtliche Sendersuche.",
+          "VOD-Bibliothek: eine nachvollziehbare Auswahl an Filmen und Serien, sofern im Tarif enthalten.",
+          "Kundensupport: ein erreichbares Team, das auch bei technischen Rückfragen zur Einrichtung weiterhilft.",
+          "Transparenz und AGB: klar formulierte Vertragsbedingungen ohne versteckte Kosten.",
+          "Sicherheit und Zuverlässigkeit: ein nachvollziehbarer Umgang mit Zahlungs- und Kontaktdaten.",
+        ],
+        subsections: [
+          {
+            heading: "Unser IPTV TV Angebot",
+            body: [
+              "Wer auf der Suche nach einer passenden IPTV-Lösung für Smart TV, Android TV oder Fire TV Stick ist, kann sich das Angebot von [IPTV TV](/) ansehen. Im [IPTV Shop](/plans) finden Sie Tarife, die sich sowohl mit IBO Player als auch mit IBO Pro einrichten lassen, und unser Support berät Sie bei Fragen zur passenden Zugangsart für Ihr Gerät.",
+              "Einen ausführlichen Überblick über die Auswahlkriterien für einen [IPTV Anbieter](/iptv-providers) sowie unser Angebot für [IPTV Deutschland](/iptv-service) finden Sie auf den jeweiligen Seiten.",
+            ],
+          },
+        ],
+      },
+    ],
+    conclusion: [
+      "Ob IBO Player oder IBO Pro: Beide Apps folgen demselben Grundprinzip und lassen sich auf Samsung- und LG-Fernsehern, Android TV, Google TV sowie Fire TV Stick mit überschaubarem Aufwand installieren. Entscheidend für ein zuverlässiges Ergebnis sind am Ende weniger die App-Einstellungen als eine stabile Internetverbindung und ein seriöser IPTV Anbieter im Hintergrund.",
+      "Wenn Sie noch auf der Suche nach einem passenden IPTV-Zugang sind, werfen Sie einen Blick auf unsere [Tarife](/plans) oder lesen Sie weitere praktische Anleitungen in unserem [Blog](/blog) — etwa zu [IPTV Smarters Pro](/blog/iptv-smarters-pro-installieren) oder im [Vergleich gängiger IPTV Player](/blog/iptv-player-vergleich). Bei individuellen Fragen erreichen Sie unser Team jederzeit über unsere [Kontaktseite](/contact).",
+    ],
+    faq: [
+      {
+        question: "Was ist der IBO Player?",
+        answer:
+          "Der IBO Player ist eine App zur Wiedergabe von IPTV-Inhalten, die eine M3U-Playlist oder einen Xtream-Codes-Zugang lädt und daraus eine Senderübersicht mit Programmführer erstellt. Die App liefert selbst keine Inhalte, sondern zeigt ausschließlich das an, was der jeweilige IPTV Anbieter bereitstellt.",
+      },
+      {
+        question: "Wie installiert man den IBO Player auf Smart TV?",
+        answer:
+          "Auf Samsung-Fernsehern erfolgt die Installation über den Samsung App Store, auf LG-Geräten über den LG Content Store. Suchen Sie dort jeweils nach „IBO Player“, installieren Sie die App und tragen Sie anschließend Ihre Zugangsdaten ein.",
+      },
+      {
+        question: "Was ist der Unterschied zwischen IBO Player und IBO Pro?",
+        answer:
+          "Beide Apps arbeiten nach demselben Grundprinzip. IBO Pro bietet in der Regel etwas mehr Einstellungsmöglichkeiten bei Wiedergabe und Verbindung, während IBO Player auf eine besonders einfache Bedienung setzt.",
+      },
+      {
+        question: "Funktioniert IBO Player auf Samsung Smart TV?",
+        answer:
+          "Ja, sofern die App im Samsung App Store des jeweiligen Modells verfügbar ist. Die Installation läuft wie bei jeder anderen Samsung-App über den integrierten Store.",
+      },
+      {
+        question: "Funktioniert IBO Player auf LG Smart TV?",
+        answer:
+          "Ja, über den LG Content Store lässt sich IBO Player auf kompatiblen webOS-Fernsehern installieren und anschließend mit einem M3U- oder Xtream-Codes-Zugang einrichten.",
+      },
+      {
+        question: "Warum lädt meine Playlist nicht?",
+        answer:
+          "Häufige Ursachen sind eine unterbrochene Internetverbindung, eine falsch eingetragene URL oder ein abgelaufener Zugang. Prüfen Sie zunächst die Verbindung und anschließend, ob die Zugangsdaten korrekt und vollständig übernommen wurden.",
+      },
+      {
+        question: "Welcher IPTV Player ist für Smart TV geeignet?",
+        answer:
+          "Neben IBO Player und IBO Pro eignen sich je nach Gerät auch andere Apps wie IPTV Smarters Pro. Welcher Player am besten passt, hängt von der jeweiligen Plattform und den persönlichen Vorlieben bei der Bedienung ab.",
+      },
+      {
+        question: "Was sollte man bei einem IPTV Anbieter beachten?",
+        answer:
+          "Wichtige Kriterien sind Servicestabilität, Gerätekompatibilität, ein zuverlässiges EPG, transparente Vertragsbedingungen und ein erreichbarer Kundensupport, der auch bei der technischen Einrichtung unterstützt.",
+      },
+    ],
+    sources: [
+      {
+        label: "Android TV – Wikipedia",
+        url: "https://de.wikipedia.org/wiki/Android_TV",
+      },
+    ],
+  },
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
