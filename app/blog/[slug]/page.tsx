@@ -39,6 +39,7 @@ const relatedLandingPages: Record<string, { href: string; label: string }> = {
   "iptv-smarters-pro-xtream-codes-einrichten": { href: "/iptv-android-tv", label: "IPTV Android TV" },
   "iptv-formuler-installieren": { href: "/iptv-android-tv", label: "IPTV Android TV" },
   "ibo-player-iptv-installieren": { href: "/iptv-smart-tv", label: "IPTV Smart TV" },
+  "iptv-smarters-pro-probleme-loesen": { href: "/iptv-providers", label: "IPTV Anbieter" },
 };
 
 export function generateStaticParams() {
