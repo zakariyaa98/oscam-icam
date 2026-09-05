@@ -1,19 +1,14 @@
-import { PricingCard } from "@/components/plans/PricingCard";
-import { pricingDurations } from "@/lib/plans";
+import { FeaturedPlanCard } from "@/components/plans/FeaturedPlanCard";
+import { featuredPlans } from "@/lib/plans";
 
-// Simple, tab-free pricing grid: one clean card per support package, showing its
-// lowest ("bereits ab") price. All packages, prices and features come from
-// lib/plans.ts unchanged.
+// Same clean pricing table as the home page (PlansPreview): one card per plan
+// from lib/plans.ts, no tabs. Prices and plans come from the project data
+// unchanged; feature list is the project's own homeFeatures.
 export function PricingTabs() {
   return (
-    <div className="grid w-full items-start gap-6 pt-4 sm:grid-cols-2 lg:grid-cols-3">
-      {pricingDurations.map((duration) => (
-        <PricingCard
-          key={duration.id}
-          tier={duration.tiers[0]}
-          duration={duration}
-          recommended={duration.featured}
-        />
+    <div className="grid w-full items-start gap-6 pt-4 sm:grid-cols-2 lg:grid-cols-4">
+      {featuredPlans.map((plan) => (
+        <FeaturedPlanCard key={plan.id} plan={plan} />
       ))}
     </div>
   );
