@@ -7,6 +7,7 @@ import { TechnologyGrid } from "@/components/sections/TechnologyGrid";
 import { Devices } from "@/components/sections/Devices";
 import { VisualBreak } from "@/components/sections/VisualBreak";
 import { Knowledge } from "@/components/sections/Knowledge";
+import { PlansPreview } from "@/components/sections/PlansPreview";
 import { PricingPreview } from "@/components/sections/PricingPreview";
 import { LatestArticles } from "@/components/sections/LatestArticles";
 import { FAQPreview } from "@/components/sections/FAQPreview";
@@ -33,6 +34,7 @@ export default function Home() {
       <Hero />
       <Benefits />
       <TechShowcase />
+      <PlansPreview />
       <TechnologyGrid />
       <Devices />
       <VisualBreak />

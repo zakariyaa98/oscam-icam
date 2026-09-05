@@ -13,6 +13,7 @@ export type FeaturedPlan = {
   id: string;
   duration: string;
   price: string;
+  period: string;
   badge?: string;
   featured?: boolean;
   whatsappLink: string;
@@ -28,30 +29,40 @@ export const homeFeatures: string[] = [
 
 export const featuredPlans: FeaturedPlan[] = [
   {
-    id: "basis",
-    duration: "Basis-Einrichtung",
-    price: "29€",
+    id: "starter",
+    duration: "Starter",
+    price: "14,99€",
+    period: "3 Monate",
     whatsappLink: buildWhatsAppLink(
-      "Hallo OSCam-iCam Team,\nich interessiere mich für die Basis-Einrichtung (ab 29€)."
+      'Hallo OSCam-iCam Team,\nich interessiere mich für das Paket "Starter" (14,99€ / 3 Monate).'
     ),
   },
   {
-    id: "erweitert",
-    duration: "Erweiterte Einrichtung",
-    price: "49€",
-    badge: "🔥 Am meisten gebucht",
+    id: "basic",
+    duration: "Basic",
+    price: "29,99€",
+    period: "6 Monate",
+    whatsappLink: buildWhatsAppLink(
+      'Hallo OSCam-iCam Team,\nich interessiere mich für das Paket "Basic" (29,99€ / 6 Monate).'
+    ),
+  },
+  {
+    id: "standard",
+    duration: "Standard",
+    price: "34,99€",
+    period: "12 Monate",
+    whatsappLink: buildWhatsAppLink(
+      'Hallo OSCam-iCam Team,\nich interessiere mich für das Paket "Standard" (34,99€ / 12 Monate).'
+    ),
+  },
+  {
+    id: "beliebt",
+    duration: "Beliebtestes Angebot",
+    price: "49,99€",
+    period: "24 Monate",
     featured: true,
     whatsappLink: buildWhatsAppLink(
-      "Hallo OSCam-iCam Team,\nich interessiere mich für die Erweiterte Einrichtung (ab 49€)."
-    ),
-  },
-  {
-    id: "premium",
-    duration: "Premium-Support",
-    price: "79€",
-    badge: "💎 Laufende Betreuung",
-    whatsappLink: buildWhatsAppLink(
-      "Hallo OSCam-iCam Team,\nich interessiere mich für den Premium-Support (ab 79€)."
+      'Hallo OSCam-iCam Team,\nich interessiere mich für das Paket "Beliebtestes Angebot" (49,99€ / 24 Monate).'
     ),
   },
 ];
