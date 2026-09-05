@@ -1,35 +1,53 @@
 @import "tailwindcss";
 
 :root {
-  --background: #050505;
-  --background-elevated: #121212;
-  --foreground: #ffffff;
-  --muted: #b3b3b3;
-  --border: #262626;
+  /* Core dark palette — German-flag-inspired, tuned for a technical
+     OSCam / iCam / Enigma2 site. Near-black charcoal dominates; red and gold
+     appear only as accents, never as large fills. */
+  --background: #090909;          /* dominant page background */
+  --background-elevated: #171717; /* cards / raised surfaces (never pure black) */
+  --surface: #1c1c1c;             /* deepest raised surface (nested panels) */
+  --foreground: #ffffff;          /* primary text */
+  --secondary: #d1d5db;           /* secondary text */
+  --muted: #9ca3af;               /* muted / meta text */
+  --border: #2a2a2a;              /* default hairline border */
+  --border-strong: #3a3a3a;       /* emphasised border / divider */
 
-  /* Brand accent — OSCam-iCam red (#E30613). Variable names kept as "aqua" to
-     avoid a sitewide class-name rename (bg-aqua/text-aqua/etc. stay valid Tailwind
-     utilities); only the color values changed. "-soft" is the brighter red used
-     for hover states (buttons and links alike — hover always brightens, never
-     dims, so it stays legible against the near-black background). "-dim" is a
-     deep, muted red reserved for surfaces that need a quieter accent (decorative
-     gradients, accents on white/light surfaces) rather than the vivid primary. */
-  --brand-aqua: #E30613;
-  --brand-aqua-dim: #8C0F1D;
-  --brand-aqua-soft: #FF1A2D;
+  /* Primary accent — German red (#E30613). Variable names kept as "aqua" so the
+     existing bg-aqua / text-aqua / border-aqua utilities across the codebase stay
+     valid; only the values changed. "-soft" is a brighter red used for text hover
+     states on the near-black background (hover brightens so the link stays
+     legible). "-dim" (#B80510) is a deep red for depth: borders/fills on light
+     surfaces, gradient stops, quieter accents. */
+  --brand-aqua: #e30613;
+  --brand-aqua-dim: #b80510;
+  --brand-aqua-soft: #ff1a2d;
+
+  /* Secondary accent — German gold (#FFD500). Used sparingly: eyebrow/section
+     labels, blog category tags, small decorative marks. Pairs with dark text or
+     sits as a small mark on the dark background — never large bright fills.
+     "-dim" (#E5BE00) is the darker gold for hover/depth. */
+  --brand-gold: #ffd500;
+  --brand-gold-dim: #e5be00;
+
   --brand-black: #000000;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-background-elevated: var(--background-elevated);
+  --color-surface: var(--surface);
   --color-foreground: var(--foreground);
+  --color-secondary: var(--secondary);
   --color-muted: var(--muted);
   --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
 
   --color-aqua: var(--brand-aqua);
   --color-aqua-dim: var(--brand-aqua-dim);
   --color-aqua-soft: var(--brand-aqua-soft);
+  --color-gold: var(--brand-gold);
+  --color-gold-dim: var(--brand-gold-dim);
   --color-black: var(--brand-black);
 
   --font-sans: var(--font-manrope);
@@ -52,7 +70,7 @@ body {
 }
 
 .text-gradient-aqua {
-  background: linear-gradient(90deg, #FF1A2D 0%, #E30613 55%, #8C0F1D 100%);
+  background: linear-gradient(90deg, #FF1A2D 0%, #E30613 55%, #B80510 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -68,7 +86,7 @@ body {
 }
 
 .glass-panel {
-  background: rgba(11, 16, 13, 0.6);
+  background: rgba(23, 23, 23, 0.6);
   border: 1px solid var(--border);
   backdrop-filter: blur(12px);
 }
@@ -162,7 +180,7 @@ body {
    --brand-aqua token, kept deliberately subtle to stay premium rather than
    cyberpunk/neon. */
 .hero-bg-base {
-  background: #050505;
+  background: #090909;
 }
 
 /* Darkens the poster grid heavily on the left, where the Hero text sits, and
@@ -172,10 +190,10 @@ body {
   background: radial-gradient(ellipse 60% 60% at 78% 35%, rgba(227, 6, 19, 0.12), transparent 60%),
     linear-gradient(
       100deg,
-      rgba(5, 5, 5, 0.97) 0%,
-      rgba(5, 5, 5, 0.93) 32%,
-      rgba(5, 5, 5, 0.62) 58%,
-      rgba(5, 5, 5, 0.32) 100%
+      rgba(9, 9, 9, 0.97) 0%,
+      rgba(9, 9, 9, 0.93) 32%,
+      rgba(9, 9, 9, 0.62) 58%,
+      rgba(9, 9, 9, 0.32) 100%
     );
 }
 

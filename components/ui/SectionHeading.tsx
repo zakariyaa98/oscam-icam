@@ -19,7 +19,7 @@ export function SectionHeading({
   return (
     <div className={`flex max-w-2xl flex-col gap-4 ${alignClasses}`}>
       {eyebrow ? (
-        <span className="inline-flex w-fit items-center rounded-full border border-aqua/30 bg-aqua/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-aqua">
+        <span className="inline-flex w-fit items-center rounded-full border border-gold/30 bg-gold/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-gold">
           {eyebrow}
         </span>
       ) : null}

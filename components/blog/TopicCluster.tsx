@@ -27,7 +27,7 @@ export function TopicCluster({ post, allPosts }: TopicClusterProps) {
         className="flex flex-col gap-4 rounded-3xl border border-aqua/30 bg-aqua/5 p-7"
       >
         <div className="flex flex-col gap-1">
-          <span className="text-xs font-semibold uppercase tracking-wide text-aqua">Themenreihe</span>
+          <span className="text-xs font-semibold uppercase tracking-wide text-gold">Themenreihe</span>
           <h2 id="topic-cluster-heading" className="text-lg font-semibold text-foreground">
             {clusterLabel}: Alle Artikel dieser Reihe
           </h2>
@@ -56,7 +56,7 @@ export function TopicCluster({ post, allPosts }: TopicClusterProps) {
       aria-labelledby="topic-cluster-heading"
       className="flex flex-col gap-2 rounded-3xl border border-border bg-background-elevated/60 p-6"
     >
-      <span id="topic-cluster-heading" className="text-xs font-semibold uppercase tracking-wide text-aqua">
+      <span id="topic-cluster-heading" className="text-xs font-semibold uppercase tracking-wide text-gold">
         Themenreihe: {clusterLabel}
       </span>
       <p className="text-sm leading-relaxed text-muted">

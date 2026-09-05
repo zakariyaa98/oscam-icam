@@ -50,7 +50,7 @@ export function BlogList({ posts }: { posts: BlogPost[] }) {
                 <BlogThumbnail post={post} className="aspect-[16/10] w-full" priority={index < 3} />
                 <div className="flex flex-col gap-3 px-1 pb-1">
                   <div className="flex flex-wrap items-center gap-2 text-xs uppercase tracking-wide text-muted">
-                    <span className="rounded-full bg-aqua/10 px-2.5 py-1 font-semibold text-aqua">
+                    <span className="rounded-full bg-gold/10 px-2.5 py-1 font-semibold text-gold">
                       {post.category}
                     </span>
                     <time dateTime={post.publishedAt}>
