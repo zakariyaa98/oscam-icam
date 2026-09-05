@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { BrandLogo } from "@/components/logo/BrandLogo";
 import { Button } from "@/components/ui/Button";
+import { WHATSAPP_DEFAULT_LINK } from "@/lib/whatsapp";
 
 const navLinks = [
   { href: "/", label: "Startseite" },
@@ -51,8 +52,8 @@ export function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <Button href="/oscam-service" variant="primary" className="text-sm">
-            Support anfragen
+          <Button href={WHATSAPP_DEFAULT_LINK} external variant="primary" className="text-sm">
+            OSCam erhalten
           </Button>
         </div>
 
@@ -94,8 +95,8 @@ export function Header() {
               </Link>
             );
           })}
-          <Button href="/oscam-service" variant="primary" className="mt-2 w-full">
-            Support anfragen
+          <Button href={WHATSAPP_DEFAULT_LINK} external variant="primary" className="mt-2 w-full">
+            OSCam erhalten
           </Button>
         </nav>
       ) : null}

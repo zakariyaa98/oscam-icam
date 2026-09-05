@@ -74,10 +74,10 @@ export default function Home() {
       </section>
 
       <PricingPreview />
-      <FAQPreview />
       <HomeFinalCTA />
       <Testimonials />
       <LatestArticles />
+      <FAQPreview />
     </>
   );
 }
