@@ -45,6 +45,11 @@ const reviews = [
   },
 ];
 
+// The track holds two identical copies of the list; the marquee keyframe shifts
+// it by -50%, so it loops seamlessly with no visible jump. The second copy is
+// hidden from assistive tech.
+const marqueeItems = [...reviews, ...reviews];
+
 export function Testimonials() {
   return (
     <section className="border-b border-border bg-background-elevated/40 py-20 sm:py-28">
@@ -54,29 +59,34 @@ export function Testimonials() {
           title="Was unsere Kunden sagen"
           description="Rückmeldungen von Nutzern, die OSCam oder iCam mit unserer Unterstützung auf ihrem Enigma2-Receiver eingerichtet haben."
         />
+      </Container>
 
-        <div className="w-full columns-1 gap-6 sm:columns-2 lg:columns-3">
-          {reviews.map((review, index) => (
-            <ScrollReveal
-              key={review.src}
-              delay={((index % 3) + 1) as 1 | 2 | 3}
-              className="mb-6 break-inside-avoid"
+      <ScrollReveal className="marquee-fade w-full overflow-hidden">
+        <ul
+          className="animate-marquee marquee-track flex w-max gap-5 sm:gap-6"
+          style={{ animationDuration: "60s" }}
+        >
+          {marqueeItems.map((review, index) => (
+            <li
+              key={`${review.src}-${index}`}
+              className="shrink-0"
+              aria-hidden={index >= reviews.length ? true : undefined}
             >
-              <figure className="overflow-hidden rounded-3xl border border-border bg-background-elevated p-2.5 shadow-[0_4px_24px_rgba(0,0,0,0.4)] transition-colors duration-300 hover:border-gold/40">
+              <figure className="h-[400px] w-[248px] overflow-hidden rounded-3xl border border-border bg-background-elevated p-2.5 shadow-[0_4px_24px_rgba(0,0,0,0.4)] transition-colors duration-300 hover:border-gold/40 sm:h-[480px] sm:w-[300px]">
                 <Image
                   src={review.src}
                   alt={review.alt}
                   width={review.width}
                   height={review.height}
                   loading="lazy"
-                  sizes="(max-width: 640px) 88vw, (max-width: 1024px) 45vw, 360px"
-                  className="h-auto w-full rounded-2xl"
+                  sizes="300px"
+                  className="h-full w-full rounded-2xl object-contain"
                 />
               </figure>
-            </ScrollReveal>
+            </li>
           ))}
-        </div>
-      </Container>
+        </ul>
+      </ScrollReveal>
     </section>
   );
 }
