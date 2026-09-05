@@ -12,6 +12,7 @@ import { PricingPreview } from "@/components/sections/PricingPreview";
 import { LatestArticles } from "@/components/sections/LatestArticles";
 import { FAQPreview } from "@/components/sections/FAQPreview";
 import { HomeFinalCTA } from "@/components/sections/HomeFinalCTA";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { Container } from "@/components/ui/Container";
 
 export const metadata: Metadata = {
@@ -75,6 +76,7 @@ export default function Home() {
       <PricingPreview />
       <FAQPreview />
       <HomeFinalCTA />
+      <Testimonials />
       <LatestArticles />
     </>
   );
