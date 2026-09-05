@@ -9,7 +9,8 @@ type PricingCardProps = {
 };
 
 // Same card design as the home page pricing section (FeaturedPlanCard), driven
-// by the existing /oscam-service data (pricingDurations tiers + pricingFeatures).
+// by the existing /oscam-service data. One card per package, showing that
+// package's lowest ("bereits ab") price from its cheapest device tier.
 export function PricingCard({ tier, duration, recommended }: PricingCardProps) {
   const highlight = Boolean(duration.featured && recommended);
 
@@ -27,12 +28,14 @@ export function PricingCard({ tier, duration, recommended }: PricingCardProps) {
         </span>
       ) : null}
 
-      <h3 className="text-xl font-bold tracking-tight text-foreground sm:text-2xl">{tier.label}</h3>
+      <h3 className="text-xl font-bold tracking-tight text-foreground sm:text-2xl">{duration.label}</h3>
       <p className="mt-3 text-xs font-semibold uppercase tracking-[0.2em] text-muted">bereits ab</p>
 
       <p className="mt-2 flex items-end justify-center gap-1 text-foreground">
         <span className="mb-2 text-lg font-semibold text-muted">€</span>
-        <span className="text-5xl font-bold leading-none tracking-tight">{tier.price}</span>
+        <span className="text-5xl font-bold leading-none tracking-tight">
+          {tier.price.toLocaleString("de-DE", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+        </span>
       </p>
 
       <Button

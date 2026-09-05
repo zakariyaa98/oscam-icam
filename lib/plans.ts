@@ -120,7 +120,7 @@ export const pricingDurations: PricingDuration[] = [
     id: "basis",
     label: "Basis-Einrichtung",
     tiers: buildTiers("Basis-Einrichtung", [
-      { devices: 1, originalPrice: 39, price: 29 },
+      { devices: 1, originalPrice: 39, price: 14.99 },
       { devices: 2, originalPrice: 59, price: 45 },
       { devices: 3, originalPrice: 79, price: 60 },
     ]),
@@ -131,7 +131,7 @@ export const pricingDurations: PricingDuration[] = [
     badge: "🔥 Am meisten gebucht",
     featured: true,
     tiers: buildTiers("Erweiterte Einrichtung", [
-      { devices: 1, originalPrice: 65, price: 49 },
+      { devices: 1, originalPrice: 65, price: 29.99 },
       { devices: 2, originalPrice: 99, price: 75 },
       { devices: 3, originalPrice: 129, price: 95 },
     ]),
@@ -141,7 +141,7 @@ export const pricingDurations: PricingDuration[] = [
     label: "Premium-Support (3 Monate)",
     badge: "💎 Laufende Betreuung",
     tiers: buildTiers("Premium-Support (3 Monate)", [
-      { devices: 1, originalPrice: 99, price: 79 },
+      { devices: 1, originalPrice: 99, price: 34.99 },
       { devices: 2, originalPrice: 149, price: 120 },
       { devices: 3, originalPrice: 189, price: 150 },
     ]),
