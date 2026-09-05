@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { HeroBackground } from "@/components/home/HeroBackground";
+import { WHATSAPP_DEFAULT_LINK } from "@/lib/whatsapp";
 
 const quickFacts = ["Open Source", "Enigma2", "VU+ · Dreambox · Zgemma"];
 
@@ -27,8 +28,8 @@ export function Hero() {
           </p>
 
           <div className="animate-fade-up-delay-3 flex flex-col gap-4 pt-2 sm:flex-row">
-            <Button href="/oscam-installieren" variant="primary" className="px-8 py-4 text-base">
-              OSCam installieren
+            <Button href={WHATSAPP_DEFAULT_LINK} external variant="primary" className="px-8 py-4 text-base">
+              Testline
             </Button>
             <Button href="/oscam" variant="outline" className="px-8 py-4 text-base">
               OSCam &amp; iCam verstehen
