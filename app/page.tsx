@@ -73,9 +73,9 @@ export default function Home() {
       </section>
 
       <PricingPreview />
-      <LatestArticles />
       <FAQPreview />
       <HomeFinalCTA />
+      <LatestArticles />
     </>
   );
 }
