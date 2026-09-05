@@ -10,10 +10,38 @@ const reviews = [
   {
     src: "/images/home page/reveiw/OSCam-iCam-OSCam-und-iCam-fuer-Enigma2-OSCam-Deutsch-Handy-1.png",
     alt: "Fünf-Sterne-Kundenbewertung auf einem Smartphone: OSCam läuft stabil auf einer Dreambox One",
+    width: 1120,
+    height: 2240,
+  },
+  {
+    src: "/images/home page/reveiw/OSCam-iCam-OSCam-und-iCam-fuer-Enigma2-Bewertung-Handy-Dreambox-One-OpenATV.png",
+    alt: "Fünf-Sterne-Kundenbewertung auf einem Smartphone: OSCam- und iCam-Einrichtung auf einer Dreambox One mit OpenATV",
+    width: 1344,
+    height: 1792,
+  },
+  {
+    src: "/images/home page/reveiw/OSCam-iCam-OSCam-und-iCam-fuer-Enigma2-Bewertung-Handy-VU-Duo-4K-SE.png",
+    alt: "Fünf-Sterne-Kundenbewertung auf einem Smartphone: OSCam-Anleitung für den VU+ Duo 4K SE",
+    width: 1280,
+    height: 1920,
+  },
+  {
+    src: "/images/home page/reveiw/OSCam-iCam-OSCam-und-iCam-fuer-Enigma2-Bewertung-Handy-Zgemma-H11S-DAZN.png",
+    alt: "Fünf-Sterne-Kundenbewertung auf einem Smartphone: iCam-Einrichtung auf einer Zgemma H11S",
+    width: 1280,
+    height: 1920,
+  },
+  {
+    src: "/images/home page/reveiw/OSCam-iCam-OSCam-und-iCam-fuer-Enigma2-Bewertung-Handy-Gigablue-UHD-Quad-4K-iCam.png",
+    alt: "Fünf-Sterne-Kundenbewertung auf einem Smartphone: iCam läuft stabil auf einer Gigablue UHD Quad 4K",
+    width: 1920,
+    height: 1280,
   },
   {
     src: "/images/home page/reveiw/OSCam-iCam-OSCam-und-iCam-fuer-Enigma2-OSCam-Deutsch-Handy-2.png",
     alt: "Fünf-Sterne-Kundenbewertung auf einem Smartphone: OSCam-Einrichtung auf einem VU+ Uno 4K SE",
+    width: 1120,
+    height: 2240,
   },
 ];
 
@@ -27,21 +55,21 @@ export function Testimonials() {
           description="Rückmeldungen von Nutzern, die OSCam oder iCam mit unserer Unterstützung auf ihrem Enigma2-Receiver eingerichtet haben."
         />
 
-        <div className="grid w-full max-w-3xl gap-6 sm:grid-cols-2">
+        <div className="w-full columns-1 gap-6 sm:columns-2 lg:columns-3">
           {reviews.map((review, index) => (
-            <ScrollReveal key={review.src} delay={((index % 2) + 1) as 1 | 2} className="relative mx-auto w-full max-w-sm">
-              <div
-                aria-hidden
-                className="pointer-events-none absolute -inset-4 rounded-[3rem] bg-gold/10 blur-[70px]"
-              />
-              <figure className="relative overflow-hidden rounded-3xl border border-border bg-background-elevated p-3 shadow-[0_4px_24px_rgba(0,0,0,0.4)] sm:p-4">
+            <ScrollReveal
+              key={review.src}
+              delay={((index % 3) + 1) as 1 | 2 | 3}
+              className="mb-6 break-inside-avoid"
+            >
+              <figure className="overflow-hidden rounded-3xl border border-border bg-background-elevated p-2.5 shadow-[0_4px_24px_rgba(0,0,0,0.4)] transition-colors duration-300 hover:border-gold/40">
                 <Image
                   src={review.src}
                   alt={review.alt}
-                  width={1120}
-                  height={2240}
+                  width={review.width}
+                  height={review.height}
                   loading="lazy"
-                  sizes="(max-width: 640px) 88vw, 360px"
+                  sizes="(max-width: 640px) 88vw, (max-width: 1024px) 45vw, 360px"
                   className="h-auto w-full rounded-2xl"
                 />
               </figure>
