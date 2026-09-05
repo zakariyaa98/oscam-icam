@@ -20,6 +20,7 @@ export function Devices() {
         <ScrollReveal className="flex flex-col items-start gap-6">
           <SectionHeading
             align="left"
+            eyebrow="Receiver"
             title="Ein Prinzip, viele Enigma2-Receiver"
             description="OSCam und iCam laufen grundsätzlich auf jedem Receiver mit Enigma2-Image — unabhängig vom Hersteller. Diese Marken sind im deutschsprachigen Raum besonders verbreitet."
           />
@@ -37,21 +38,28 @@ export function Devices() {
           </div>
         </ScrollReveal>
 
-        <ScrollReveal delay={2} className="relative mx-auto w-full max-w-md">
+        <ScrollReveal delay={2} className="relative mx-auto w-full max-w-lg">
           <div
             aria-hidden
-            className="pointer-events-none absolute -inset-4 rounded-[3rem] bg-aqua/15 blur-[80px] sm:-inset-8"
+            className="pointer-events-none absolute -inset-4 rounded-[3rem] bg-aqua/12 blur-[80px]"
           />
-          <div className="relative overflow-hidden rounded-3xl border border-border shadow-2xl">
+          <figure className="relative overflow-hidden rounded-2xl border border-border-strong bg-surface shadow-2xl">
+            <div className="flex items-center gap-1.5 border-b border-border px-4 py-3">
+              <span className="h-2.5 w-2.5 rounded-full bg-aqua/80" />
+              <span className="h-2.5 w-2.5 rounded-full bg-gold/80" />
+              <span className="h-2.5 w-2.5 rounded-full bg-muted/50" />
+              <span className="ml-3 text-xs font-medium text-muted">oscam.services</span>
+            </div>
             <Image
-              src="/images/streaming-technologie.png"
-              alt="Symbolbild: Netzwerktechnik im Hintergrund einer Enigma2-Konfiguration"
-              width={640}
-              height={720}
-              sizes="(max-width: 1024px) 90vw, 480px"
+              src="/images/home page/OSCam-iCam-OSCam-und-iCam-fuer-Enigma2-oscam-services.png"
+              alt="OSCam-Datei oscam.services mit Service-IDs für einen Enigma2-Receiver"
+              width={900}
+              height={600}
+              loading="lazy"
+              sizes="(max-width: 1024px) 90vw, 512px"
               className="h-auto w-full object-cover"
             />
-          </div>
+          </figure>
         </ScrollReveal>
       </Container>
     </section>
