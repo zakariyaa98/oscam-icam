@@ -38,7 +38,7 @@ export function FeaturedPlanCard({ plan }: FeaturedPlanCardProps) {
         ))}
       </ul>
 
-      <Button href="/plans" variant={plan.featured ? "primary" : "outline"} className="mt-auto w-full">
+      <Button href="/oscam-service" variant={plan.featured ? "primary" : "outline"} className="mt-auto w-full">
         Details ansehen
       </Button>
     </div>

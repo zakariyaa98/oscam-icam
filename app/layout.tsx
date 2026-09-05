@@ -12,27 +12,27 @@ const manrope = Manrope({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-const siteUrl = "https://iptv-tv.shop";
+const siteUrl = "https://oscam-icam.de";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "IPTV TV – Premium IPTV Anbieter für Deutschland",
-    template: "%s | IPTV TV",
+    default: "OSCam-iCam – OSCam & iCam für Enigma2 verständlich erklärt",
+    template: "%s | OSCam-iCam",
   },
   description:
-    "Live-TV, Sport, Filme und Serien in HD, Full HD und 4K — gebündelt in einem Abo. IPTV TV: stabile Server, faire Preise, Support auf Deutsch.",
+    "OSCam-iCam erklärt OSCam und iCam für Enigma2-Receiver wie VU+, Dreambox und Zgemma: Installation, Konfiguration, Troubleshooting und technischer Support auf Deutsch.",
   keywords: [
-    "IPTV TV",
-    "IPTV Deutschland",
-    "IPTV Anbieter",
-    "IPTV Shop",
-    "IPTV kaufen",
-    "IPTV Anbieter Deutschland",
-    "IPTV Abonnement",
-    "IPTV Streaming",
-    "IPTV Smart TV",
-    "IPTV Fire TV Stick",
+    "OSCam",
+    "iCam",
+    "OSCam iCam",
+    "OSCam Installation",
+    "OSCam Einrichtung",
+    "OSCam Enigma2",
+    "OSCam VU+",
+    "OSCam Dreambox",
+    "OSCam Zgemma",
+    "Enigma2 OSCam",
   ],
   alternates: {
     canonical: "/",
@@ -41,23 +41,20 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     url: siteUrl,
-    siteName: "IPTV TV",
-    title: "IPTV TV – Premium IPTV Anbieter für Deutschland",
+    siteName: "OSCam-iCam",
+    title: "OSCam-iCam – OSCam & iCam für Enigma2 verständlich erklärt",
     description:
-      "Live-TV, Sport, Filme und Serien in HD, Full HD und 4K. Stabile Server, faire Preise, Support auf Deutsch.",
+      "Installation, Konfiguration und Troubleshooting von OSCam und iCam für Enigma2-Receiver — verständlich erklärt, mit technischem Support auf Deutsch.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "IPTV TV – Premium IPTV Anbieter für Deutschland",
+    title: "OSCam-iCam – OSCam & iCam für Enigma2 verständlich erklärt",
     description:
-      "Live-TV, Sport, Filme und Serien in HD, Full HD und 4K. Stabile Server, faire Preise, Support auf Deutsch.",
+      "Installation, Konfiguration und Troubleshooting von OSCam und iCam für Enigma2-Receiver — verständlich erklärt, mit technischem Support auf Deutsch.",
   },
   robots: {
     index: true,
     follow: true,
-  },
-  verification: {
-    google: "leQRi6F3XMHopdXHnus_EypwdyFwB2-5lUnS-0xOjc8",
   },
 };
 
@@ -68,7 +65,7 @@ const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": `${siteUrl}/#organization`,
-  name: "IPTV TV",
+  name: "OSCam-iCam",
   url: siteUrl,
   logo: {
     "@type": "ImageObject",
@@ -77,7 +74,7 @@ const organizationJsonLd = {
     height: 512,
   },
   description:
-    "Premium IPTV Abo für Deutschland: Live-TV, Sport, Filme und Serien in HD, Full HD und 4K, gebündelt auf einem Zugang.",
+    "OSCam-iCam erklärt OSCam und iCam für Enigma2-Receiver und bietet technischen Support bei der Einrichtung und Konfiguration.",
   contactPoint: {
     "@type": "ContactPoint",
     email: "contactipm3tv@gmail.com",
@@ -91,7 +88,7 @@ const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": `${siteUrl}/#website`,
-  name: "IPTV TV",
+  name: "OSCam-iCam",
   url: siteUrl,
   inLanguage: "de-DE",
   publisher: { "@id": `${siteUrl}/#organization` },

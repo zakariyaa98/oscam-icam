@@ -4,7 +4,7 @@ import { useState } from "react";
 import { PricingCard } from "@/components/plans/PricingCard";
 import { pricingDurations } from "@/lib/plans";
 
-const DEFAULT_DURATION_ID = "1-year";
+const DEFAULT_DURATION_ID = "erweitert";
 
 export function PricingTabs() {
   const [activeId, setActiveId] = useState(DEFAULT_DURATION_ID);
@@ -15,7 +15,7 @@ export function PricingTabs() {
     <div className="flex w-full flex-col items-center gap-10">
       <div
         role="tablist"
-        aria-label="Laufzeit auswählen"
+        aria-label="Support-Paket auswählen"
         className="flex flex-wrap items-center justify-center gap-1.5 rounded-full border border-border bg-background-elevated/60 p-1.5"
       >
         {pricingDurations.map((duration) => {

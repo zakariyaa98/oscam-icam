@@ -3,14 +3,21 @@ import { BrandLogo } from "@/components/logo/BrandLogo";
 import { WHATSAPP_DEFAULT_LINK } from "@/lib/whatsapp";
 
 const footerLinks = {
-  Unternehmen: [
+  Themen: [
     { href: "/", label: "Startseite" },
-    { href: "/about", label: "Über uns" },
-    { href: "/plans", label: "Preise" },
+    { href: "/oscam", label: "OSCam" },
+    { href: "/icam", label: "iCam" },
+    { href: "/oscam-installieren", label: "OSCam installieren" },
+    { href: "/oscam-icam-anbieter", label: "OSCam iCam Anbieter" },
+    { href: "/oscam-reseller", label: "OSCam Reseller" },
+  ],
+  Receiver: [
+    { href: "/oscam-vu-plus", label: "OSCam VU+" },
+    { href: "/oscam-dreambox", label: "OSCam Dreambox" },
+    { href: "/oscam-zgemma", label: "OSCam Zgemma" },
+    { href: "/oscam-service", label: "Technischer Support" },
     { href: "/blog", label: "Blog" },
-    { href: "/iptv-service", label: "IPTV Service" },
-    { href: "/best-iptv-service", label: "Bester IPTV Anbieter" },
-    { href: "/iptv-providers", label: "IPTV Anbieter" },
+    { href: "/about", label: "Über uns" },
   ],
   Support: [
     { href: "/faq", label: "FAQ" },
@@ -27,12 +34,12 @@ const footerLinks = {
 export function Footer() {
   return (
     <footer className="border-t border-border bg-background">
-      <div className="mx-auto grid w-full max-w-7xl gap-10 px-5 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-[1.2fr_1fr_1fr_1fr] lg:px-10">
+      <div className="mx-auto grid w-full max-w-7xl gap-10 px-5 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-[1.2fr_1fr_1fr_1fr_1fr] lg:px-10">
         <div className="flex flex-col gap-4">
           <BrandLogo />
           <p className="max-w-sm text-sm leading-relaxed text-muted">
-            IPTV TV ist Ihr IPTV Anbieter für Deutschland — stabile Server, Tausende Sender
-            und persönlicher Support, sieben Tage die Woche.
+            OSCam-iCam erklärt OSCam und iCam für Enigma2-Receiver — verständlich, technisch fundiert
+            und mit persönlichem Support auf Deutsch.
           </p>
         </div>
 
@@ -67,7 +74,7 @@ export function Footer() {
 
       <div className="border-t border-border">
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-2 px-5 py-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-10">
-          <p>© {new Date().getFullYear()} IPTV TV. Alle Rechte vorbehalten.</p>
+          <p>© {new Date().getFullYear()} OSCam-iCam. Alle Rechte vorbehalten.</p>
           <p>contactipm3tv@gmail.com</p>
         </div>
       </div>

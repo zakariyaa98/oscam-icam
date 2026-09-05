@@ -6,26 +6,26 @@ import { ContactCTA } from "@/components/sections/ContactCTA";
 import { faqCategories } from "@/lib/faq-data";
 
 export const metadata: Metadata = {
-  title: "Häufige Fragen zu IPTV | IPTV TV",
+  title: "Häufige Fragen zu OSCam & iCam | OSCam-iCam",
   description:
-    "Wie funktioniert IPTV, welche Geräte werden unterstützt und wie läuft der Test ab? Antworten auf die wichtigsten Fragen zu IPTV TV.",
+    "Was ist OSCam, was ist iCam, welche Receiver werden unterstützt und wie läuft der technische Support ab? Antworten auf die wichtigsten Fragen.",
   alternates: {
     canonical: "/faq",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "IPTV TV",
+    siteName: "OSCam-iCam",
     url: "/faq",
-    title: "Häufige Fragen zu IPTV | IPTV TV",
-    description: "Antworten auf die wichtigsten Fragen zu Abo, Geräten, Installation und Support.",
-    images: [{ url: "https://iptv-tv.shop/opengraph-image", width: 1200, height: 630 }],
+    title: "Häufige Fragen zu OSCam & iCam | OSCam-iCam",
+    description: "Antworten auf die wichtigsten Fragen zu OSCam, iCam, Receivern und Support.",
+    images: [{ url: "https://oscam-icam.de/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://iptv-tv.shop/opengraph-image"],
-    title: "Häufige Fragen zu IPTV | IPTV TV",
-    description: "Antworten auf die wichtigsten Fragen zu Abo, Geräten, Installation und Support.",
+    images: ["https://oscam-icam.de/opengraph-image"],
+    title: "Häufige Fragen zu OSCam & iCam | OSCam-iCam",
+    description: "Antworten auf die wichtigsten Fragen zu OSCam, iCam, Receivern und Support.",
   },
 };
 
@@ -59,7 +59,7 @@ export default function FaqPage() {
             as="h1"
             eyebrow="FAQ"
             title="Fragen? Wahrscheinlich schon beantwortet."
-            description="Von der Einrichtung bis zum passenden Abo — hier finden Sie die Antworten, die uns am häufigsten erreichen. Nichts dabei? Schreiben Sie uns direkt."
+            description="Von der Einrichtung bis zum passenden Support-Paket — hier finden Sie die Antworten, die uns am häufigsten erreichen. Nichts dabei? Schreiben Sie uns direkt."
           />
 
           <div className="flex w-full max-w-3xl flex-col gap-12">

@@ -5,11 +5,11 @@ export function buildWhatsAppLink(message: string): string {
 }
 
 export const WHATSAPP_DEFAULT_MESSAGE =
-  "Hallo IPTV TV Support, ich interessiere mich für ein IPTV Abo. Können Sie mir bitte weitere Informationen schicken?";
+  "Hallo OSCam-iCam Team, ich habe eine Frage zur Einrichtung von OSCam/iCam auf meinem Enigma2-Receiver. Können Sie mir weiterhelfen?";
 
 export const WHATSAPP_DEFAULT_LINK = buildWhatsAppLink(WHATSAPP_DEFAULT_MESSAGE);
 
 export const WHATSAPP_FREE_TRIAL_MESSAGE =
-  "Hallo IPTV TV,\n\nich möchte gerne einen kostenlosen IPTV Test anfragen.\n\nVielen Dank!";
+  "Hallo OSCam-iCam Team,\n\nich interessiere mich für technischen Support bei der Einrichtung von OSCam/iCam auf meinem Enigma2-Receiver. Können Sie mir unverbindlich mehr dazu erklären?\n\nVielen Dank!";
 
 export const WHATSAPP_FREE_TRIAL_LINK = buildWhatsAppLink(WHATSAPP_FREE_TRIAL_MESSAGE);

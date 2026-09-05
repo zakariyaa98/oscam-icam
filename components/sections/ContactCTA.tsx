@@ -16,11 +16,11 @@ export function ContactCTA() {
           />
           <div className="relative flex flex-col items-center gap-6">
             <h2 className="max-w-xl text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-              Fragen? Wir hören zu, statt Sie warten zu lassen.
+              Fragen zu OSCam oder iCam? Wir hören zu.
             </h2>
             <p className="max-w-lg text-base leading-relaxed text-muted sm:text-lg">
-              Schreiben Sie uns jetzt — meist innerhalb weniger Minuten erhalten Sie eine
-              persönliche Empfehlung für das passende Abo.
+              Schreiben Sie uns jetzt — meist innerhalb weniger Stunden erhalten Sie eine
+              persönliche Antwort und, falls gewünscht, ein passendes Support-Paket.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
               <Button

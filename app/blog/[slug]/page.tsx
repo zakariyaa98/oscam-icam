@@ -11,7 +11,7 @@ import { TopicCluster } from "@/components/blog/TopicCluster";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 import { blogPosts, getBlogPostBySlug, getRelatedPosts } from "@/lib/blog-posts";
 
-const SITE_URL = "https://iptv-tv.shop";
+const SITE_URL = "https://oscam-icam.de";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -33,13 +33,12 @@ function subsectionId(sectionHeading: string, subHeading: string) {
 }
 
 const relatedLandingPages: Record<string, { href: string; label: string }> = {
-  "iptv-player-vergleich": { href: "/iptv-android-tv", label: "IPTV Android TV" },
-  "iptv-enigma2-installieren": { href: "/iptv-providers", label: "IPTV Anbieter" },
-  "iptv-smarters-pro-installieren": { href: "/iptv-smart-tv", label: "IPTV Smart TV" },
-  "iptv-smarters-pro-xtream-codes-einrichten": { href: "/iptv-android-tv", label: "IPTV Android TV" },
-  "iptv-formuler-installieren": { href: "/iptv-android-tv", label: "IPTV Android TV" },
-  "ibo-player-iptv-installieren": { href: "/iptv-smart-tv", label: "IPTV Smart TV" },
-  "iptv-smarters-pro-probleme-loesen": { href: "/iptv-providers", label: "IPTV Anbieter" },
+  "oscam-konfiguration-verstehen": { href: "/oscam", label: "OSCam" },
+  "oscam-fehler-loesungen": { href: "/oscam-installieren", label: "OSCam installieren" },
+  "oscam-updates-durchfuehren": { href: "/oscam", label: "OSCam" },
+  "oscam-icam-unterschiede": { href: "/icam", label: "iCam" },
+  "enigma2-receiver-oscam-vorbereiten": { href: "/oscam-installieren", label: "OSCam installieren" },
+  "enigma2-bouquets-epg-organisieren": { href: "/oscam-vu-plus", label: "OSCam VU+" },
 };
 
 export function generateStaticParams() {
@@ -70,7 +69,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       type: "article",
       locale: "de_DE",
-      siteName: "IPTV TV",
+      siteName: "OSCam-iCam",
       url: `/blog/${post.slug}`,
       title: post.seoTitle,
       description: post.metaDescription,
@@ -116,12 +115,12 @@ export default async function BlogPostPage({ params }: PageProps) {
     articleSection: post.category,
     author: {
       "@type": "Organization",
-      name: "IPTV TV",
+      name: "OSCam-iCam",
       url: SITE_URL,
     },
     publisher: {
       "@type": "Organization",
-      name: "IPTV TV",
+      name: "OSCam-iCam",
       url: SITE_URL,
       logo: {
         "@type": "ImageObject",
@@ -411,9 +410,9 @@ export default async function BlogPostPage({ params }: PageProps) {
             ) : null}
 
             <p className="text-sm leading-relaxed text-muted">
-              Bereit für Premium-Streaming? Werfen Sie einen Blick auf unsere{" "}
-              <Link href="/plans" className="text-aqua underline underline-offset-4">
-                Tarife
+              Brauchen Sie Unterstützung bei der Einrichtung? Werfen Sie einen Blick auf unsere{" "}
+              <Link href="/oscam-service" className="text-aqua underline underline-offset-4">
+                Support-Pakete
               </Link>{" "}
               oder besuchen Sie unsere{" "}
               <Link href="/faq" className="text-aqua underline underline-offset-4">
@@ -427,7 +426,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               <Link href="/blog" className="text-aqua underline underline-offset-4">
                 Blog
               </Link>{" "}
-              finden Sie weitere hilfreiche IPTV Artikel.
+              finden Sie weitere hilfreiche Artikel rund um OSCam und iCam.
               {relatedLandingPages[post.slug] ? (
                 <>
                   {" "}

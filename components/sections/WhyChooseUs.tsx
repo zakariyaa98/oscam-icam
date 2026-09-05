@@ -3,24 +3,24 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 const reasons = [
   {
-    title: "Server, die auch bei Anpfiff nicht schlappmachen",
+    title: "Technisch fundiert statt oberflächlich",
     description:
-      "Unsere Infrastruktur ist auf konstante Auslastung ausgelegt — auch dann, wenn Millionen gleichzeitig einschalten.",
+      "Wir erklären, wie OSCam und iCam tatsächlich funktionieren — Konfigurationsdateien, Architektur und Zusammenhänge, nicht nur Klick-Anleitungen.",
   },
   {
-    title: "Ein Preis, keine Überraschungen danach",
+    title: "Ausgerichtet auf Enigma2",
     description:
-      "Was auf der Tarifseite steht, ist der Preis, den Sie zahlen. Keine versteckten Gebühren, kein Kleingedrucktes.",
+      "Unsere Inhalte sind speziell auf VU+, Dreambox, Zgemma und andere Enigma2-Receiver zugeschnitten, nicht generisch für jedes Betriebssystem.",
   },
   {
-    title: "Zugang meist in wenigen Minuten",
+    title: "Verantwortungsvoll erklärt",
     description:
-      "Nach Bestätigung Ihrer Bestellung erhalten Sie Ihre Zugangsdaten üblicherweise noch am selben Tag.",
+      "Wir zeigen die technische Konfiguration, ohne Zugangsdaten, Kartenserver oder Umgehung von Zugangskontrollen anzubieten.",
   },
   {
     title: "Ein echter Mensch antwortet auf WhatsApp",
     description:
-      "Kein Ticket-System, kein Warten in der Warteschleife — unser Team antwortet Ihnen direkt und persönlich.",
+      "Kommen Sie bei der Einrichtung nicht weiter, erreichen Sie unser Support-Team direkt und persönlich — kein Ticket-System.",
   },
 ];
 
@@ -43,12 +43,12 @@ export function WhyChooseUs() {
       <Container className="relative z-10 grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <div className="flex max-w-xl flex-col gap-4">
           <h2 className="text-3xl font-bold tracking-tight text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.7)] sm:text-4xl lg:text-5xl">
-            Was IPTV TV wirklich anders macht
+            Was OSCam-iCam wirklich anders macht
           </h2>
           <p className="text-base leading-relaxed text-white/80 drop-shadow-[0_1px_12px_rgba(0,0,0,0.6)] sm:text-lg">
-            Nicht die längste Senderliste entscheidet über ein gutes IPTV Erlebnis, sondern das,
-            was im Hintergrund passiert: stabile Server, ehrliche Preise und ein Team, das
-            erreichbar bleibt, wenn Sie es brauchen.
+            Nicht die längste Anleitung entscheidet über eine funktionierende OSCam/iCam-Einrichtung,
+            sondern verständliche Erklärungen und ein Team, das erreichbar bleibt, wenn es einmal
+            hakt.
           </p>
         </div>
 

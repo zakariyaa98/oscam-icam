@@ -13,84 +13,79 @@ export const faqCategories: FaqCategory[] = [
     category: "Einstieg",
     items: [
       {
-        question: "Was ist IPTV TV?",
+        question: "Was ist OSCam?",
         answer:
-          "IPTV TV ist ein Streaming-Abo, das Live-TV, Sport, Filme und Serien über Ihre Internetverbindung liefert — statt über Kabel oder Satellit. Sie erhalten persönliche Zugangsdaten, die Sie in einer App auf Ihrem Gerät hinterlegen.",
+          "OSCam ist eine quelloffene Softcam-Software für Linux-basierte Receiver wie Enigma2-Geräte. Sie verwaltet den Zugriff auf Conditional-Access-Module und leitet Entschlüsselungsanfragen an lokal angeschlossene, rechtmäßig erworbene Smartcards oder CI+-Module weiter.",
       },
       {
-        question: "Wie funktioniert IPTV grundsätzlich?",
+        question: "Was ist iCam und wie unterscheidet es sich von OSCam?",
         answer:
-          "IPTV überträgt Fernsehprogramme als Datenstrom über das Internet. Statt eines Tuners genügt eine stabile Verbindung und eine kompatible App, die Sender, Programmführer und Filmbibliothek lädt.",
+          "iCam ist ein Softcam-Client, der nach einem ähnlichen Prinzip wie OSCam arbeitet, sich in Detailfragen wie Konfigurationssyntax und unterstützten Protokollen aber unterscheidet. Mehr dazu lesen Sie auf unserer Seite iCam.",
       },
       {
-        question: "Wie funktioniert der kostenlose Test?",
+        question: "Ist die Nutzung von OSCam oder iCam legal?",
         answer:
-          "Schreiben Sie uns über WhatsApp, und wir richten Ihnen einen kurzen Testzugang ein, damit Sie Bildqualität und Senderauswahl vorab in Ruhe prüfen können.",
-      },
-    ],
-  },
-  {
-    category: "Geräte",
-    items: [
-      {
-        question: "Welche Geräte werden unterstützt?",
-        answer:
-          "Smart TV (Samsung, LG), Android TV, Fire TV Stick, iPhone, Android-Smartphones sowie PC und Laptop — Sie brauchen kein zusätzliches Gerät, wenn eines davon schon vorhanden ist.",
-      },
-      {
-        question: "Funktioniert es auf Samsung Smart TV?",
-        answer:
-          "Ja. Über den integrierten Samsung App Store installieren Sie eine kompatible App, geben Ihre Zugangsdaten ein, und die Senderliste lädt automatisch.",
-      },
-      {
-        question: "Funktioniert es auch auf LG-Fernsehern?",
-        answer:
-          "Ja, über den LG Content Store (webOS) nach demselben Prinzip wie bei Samsung — App installieren, anmelden, loslegen.",
-      },
-      {
-        question: "Wie funktioniert die Einrichtung auf dem Fire TV Stick?",
-        answer:
-          "App aus dem Amazon App Store installieren, mit Ihren Zugangsdaten anmelden — in der Regel ist der Stick in wenigen Minuten startklar.",
+          "Die Software selbst ist frei verfügbare Open-Source-Software. Ihre Nutzung ist Teil einer legalen technischen Konfiguration, solange sie ausschließlich mit eigenen, rechtmäßig erworbenen Zugangsberechtigungen erfolgt. Wir erklären hier ausschließlich die technische Funktionsweise und bieten keine Zugangsdaten oder Kartenserver an.",
       },
     ],
   },
   {
-    category: "Funktionen",
+    category: "Enigma2 & Receiver",
     items: [
       {
-        question: "Ist ein Programmführer (EPG) enthalten?",
+        question: "Welche Receiver unterstützen OSCam?",
         answer:
-          "Ja, der elektronische Programmführer ist automatisch Teil jedes Abos und zeigt Ihnen das aktuelle und kommende Programm über alle Sender hinweg.",
+          "Grundsätzlich jeder Receiver, der mit einem Enigma2-Image läuft — darunter VU+, Dreambox, Zgemma, GigaBlue und viele weitere Modelle. Details finden Sie auf unseren Geräteseiten.",
       },
       {
-        question: "Sind auch Filme und Serien auf Abruf verfügbar?",
+        question: "Brauche ich Programmierkenntnisse für die Einrichtung?",
         answer:
-          "Ja, neben dem Live-Programm steht eine umfangreiche VOD-Bibliothek zur Verfügung, jederzeit abrufbar in derselben App.",
+          "Nein, die Grundkonfiguration erfolgt über Textdateien mit klar dokumentierter Struktur beziehungsweise über die Weboberfläche (WebIf). Etwas technisches Interesse ist hilfreich, Programmierkenntnisse sind aber nicht erforderlich.",
+      },
+      {
+        question: "Was ist der Unterschied zwischen den Enigma2-Images (OpenATV, OpenPLi, etc.)?",
+        answer:
+          "Die Images unterscheiden sich in Oberfläche, vorinstallierten Paketen und Plugin-Feed, teilen sich aber dieselbe Enigma2-Grundlage. OSCam und iCam lassen sich auf den gängigen Images vergleichbar einrichten.",
       },
     ],
   },
   {
-    category: "Abo & Support",
+    category: "Konfiguration",
     items: [
       {
-        question: "Wie schnell wird der Zugang aktiviert?",
+        question: "Welche Konfigurationsdateien sind bei OSCam wichtig?",
         answer:
-          "Meist innerhalb weniger Minuten nach Zahlungsbestätigung. In Ausnahmefällen kann es bis zu einigen Stunden dauern.",
+          "Die zentralen Dateien sind oscam.conf (allgemeine Einstellungen), oscam.server (Kartenleser/Reader) und oscam.user (Benutzerkonten). Mehr dazu in unserem Blogartikel zur OSCam-Konfiguration.",
       },
       {
-        question: "Welche Abonnementoptionen gibt es?",
+        question: "Was ist das OSCam WebIf?",
         answer:
-          "Sie wählen zwischen 6 Monaten, 1 Jahr oder 2 Jahren Laufzeit — je länger die Laufzeit, desto günstiger der Preis pro Monat. Details finden Sie auf unserer Tarifseite.",
+          "Das WebIf ist die browserbasierte Weboberfläche von OSCam. Darüber lassen sich Status, Logs und viele Einstellungen bequem einsehen und anpassen, ohne jede Datei manuell zu bearbeiten.",
+      },
+    ],
+  },
+  {
+    category: "Support",
+    items: [
+      {
+        question: "Wie schnell kann ich Unterstützung bekommen?",
+        answer:
+          "In der Regel antworten wir innerhalb weniger Stunden über WhatsApp und vereinbaren einen Termin für die Fernunterstützung.",
       },
       {
-        question: "Wie kann ich den Support kontaktieren?",
+        question: "Welche Support-Pakete bietet OSCam-iCam an?",
         answer:
-          "Am schnellsten über WhatsApp. Alternativ erreichen Sie uns per E-Mail — beide Kanäle finden Sie auf unserer Kontaktseite.",
+          "Von der einmaligen Basis-Einrichtung bis zum laufenden Premium-Support über mehrere Monate. Details und Preise finden Sie auf unserer Service-Seite.",
       },
       {
-        question: "Was tue ich bei Verbindungsproblemen?",
+        question: "Was tue ich, wenn OSCam nach einem Update nicht mehr startet?",
         answer:
-          "Prüfen Sie zunächst Ihre Internetgeschwindigkeit (mindestens 10 Mbit/s empfohlen) und starten Sie die App neu. Hilft das nicht, ist unser Support-Team direkt für Sie da.",
+          "Meist hilft ein Blick in die Logdatei sowie eine Prüfung der zuletzt geänderten Konfigurationsdateien auf Syntaxfehler. Eine ausführliche Anleitung finden Sie in unserem Blogartikel zu häufigen OSCam-Fehlern, bei Bedarf hilft unser Support-Team gerne weiter.",
+      },
+      {
+        question: "Bietet ihr Zugangsdaten oder Kartenserver an?",
+        answer:
+          "Nein. Wir bieten ausschließlich technische Aufklärung und Unterstützung bei der Konfiguration von OSCam/iCam auf Ihrem eigenen Receiver mit Ihren eigenen, rechtmäßig erworbenen Berechtigungen.",
       },
     ],
   },

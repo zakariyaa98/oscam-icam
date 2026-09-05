@@ -46,12 +46,12 @@ export default function Image() {
               <path d="M20 17.5 30.5 24 20 30.5V17.5Z" fill="#E30613" />
             </svg>
           </div>
-          <div style={{ display: "flex", fontSize: 84, fontWeight: 700, color: "#FFFFFF" }}>
-            IPTV&nbsp;<span style={{ color: "#E30613" }}>TV</span>
+          <div style={{ display: "flex", fontSize: 76, fontWeight: 700, color: "#FFFFFF" }}>
+            OSCam<span style={{ color: "#E30613" }}>-iCam</span>
           </div>
         </div>
-        <div style={{ display: "flex", marginTop: 28, fontSize: 32, color: "#A0A0A0" }}>
-          Premium IPTV Anbieter für Deutschland
+        <div style={{ display: "flex", marginTop: 28, fontSize: 30, color: "#A0A0A0" }}>
+          OSCam &amp; iCam für Enigma2 verständlich erklärt
         </div>
       </div>
     ),

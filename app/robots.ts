@@ -14,6 +14,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: "/api/",
       },
     ],
-    sitemap: "https://iptv-tv.shop/sitemap.xml",
+    sitemap: "https://oscam-icam.de/sitemap.xml",
   };
 }

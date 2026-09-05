@@ -6,26 +6,26 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
 export const metadata: Metadata = {
-  title: "AGB – Allgemeine Geschäftsbedingungen | IPTV TV",
+  title: "AGB – Allgemeine Geschäftsbedingungen | OSCam-iCam",
   description:
-    "Die Bedingungen für die Nutzung von IPTV TV: Abo, Zahlung, Haftung, geistiges Eigentum und geltendes Recht auf einen Blick.",
+    "Die Bedingungen für die Nutzung von OSCam-iCam: Leistungsumfang, Zahlung, Haftung, geistiges Eigentum und geltendes Recht auf einen Blick.",
   alternates: {
     canonical: "/terms",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "IPTV TV",
+    siteName: "OSCam-iCam",
     url: "/terms",
-    title: "AGB – Allgemeine Geschäftsbedingungen | IPTV TV",
-    description: "Nutzung des Dienstes, Abo und Zahlung, Haftung, geistiges Eigentum und geltendes Recht.",
-    images: [{ url: "https://iptv-tv.shop/opengraph-image", width: 1200, height: 630 }],
+    title: "AGB – Allgemeine Geschäftsbedingungen | OSCam-iCam",
+    description: "Leistungsumfang, Zahlung, Haftung, geistiges Eigentum und geltendes Recht.",
+    images: [{ url: "https://oscam-icam.de/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://iptv-tv.shop/opengraph-image"],
-    title: "AGB – Allgemeine Geschäftsbedingungen | IPTV TV",
-    description: "Nutzung des Dienstes, Abo und Zahlung, Haftung, geistiges Eigentum und geltendes Recht.",
+    images: ["https://oscam-icam.de/opengraph-image"],
+    title: "AGB – Allgemeine Geschäftsbedingungen | OSCam-iCam",
+    description: "Leistungsumfang, Zahlung, Haftung, geistiges Eigentum und geltendes Recht.",
   },
 };
 
@@ -40,59 +40,71 @@ export default function TermsPage() {
             as="h1"
             eyebrow="Rechtliches"
             title="Allgemeine Geschäftsbedingungen"
-            description="Diese AGB regeln die Nutzung von IPTV TV. Mit der Bestellung eines Abos erkennen Sie die folgenden Bedingungen an."
+            description="Diese AGB regeln die Nutzung von OSCam-iCam und die Beauftragung unserer technischen Support-Pakete."
           />
 
           <div className="mx-auto flex w-full max-w-3xl flex-col gap-10">
-            <p className="text-xs text-muted">Stand: 28. August 2026</p>
+            <p className="text-xs text-muted">Stand: 4. September 2026</p>
 
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
                 1. Geltungsbereich und Leistungsbeschreibung
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                IPTV TV stellt seinen Kunden im Rahmen eines zeitlich befristeten Abos Zugang zu einem
-                IPTV Streaming-Dienst zur Verfügung, bestehend aus Live-Sendern, einer VOD-Bibliothek sowie einem
-                elektronischen Programmführer (EPG). Diese AGB gelten für jede Nutzung unseres Dienstes durch
-                Verbraucher und Unternehmer gleichermaßen, soweit nicht ausdrücklich anders angegeben.
+                OSCam-iCam bietet technische Aufklärung sowie optionalen, kostenpflichtigen Support
+                bei der Installation und Konfiguration der Open-Source-Software OSCam bzw. iCam auf
+                Enigma2-Receivern (z. B. VU+, Dreambox, Zgemma). Unsere Leistung beschränkt sich
+                ausdrücklich auf technischen Support und Konfigurationshilfe.{" "}
+                <strong className="text-foreground">
+                  Wir stellen keine Zugangsdaten, Kartenserver, Abonnements oder sonstige Berechtigungen
+                  zum Empfang verschlüsselter Sender bereit und unterstützen keine Umgehung von
+                  Zugangskontrollen oder Verschlüsselung.
+                </strong>{" "}
+                Der Kunde bestätigt, dass er über eine eigene, rechtmäßig erworbene Berechtigung
+                (Smartcard, CI+-Modul oder vergleichbar) verfügt, die im Rahmen des Supports lediglich
+                technisch eingebunden wird.
               </p>
             </section>
 
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">2. Vertragsschluss</h2>
               <p className="text-base leading-relaxed text-muted">
-                Ein Vertrag kommt zustande, sobald Sie über WhatsApp, unser Kontaktformular oder E-Mail eine
-                Bestellung aufgeben und wir diese bestätigen. Nach Zahlungseingang erhalten Sie Ihre persönlichen
-                Zugangsdaten oder eine Playlist-URL, mit denen Sie den Dienst auf Ihrem Gerät einrichten können.
+                Ein Vertrag kommt zustande, sobald Sie über WhatsApp, unser Kontaktformular oder E-Mail
+                ein Support-Paket anfragen und wir die Beauftragung bestätigen. Der Umfang der
+                jeweiligen Leistung ergibt sich aus dem gewählten Paket auf unserer{" "}
+                <Link href="/oscam-service" className="text-aqua underline underline-offset-4">
+                  Support-Seite
+                </Link>
+                .
               </p>
             </section>
 
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                3. Abonnement, Zahlung und Laufzeit
+                3. Vergütung und Zahlung
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Wir bieten Tarife mit unterschiedlichen Laufzeiten an, deren aktuelle Preise auf unserer{" "}
-                <Link href="/plans" className="text-aqua underline underline-offset-4">
-                  Tarifseite
+                Die aktuellen Preise für unsere Support-Pakete sind auf unserer{" "}
+                <Link href="/oscam-service" className="text-aqua underline underline-offset-4">
+                  Support-Seite
                 </Link>{" "}
-                einsehbar sind. Die Zahlungsabwicklung wird individuell mit Ihnen über WhatsApp oder E-Mail
-                abgestimmt. Ihr Abo{" "}
-                <strong className="text-foreground">verlängert sich nicht automatisch</strong> — es endet mit
-                Ablauf der gewählten Laufzeit. Möchten Sie den Dienst weiter nutzen, buchen Sie aktiv ein neues
-                Abo.
+                einsehbar. Die Zahlungsabwicklung wird individuell mit Ihnen über WhatsApp oder E-Mail
+                abgestimmt. Bei laufenden Support-Paketen (z. B. Premium-Support über mehrere Monate)
+                endet die Leistung automatisch mit Ablauf des vereinbarten Zeitraums, sofern keine
+                Verlängerung vereinbart wird.
               </p>
             </section>
 
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                4. Nutzungsrechte und Pflichten
+                4. Pflichten des Kunden
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Die überlassenen Zugangsdaten sind ausschließlich zur persönlichen Nutzung durch den Kunden
-                bestimmt. Eine Weitergabe an Dritte, ein Weiterverkauf oder eine gewerbliche Nutzung der
-                Zugangsdaten sind nicht gestattet. Der Kunde verpflichtet sich, den Dienst nur im Rahmen der
-                geltenden Gesetze zu nutzen.
+                Der Kunde verpflichtet sich, unsere Leistungen ausschließlich im Rahmen der geltenden
+                Gesetze zu nutzen und ausschließlich eigene, rechtmäßig erworbene
+                Zugangsberechtigungen im Rahmen des Supports einzubinden. Eine Nutzung unserer
+                Leistungen zur Vorbereitung oder Durchführung unautorisierten Zugriffs auf
+                kostenpflichtige Inhalte ist ausdrücklich untersagt.
               </p>
             </section>
 
@@ -101,10 +113,10 @@ export default function TermsPage() {
                 5. Geistiges Eigentum
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Alle Inhalte, Marken, Logos und die Gestaltung unserer Website sowie unseres Dienstes sind
-                Eigentum von IPTV TV oder der jeweiligen Rechteinhaber und urheberrechtlich geschützt.
-                Mit dem Abschluss eines Abos erhält der Kunde ein einfaches, nicht übertragbares Nutzungsrecht zum
-                persönlichen Streamen der Inhalte — darüber hinaus werden keine Rechte eingeräumt.
+                Alle Inhalte, Marken, Logos und die Gestaltung unserer Website sind Eigentum von
+                OSCam-iCam oder der jeweiligen Rechteinhaber und urheberrechtlich geschützt. OSCam
+                und iCam sind eigenständige Softwareprojekte Dritter; wir sind nicht deren Entwickler
+                und erheben keinen Anspruch auf deren geistiges Eigentum.
               </p>
             </section>
 
@@ -115,23 +127,21 @@ export default function TermsPage() {
               <p className="text-base leading-relaxed text-muted">
                 Wir haften unbeschränkt bei Vorsatz und grober Fahrlässigkeit sowie nach den Vorschriften des
                 Produkthaftungsgesetzes. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die
-                Haftung auf den vertragstypisch vorhersehbaren Schaden begrenzt. Für kurzzeitige Ausfälle, die auf
-                Wartungsarbeiten, höhere Gewalt oder auf Umstände außerhalb unseres Einflussbereichs
-                zurückzuführen sind — etwa Störungen bei Ihrem Internetanbieter oder beim ursprünglichen
-                Sendersignal —, übernehmen wir keine Haftung. Eine weitergehende Haftung ist ausgeschlossen.
+                Haftung auf den vertragstypisch vorhersehbaren Schaden begrenzt. Für Fehlfunktionen der
+                Drittsoftware OSCam bzw. iCam selbst sowie für Störungen außerhalb unseres Einflussbereichs — etwa
+                bei Ihrem Internetanbieter, Ihrer Hardware oder Ihrer Zugangsberechtigung — übernehmen wir keine
+                Haftung. Eine weitergehende Haftung ist ausgeschlossen.
               </p>
             </section>
 
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                7. Kündigung und Sperrung des Kontos
+                7. Beendigung und Ausschluss vom Support
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Da unsere Abos nicht automatisch verlängert werden, ist keine gesonderte Kündigung erforderlich —
-                der Zugang endet mit Ablauf der gebuchten Laufzeit von selbst. Bei einem Verstoß gegen diese AGB,
-                insbesondere bei Weitergabe der Zugangsdaten an Dritte oder missbräuchlicher Nutzung, sind wir
-                berechtigt, den Zugang mit sofortiger Wirkung zu sperren, ohne dass ein Anspruch auf
-                Rückerstattung bereits genutzter Leistungszeiträume besteht.
+                Stellt sich heraus, dass eine Anfrage auf unautorisierten Zugriff auf kostenpflichtige
+                Inhalte abzielt, sind wir berechtigt, die Leistung ohne Ankündigung abzulehnen oder zu
+                beenden, ohne dass ein Anspruch auf Rückerstattung bereits erbrachter Leistung besteht.
               </p>
             </section>
 
@@ -139,8 +149,8 @@ export default function TermsPage() {
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">8. Änderungen der AGB</h2>
               <p className="text-base leading-relaxed text-muted">
                 Wir behalten uns vor, diese AGB bei Bedarf anzupassen, etwa bei Änderungen unseres Angebots oder
-                der Rechtslage. Für bestehende Abos gelten die AGB in der zum Zeitpunkt des Vertragsschlusses
-                gültigen Fassung.
+                der Rechtslage. Für bereits beauftragte Leistungen gelten die AGB in der zum Zeitpunkt der
+                Beauftragung gültigen Fassung.
               </p>
             </section>
 

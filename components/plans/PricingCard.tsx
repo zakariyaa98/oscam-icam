@@ -54,16 +54,16 @@ export function PricingCard({ tier, duration, recommended }: PricingCardProps) {
 
       <div className="mt-auto flex flex-col items-center gap-4 pt-2">
         <ul className="flex flex-col items-center gap-1 text-xs text-muted">
-          <li>✔ Zugang meist am selben Tag</li>
+          <li>✔ Termin meist innerhalb weniger Tage</li>
           <li>✔ Der Preis bleibt, wie er ist</li>
           <li>✔ Sichere Zahlungsabwicklung</li>
         </ul>
 
         <div className="flex w-full flex-col items-center gap-2">
           <Button href={tier.whatsappLink} external variant="primary" className="w-full">
-            {recommended ? "Direkt loslegen" : "Dieses Abo wählen"}
+            {recommended ? "Jetzt anfragen" : "Dieses Paket wählen"}
           </Button>
-          <p className="text-xs text-muted">Zufriedenheitsgarantie inklusive</p>
+          <p className="text-xs text-muted">Zufriedenheitsgarantie für die Support-Leistung</p>
         </div>
       </div>
     </div>

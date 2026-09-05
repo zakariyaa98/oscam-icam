@@ -13,7 +13,7 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
       "@type": "ListItem",
       position: index + 1,
       name: item.label,
-      item: `https://iptv-tv.shop${item.href}`,
+      item: `https://oscam-icam.de${item.href}`,
     })),
   };
 

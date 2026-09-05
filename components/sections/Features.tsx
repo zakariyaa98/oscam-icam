@@ -15,36 +15,35 @@ type Feature = {
 const features: Feature[] = [
   {
     number: "01",
-    title: "Scharf bis ins letzte Detail",
-    description: "HD, Full HD oder 4K — Sie entscheiden, das Bild bleibt immer klar.",
+    title: "OSCam verständlich erklärt",
+    description: "Architektur, Konfigurationsdateien und Grundbegriffe, ohne unnötigen Fachjargon.",
   },
   {
     number: "02",
-    title: "Ein Abo, tausende Sender",
-    description: "Deutsche und internationale Programme in einer einzigen Übersicht.",
-    image: "/images/dashbord.png",
+    title: "iCam im Vergleich",
+    description: "Was iCam von OSCam unterscheidet und wann welche Lösung sinnvoll ist.",
   },
   {
     number: "03",
-    title: "Filmabend, wann Sie wollen",
-    description: "Eine große VOD-Bibliothek wartet, ganz ohne festen Sendeplan.",
-    image: "/images/filme%20pictures/Filme1.jpg",
+    title: "Schritt-für-Schritt-Installation",
+    description: "Von der Plugin-Installation bis zur ersten funktionierenden Konfiguration.",
+    image: "/images/streaming-technologie.png",
   },
   {
     number: "04",
-    title: "Der Programmführer denkt mit",
-    description: "Alle Sendetermine auf einen Blick, statt endlosem Zappen.",
+    title: "Für gängige Enigma2-Receiver",
+    description: "VU+, Dreambox, Zgemma und weitere Marken — mit gerätespezifischen Hinweisen.",
   },
   {
     number: "05",
-    title: "Server, die mitziehen",
-    description: "Kurze Ladezeiten und ein Stream, der stabil bleibt.",
-    image: "/images/internet-speed.png",
+    title: "Troubleshooting bei Problemen",
+    description: "Logdateien lesen, häufige Fehlerursachen erkennen und gezielt beheben.",
+    image: "/images/troubleshooting.png",
   },
   {
     number: "06",
     title: "Support, der wirklich hilft",
-    description: "Fragen landen bei einem Menschen, nicht in einer Warteschleife.",
+    description: "Wenn Sie einmal nicht weiterkommen, erreichen Sie unser Team direkt auf Deutsch.",
   },
 ];
 
@@ -53,8 +52,8 @@ export function Features() {
     <section className="border-b border-border py-20 sm:py-28">
       <Container className="flex flex-col items-center gap-16">
         <SectionHeading
-          title="Was Sie von IPTV TV erwarten dürfen"
-          description="Sechs Dinge, die den Unterschied zwischen einem gewöhnlichen Streaming-Abo und einem wirklich guten ausmachen."
+          title="Was Sie auf OSCam-iCam erwarten dürfen"
+          description="Sechs Bausteine, die den Unterschied zwischen einer frustrierenden und einer reibungslosen OSCam/iCam-Einrichtung ausmachen."
         />
 
         <div className="w-full columns-1 lg:columns-2 lg:gap-x-20">

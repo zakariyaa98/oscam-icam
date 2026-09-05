@@ -6,25 +6,25 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
 export const metadata: Metadata = {
-  title: "Datenschutzerklärung | IPTV TV",
+  title: "Datenschutzerklärung | OSCam-iCam",
   description:
-    "Welche Daten IPTV TV erhebt, wie wir sie verwenden, mit wem wir sie teilen und welche Rechte Ihnen nach der DSGVO zustehen.",
+    "Welche Daten OSCam-iCam erhebt, wie wir sie verwenden, mit wem wir sie teilen und welche Rechte Ihnen nach der DSGVO zustehen.",
   alternates: {
     canonical: "/privacy-policy",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "IPTV TV",
+    siteName: "OSCam-iCam",
     url: "/privacy-policy",
-    title: "Datenschutzerklärung | IPTV TV",
+    title: "Datenschutzerklärung | OSCam-iCam",
     description: "Welche Daten wir erheben, wie wir sie verwenden und welche Rechte Sie nach der DSGVO haben.",
-    images: [{ url: "https://iptv-tv.shop/opengraph-image", width: 1200, height: 630 }],
+    images: [{ url: "https://oscam-icam.de/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://iptv-tv.shop/opengraph-image"],
-    title: "Datenschutzerklärung | IPTV TV",
+    images: ["https://oscam-icam.de/opengraph-image"],
+    title: "Datenschutzerklärung | OSCam-iCam",
     description: "Welche Daten wir erheben, wie wir sie verwenden und welche Rechte Sie nach der DSGVO haben.",
   },
 };
@@ -46,12 +46,12 @@ export default function PrivacyPolicyPage() {
           />
 
           <div className="mx-auto flex w-full max-w-3xl flex-col gap-10">
-            <p className="text-xs text-muted">Stand: 28. August 2026</p>
+            <p className="text-xs text-muted">Stand: 4. September 2026</p>
 
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">Verantwortlicher</h2>
               <p className="text-base leading-relaxed text-muted">
-                Verantwortlich für die Datenverarbeitung im Sinne der DSGVO ist IPTV TV. Bei Fragen zum
+                Verantwortlich für die Datenverarbeitung im Sinne der DSGVO ist OSCam-iCam. Bei Fragen zum
                 Datenschutz erreichen Sie uns unter{" "}
                 <a href="mailto:contactipm3tv@gmail.com" className="text-aqua underline underline-offset-4">
                   contactipm3tv@gmail.com
@@ -65,7 +65,8 @@ export default function PrivacyPolicyPage() {
                 Welche Daten wir erheben
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Wir erheben nur die Daten, die für die Bearbeitung Ihrer Anfrage oder Ihres Abos notwendig sind:
+                Wir erheben nur die Daten, die für die Bearbeitung Ihrer Anfrage oder eines gebuchten
+                Support-Pakets notwendig sind:
               </p>
               <ul className="flex flex-col gap-2.5 text-base leading-relaxed text-muted">
                 <li className="flex items-start gap-3">
@@ -79,14 +80,14 @@ export default function PrivacyPolicyPage() {
                   <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua" />
                   <span>
                     <strong className="text-foreground">Nachrichteninhalt:</strong> der Text Ihrer Anfrage über das
-                    Kontaktformular oder WhatsApp
+                    Kontaktformular oder WhatsApp, einschließlich technischer Angaben zu Ihrem Receiver
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua" />
                   <span>
-                    <strong className="text-foreground">Zahlungsinformationen:</strong> im Rahmen der individuellen
-                    Bestellabwicklung, die wir Ihnen persönlich mitteilen
+                    <strong className="text-foreground">Abrechnungsdaten:</strong> im Rahmen der individuellen
+                    Abwicklung eines gebuchten Support-Pakets, die wir Ihnen persönlich mitteilen
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -104,9 +105,10 @@ export default function PrivacyPolicyPage() {
                 Wie wir Ihre Daten verwenden
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Wir verwenden Ihre Daten ausschließlich, um Ihre Anfragen zu beantworten, Ihr Abo einzurichten und
-                zu verwalten, unsere Website technisch sicher und funktionsfähig zu betreiben und gesetzlichen
-                Pflichten nachzukommen. Eine Nutzung zu Werbezwecken Dritter findet nicht statt.
+                Wir verwenden Ihre Daten ausschließlich, um Ihre Anfragen zu beantworten, gebuchte
+                Support-Leistungen durchzuführen und abzurechnen, unsere Website technisch sicher und
+                funktionsfähig zu betreiben und gesetzlichen Pflichten nachzukommen. Eine Nutzung zu
+                Werbezwecken Dritter findet nicht statt.
               </p>
             </section>
 
@@ -137,8 +139,8 @@ export default function PrivacyPolicyPage() {
                 <li className="flex items-start gap-3">
                   <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua" />
                   <span>
-                    Zahlungsdienstleister, sofern im Rahmen der individuellen Zahlungsabwicklung Ihres Abos
-                    erforderlich
+                    Zahlungsdienstleister, sofern im Rahmen der individuellen Abrechnung eines
+                    Support-Pakets erforderlich
                   </span>
                 </li>
               </ul>
@@ -225,10 +227,10 @@ export default function PrivacyPolicyPage() {
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">Speicherdauer</h2>
               <p className="text-base leading-relaxed text-muted">
                 Wir speichern Ihre Daten nur so lange, wie es für den jeweiligen Zweck erforderlich ist — etwa für
-                die Dauer Ihres Abos zuzüglich der anschließenden Bearbeitung von Rückfragen. Abrechnungsrelevante
-                Unterlagen bewahren wir entsprechend den gesetzlichen handels- und steuerrechtlichen
-                Aufbewahrungsfristen von bis zu zehn Jahren auf. Anschließend werden die Daten gelöscht oder
-                anonymisiert.
+                die Dauer der Bearbeitung Ihres Support-Anliegens zuzüglich der anschließenden Bearbeitung von
+                Rückfragen. Abrechnungsrelevante Unterlagen bewahren wir entsprechend den gesetzlichen handels- und
+                steuerrechtlichen Aufbewahrungsfristen von bis zu zehn Jahren auf. Anschließend werden die Daten
+                gelöscht oder anonymisiert.
               </p>
             </section>
 

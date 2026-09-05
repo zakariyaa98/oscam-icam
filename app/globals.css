@@ -7,7 +7,7 @@
   --muted: #b3b3b3;
   --border: #262626;
 
-  /* Brand accent — IPTV TV red (#E30613). Variable names kept as "aqua" to
+  /* Brand accent — OSCam-iCam red (#E30613). Variable names kept as "aqua" to
      avoid a sitewide class-name rename (bg-aqua/text-aqua/etc. stay valid Tailwind
      utilities); only the color values changed. "-soft" is the brighter red used
      for hover states (buttons and links alike — hover always brightens, never
@@ -155,12 +155,12 @@ body {
   -webkit-mask-image: radial-gradient(ellipse 65% 65% at center, black 0%, transparent 75%);
 }
 
-/* Hero background (components/home/HeroBackground.tsx): solid black base,
-   rows of posters scrolling via the sitewide .animate-marquee / -reverse
-   utilities (see below), a dark scrim gradient, a periodic diagonal light
-   beam, film grain and a vignette. Beam/scrim colors use a muted, understated
-   red treatment scoped to this effect rather than the flat --brand-aqua
-   token, kept deliberately subtle to stay premium rather than cyberpunk/neon. */
+/* Hero background (components/home/HeroBackground.tsx): solid black base, a
+   dark scrim gradient, a periodic diagonal light beam, film grain and a
+   vignette — no imagery, purely atmospheric. Beam/scrim colors use a muted,
+   understated red treatment scoped to this effect rather than the flat
+   --brand-aqua token, kept deliberately subtle to stay premium rather than
+   cyberpunk/neon. */
 .hero-bg-base {
   background: #050505;
 }

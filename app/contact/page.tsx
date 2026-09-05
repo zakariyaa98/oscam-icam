@@ -7,25 +7,25 @@ import { ContactForm } from "@/components/sections/ContactForm";
 import { WHATSAPP_DEFAULT_LINK } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Kontakt | IPTV TV",
+  title: "Kontakt | OSCam-iCam",
   description:
-    "Fragen zu IPTV TV? Schreiben Sie uns auf WhatsApp oder per E-Mail — unser Support-Team antwortet persönlich und meist innerhalb weniger Minuten.",
+    "Fragen zu OSCam, iCam oder Ihrem Enigma2-Receiver? Schreiben Sie uns auf WhatsApp oder per E-Mail — unser Support-Team antwortet persönlich.",
   alternates: {
     canonical: "/contact",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "IPTV TV",
+    siteName: "OSCam-iCam",
     url: "/contact",
-    title: "Kontakt | IPTV TV",
+    title: "Kontakt | OSCam-iCam",
     description: "Schreiben Sie uns auf WhatsApp oder per E-Mail — unser Team antwortet persönlich.",
-    images: [{ url: "https://iptv-tv.shop/opengraph-image", width: 1200, height: 630 }],
+    images: [{ url: "https://oscam-icam.de/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://iptv-tv.shop/opengraph-image"],
-    title: "Kontakt | IPTV TV",
+    images: ["https://oscam-icam.de/opengraph-image"],
+    title: "Kontakt | OSCam-iCam",
     description: "Schreiben Sie uns auf WhatsApp oder per E-Mail — unser Team antwortet persönlich.",
   },
 };
@@ -36,7 +36,7 @@ const contactChannels = [
     value: "+33 7 53 41 13 26",
     href: WHATSAPP_DEFAULT_LINK,
     external: true,
-    description: "Der schnellste Weg zu uns — ideal, wenn es um eine Bestellung oder eine dringende Frage geht.",
+    description: "Der schnellste Weg zu uns — ideal bei technischen Fragen zur Einrichtung.",
   },
   {
     label: "E-Mail",
@@ -57,8 +57,8 @@ export default function ContactPage() {
           <SectionHeading
             as="h1"
             eyebrow="Kontakt"
-            title="Du hast Fragen? Wir sind für dich da."
-            description="Ob es um die Einrichtung geht, um das passende Abo oder einfach um eine offene Frage — schreiben Sie uns, und wir kümmern uns persönlich darum."
+            title="Fragen zu OSCam oder iCam? Wir sind für Sie da."
+            description="Ob es um die Einrichtung geht, um ein passendes Support-Paket oder einfach um eine offene technische Frage — schreiben Sie uns, und wir kümmern uns persönlich darum."
           />
 
           <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr]">

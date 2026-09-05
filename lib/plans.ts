@@ -6,7 +6,7 @@ export function discountPercent(originalPrice: number, price: number): number {
 }
 
 // ---------------------------------------------------------------------------
-// Home page — featured plans preview (3 cards, no device selection)
+// Home page — featured service packages preview (3 cards)
 // ---------------------------------------------------------------------------
 
 export type FeaturedPlan = {
@@ -19,45 +19,45 @@ export type FeaturedPlan = {
 };
 
 export const homeFeatures: string[] = [
-  "30.000+ Live-Sender, inklusive aller wichtigen Sportevents weltweit",
-  "Bildqualität in Full HD, 4K und Ultra HD, ohne Qualitätsabstriche",
-  "70.000+ Filme und Serien jederzeit auf Abruf (VOD)",
-  "Elektronischer Programmführer (EPG) automatisch inklusive",
-  "Support-Team 24/7 erreichbar — auf Deutsch, ohne Warteschleife",
+  "Persönliche Fernunterstützung bei der OSCam/iCam-Einrichtung auf Ihrem Enigma2-Receiver",
+  "Konfiguration von oscam.conf, oscam.server und oscam.user gemeinsam mit Ihnen",
+  "Einrichtung von Bouquets und EPG, sofern gewünscht",
+  "Hilfe bei der Fehlersuche anhand Ihrer Logdateien",
+  "Support-Team auf Deutsch, erreichbar per WhatsApp",
 ];
 
 export const featuredPlans: FeaturedPlan[] = [
   {
-    id: "6-months",
-    duration: "6 Monate",
-    price: "30€",
+    id: "basis",
+    duration: "Basis-Einrichtung",
+    price: "29€",
     whatsappLink: buildWhatsAppLink(
-      "Hallo IPTV TV Support,\nich interessiere mich für den 6-Monats-Tarif (ab 30€)."
+      "Hallo OSCam-iCam Team,\nich interessiere mich für die Basis-Einrichtung (ab 29€)."
     ),
   },
   {
-    id: "1-year",
-    duration: "1 Jahr",
-    price: "40€",
-    badge: "🔥 Am beliebtesten",
+    id: "erweitert",
+    duration: "Erweiterte Einrichtung",
+    price: "49€",
+    badge: "🔥 Am meisten gebucht",
     featured: true,
     whatsappLink: buildWhatsAppLink(
-      "Hallo IPTV TV Support,\nich interessiere mich für den 1-Jahres-Tarif (ab 40€)."
+      "Hallo OSCam-iCam Team,\nich interessiere mich für die Erweiterte Einrichtung (ab 49€)."
     ),
   },
   {
-    id: "2-years",
-    duration: "2 Jahre",
-    price: "70€",
-    badge: "💎 Bester Wert",
+    id: "premium",
+    duration: "Premium-Support",
+    price: "79€",
+    badge: "💎 Laufende Betreuung",
     whatsappLink: buildWhatsAppLink(
-      "Hallo IPTV TV Support,\nich interessiere mich für den 2-Jahres-Tarif (ab 70€)."
+      "Hallo OSCam-iCam Team,\nich interessiere mich für den Premium-Support (ab 79€)."
     ),
   },
 ];
 
 // ---------------------------------------------------------------------------
-// Pricing page — duration tabs, each with 1/2/3-device tiers
+// Service page — package tabs, each with 1/2/3-Geräte-Stufen
 // ---------------------------------------------------------------------------
 
 export type DeviceTier = {
@@ -78,27 +78,27 @@ export type PricingDuration = {
 };
 
 export const pricingFeatures: string[] = [
-  "30.000+ Sender in einer Übersicht",
-  "Bildqualität in Full HD, 4K und Ultra HD",
-  "70.000+ Filme und Serien auf Abruf (VOD)",
-  "Läuft auf Smart TV, Android TV, Fire TV Stick, Apple TV, MAG, PC und Smartphone",
-  "Zugang meist noch am selben Tag",
-  "Support-Team rund um die Uhr erreichbar",
+  "Fernunterstützung per WhatsApp oder Fernwartungssoftware",
+  "Konfiguration von oscam.conf, oscam.server und oscam.user",
+  "Einrichtung des OSCam WebIf zur späteren Selbstverwaltung",
+  "Hilfe bei Bouquet- und EPG-Organisation unter Enigma2",
+  "Geeignet für VU+, Dreambox, Zgemma und weitere Enigma2-Receiver",
+  "Support-Team auf Deutsch erreichbar",
 ];
 
 function buildTiers(
-  durationLabel: string,
+  packageLabel: string,
   entries: { devices: 1 | 2 | 3; originalPrice: number; price: number }[]
 ): DeviceTier[] {
   return entries.map(({ devices, originalPrice, price }) => ({
-    id: `${durationLabel}-${devices}`,
+    id: `${packageLabel}-${devices}`,
     devices,
-    label: devices === 1 ? "1 Gerät" : `${devices} Geräte`,
+    label: devices === 1 ? "1 Receiver" : `${devices} Receiver`,
     originalPrice,
     price,
     whatsappLink: buildWhatsAppLink(
-      `Hallo IPTV TV Support,\nich interessiere mich für den Tarif "${durationLabel}" mit ${devices} Gerät${
-        devices > 1 ? "en" : ""
+      `Hallo OSCam-iCam Team,\nich interessiere mich für das Paket "${packageLabel}" für ${devices} Receiver${
+        devices > 1 ? "" : ""
       } (${price}€).`
     ),
   }));
@@ -106,51 +106,33 @@ function buildTiers(
 
 export const pricingDurations: PricingDuration[] = [
   {
-    id: "1-month",
-    label: "1 Monat",
-    tiers: buildTiers("1 Monat", [
-      { devices: 1, originalPrice: 15, price: 10 },
-      { devices: 2, originalPrice: 22, price: 16 },
-      { devices: 3, originalPrice: 29, price: 20 },
+    id: "basis",
+    label: "Basis-Einrichtung",
+    tiers: buildTiers("Basis-Einrichtung", [
+      { devices: 1, originalPrice: 39, price: 29 },
+      { devices: 2, originalPrice: 59, price: 45 },
+      { devices: 3, originalPrice: 79, price: 60 },
     ]),
   },
   {
-    id: "3-months",
-    label: "3 Monate",
-    tiers: buildTiers("3 Monate", [
-      { devices: 1, originalPrice: 35, price: 20 },
-      { devices: 2, originalPrice: 49, price: 30 },
-      { devices: 3, originalPrice: 59, price: 40 },
-    ]),
-  },
-  {
-    id: "6-months",
-    label: "6 Monate",
-    tiers: buildTiers("6 Monate", [
-      { devices: 1, originalPrice: 49, price: 30 },
-      { devices: 2, originalPrice: 69, price: 40 },
-      { devices: 3, originalPrice: 89, price: 55 },
-    ]),
-  },
-  {
-    id: "1-year",
-    label: "1 Jahr",
-    badge: "🔥 Am beliebtesten",
+    id: "erweitert",
+    label: "Erweiterte Einrichtung",
+    badge: "🔥 Am meisten gebucht",
     featured: true,
-    tiers: buildTiers("1 Jahr", [
-      { devices: 1, originalPrice: 79, price: 40 },
-      { devices: 2, originalPrice: 99, price: 70 },
-      { devices: 3, originalPrice: 129, price: 100 },
+    tiers: buildTiers("Erweiterte Einrichtung", [
+      { devices: 1, originalPrice: 65, price: 49 },
+      { devices: 2, originalPrice: 99, price: 75 },
+      { devices: 3, originalPrice: 129, price: 95 },
     ]),
   },
   {
-    id: "2-years",
-    label: "2 Jahre",
-    badge: "💎 Bestes Angebot",
-    tiers: buildTiers("2 Jahre", [
-      { devices: 1, originalPrice: 119, price: 70 },
+    id: "premium",
+    label: "Premium-Support (3 Monate)",
+    badge: "💎 Laufende Betreuung",
+    tiers: buildTiers("Premium-Support (3 Monate)", [
+      { devices: 1, originalPrice: 99, price: 79 },
       { devices: 2, originalPrice: 149, price: 120 },
-      { devices: 3, originalPrice: 199, price: 170 },
+      { devices: 3, originalPrice: 189, price: 150 },
     ]),
   },
 ];

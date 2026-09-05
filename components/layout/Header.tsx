@@ -8,7 +8,8 @@ import { Button } from "@/components/ui/Button";
 
 const navLinks = [
   { href: "/", label: "Startseite" },
-  { href: "/plans", label: "Preise" },
+  { href: "/oscam", label: "OSCam" },
+  { href: "/icam", label: "iCam" },
   { href: "/blog", label: "Blog" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Kontakt" },
@@ -21,7 +22,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-lg">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-10">
-        <Link href="/" aria-label="IPTV TV Startseite">
+        <Link href="/" aria-label="OSCam-iCam Startseite">
           <BrandLogo />
         </Link>
 
@@ -50,8 +51,8 @@ export function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <Button href="/plans" variant="primary" className="text-sm">
-            Jetzt starten
+          <Button href="/oscam-service" variant="primary" className="text-sm">
+            Support anfragen
           </Button>
         </div>
 
@@ -93,8 +94,8 @@ export function Header() {
               </Link>
             );
           })}
-          <Button href="/plans" variant="primary" className="mt-2 w-full">
-            Jetzt starten
+          <Button href="/oscam-service" variant="primary" className="mt-2 w-full">
+            Support anfragen
           </Button>
         </nav>
       ) : null}

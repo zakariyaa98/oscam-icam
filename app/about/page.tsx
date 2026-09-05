@@ -6,45 +6,45 @@ import { Button } from "@/components/ui/Button";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
 export const metadata: Metadata = {
-  title: "Über uns | IPTV TV",
+  title: "Über uns | OSCam-iCam",
   description:
-    "IPTV TV in Kürze: was unser Service bietet, welche Geräte er unterstützt und warum unser Support den Unterschied macht.",
+    "OSCam-iCam in Kürze: was die Website bietet, wie unser technischer Support funktioniert und warum wir Wert auf verantwortungsvolle, verständliche Inhalte legen.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "IPTV TV",
+    siteName: "OSCam-iCam",
     url: "/about",
-    title: "Über uns | IPTV TV",
-    description: "Was IPTV TV bietet und worauf wir bei unserem Service Wert legen.",
-    images: [{ url: "https://iptv-tv.shop/opengraph-image", width: 1200, height: 630 }],
+    title: "Über uns | OSCam-iCam",
+    description: "Was OSCam-iCam bietet und worauf wir bei unseren Inhalten Wert legen.",
+    images: [{ url: "https://oscam-icam.de/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://iptv-tv.shop/opengraph-image"],
-    title: "Über uns | IPTV TV",
-    description: "Was IPTV TV bietet und worauf wir bei unserem Service Wert legen.",
+    images: ["https://oscam-icam.de/opengraph-image"],
+    title: "Über uns | OSCam-iCam",
+    description: "Was OSCam-iCam bietet und worauf wir bei unseren Inhalten Wert legen.",
   },
 };
 
 const reasons = [
   {
-    title: "Ein Abo für alles",
-    description: "Live-TV, Sport, Filme und Serien in einer einzigen App, statt mehrerer separater Dienste.",
+    title: "Verständlich statt technokratisch",
+    description: "OSCam und iCam einfach erklärt — mit den Fachbegriffen, aber ohne unnötigen Ballast.",
   },
   {
-    title: "Läuft auf Ihren vorhandenen Geräten",
-    description: "Smart TV, Fire TV Stick, Smartphone oder PC — kein Zusatzgerät nötig, wenn Sie schon eines besitzen.",
+    title: "Ausgerichtet auf Enigma2",
+    description: "VU+, Dreambox, Zgemma und weitere Marken — unsere Inhalte sind speziell darauf zugeschnitten.",
   },
   {
-    title: "Einrichtung ohne Vorwissen",
-    description: "App installieren, Zugangsdaten eingeben — in der Regel sind Sie in wenigen Minuten startklar.",
+    title: "Verantwortungsvoll erklärt",
+    description: "Technische Aufklärung ohne Zugangsdaten, Kartenserver oder Anleitungen zur Umgehung von Zugangskontrollen.",
   },
   {
     title: "Support, den Sie erreichen",
-    description: "Unser Team antwortet persönlich über WhatsApp, statt Sie in einer Warteschleife zu parken.",
+    description: "Unser Team antwortet persönlich über WhatsApp, wenn Sie bei der Einrichtung nicht weiterkommen.",
   },
 ];
 
@@ -58,28 +58,30 @@ export default function AboutPage() {
           <SectionHeading
             as="h1"
             eyebrow="Über uns"
-            title="Streaming, das einfach funktioniert"
-            description="IPTV TV bündelt Live-TV, Sport, Filme und Serien in einem Abo — mit dem Anspruch, dass Einrichtung und Support genauso unkompliziert bleiben wie das Zuschauen selbst."
+            title="OSCam und iCam, verständlich erklärt"
+            description="OSCam-iCam ist eine deutschsprachige Informationsseite rund um OSCam, iCam und Enigma2-Receiver — mit dem Anspruch, technische Zusammenhänge nachvollziehbar zu erklären und bei Bedarf persönlich zu unterstützen."
           />
 
           <div className="mx-auto flex w-full max-w-3xl flex-col gap-10">
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">Worauf wir Wert legen</h2>
               <p className="text-base leading-relaxed text-muted">
-                Ein Streaming-Dienst sollte sich nicht wie ein Kompromiss anfühlen. Statt vieler
-                einzelner Apps für Live-TV, Sport und Filme bündelt IPTV TV alles in einer
-                Oberfläche — verfügbar auf dem Gerät, das Sie ohnehin schon nutzen.
+                OSCam und iCam wirken auf den ersten Blick kompliziert — viele Konfigurationsdateien,
+                unterschiedliche Enigma2-Images, verschiedene Receiver-Marken. Unser Ziel ist es,
+                diese Themen so zu erklären, dass sie auch ohne Programmierkenntnisse verständlich
+                bleiben.
               </p>
               <p className="text-base leading-relaxed text-muted">
-                Genauso wichtig ist uns, was im Hintergrund passiert: stabile Server, eine klare
-                Preisstruktur ohne Kleingedrucktes und ein Support-Team, das tatsächlich antwortet,
-                statt Sie mit einem Ticket-System allein zu lassen.
+                Genauso wichtig ist uns die Abgrenzung: Wir erklären ausschließlich die technische
+                Funktionsweise und Konfiguration mit eigenen, rechtmäßig erworbenen
+                Zugangsberechtigungen. Zugangsdaten, Kartenserver oder Anleitungen zur Umgehung von
+                Zugangskontrollen bieten wir nicht an und werden das auch nicht tun.
               </p>
             </section>
 
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                Was IPTV TV ausmacht
+                Was OSCam-iCam ausmacht
               </h2>
               <div className="grid gap-5 sm:grid-cols-2">
                 {reasons.map((reason) => (
@@ -96,13 +98,13 @@ export default function AboutPage() {
 
             <section className="flex flex-col items-center gap-5 rounded-3xl border border-aqua/30 bg-aqua/5 p-8 text-center">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                Selbst ausprobieren?
+                Brauchen Sie Unterstützung?
               </h2>
               <p className="max-w-lg text-base leading-relaxed text-muted">
-                Vergleichen Sie unsere Abonnements und finden Sie die Laufzeit, die zu Ihnen passt.
+                Vergleichen Sie unsere Support-Pakete und finden Sie den Umfang, der zu Ihnen passt.
               </p>
-              <Button href="/plans" variant="primary" className="px-8 py-4 text-base">
-                Abonnements ansehen
+              <Button href="/oscam-service" variant="primary" className="px-8 py-4 text-base">
+                Support-Pakete ansehen
               </Button>
             </section>
           </div>

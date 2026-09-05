@@ -7,26 +7,26 @@ import { ContactCTA } from "@/components/sections/ContactCTA";
 import { WHATSAPP_DEFAULT_LINK } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Rückerstattungsrichtlinie | IPTV TV",
+  title: "Rückerstattungsrichtlinie | OSCam-iCam",
   description:
-    "Frist und Bedingungen für Rückerstattungen bei IPTV TV — verständlich erklärt, ohne Kleingedrucktes.",
+    "Frist und Bedingungen für Rückerstattungen bei unseren OSCam/iCam Support-Paketen — verständlich erklärt, ohne Kleingedrucktes.",
   alternates: {
     canonical: "/refund-policy",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "IPTV TV",
+    siteName: "OSCam-iCam",
     url: "/refund-policy",
-    title: "Rückerstattungsrichtlinie | IPTV TV",
-    description: "Frist, Bedingungen und Ablauf für Rückerstattungsanfragen bei IPTV TV.",
-    images: [{ url: "https://iptv-tv.shop/opengraph-image", width: 1200, height: 630 }],
+    title: "Rückerstattungsrichtlinie | OSCam-iCam",
+    description: "Frist, Bedingungen und Ablauf für Rückerstattungsanfragen bei OSCam-iCam.",
+    images: [{ url: "https://oscam-icam.de/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://iptv-tv.shop/opengraph-image"],
-    title: "Rückerstattungsrichtlinie | IPTV TV",
-    description: "Frist, Bedingungen und Ablauf für Rückerstattungsanfragen bei IPTV TV.",
+    images: ["https://oscam-icam.de/opengraph-image"],
+    title: "Rückerstattungsrichtlinie | OSCam-iCam",
+    description: "Frist, Bedingungen und Ablauf für Rückerstattungsanfragen bei OSCam-iCam.",
   },
 };
 
@@ -43,24 +43,25 @@ export default function RefundPolicyPage() {
             as="h1"
             eyebrow="Rechtliches"
             title="Rückerstattungsrichtlinie"
-            description="Wir möchten, dass Sie mit IPTV TV zufrieden sind. Diese Seite erklärt, wann und wie Sie eine Rückerstattung beantragen können."
+            description="Wir möchten, dass Sie mit unserem technischen Support zufrieden sind. Diese Seite erklärt, wann und wie Sie eine Rückerstattung beantragen können."
           />
 
           <div className="mx-auto flex w-full max-w-3xl flex-col gap-10">
-            <p className="text-xs text-muted">Stand: 28. August 2026</p>
+            <p className="text-xs text-muted">Stand: 4. September 2026</p>
 
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
                 Unsere Zufriedenheitsgarantie
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Jeder Tarif auf unserer{" "}
-                <Link href="/plans" className="text-aqua underline underline-offset-4">
-                  Tarifseite
+                Jedes Support-Paket auf unserer{" "}
+                <Link href="/oscam-service" className="text-aqua underline underline-offset-4">
+                  Service-Seite
                 </Link>{" "}
-                kommt mit einer Zufriedenheitsgarantie. Funktioniert Ihr Zugang nicht wie beschrieben und
-                unser Support kann das Problem nicht innerhalb angemessener Zeit beheben, erstatten wir Ihnen den
-                Kaufpreis im Rahmen der folgenden Bedingungen zurück.
+                kommt mit einer Zufriedenheitsgarantie. Konnte die vereinbarte technische Leistung
+                nachweislich nicht erbracht werden und unser Support kann das Problem nicht innerhalb
+                angemessener Zeit beheben, erstatten wir den gezahlten Betrag im Rahmen der folgenden
+                Bedingungen zurück.
               </p>
             </section>
 
@@ -68,8 +69,8 @@ export default function RefundPolicyPage() {
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">Rückerstattungsfrist</h2>
               <p className="text-base leading-relaxed text-muted">
                 Rückerstattungsanfragen können Sie innerhalb von <strong className="text-foreground">7 Tagen</strong>{" "}
-                nach Aktivierung Ihres Zugangs stellen. Anfragen nach Ablauf dieser Frist können wir leider nicht
-                mehr berücksichtigen.
+                nach Abschluss der jeweiligen Support-Leistung stellen. Anfragen nach Ablauf dieser Frist können wir
+                leider nicht mehr berücksichtigen.
               </p>
             </section>
 
@@ -78,46 +79,32 @@ export default function RefundPolicyPage() {
                 Voraussetzungen und Ausnahmen
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Eine Rückerstattung setzen wir voraus, wenn ein technisches Problem auf unserer Seite vorliegt, das
-                unser Support-Team nicht beheben konnte. In folgenden Fällen ist eine Rückerstattung
-                ausgeschlossen:
+                Eine Rückerstattung setzen wir voraus, wenn die vereinbarte technische Leistung
+                nachweislich nicht funktioniert hat und unser Support-Team das Problem nicht beheben
+                konnte. In folgenden Fällen ist eine Rückerstattung ausgeschlossen:
               </p>
               <ul className="flex flex-col gap-2.5 text-base leading-relaxed text-muted">
                 <li className="flex items-start gap-3">
                   <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua" />
-                  <span>Der Dienst wurde bereits über mehrere Tage hinweg umfangreich genutzt</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua" />
-                  <span>Die Zugangsdaten wurden an Dritte weitergegeben oder missbräuchlich genutzt</span>
+                  <span>Die vereinbarte Leistung wurde vollständig und erfolgreich erbracht</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua" />
                   <span>
-                    Das Problem liegt nachweislich außerhalb unseres Einflussbereichs — etwa eine unzureichende
-                    Internetgeschwindigkeit oder ein nicht kompatibles Gerät
+                    Das Problem liegt nachweislich außerhalb unseres Einflussbereichs — etwa an einer
+                    defekten Zugangsberechtigung, inkompatibler Hardware oder einer unzureichenden
+                    Internetverbindung
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua" />
-                  <span>
-                    Sie haben vor dem Kauf eine Testphase genutzt und sich anschließend bewusst für den Kauf
-                    entschieden
-                  </span>
+                  <span>Der Kunde hat eigenständig Änderungen an der Konfiguration vorgenommen, die das Problem verursacht haben</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua" />
-                  <span>Reiner Meinungswechsel ohne technischen Grund, nachdem der Dienst mehrere Tage lief</span>
+                  <span>Reiner Meinungswechsel ohne technischen Grund, nachdem die Leistung erbracht wurde</span>
                 </li>
               </ul>
-              <p className="text-base leading-relaxed text-muted">
-                Wir empfehlen daher, vor einer längeren Laufzeit unsere kurze Testphase zu nutzen — mehr dazu
-                erfahren Sie über unser{" "}
-                <Link href="/contact" className="text-aqua underline underline-offset-4">
-                  Support-Team
-                </Link>
-                .
-              </p>
             </section>
 
             <section className="flex flex-col gap-4">
@@ -149,15 +136,15 @@ export default function RefundPolicyPage() {
                   <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-aqua text-xs font-bold text-white">
                     2
                   </span>
-                  <span>Teilen Sie uns Ihre Bestelldaten und den Grund der Rückerstattung mit</span>
+                  <span>Teilen Sie uns das gebuchte Paket und den Grund der Rückerstattung mit</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-aqua text-xs font-bold text-white">
                     3
                   </span>
                   <span>
-                    Unser Team prüft die Anfrage und versucht zunächst, ein technisches Problem gemeinsam mit
-                    Ihnen zu beheben
+                    Unser Team prüft die Anfrage und versucht zunächst, das technische Problem
+                    gemeinsam mit Ihnen zu beheben
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
