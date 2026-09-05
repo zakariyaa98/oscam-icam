@@ -1,24 +1,26 @@
+import Image from "next/image";
+
 type BrandLogoProps = {
   className?: string;
+  /** Set on the header instance so the above-the-fold logo is not lazy-loaded. */
+  priority?: boolean;
 };
 
-// Text-based wordmark — no static image asset. "OSCam" in the foreground
-// color, "iCam" in the brand accent color, matching the favicon/OG mark.
-export function BrandLogo({ className }: BrandLogoProps) {
+// Official OSCam-iCam badge shipped in /public. The PNG is a square 1600x1600
+// image with a transparent background, so it sits on any surface unchanged.
+const LOGO_SRC = "/images/logo/OSCam-iCam-OSCam-und-iCam-fuer-Enigma2-2.png";
+const LOGO_ALT = "OSCam-iCam – OSCam und iCam für Enigma2";
+
+export function BrandLogo({ className, priority = false }: BrandLogoProps) {
   return (
-    <span
-      className={`inline-flex items-center gap-1.5 text-xl font-extrabold tracking-tight text-foreground sm:text-2xl ${className ?? ""}`}
-    >
-      <svg
-        viewBox="0 0 48 48"
-        fill="none"
-        aria-hidden="true"
-        className="h-6 w-6 shrink-0 sm:h-7 sm:w-7"
-      >
-        <circle cx="24" cy="24" r="15" stroke="currentColor" className="text-aqua" strokeWidth="3" />
-        <path d="M20 17.5 30.5 24 20 30.5V17.5Z" fill="currentColor" className="text-aqua" />
-      </svg>
-      OSCam<span className="text-aqua">-iCam</span>
-    </span>
+    <Image
+      src={LOGO_SRC}
+      alt={LOGO_ALT}
+      width={1600}
+      height={1600}
+      priority={priority}
+      sizes="(max-width: 640px) 40px, (max-width: 1024px) 44px, 48px"
+      className={`h-10 w-10 shrink-0 object-contain sm:h-11 sm:w-11 lg:h-12 lg:w-12 ${className ?? ""}`}
+    />
   );
 }

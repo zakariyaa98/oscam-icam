@@ -69,9 +69,9 @@ const organizationJsonLd = {
   url: siteUrl,
   logo: {
     "@type": "ImageObject",
-    url: `${siteUrl}/logo`,
-    width: 512,
-    height: 512,
+    url: `${siteUrl}/images/logo/OSCam-iCam-OSCam-und-iCam-fuer-Enigma2-2.png`,
+    width: 1600,
+    height: 1600,
   },
   description:
     "OSCam-iCam erklärt OSCam und iCam für Enigma2-Receiver und bietet technischen Support bei der Einrichtung und Konfiguration.",

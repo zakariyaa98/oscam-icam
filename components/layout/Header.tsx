@@ -23,7 +23,7 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-lg">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-10">
         <Link href="/" aria-label="OSCam-iCam Startseite">
-          <BrandLogo />
+          <BrandLogo priority />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Hauptnavigation">

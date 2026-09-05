@@ -124,9 +124,9 @@ export default async function BlogPostPage({ params }: PageProps) {
       url: SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: `${SITE_URL}/logo`,
-        width: 512,
-        height: 512,
+        url: `${SITE_URL}/images/logo/OSCam-iCam-OSCam-und-iCam-fuer-Enigma2-2.png`,
+        width: 1600,
+        height: 1600,
       },
     },
     mainEntityOfPage: {
