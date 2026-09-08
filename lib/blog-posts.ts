@@ -176,6 +176,10 @@ export const blogPosts: BlogPost[] = [
         body: [
           "Bei den meisten Enigma2-Installationen liegen die OSCam-Konfigurationsdateien im Verzeichnis /etc/tuxbox/config/oscam oder einem vergleichbaren Pfad, abhängig vom installierten Image. Der Zugriff erfolgt in der Regel über FTP, Telnet oder direkt über das OSCam WebIf, sofern dieses bereits eingerichtet ist.",
         ],
+        image: {
+          src: "/images/Blog/understanding-oscam-configuration-oscam-conf-oscam-server-oscam-user-diagram-how-it-works.webp",
+          alt: "Schaubild der drei OSCam-Konfigurationsdateien: oscam.conf für globale Einstellungen und Logging, oscam.server für die Reader und oscam.user für die Benutzerkonten, mit Pfeilen, die das Zusammenspiel der Dateien zeigen",
+        },
       },
       {
         heading: "oscam.conf: die Grundeinstellungen",
@@ -187,6 +191,10 @@ export const blogPosts: BlogPost[] = [
           "[webif]: Port, Benutzername und Passwort für die browserbasierte WebIf-Oberfläche.",
           "[monitor]: Einstellungen für die Monitor-Schnittstelle, etwa für Statusabfragen.",
         ],
+        image: {
+          src: "/images/Blog/understanding-oscam-configuration-oscam-conf-global-settings-logging-dvbapi-explained.webp",
+          alt: "Geöffnete oscam.conf im Editor auf einem Laptop mit den Abschnitten [global], [cache], [dvbapi] und [reader] sowie Parametern wie logfile und fallbacktimeout, daneben ein DVB-S2-Receiver",
+        },
         subsections: [
           {
             heading: "Typische Stolperfallen",
@@ -224,6 +232,10 @@ export const blogPosts: BlogPost[] = [
         body: [
           "Wer die direkte Bearbeitung der Textdateien scheut, kann viele Einstellungen auch über das browserbasierte OSCam WebIf vornehmen. Es zeigt zudem den aktuellen Status aller Reader übersichtlich an und erleichtert so die spätere Fehlersuche erheblich.",
         ],
+        image: {
+          src: "/images/Blog/understanding-oscam-configuration-webif-status-readers-clients-online-result.webp",
+          alt: "OSCam WebIf auf der Status-Seite im Browser: drei Reader mit dem Zustand online und aktiv sowie eine Liste verbundener Clients mit IP-Adresse und ECM-Zeit",
+        },
       },
       {
         heading: "Nach Änderungen: Neustart und Log prüfen",
