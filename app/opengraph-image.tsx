@@ -1,4 +1,6 @@
 import { ImageResponse } from "next/og";
+import { readFileSync } from "fs";
+import { join } from "path";
 
 export const size = {
   width: 1200,
@@ -6,6 +8,13 @@ export const size = {
 };
 
 export const contentType = "image/png";
+
+// Same official OSCam-iCam badge the Header/Footer (BrandLogo) render — a square
+// 1600x1600 PNG with a transparent background. Inlined as a data URL because the
+// satori renderer cannot reach the filesystem or network at request time.
+const logoDataUrl = `data:image/png;base64,${readFileSync(
+  join(process.cwd(), "public/images/logo/OSCam-iCam-OSCam-und-iCam-fuer-Enigma2-2.png")
+).toString("base64")}`;
 
 export default function Image() {
   return new ImageResponse(
@@ -33,18 +42,19 @@ export default function Image() {
           <div
             style={{
               display: "flex",
-              width: 96,
-              height: 96,
-              borderRadius: 24,
-              border: "2px solid #E30613",
               alignItems: "center",
               justifyContent: "center",
+              width: 140,
+              height: 140,
             }}
           >
-            <svg width="64" height="64" viewBox="0 0 48 48" fill="none">
-              <circle cx="24" cy="24" r="15" stroke="#E30613" strokeWidth="2" />
-              <path d="M20 17.5 30.5 24 20 30.5V17.5Z" fill="#E30613" />
-            </svg>
+            {/* eslint-disable-next-line @next/next/no-img-element -- satori render target, not DOM */}
+            <img
+              src={logoDataUrl}
+              width={140}
+              height={140}
+              style={{ objectFit: "contain" }}
+            />
           </div>
           <div style={{ display: "flex", fontSize: 76, fontWeight: 700, color: "#FFFFFF" }}>
             OSCam<span style={{ color: "#E30613" }}>-iCam</span>

@@ -1,4 +1,6 @@
 import { ImageResponse } from "next/og";
+import { readFileSync } from "fs";
+import { join } from "path";
 
 export const size = {
   width: 32,
@@ -6,6 +8,13 @@ export const size = {
 };
 
 export const contentType = "image/png";
+
+// Same official OSCam-iCam badge the Header/Footer (BrandLogo) render — a square
+// 1600x1600 PNG with a transparent background. Inlined as a data URL because the
+// satori renderer cannot reach the filesystem or network at request time.
+const logoDataUrl = `data:image/png;base64,${readFileSync(
+  join(process.cwd(), "public/images/logo/OSCam-iCam-OSCam-und-iCam-fuer-Enigma2-2.png")
+).toString("base64")}`;
 
 export default function Icon() {
   return new ImageResponse(
@@ -17,17 +26,15 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#000000",
-          borderRadius: 8,
         }}
       >
-        <svg width="22" height="22" viewBox="0 0 48 48" fill="none">
-          {/* Favicon stays a plain ring + play mark — the site's text wordmark
-              (BrandLogo) carries the same mark inline, so this stays scoped to
-              the favicon/OG image only. */}
-          <circle cx="24" cy="24" r="15" stroke="#E30613" strokeWidth="3" />
-          <path d="M20 17.5 30.5 24 20 30.5V17.5Z" fill="#E30613" />
-        </svg>
+        {/* eslint-disable-next-line @next/next/no-img-element -- satori render target, not DOM */}
+        <img
+          src={logoDataUrl}
+          width={size.width}
+          height={size.height}
+          style={{ objectFit: "contain" }}
+        />
       </div>
     ),
     { ...size }
