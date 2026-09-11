@@ -473,66 +473,173 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "oscam-icam-unterschiede",
     title: "OSCam und iCam: Die wichtigsten Unterschiede erklärt",
-    seoTitle: "OSCam vs. iCam: Die Unterschiede im Überblick",
+    seoTitle: "OSCam und iCam: Die wichtigsten Unterschiede erklärt",
     metaDescription:
-      "OSCam und iCam im Vergleich: gemeinsames Grundprinzip, Unterschiede bei Konfiguration und Protokollen sowie Entscheidungshilfen für Ihr Setup.",
+      "OSCam und iCam im Vergleich: die wichtigsten Unterschiede bei Konfiguration, WebIf und Dokumentation – inklusive Entscheidungshilfe für Ihren Enigma2-Receiver.",
     excerpt:
-      "OSCam und iCam verfolgen ein ähnliches Grundprinzip, unterscheiden sich aber in Details. Ein strukturierter Vergleich beider Softcam-Lösungen.",
+      "OSCam und iCam verfolgen ein ähnliches Grundprinzip, unterscheiden sich aber deutlich bei Konfiguration, WebIf und Dokumentation. Ein strukturierter Vergleich beider Softcam-Lösungen für Enigma2.",
     publishedAt: "2026-08-31",
-    readingTimeMinutes: 8,
+    updatedAt: "2026-09-11",
+    readingTimeMinutes: 10,
     category: "Vergleich",
     gradient: "circuit",
     toc: true,
     clusterId: "grundlagen",
     tldr: [
-      "OSCam und iCam sind beides Softcam-Clients für Linux-basierte Receiver mit einem ähnlichen Grundprinzip.",
-      "Unterschiede zeigen sich vor allem in Konfigurationssyntax, Entwicklungsstand und unterstützten Protokollen.",
-      "Beide lassen sich grundsätzlich auf denselben Enigma2-Receivern einbinden.",
-      "Welche Variante besser passt, hängt von der konkreten Hardware und den persönlichen Präferenzen ab.",
+      "OSCam und iCam sind beides Softcam-Clients für Linux-basierte Enigma2-Receiver mit einem sehr ähnlichen Grundprinzip.",
+      "Beide vermitteln zwischen dem Receiver und einem lokal angeschlossenen Kartenleser oder CI+-Modul.",
+      "Die wichtigsten Unterschiede liegen in Konfigurationssyntax, WebIf-Funktionsumfang, Dokumentation und Community-Größe.",
+      "Beide Lösungen lassen sich grundsätzlich auf denselben Enigma2-Receivern wie VU+, Dreambox oder Zgemma einbinden.",
+      "Ein Wechsel zwischen OSCam und iCam ist technisch möglich, erfordert aber eine neue Konfiguration von Readern und Benutzern.",
+      "Für die meisten Standardanwendungen ist OSCam aufgrund seiner breiten Dokumentation der pragmatischere Einstieg.",
     ],
-    keywords: ["OSCam iCam Unterschiede", "OSCam vs iCam", "iCam oder OSCam"],
+    keywords: [
+      "OSCam iCam Unterschiede",
+      "OSCam vs iCam",
+      "iCam oder OSCam",
+      "OSCam Konfiguration",
+      "iCam Konfiguration",
+      "OSCam WebIF",
+    ],
     intro: [
-      "OSCam und iCam werden häufig in einem Atemzug genannt — kein Zufall, denn beide Programme lösen dieselbe grundlegende Aufgabe: die Vermittlung zwischen einem Enigma2-Receiver und einem angeschlossenen Conditional-Access-Modul oder Kartenleser. Trotzdem unterscheiden sie sich in einigen technischen Details, die für die Wahl der passenden Lösung relevant sein können.",
-      "Dieser Artikel stellt beide Ansätze gegenüber und ordnet ein, worauf es bei der Entscheidung ankommt.",
+      "OSCam und iCam werden häufig in einem Atemzug genannt — kein Zufall, denn beide Programme lösen dieselbe grundlegende Aufgabe: die Vermittlung zwischen einem Enigma2-Receiver und einem angeschlossenen Conditional-Access-Modul oder Kartenleser. Wer sich zum ersten Mal mit dem Thema beschäftigt, stößt schnell auf beide Namen und fragt sich zu Recht, worin der eigentliche Unterschied besteht.",
+      "Dieser Artikel stellt beide Ansätze strukturiert gegenüber: vom gemeinsamen Grundprinzip über Konfiguration und WebIf bis hin zur Frage, welche Lösung für welches Enigma2-Setup — etwa auf einer VU+, einer Dreambox oder einer Zgemma — sinnvoller ist. Er ersetzt keine vollständige technische Referenz, gibt aber die Orientierung, die für eine fundierte Entscheidung nötig ist.",
+      "Wichtig zu wissen: Weder OSCam noch iCam ersetzen einen bestehenden Vertrag oder eine Berechtigung für verschlüsselte Inhalte. Beide Programme übernehmen ausschließlich die technische Vermittlung zwischen Receiver und einem lokal vorhandenen Kartenleser oder CI+-Modul — die eigentliche Berechtigung liegt weiterhin beim jeweiligen Anbieter der Karte oder des Moduls.",
     ],
     sections: [
       {
         heading: "Das gemeinsame Grundprinzip",
         body: [
-          "Sowohl [OSCam](/oscam) als auch [iCam](/icam) laufen als eigenständiger Dienst im Hintergrund eines Linux-basierten Receivers. Beide nehmen Entschlüsselungsanfragen des Receivers entgegen und leiten sie an einen konfigurierten Reader weiter — einen lokal angeschlossenen Kartenleser oder ein CI+-Modul.",
+          "Sowohl [OSCam](/oscam) als auch [iCam](/icam) laufen als eigenständiger Dienst im Hintergrund eines Linux-basierten Receivers. Beide nehmen Entschlüsselungsanfragen des Receivers entgegen und leiten sie an einen konfigurierten Reader weiter — einen lokal angeschlossenen Kartenleser oder ein CI+-Modul. Für den Receiver selbst macht es dabei zunächst keinen Unterschied, welches der beiden Programme im Hintergrund aktiv ist: Beide erscheinen ihm gegenüber als vermittelnde Instanz, die Anfragen entgegennimmt und Antworten zurückliefert.",
+          "Diese Rollenverteilung — Receiver auf der einen, Softcam-Dienst auf der anderen Seite, dazwischen ein Reader oder ein Modul mit eigener Berechtigung — ist der Kern, den beide Projekte teilen. Die eigentlichen Unterschiede entstehen erst eine Ebene tiefer: in der Art, wie die Konfiguration aufgebaut ist, welche Werkzeuge zur Verwaltung bereitstehen und wie groß die jeweilige Community ist, auf die sich Nutzer bei Fragen stützen können.",
+          "Technisch läuft das in mehreren Schritten ab: Der Receiver erkennt beim Senderwechsel, dass ein Kanal verschlüsselt ist, und schickt eine Anfrage an den lokal laufenden Softcam-Dienst. Dieser prüft anhand der Konfiguration, welcher Reader für den jeweiligen Sender zuständig ist, leitet die Anfrage weiter und gibt das Ergebnis an den Receiver zurück. Ob dabei OSCam oder iCam im Hintergrund arbeitet, ändert an diesem grundsätzlichen Ablauf nichts.",
         ],
-      },
-      {
-        heading: "Unterschiede im Überblick",
-        body: [
-          "Auf den ersten Blick wirken beide Lösungen sehr ähnlich. Bei genauerem Hinsehen zeigen sich jedoch einige Unterschiede:",
-        ],
-        table: {
-          headers: ["Aspekt", "OSCam", "iCam"],
-          rows: [
-            ["Konfigurationssyntax", "Mehrere Textdateien (conf/server/user)", "Eigene Syntax, in Teilen abweichend"],
-            ["WebIf", "Umfangreiche browserbasierte Oberfläche", "Je nach Version unterschiedlich ausgeprägt"],
-            ["Community & Dokumentation", "Breit etabliert, viele Anleitungen", "Kleinere, spezialisierte Community"],
-            ["Protokollunterstützung", "Breite Unterstützung verschiedener Protokolle", "Fokus auf bestimmte Anwendungsfälle"],
-          ],
-          caption: "Vereinfachte Gegenüberstellung — der konkrete Funktionsumfang hängt von der jeweiligen Version ab.",
+        image: {
+          src: "/images/home page/OSCam-iCam-Icon-Enigma2-Linux-Sat-Receiver.png",
+          alt: "Symbolisches Icon eines Linux-basierten Enigma2-Receivers mit Satellitenschüssel als Sinnbild für die gemeinsame Systemgrundlage von OSCam und iCam",
         },
       },
       {
-        heading: "Welche Lösung passt zu welchem Setup?",
+        heading: "OSCam vs. iCam – die wichtigsten Unterschiede",
         body: [
-          "Für Einsteiger, die von einer breiten Dokumentation und einer etablierten Community profitieren möchten, ist OSCam meist der naheliegendere Einstieg. iCam kann in spezifischen Setups eine sinnvolle Alternative sein, etwa wenn bestimmte Protokolleigenschaften benötigt werden.",
+          "Auf den ersten Blick wirken beide Lösungen sehr ähnlich. Bei genauerem Hinsehen zeigen sich jedoch einige Unterschiede, die je nach Erfahrungsstand und Anspruch durchaus relevant sein können:",
+        ],
+        table: {
+          headers: ["Merkmal", "OSCam", "iCam"],
+          rows: [
+            ["Grundprinzip", "Vermittelt zwischen Receiver und lokalem Reader bzw. CI+-Modul", "Verfolgt denselben Vermittlungsansatz"],
+            ["Konfiguration", "Mehrere Textdateien (oscam.conf, oscam.server, oscam.user)", "Eigene Konfigurationsstruktur, in Teilen abweichend"],
+            ["WebIf", "Umfangreiche, etablierte browserbasierte Oberfläche", "Je nach Version unterschiedlich ausgeprägt"],
+            ["Dokumentation", "Sehr breit, viele Anleitungen und Foren-Beiträge", "Deutlich kleinerer Bestand an frei verfügbaren Anleitungen"],
+            ["Community", "Groß, etabliert, seit vielen Jahren aktiv", "Kleinerer, spezialisierter Nutzerkreis"],
+            ["Protokollunterstützung", "Breite Unterstützung verschiedener Protokolle", "Fokus auf bestimmte Anwendungsfälle"],
+            ["Einrichtung", "Klar dokumentierter, weit verbreiteter Ablauf", "Erfordert häufiger eigene Recherche"],
+            ["Geeignet für", "Standardsetups, Einsteiger, breite Hardware-Basis", "Spezifische Setups mit besonderen Anforderungen"],
+          ],
+          caption: "Vereinfachte Gegenüberstellung — der konkrete Funktionsumfang hängt von der jeweiligen Version und dem Receiver-Image ab.",
+        },
+        image: {
+          src: "/images/home page/OSCam-iCam-Icon-OSCam-Softcam-Kartenleser.png",
+          alt: "Symbolisches Icon eines Kartenlesers mit Chipkarte als Sinnbild für OSCam im direkten Vergleich mit iCam",
+        },
+        subsections: [
+          {
+            heading: "OSCam im Überblick",
+            body: ["Die zentralen Eigenschaften von OSCam auf einen Blick:"],
+            list: [
+              "Etablierte Lösung mit langer Entwicklungsgeschichte",
+              "Umfangreiche Dokumentation und viele Community-Anleitungen",
+              "Bekannte Konfigurationsstruktur aus oscam.conf, oscam.server und oscam.user",
+              "Ausgereiftes WebIf zur Statusübersicht und Verwaltung",
+            ],
+          },
+          {
+            heading: "iCam im Überblick",
+            body: ["Die zentralen Eigenschaften von iCam auf einen Blick:"],
+            list: [
+              "Eigenständiges Softwareprojekt mit eigenem Entwicklungsweg",
+              "Eigener Konfigurationsaufbau, der sich in Teilen von OSCam unterscheidet",
+              "Für spezifische Einsatzbereiche und Setups relevant",
+              "Funktionsumfang und WebIf variieren je nach Version",
+            ],
+          },
         ],
       },
       {
-        heading: "Lässt sich zwischen beiden gewechselt werden?",
+        heading: "OSCam Konfiguration und iCam Konfiguration",
         body: [
-          "Grundsätzlich ja — beide Programme laufen unabhängig voneinander, ein Wechsel bedeutet aber, die Konfiguration (Reader, Benutzer) im jeweils anderen Format neu anzulegen. Ein paralleler Betrieb beider Dienste auf demselben Receiver ist technisch möglich, aber selten sinnvoll.",
+          "Ein zentraler Unterschied zwischen OSCam und iCam liegt in der Art, wie ihre Konfiguration aufgebaut ist. OSCam verteilt die Einstellungen klassischerweise auf mehrere Textdateien: [oscam.conf](/blog/oscam-konfiguration-verstehen) für die Grundeinstellungen, oscam.server für die Reader und oscam.user für die Benutzerkonten. Diese Aufteilung ist gut dokumentiert und in zahlreichen Anleitungen beschrieben.",
+          "iCam verfolgt einen eigenen Konfigurationsansatz, der sich in Aufbau und Bezeichnung der Parameter von OSCam unterscheidet. Wer von OSCam zu iCam wechselt, erkennt die grundlegende Systematik — Reader, Benutzer, allgemeine Einstellungen — zwar wieder, muss die konkrete Syntax aber neu erlernen und die vorhandene Konfiguration entsprechend übertragen.",
+          "Für beide Programme gilt gleichermaßen: Änderungen an der Konfiguration sollten sorgfältig dokumentiert und vor größeren Anpassungen gesichert werden. Ein Blick in die Logdatei nach jeder Änderung zeigt zuverlässig, ob die neue Konfiguration korrekt eingelesen wurde oder ob ein Syntaxfehler die Ursache für ausbleibende Funktion ist.",
+          "In beiden Fällen empfiehlt sich ein schrittweises Vorgehen: zunächst nur eine einzelne Einstellung ändern, den Dienst neu starten und das Ergebnis prüfen, bevor die nächste Anpassung folgt. So lässt sich im Fehlerfall schnell eingrenzen, welche Änderung die Ursache war, statt mehrere Anpassungen gleichzeitig vorzunehmen und im Anschluss raten zu müssen, welche davon das Problem verursacht hat.",
+        ],
+        image: {
+          src: "/images/home page/OSCam-iCam-Icon-Technische-Anleitungen.png",
+          alt: "Symbolisches Icon einer Checkliste für technische Anleitungen als Sinnbild für die unterschiedlichen Konfigurationsschritte von OSCam und iCam",
+        },
+      },
+      {
+        heading: "OSCam und iCam auf Enigma2",
+        body: [
+          "Beide Programme laufen nicht eigenständig, sondern innerhalb eines Enigma2-Receivers. Das bedeutet: Bevor die Wahl zwischen OSCam und iCam überhaupt relevant wird, muss der Receiver selbst die nötigen Voraussetzungen erfüllen — ein aktuelles Image, ausreichend Speicherplatz und ein funktionierender Kartenleser oder ein CI+-Modul.",
+          "Nicht jedes Enigma2-Image bringt beide Programme im Plugin-Feed mit, und nicht jede Version ist mit jeder Receiver-Generation gleichermaßen kompatibel. Vor der Installation lohnt sich daher ein Blick in die Dokumentation des jeweiligen Images sowie in unsere [Anleitung zur Vorbereitung des Receivers](/blog/enigma2-receiver-oscam-vorbereiten).",
+          "Auch nach der Installation bleibt die Hardware relevant: Ältere Receiver mit wenig Arbeitsspeicher oder begrenztem Flash-Speicher stoßen bei intensiver Nutzung schneller an ihre Grenzen als aktuelle Modelle. Wer eine Neuinstallation plant, findet in unserer [Anleitung zur OSCam-Installation](/oscam-installieren) den passenden Einstieg.",
+          "Ein weiterer Faktor ist die Art des verwendeten Zugangsmoduls: Bei einem CI+-Modul übernimmt größtenteils die Hardware die Entschlüsselung, während ein separater Kartenleser enger mit der Softcam-Software zusammenspielt. Welche Variante zum Einsatz kommt, hängt vom jeweiligen Receiver-Modell und der vorhandenen Ausstattung ab und sollte vor der Einrichtung von OSCam oder iCam geklärt sein.",
+        ],
+      },
+      {
+        heading: "OSCam oder iCam – welche Lösung passt besser?",
+        body: [
+          "Eine pauschale Empfehlung gibt es nicht — die passende Lösung hängt vom konkreten Setup, der vorhandenen Erfahrung und den persönlichen Prioritäten ab. Die folgende Einordnung hilft bei der Entscheidung, ersetzt aber keine Prüfung der eigenen Situation.",
+          "Wer unsicher ist, kann beide Aspekte gegeneinander abwägen: Überwiegt der Wunsch nach Dokumentation, Erfahrungsberichten und einer bekannten Oberfläche, spricht das eher für OSCam. Ist hingegen ein konkretes technisches Detail ausschlaggebend, das gezielt von iCam abgedeckt wird, kann sich der zusätzliche Einarbeitungsaufwand lohnen.",
+        ],
+        image: {
+          src: "/images/home page/OSCam-iCam-Icon-iCam-Softcam-Client.png",
+          alt: "Symbolisches Icon aus gestapelten Ebenen als Sinnbild für iCam als eigenständige Softcam-Lösung",
+        },
+        subsections: [
+          {
+            heading: "OSCam kann attraktiv sein, wenn …",
+            body: [],
+            list: [
+              "eine umfangreiche Dokumentation und viele Anleitungen wichtig sind",
+              "auf etablierte Community-Ressourcen zurückgegriffen werden soll",
+              "ein bekanntes, ausgereiftes WebIf gewünscht ist",
+              "eine breite Kompatibilität mit verschiedener Hardware im Vordergrund steht",
+            ],
+          },
+          {
+            heading: "iCam kann relevant sein, wenn …",
+            body: [],
+            list: [
+              "das konkrete technische Umfeld iCam explizit unterstützt oder vorsieht",
+              "ein bestimmter Anwendungsfall die spezifischen Eigenschaften von iCam erfordert",
+              "bereits Erfahrung mit der eigenen Konfigurationsstruktur von iCam besteht",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "OSCam vs. iCam auf VU+, Dreambox und Zgemma",
+        body: [
+          "Beide Programme lassen sich grundsätzlich auf den gängigen Enigma2-Receiver-Familien einbinden. Die konkrete Verfügbarkeit im Plugin-Feed und die Einrichtung unterscheiden sich aber je nach Hersteller und Image-Version. Eine ausführliche, modellspezifische Anleitung finden Sie für [VU+](/oscam-vu-plus), für [Dreambox](/oscam-dreambox) und für [Zgemma](/oscam-zgemma)-Receiver.",
+          "Auf allen drei Receiver-Familien gilt derselbe Grundsatz: Vor der Installation lohnt sich ein Blick auf die installierte Image-Version, den verfügbaren Speicherplatz und den passenden Plugin-Feed. Die jeweilige Seite geht im Detail auf die Besonderheiten des Herstellers ein und ergänzt diesen Vergleich um modellspezifische Hinweise.",
+          "Unabhängig vom Hersteller gilt: Ein Blick in die Release-Notes des installierten Images verrät zuverlässig, welche Version von OSCam oder iCam mitgeliefert wird und ob ein manuelles Update erforderlich ist. Gerade bei älteren Receivern lohnt sich dieser Schritt, bevor Zeit in eine Konfiguration investiert wird, die von der installierten Version möglicherweise gar nicht unterstützt wird.",
+        ],
+      },
+      {
+        heading: "Kann man zwischen OSCam und iCam wechseln?",
+        body: [
+          "Grundsätzlich ja — beide Programme laufen unabhängig voneinander und lassen sich auf demselben Receiver installieren. Ein Wechsel bedeutet aber nicht einfach einen Klick: Die Konfiguration — Reader, Benutzer, allgemeine Einstellungen — muss im jeweils anderen Format neu angelegt werden, da beide Programme eigene Konfigurationsdateien mit eigener Syntax verwenden.",
+          "Vor einem Wechsel empfiehlt sich eine vollständige Sicherung der bestehenden Konfiguration. So lässt sich der ursprüngliche Zustand bei Bedarf wiederherstellen, falls die neue Einrichtung nicht wie gewünscht funktioniert. Anschließend werden Reader und Benutzer in der Zielstruktur neu angelegt und die Verbindung anhand der Statusanzeige im jeweiligen WebIf überprüft.",
+          "Vor einem Wechsel lohnt sich außerdem ein Blick auf die Reader-Hardware: Ein Kartenleser oder ein CI+-Modul, das unter OSCam einwandfrei funktioniert, sollte auch unter iCam grundsätzlich unterstützt werden — die genaue Kompatibilität hängt jedoch vom jeweiligen Modell und Treiber ab und lässt sich am zuverlässigsten über die Statusanzeige im WebIf nach der Neuinstallation überprüfen.",
+          "Ein paralleler Betrieb beider Dienste auf demselben Receiver ist technisch möglich, in der Praxis aber selten sinnvoll: Er erhöht die Komplexität der Konfiguration, ohne einen echten Mehrwert zu bieten, und erschwert im Fehlerfall die Eingrenzung des Problems. Treten nach einem Wechsel Probleme auf, hilft unser Beitrag zu [häufigen OSCam-Fehlern](/blog/oscam-fehler-loesungen) bei der Eingrenzung.",
         ],
       },
     ],
     conclusion: [
-      "OSCam und iCam unterscheiden sich weniger im grundsätzlichen Zweck als in Detailfragen rund um Konfiguration, Dokumentation und Protokollunterstützung. Für die meisten Standardanwendungen auf Enigma2-Receivern ist OSCam aufgrund seiner breiten Verbreitung der pragmatischere Einstieg — eine ausführliche Installationsanleitung finden Sie unter [OSCam installieren](/oscam-installieren).",
+      "OSCam und iCam unterscheiden sich weniger im grundsätzlichen Zweck als in Detailfragen rund um Konfiguration, WebIf, Dokumentation und Community. Für die meisten Standardanwendungen auf Enigma2-Receivern ist OSCam aufgrund seiner breiten Verbreitung und ausführlichen Dokumentation der pragmatischere Einstieg — eine ausführliche Installationsanleitung finden Sie unter [OSCam installieren](/oscam-installieren).",
+      "iCam bleibt in spezifischen Setups eine legitime Alternative, insbesondere wenn die konkrete technische Umgebung oder ein bestehendes Setup dafür sprechen. In den meisten Fällen entscheidet weniger der theoretische Funktionsumfang als die verfügbare Dokumentation und die eigene Erfahrung darüber, welche Lösung im Alltag besser funktioniert. Wer sich unsicher ist, fährt in der Regel gut damit, zunächst mit OSCam zu starten und iCam erst dann in Betracht zu ziehen, wenn ein konkreter technischer Grund dafürspricht — ein späterer Wechsel bleibt jederzeit möglich.",
     ],
     faq: [
       {
@@ -549,6 +656,47 @@ export const blogPosts: BlogPost[] = [
         question: "Welches Programm hat mehr Anleitungen und Dokumentation?",
         answer:
           "OSCam ist deutlich weiter verbreitet und verfügt entsprechend über mehr frei verfügbare Dokumentation und Community-Ressourcen.",
+      },
+      {
+        question: "Ist iCam schwerer einzurichten als OSCam?",
+        answer:
+          "Nicht grundsätzlich schwerer, aber häufig weniger dokumentiert. Wer bereits Erfahrung mit der Konfigurationslogik von Softcam-Clients hat, findet sich in der Regel schnell zurecht.",
+      },
+      {
+        question: "Funktionieren OSCam und iCam auf jedem Enigma2-Receiver?",
+        answer:
+          "In der Regel ja, sofern das installierte Image das jeweilige Plugin bereitstellt und der Receiver über ausreichend Speicherplatz verfügt. Details zu einzelnen Modellen wie VU+, Dreambox oder Zgemma finden Sie in den jeweiligen Receiver-Anleitungen auf dieser Seite.",
+      },
+      {
+        question: "Was ist der Unterschied bei den Konfigurationsdateien?",
+        answer:
+          "OSCam nutzt mehrere Textdateien (oscam.conf, oscam.server, oscam.user) mit fest dokumentierter Syntax. iCam verwendet eine eigene Konfigurationsstruktur, die sich im Aufbau unterscheidet, auch wenn das Grundprinzip aus Reader, Benutzer und allgemeinen Einstellungen vergleichbar bleibt.",
+      },
+      {
+        question: "Muss ich mich dauerhaft für eine der beiden Lösungen entscheiden?",
+        answer:
+          "Für den Dauerbetrieb ist das sinnvoll, da ein paralleler Betrieb die Konfiguration unnötig verkompliziert. Zum Testen lässt sich aber zunächst die eine und später die andere Lösung ausprobieren.",
+      },
+      {
+        question: "Welches WebIf bietet mehr Funktionen?",
+        answer:
+          "Das WebIf von OSCam ist umfangreicher dokumentiert und in der Praxis weiter verbreitet. Der tatsächliche Funktionsumfang von iCam hängt stark von der installierten Version ab.",
+      },
+      {
+        question: "Wo finde ich Hilfe, wenn die Konfiguration nicht funktioniert?",
+        answer:
+          "Ein erster Blick in die Logdatei zeigt meist, ob ein Syntaxfehler vorliegt. Weiterführende Hinweise bieten unser Beitrag zu häufigen OSCam-Fehlern sowie unsere FAQ-Seite.",
+      },
+      {
+        question: "Ist ein Wechsel von OSCam zu iCam mit Datenverlust verbunden?",
+        answer:
+          "Nicht, wenn vorher eine vollständige Sicherung der bestehenden Konfiguration angelegt wird. Die Einstellungen selbst müssen aber ohnehin im neuen Format nachgebaut werden, da beide Programme unterschiedliche Konfigurationsdateien verwenden.",
+      },
+    ],
+    sources: [
+      {
+        label: "Conditional Access – Wikipedia",
+        url: "https://de.wikipedia.org/wiki/Conditional_Access",
       },
     ],
   },
