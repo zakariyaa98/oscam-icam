@@ -483,6 +483,10 @@ export const blogPosts: BlogPost[] = [
     readingTimeMinutes: 10,
     category: "Vergleich",
     gradient: "circuit",
+    image: {
+      src: "/images/Blog/OSCam und iCam Die wichtigsten Unterschiede/oscam-und-icam-unterschiede-praxis-bundesliga-familie-wohnzimmer-erlebnis-vorteile.webp",
+      alt: "Familie sitzt abends im Wohnzimmer auf dem Sofa und schaut gemeinsam ein Live-Fußballspiel auf einem Fernseher, der an einen Enigma2-Receiver angeschlossen ist",
+    },
     toc: true,
     clusterId: "grundlagen",
     tldr: [
@@ -586,6 +590,10 @@ export const blogPosts: BlogPost[] = [
           "Auch nach der Installation bleibt die Hardware relevant: Ältere Receiver mit wenig Arbeitsspeicher oder begrenztem Flash-Speicher stoßen bei intensiver Nutzung schneller an ihre Grenzen als aktuelle Modelle. Wer eine Neuinstallation plant, findet in unserer [Anleitung zur OSCam-Installation](/oscam-installieren) den passenden Einstieg.",
           "Ein weiterer Faktor ist die Art des verwendeten Zugangsmoduls: Bei einem CI+-Modul übernimmt größtenteils die Hardware die Entschlüsselung, während ein separater Kartenleser enger mit der Softcam-Software zusammenspielt. Welche Variante zum Einsatz kommt, hängt vom jeweiligen Receiver-Modell und der vorhandenen Ausstattung ab und sollte vor der Einrichtung von OSCam oder iCam geklärt sein.",
         ],
+        image: {
+          src: "/images/Blog/OSCam und iCam Die wichtigsten Unterschiede/oscam-und-icam-unterschiede-webif-icam-settings-streamrelay-port-8001-tutorial.webp",
+          alt: "Laptop zeigt den Plugin-Browser eines Enigma2-Receivers mit installierten Plugins wie WebInterface und EPG Import, daneben steht ein DVB-S2-Satellitenreceiver auf dem Schreibtisch",
+        },
       },
       {
         heading: "OSCam oder iCam – welche Lösung passt besser?",
