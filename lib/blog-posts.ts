@@ -149,6 +149,10 @@ export const blogPosts: BlogPost[] = [
     readingTimeMinutes: 10,
     category: "Grundlagen",
     gradient: "aurora",
+    image: {
+      src: "/images/Blog/OSCam Konfiguration verstehen oscam.conf, oscam.server und oscam.user/OSCam Konfiguration verstehen  oscam.conf  oscam.server und oscam.user erklart.webp",
+      alt: "Illustration mit drei Boxen für oscam.conf, oscam.server und oscam.user, die die zentralen OSCam-Konfigurationsdateien und ihre jeweiligen Aufgaben symbolisieren",
+    },
     toc: true,
     isPillar: true,
     clusterId: "grundlagen",
