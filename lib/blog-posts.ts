@@ -286,39 +286,76 @@ export const blogPosts: BlogPost[] = [
     title: "Häufige OSCam Fehler und Lösungen",
     seoTitle: "OSCam Fehler: Häufige Ursachen und Lösungen",
     metaDescription:
-      "Die häufigsten OSCam Fehler im Überblick: Reader verbindet nicht, Dienst startet nicht, Logdatei richtig lesen — mit praktischen Lösungsansätzen.",
+      "Die häufigsten OSCam Fehler im Überblick: Reader verbindet nicht, Karte wird nicht erkannt, Timeouts, Dienst startet nicht — mit praktischen Lösungsansätzen.",
     excerpt:
-      "Reader verbindet nicht, OSCam startet nicht, Logdatei bleibt kryptisch: die häufigsten Ursachen für OSCam-Probleme und wie Sie sie eingrenzen.",
+      "Reader verbindet nicht, Karte wird nicht erkannt, OSCam startet nicht: die häufigsten Ursachen für OSCam-Probleme und wie Sie sie systematisch eingrenzen.",
     publishedAt: "2026-08-29",
-    readingTimeMinutes: 9,
+    updatedAt: "2026-09-12",
+    readingTimeMinutes: 10,
     category: "Troubleshooting",
     gradient: "signal",
+    image: {
+      src: "/images/Blog/haufige oscam/haeufige-oscam-fehler-und-loesungen-featured-icon-troubleshooting-guide.webp",
+      alt: "Banner-Grafik „Häufige OSCam Fehler und Lösungen“ mit den Themen Karte nicht erkannt, Timeout- und Verbindungsfehler sowie Konfigurationslösungen",
+    },
     toc: true,
     clusterId: "konfiguration",
     tldr: [
       "Die meisten OSCam-Probleme lassen sich anhand der Logdatei eingrenzen — sie ist der erste Ansprechpartner bei jeder Fehlersuche.",
       "Ein nicht startender Dienst deutet meist auf einen Syntaxfehler in einer der Konfigurationsdateien hin.",
-      "Ein Reader, der auf 'nicht verbunden' steht, hat häufig eine falsche Geräteangabe oder ein Hardwareproblem.",
+      "Ein Reader, der auf 'nicht verbunden' steht, hat häufig eine falsche Geräteangabe, ein Kabelproblem oder eine nicht erkannte Karte.",
+      "Timeouts und wiederkehrende Verbindungsabbrüche lassen sich häufig durch angepasste Wartezeiten und eine stabilere Netzwerkverbindung beheben.",
       "Nach jeder Änderung an der Konfiguration hilft ein vollständiger Neustart von OSCam, statt nur die Datei neu zu laden.",
       "Bleibt das Problem bestehen, lohnt sich der Vergleich mit einer bekannt funktionierenden Beispielkonfiguration.",
     ],
-    keywords: ["OSCam Fehler", "OSCam Troubleshooting", "OSCam startet nicht", "OSCam Reader Problem"],
+    keywords: [
+      "OSCam Fehler",
+      "OSCam Troubleshooting",
+      "OSCam startet nicht",
+      "OSCam Reader Problem",
+      "OSCam Karte nicht erkannt",
+      "OSCam Timeout",
+    ],
     intro: [
-      "Kaum eine OSCam-Einrichtung verläuft komplett ohne Umwege. Ein Reader verbindet nicht, der Dienst startet gar nicht erst, oder die Logdatei wirft Meldungen aus, die auf den ersten Blick wenig aussagekräftig erscheinen. Die gute Nachricht: Die allermeisten Probleme lassen sich auf eine überschaubare Anzahl bekannter Ursachen zurückführen.",
-      "Dieser Artikel sammelt die häufigsten OSCam-Fehlerbilder und zeigt, wie Sie systematisch vorgehen, um die Ursache einzugrenzen — von der Logdatei bis zur Reader-Konfiguration.",
+      "Kaum eine OSCam-Einrichtung verläuft komplett ohne Umwege. Ein Reader verbindet nicht, eine Karte wird nicht erkannt, der Dienst startet gar nicht erst, oder die Logdatei wirft Meldungen aus, die auf den ersten Blick wenig aussagekräftig erscheinen. Die gute Nachricht: Die allermeisten Probleme lassen sich auf eine überschaubare Anzahl bekannter Ursachen zurückführen.",
+      "Dieser Artikel sammelt die häufigsten OSCam-Fehlerbilder — von der Logdatei über nicht erkannte Karten bis zu Timeouts und Problemen nach einem Update — und zeigt, wie Sie systematisch vorgehen, um die Ursache einzugrenzen.",
     ],
     sections: [
       {
         heading: "Der erste Schritt: die Logdatei lesen",
         body: [
           "Bevor Sie an der Konfiguration herumprobieren, lohnt sich immer zuerst ein Blick in die OSCam-Logdatei. Sie protokolliert Startvorgänge, Verbindungsversuche der Reader und aufgetretene Fehler mit Zeitstempel — meist reicht das, um die Fehlerquelle grob einzugrenzen.",
+          "Je nach eingestelltem Log-Level unterscheidet sich, wie detailliert die Ausgabe ausfällt. Für die Fehlersuche lohnt es sich, das Log kurzzeitig etwas ausführlicher zu stellen, den Fehler gezielt zu reproduzieren und anschließend wieder auf die gewohnte Stufe zurückzustellen, damit die Datei nicht unnötig anwächst.",
+        ],
+        image: {
+          src: "/images/Blog/haufige oscam/haeufige-oscam-fehler-und-loesungen-4-haeufige-fehler-card-timeout-connection.webp",
+          alt: "Übersichtsgrafik mit den vier häufigsten OSCam-Fehlerbildern: Karte nicht erkannt, Timeout, Verbindungsfehler und Konfigurationsfehler samt Lösungsansätzen",
+        },
+        subsections: [
+          {
+            heading: "Typische Log-Muster und ihre Bedeutung",
+            body: [
+              "Auch ohne jede Meldung im Detail zu kennen, lassen sich viele Log-Einträge grob einer Ursache zuordnen:",
+            ],
+            list: [
+              "Meldungen rund um „connection refused“ oder „timeout“ deuten auf ein Netzwerk- oder Erreichbarkeitsproblem beim betroffenen Reader hin.",
+              "Ein Hinweis wie „client disconnected“ zeigt, dass eine bestehende Verbindung unterbrochen wurde, oft ausgelöst durch eine zu kurze Wartezeit.",
+              "Fehlt eine Karte oder wird sie nicht erkannt, erscheint meist ein Hinweis wie „no card“ oder ein leerer Kartenstatus.",
+              "Begriffe wie „parse error“ oder „invalid config“ weisen fast immer auf einen Syntaxfehler in einer Konfigurationsdatei hin.",
+            ],
+          },
         ],
       },
       {
         heading: "OSCam startet nicht",
         body: [
           "Startet der Dienst gar nicht erst, liegt die Ursache in den meisten Fällen an einem Syntaxfehler in einer der Konfigurationsdateien — häufig ein fehlendes Gleichheitszeichen, eine doppelte Section oder ein nicht geschlossener Klammerausdruck.",
+          "Wie oscam.conf, oscam.server und oscam.user grundsätzlich aufgebaut sind und welche Abschnitte sie jeweils regeln, erklärt unser Artikel [OSCam Konfiguration verstehen](/blog/oscam-konfiguration-verstehen) — eine hilfreiche Referenz, bevor Sie einzelne Zeilen ändern.",
         ],
+        image: {
+          src: "/images/Blog/haufige oscam/haeufige-oscam-fehler-oscam-conf-konfiguration-reparieren-tutorial-loesung.webp",
+          alt: "Person bearbeitet die Datei oscam.conf am Laptop und prüft anschließend die Logausgabe, während im Hintergrund ein Enigma2-Receiver auf dem Schreibtisch steht",
+        },
         subsections: [
           {
             heading: "Vorgehensweise",
@@ -326,12 +363,35 @@ export const blogPosts: BlogPost[] = [
               "Prüfen Sie zunächst oscam.conf auf offensichtliche Tippfehler. Kommentieren Sie im Zweifel zuletzt geänderte Abschnitte testweise aus, um herauszufinden, welcher Teil der Konfiguration den Start verhindert.",
             ],
           },
+          {
+            heading: "Weitere mögliche Ursachen",
+            body: [
+              "Startet OSCam trotz augenscheinlich fehlerfreier Konfiguration nicht, kommen noch weitere Ursachen infrage.",
+            ],
+            list: [
+              "Eine bereits laufende zweite Instanz von OSCam blockiert den benötigten Port.",
+              "Fehlende Dateirechte verhindern das Lesen der Konfiguration oder das Schreiben der Logdatei.",
+              "Nach einem Firmware- oder Image-Update fehlt eine vom Plugin benötigte Abhängigkeit.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Karte wird nicht erkannt",
+        body: [
+          "Ein weiterer häufiger Fehler zeigt sich im WebIf oder in der Logdatei als „card not detected“ oder als leerer Kartenstatus. Die Ursache liegt dabei in den allermeisten Fällen nicht an OSCam selbst, sondern an der physischen Verbindung zwischen Karte und Kartenleser.",
+        ],
+        list: [
+          "Prüfen, ob die Karte korrekt und mit der Chipseite in der richtigen Ausrichtung eingelegt ist.",
+          "Kontakte von Karte und Kartenleser vorsichtig reinigen, etwa mit einem trockenen, weichen Tuch.",
+          "In oscam.server kontrollieren, ob der zuständige Reader-Abschnitt aktiviert ist und das passende Protokoll verwendet.",
+          "Bei mehreren Kartenlesern testweise Karte und Leser tauschen, um einen Hardwaredefekt einzugrenzen.",
         ],
       },
       {
         heading: "Reader zeigt 'nicht verbunden'",
         body: [
-          "Ein Reader, der dauerhaft als nicht verbunden angezeigt wird, hat meist eine falsche Geräteangabe in oscam.server, ein Kabel- oder Kontaktproblem am Kartenleser oder eine nicht kompatible Hardware-Konfiguration.",
+          "Ein Reader, der dauerhaft als nicht verbunden angezeigt wird, hat meist eine falsche Geräteangabe in oscam.server, ein Kabel- oder Kontaktproblem am Kartenleser oder eine nicht kompatible Hardware-Konfiguration. Lässt sich eine nicht erkannte Karte als Ursache ausschließen, helfen die folgenden Schritte weiter.",
         ],
         list: [
           "Geräteangabe (device) in oscam.server auf Korrektheit prüfen.",
@@ -340,26 +400,58 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
+        heading: "Verbindungsabbrüche und Timeouts",
+        body: [
+          "Bricht die Verbindung zu einem Reader immer wieder ab oder tauchen wiederholt Timeout-Meldungen in der Logdatei auf, liegt die Ursache häufig in der Netzwerkverbindung oder in zu knapp bemessenen Wartezeiten.",
+        ],
+        list: [
+          "Timeout-Werte in oscam.conf moderat erhöhen, statt sie drastisch zu verlängern.",
+          "Stabilität der Netzwerkverbindung prüfen — eine LAN-Verbindung ist einer WLAN-Verbindung meist vorzuziehen.",
+          "Bei mehreren gleichzeitigen Anfragen prüfen, ob Reader oder Gegenstelle überlastet sind.",
+        ],
+      },
+      {
         heading: "OSCam WebIf lässt sich nicht öffnen",
         body: [
           "Lässt sich das WebIf nicht im Browser aufrufen, ist häufig der in oscam.conf hinterlegte Port bereits belegt, falsch eingetragen oder durch eine Firewall blockiert. Ein Blick in den [webif]-Abschnitt der Konfiguration schafft meist Klarheit.",
+          "Prüfen Sie zusätzlich, ob die Adresse samt Port korrekt eingegeben wurde und ob eine Firewall auf dem Router oder im Heimnetzwerk den Zugriff blockiert. Ein Leeren des Browser-Caches schafft gelegentlich ebenfalls Abhilfe, wenn sich lediglich eine veraltete Seite lädt.",
         ],
       },
       {
         heading: "Nach einem Update funktioniert nichts mehr",
         body: [
           "Nach einem Update kann es vorkommen, dass sich das Format einzelner Konfigurationsparameter geändert hat. Ein Vergleich der eigenen Konfiguration mit der mitgelieferten Beispieldatei (oft mit der Endung .default) hilft, veraltete oder nicht mehr unterstützte Parameter zu identifizieren.",
+          "Wie Sie ein Update von vornherein risikoarm durchführen und Ihre Konfiguration vorher sichern, beschreibt unser Artikel [OSCam Updates richtig durchführen](/blog/oscam-updates-durchfuehren) im Detail.",
         ],
+      },
+      {
+        heading: "Häufige Konfigurationsfehler auf einen Blick",
+        body: [
+          "Die folgende Übersicht fasst die in diesem Artikel behandelten Fehlerbilder noch einmal kompakt zusammen:",
+        ],
+        table: {
+          headers: ["Fehlerbild", "Mögliche Ursache", "Lösungsansatz"],
+          rows: [
+            ["Dienst startet nicht", "Syntaxfehler, fehlendes Gleichheitszeichen, doppelte Section", "Konfigurationsdatei Abschnitt für Abschnitt prüfen"],
+            ["Karte nicht erkannt", "Falsche Ausrichtung, verschmutzte Kontakte, Reader deaktiviert", "Karte neu einlegen, Kontakte reinigen, Reader-Abschnitt prüfen"],
+            ["Reader offline", "Falsche Geräteangabe, Kabel- oder Hardwareproblem", "device in oscam.server kontrollieren, Verbindung prüfen"],
+            ["Timeout-Meldungen", "Netzwerkinstabilität, zu kurze Wartezeit", "Timeout-Werte moderat anpassen, Netzwerkverbindung prüfen"],
+            ["WebIf nicht erreichbar", "Port blockiert, falsch konfiguriert oder durch Firewall gesperrt", "[webif]-Abschnitt und Firewall-Einstellungen prüfen"],
+            ["Fehler nach Update", "Geänderte oder veraltete Konfigurationsparameter", "Mit aktueller .default-Datei vergleichen"],
+          ],
+          caption: "Kurzüberblick über die häufigsten Fehlerbilder — Details dazu finden Sie in den jeweiligen Abschnitten oben.",
+        },
       },
       {
         heading: "Wenn gar nichts hilft",
         body: [
-          "Bleibt die Ursache trotz Logdatei und Konfigurationsvergleich unklar, kann eine minimale Testkonfiguration mit nur einem Reader helfen, das Problem einzugrenzen. Kommen Sie eigenständig nicht weiter, unterstützt Sie unser [Support-Team](/oscam-service) persönlich bei der Fehlersuche.",
+          "Bleibt die Ursache trotz Logdatei und Konfigurationsvergleich unklar, kann eine minimale Testkonfiguration mit nur einem Reader helfen, das Problem einzugrenzen. Bauen Sie die übrige Konfiguration erst nach und nach wieder auf, sobald die Grundfunktion nachweislich funktioniert — so lässt sich ein zweiter, überlagerter Fehler nicht versehentlich übersehen.",
+          "Kommen Sie eigenständig nicht weiter, unterstützt Sie unser [Support-Team](/oscam-service) persönlich bei der Fehlersuche.",
         ],
       },
     ],
     conclusion: [
-      "Die meisten OSCam-Probleme sind keine Blackbox: Logdatei prüfen, Konfiguration auf Syntaxfehler kontrollieren und Reader-Einstellungen mit einer funktionierenden Referenz vergleichen, löst einen Großteil der Fälle. Wie die Konfigurationsdateien grundsätzlich aufgebaut sind, erklärt unser Artikel [OSCam Konfiguration verstehen](/blog/oscam-konfiguration-verstehen).",
+      "Die meisten OSCam-Probleme sind keine Blackbox: Logdatei prüfen, Konfiguration auf Syntaxfehler kontrollieren, Karte und Reader-Hardware in Augenschein nehmen und Timeout-Werte im Zweifel moderat anpassen, löst einen Großteil der Fälle. Wie die Konfigurationsdateien grundsätzlich aufgebaut sind, erklärt unser Artikel [OSCam Konfiguration verstehen](/blog/oscam-konfiguration-verstehen).",
     ],
     faq: [
       {
@@ -378,9 +470,34 @@ export const blogPosts: BlogPost[] = [
           "Prüfen Sie zunächst die physische Verbindung und ob sich an der Geräteangabe in oscam.server etwas geändert hat, etwa durch ein Firmware-Update.",
       },
       {
+        question: "Warum erscheint 'card not detected', obwohl die Karte eingelegt ist?",
+        answer:
+          "Häufig liegt es an der Ausrichtung der Karte, verschmutzten Kontakten oder einem im Reader-Abschnitt nicht aktivierten Kartenleser. Ein erneutes, korrektes Einlegen der Karte löst das Problem oft bereits.",
+      },
+      {
+        question: "Wie erhöhe ich den Timeout-Wert in OSCam?",
+        answer:
+          "Der entsprechende Parameter lässt sich im betreffenden Abschnitt von oscam.conf moderat erhöhen. Nach der Änderung sollte der Dienst neu gestartet und das Ergebnis über das WebIf kontrolliert werden.",
+      },
+      {
+        question: "Reicht ein Neustart des Dienstes oder muss der ganze Receiver neu starten?",
+        answer:
+          "In der Regel reicht ein Neustart des OSCam-Dienstes aus. Ein Neustart des gesamten Receivers ist meist nur bei blockierten Ports oder hängenden Prozessen zusätzlich hilfreich.",
+      },
+      {
+        question: "Wo finde ich eine Beispielkonfiguration zum Vergleich?",
+        answer:
+          "Viele Images liefern eine .default-Version der Konfigurationsdateien mit, die sich direkt im Konfigurationsverzeichnis befindet und als Referenz dient.",
+      },
+      {
         question: "Hilft ein Neustart des Receivers bei OSCam-Problemen?",
         answer:
           "In manchen Fällen ja, insbesondere bei blockierten Ports oder hängenden Prozessen. Er ersetzt aber keine Prüfung der Konfiguration bei strukturellen Fehlern.",
+      },
+      {
+        question: "Kann ein Update alte Fehler wieder verursachen?",
+        answer:
+          "Ja, wenn sich Parameter zwischen Versionen geändert haben. Ein Vergleich mit der aktuellen Beispieldatei nach jedem Update beugt dem vor — mehr dazu in unserem Artikel zu OSCam-Updates.",
       },
     ],
   },
