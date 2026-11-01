@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { BrandLogo } from "@/components/logo/BrandLogo";
 import { WHATSAPP_DEFAULT_LINK } from "@/lib/whatsapp";
@@ -30,6 +31,20 @@ const footerLinks = {
     { href: "/refund-policy", label: "Rückerstattung" },
   ],
 };
+
+// All source files share the same 256×160 (1.6:1) canvas, so a fixed 56×35 box
+// keeps every logo the same size without stretching any of them.
+const paymentMethods = [
+  { file: "paypal", label: "PayPal" },
+  { file: "visa", label: "Visa" },
+  { file: "mastercard", label: "Mastercard" },
+  { file: "apple-pay", label: "Apple Pay" },
+  { file: "google-pay", label: "Google Pay" },
+  { file: "amazon-pay", label: "Amazon Pay" },
+  { file: "skrill", label: "Skrill" },
+  { file: "payoneer", label: "Payoneer" },
+  { file: "binance", label: "Binance" },
+];
 
 export function Footer() {
   return (
@@ -77,6 +92,28 @@ export function Footer() {
           <p>© {new Date().getFullYear()} OSCam-iCam. Alle Rechte vorbehalten.</p>
           <p>contactipm3tv@gmail.com</p>
         </div>
+      </div>
+
+      <div className="border-t border-border/60">
+        <ul
+          aria-label="Akzeptierte Zahlungsmethoden"
+          // Mobile: a centred 3×3 grid (3×56px + 2×10px gaps = 188px) keeps every logo
+          // clear of the fixed WhatsApp button in the bottom-right corner.
+          className="mx-auto flex max-w-[188px] flex-wrap items-center justify-center gap-2.5 py-4 sm:w-full sm:max-w-7xl sm:gap-3 sm:px-8 lg:px-10"
+        >
+          {paymentMethods.map(({ file, label }) => (
+            <li key={file}>
+              <Image
+                src={`/images/home page/payment/zahlungsmethode-${file}.webp`}
+                alt={label}
+                title={label}
+                width={56}
+                height={35}
+                className="block h-[35px] w-14 rounded-md bg-white opacity-80 transition-opacity duration-200 hover:opacity-100"
+              />
+            </li>
+          ))}
+        </ul>
       </div>
     </footer>
   );
