@@ -9,64 +9,79 @@ import { ContactCTA } from "@/components/sections/ContactCTA";
 import { FeaturedPlanCard } from "@/components/plans/FeaturedPlanCard";
 import { featuredPlans } from "@/lib/plans";
 
+const SITE_URL = "https://oscam-icam.de";
+const PAGE_PATH = "/oscam-icam-anbieter";
 const imgDir = "/images/home page/oscam-icam-anbieter";
 const ogImage = `${imgDir}/oscam-icam-anbieter-vu-plus-uno-4k-se-icam-front-display.webp`;
 
+// Prices are always derived from lib/plans.ts (the same source the homepage and the
+// price cards below use), so text, table, FAQ and structured data can never drift apart.
+const toNumber = (price: string) => Number(price.replace(/[^\d,]/g, "").replace(",", "."));
+const toMonths = (period: string) => Number(period.replace(/\D/g, ""));
+const euro = (value: number) =>
+  value.toLocaleString("de-DE", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " €";
+
+const planRows = featuredPlans.map((plan) => {
+  const price = toNumber(plan.price);
+  const months = toMonths(plan.period);
+  return { id: plan.id, name: plan.duration, period: plan.period, price, months, perMonth: price / months };
+});
+const cheapestPlan = planRows.reduce((min, row) => (row.price < min.price ? row : min), planRows[0]);
+
 export const metadata: Metadata = {
-  title: "OSCam iCam Anbieter – Pakete, Preise & Auswahlkriterien",
+  title: "OSCam iCam Anbieter – Preise, Einrichtung & Support",
   description:
-    "OSCam iCam Anbieter im Überblick: aktuelle Pakete und Preise, technische Voraussetzungen für Enigma2, VU+, Dreambox und Zgemma sowie die wichtigsten Kriterien, um den passenden OSCam Anbieter zu wählen.",
+    "OSCam iCam Anbieter im Überblick: Preise und Laufzeiten, was Einrichtung und Support umfassen und wie Sie VU+, Dreambox oder Zgemma auf Kompatibilität prüfen.",
   keywords: [
     "OSCam iCam Anbieter",
     "OSCam Anbieter",
+    "OSCam iCam",
     "OSCam kaufen",
-    "OSCam iCam kaufen",
-    "OSCam iCam Anbieter Deutschland",
-    "OSCam Anbieter Deutschland",
-    "iCam Anbieter",
-    "OSCam Service",
-    "OSCam Angebot",
-    "OSCam Paket",
-    "OSCam Preis",
-    "OSCam Kosten",
+    "OSCam Preise",
     "OSCam iCam Preise",
-    "OSCam Enigma2",
+    "OSCam Service",
+    "OSCam Einrichtung",
+    "OSCam Support",
+    "OSCam für Enigma2",
+    "OSCam VU+",
+    "OSCam Dreambox",
+    "OSCam Zgemma",
   ],
   alternates: {
-    canonical: "/oscam-icam-anbieter",
+    canonical: PAGE_PATH,
   },
   openGraph: {
     type: "article",
     locale: "de_DE",
     siteName: "OSCam-iCam",
-    url: "/oscam-icam-anbieter",
-    title: "OSCam iCam Anbieter – Pakete, Preise & Auswahlkriterien",
+    url: PAGE_PATH,
+    title: "OSCam iCam Anbieter – Preise, Einrichtung & Support",
     description:
-      "Aktuelle OSCam iCam Pakete und Preise, technische Voraussetzungen und die wichtigsten Kriterien für die Auswahl eines OSCam Anbieters.",
+      "Was ein OSCam iCam Anbieter leistet, was Einrichtung und Support kosten und wie Sie Receiver, Architektur und Image vorab prüfen.",
     images: [{ url: ogImage }],
   },
   twitter: {
     card: "summary_large_image",
     images: [ogImage],
-    title: "OSCam iCam Anbieter – Pakete, Preise & Auswahlkriterien",
+    title: "OSCam iCam Anbieter – Preise, Einrichtung & Support",
     description:
-      "OSCam iCam Anbieter vergleichen: Pakete, Preise, Kompatibilität und Auswahlkriterien für Enigma2.",
+      "Leistungsumfang, Preise und Kompatibilitäts-Check für OSCam und iCam auf VU+, Dreambox und Zgemma.",
   },
 };
 
 const pageNav = [
   { href: "#auf-einen-blick", label: "Auf einen Blick" },
   { href: "#was-ist", label: "Was ist ein Anbieter?" },
+  { href: "#leistungsumfang", label: "Leistungsumfang" },
   { href: "#unterschied", label: "OSCam vs. OSCam iCam" },
-  { href: "#deutschland", label: "Anbieter in Deutschland" },
   { href: "#auswaehlen", label: "Auswahlkriterien" },
   { href: "#preise", label: "Pakete & Preise" },
   { href: "#preise-verstehen", label: "Preise verstehen" },
   { href: "#welches-paket", label: "Welches Paket?" },
-  { href: "#ablauf", label: "Ablauf" },
+  { href: "#ablauf", label: "Ablauf & Vorbereitung" },
   { href: "#oscam-kaufen", label: "OSCam kaufen" },
-  { href: "#kompatibilitaet", label: "Kompatibilität" },
-  { href: "#receiver", label: "Nach Receiver" },
+  { href: "#kompatibilitaet", label: "Kompatibilität prüfen" },
+  { href: "#receiver", label: "VU+, Dreambox, Zgemma" },
   { href: "#checkliste", label: "Checkliste" },
   { href: "#fehler", label: "Häufige Fehler" },
   { href: "#vertrauen", label: "Seriosität" },
@@ -140,6 +155,50 @@ const unterschiedRows = [
     oscam: "gut dokumentiert, viele Anleitungen",
     icam: "schlanker, aber weniger allgemeine Dokumentation",
   },
+  {
+    dimension: "Image-Voraussetzung",
+    oscam: "jedes gängige Enigma2-Image mit OSCam im Feed",
+    icam: "Image und OSCam-Build müssen die iCam-Komponente bzw. den Streamrelay-Pfad unterstützen",
+  },
+  {
+    dimension: "Kontrolle nach der Einrichtung",
+    oscam: "Reader-Status im WebIF und Log",
+    icam: "zusätzlich prüfen, ob die iCam-Komponente aktiv ist",
+  },
+];
+
+// What is (and is not) part of the service. The "enthalten" items mirror homeFeatures
+// in lib/plans.ts (what every package card lists); the exclusions are the ones the site
+// already states on /oscam-service, /icam and in the FAQ — nothing new is promised here.
+const leistungEnthalten = [
+  {
+    titel: "Persönliche Fernunterstützung",
+    text: "bei der OSCam- bzw. iCam-Einrichtung auf Ihrem konkreten Enigma2-Receiver.",
+  },
+  {
+    titel: "Gemeinsame Konfiguration",
+    text: "von oscam.conf, oscam.server und oscam.user — nachvollziehbar, damit Sie es später selbst pflegen können.",
+  },
+  {
+    titel: "Bouquets und EPG",
+    text: "Einrichtung und Organisation der Senderlisten unter Enigma2, sofern gewünscht.",
+  },
+  {
+    titel: "Hilfe bei der Fehlersuche",
+    text: "anhand Ihrer Logdateien statt Rätselraten.",
+  },
+  {
+    titel: "Erreichbarer Support auf Deutsch",
+    text: "per WhatsApp, innerhalb der Paketlaufzeit auch für Rückfragen nach der Einrichtung.",
+  },
+];
+
+const leistungNichtEnthalten = [
+  "Zugangsdaten, Server- oder Line-Zugänge",
+  "Kartenfreigaben Dritter (Cardsharing)",
+  "Kanäle, Senderpakete oder Abonnements",
+  "Smartcard oder Zugangsberechtigung — diese bringen Sie rechtmäßig erworben selbst mit",
+  "Garantien zu Sendern, Verfügbarkeit oder Ergebnis",
 ];
 
 const kriterien = [
@@ -218,31 +277,120 @@ const paketEmpfehlung = [
   },
 ];
 
+// The original seven compatibility points, now with where to find each answer.
 const kompatibilitaet = [
-  "Receiver-Modell und Baujahr (Architektur: ARM oder MIPS)",
-  "Installiertes Enigma2-Image und dessen Version",
-  "Passender OSCam-Build aus dem richtigen Feed",
-  "Kompatibilität vorhandener Konfigurationsdateien",
-  "Stabile Netzwerkverbindung und korrekte Systemzeit",
-  "Benötigte Plugins oder Zusatzkomponenten",
-  "Erreichbarkeit des OSCam WebIF im Heimnetz",
+  {
+    punkt: "Receiver-Modell und Baujahr",
+    warum: "Bestimmt Architektur und Leistungsreserve.",
+    finden: "Typenschild auf der Geräteunterseite oder im Informationsmenü des Images.",
+  },
+  {
+    punkt: "Architektur (ARM oder MIPS)",
+    warum: "Ein OSCam-Build für MIPS läuft nicht auf ARM und umgekehrt.",
+    finden: "Per Telnet/SSH mit „uname -m“ (z. B. armv7l, aarch64 oder mips) — oder grob: 4K-Generation meist ARM, ältere HD-Modelle oft MIPS.",
+  },
+  {
+    punkt: "Enigma2-Image und Version",
+    warum: "Das Image bestimmt Feed, Softcam-Menü und Konfigurationspfad.",
+    finden: "Menü „Information“ bzw. „Über“ des Images (OpenATV, OpenPLi, VTi, DreamOS u. a.).",
+  },
+  {
+    punkt: "Passender OSCam-Build aus dem richtigen Feed",
+    warum: "Fremde Pakete für ein anderes Image starten oft nicht oder ohne Funktionen.",
+    finden: "Plugin-Browser bzw. Softcam-Manager des Images; im Zweifel den Support fragen.",
+  },
+  {
+    punkt: "Vorhandene Konfigurationsdateien",
+    warum: "Alte Dateien können zu einer neuen Version oder einem anderen Pfad nicht passen.",
+    finden: "Je nach Image unter /etc/tuxbox/config/ oder /etc/tuxbox/config/oscam/.",
+  },
+  {
+    punkt: "Netzwerk und Systemzeit",
+    warum: "Ohne stabile Verbindung und korrekte Uhrzeit scheitern Updates und Verbindungen.",
+    finden: "Netzwerkeinstellungen und Uhrzeit-/NTP-Einstellung im Image-Menü.",
+  },
+  {
+    punkt: "Benötigte Plugins oder Zusatzkomponenten",
+    warum: "Etwa für iCam oder den Softcam-Start — fehlen sie, bleibt die Einrichtung unvollständig.",
+    finden: "Plugin-Browser des Images; welche Komponenten nötig sind, klärt das Vorgespräch.",
+  },
+  {
+    punkt: "Erreichbarkeit des OSCam WebIF",
+    warum: "Darüber werden Status, Reader und Log geprüft.",
+    finden: "Im Browser unter http://<IP des Receivers>:<WebIF-Port> aus dem Heimnetz aufrufen.",
+  },
 ];
 
 const receiverBloecke = [
   {
     name: "VU+",
     href: "/oscam-vu-plus",
-    text: "OpenPLi, OpenATV oder VTi, meist mit gut gepflegtem Feed. Prüfen Sie Modellreihe (HD oder 4K) und ob der Softcam-Manager OSCam bereits kennt.",
+    linkLabel: "OSCam auf VU+ im Detail",
+    images: "OpenPLi, OpenATV, VU+ Team Image (VTi)",
+    architektur: "HD-Generation MIPS, 4K-Generation ARM",
+    text: "Die Images haben meist einen gut gepflegten Feed. Prüfen Sie Modellreihe (HD oder 4K) und ob der Softcam-Manager OSCam bereits kennt.",
   },
   {
     name: "Dreambox",
     href: "/oscam-dreambox",
+    linkLabel: "Einrichtung auf der Dreambox",
+    images: "DreamOS oder ein OE-Image (z. B. OpenATV)",
+    architektur: "DM520-Klasse MIPS, DM900/DM920 ARM",
     text: "Aktuelle Modelle laufen mit DreamOS, andere mit einem OE-Image. Das entscheidet über Paketquelle, Startbefehle und Konfigurationspfad.",
   },
   {
     name: "Zgemma",
     href: "/oscam-zgemma",
+    linkLabel: "Anleitung für Zgemma-Receiver",
+    images: "OpenATV, OpenPLi u. a. (kein Herstellerimage)",
+    architektur: "H7 und H9 ARM, ältere H2-Modelle MIPS",
     text: "Reine Enigma2-Boxen ohne Herstellerimage. Feed-Qualität und Reserve hängen vom selbst gewählten Image ab — kleinere Modelle brauchen eine schlanke Konfiguration.",
+  },
+  {
+    name: "Weitere Enigma2-Receiver",
+    href: "/oscam-installieren",
+    linkLabel: "Allgemeine OSCam-Installationsanleitung",
+    images: "meist OpenATV oder OpenPLi",
+    architektur: "modellabhängig — vorab prüfen",
+    text: "GigaBlue, Octagon, Edision und andere Enigma2-Geräte folgen demselben Prinzip. Nennen Sie Modell und Image, dann lässt sich die Eignung konkret einschätzen.",
+  },
+];
+
+// What to have ready before contacting support — distinct from the selection checklist.
+const vorbereitung = [
+  { was: "Receiver-Modell und Image mit Version", hinweis: "z. B. „VU+ Uno 4K SE, OpenATV 7.x“" },
+  { was: "Architektur", hinweis: "Ausgabe von „uname -m“, falls bekannt" },
+  { was: "IP-Adresse des Receivers im Heimnetz", hinweis: "steht in den Netzwerkeinstellungen oder im Router" },
+  { was: "Ein aktuelles Backup", hinweis: "Image-Backup oder zumindest die Konfigurationsdateien" },
+  { was: "Kurze Problembeschreibung", hinweis: "was erreicht werden soll bzw. was seit wann nicht funktioniert" },
+  { was: "Logauszug, falls OSCam bereits läuft", hinweis: "die letzten Zeilen aus dem WebIF-Log genügen" },
+];
+
+// Configuration mistakes (as opposed to the selection mistakes above), each with the fix.
+const konfigFehler = [
+  {
+    fehler: "Build für die falsche Architektur installiert",
+    loesung: "Architektur mit „uname -m“ prüfen und OSCam aus dem Feed des eigenen Images installieren.",
+  },
+  {
+    fehler: "Konfiguration im falschen Verzeichnis",
+    loesung: "Je nach Image liegen die Dateien unter /etc/tuxbox/config/ oder /etc/tuxbox/config/oscam/ — nur dort wirken Änderungen.",
+  },
+  {
+    fehler: "Falsche Systemzeit",
+    loesung: "NTP bzw. automatische Zeitsynchronisierung im Image aktivieren; eine falsche Uhrzeit stört Verbindungen und Updates.",
+  },
+  {
+    fehler: "Mehrere Softcams gleichzeitig aktiv",
+    loesung: "Im Softcam-Manager genau eine Softcam als aktiv festlegen, andere stoppen.",
+  },
+  {
+    fehler: "Änderungen ohne Neustart von OSCam",
+    loesung: "Nach jeder Änderung den OSCam-Dienst vollständig neu starten und das Log prüfen.",
+  },
+  {
+    fehler: "Mehrere Dateien auf einmal geändert",
+    loesung: "Immer nur eine Datei anpassen, testen und vorher sichern — so bleibt die Ursache nachvollziehbar.",
   },
 ];
 
@@ -285,8 +433,10 @@ const faqItems = [
   },
   {
     question: "Was kostet ein OSCam iCam Anbieter?",
-    answer:
-      "Auf dieser Seite und auf der Startseite finden Sie die aktuellen Einrichtungspakete: Starter für 14,99 € (3 Monate), Basic für 29,99 € (6 Monate), Standard für 34,99 € (12 Monate) und das beliebteste Angebot für 49,99 € (24 Monate). Preisstufen für 1 bis 3 Receiver stehen auf der Support-Seite.",
+    answer: `Auf dieser Seite und auf der Startseite finden Sie die aktuellen Einrichtungspakete: ${(() => {
+      const parts = planRows.map((p) => `${p.name} für ${euro(p.price)} (${p.period})`);
+      return parts.length > 1 ? `${parts.slice(0, -1).join(", ")} und ${parts[parts.length - 1]}` : parts.join("");
+    })()}. Preisstufen für 1 bis 3 Receiver stehen auf der Support-Seite.`,
   },
   {
     question: "Was bedeutet „OSCam kaufen“?",
@@ -363,6 +513,21 @@ const faqItems = [
     answer:
       "Die Pakete unterscheiden sich vor allem in der Laufzeit der Betreuung. Wenn Sie unsicher sind, starten Sie mit einer kürzeren Laufzeit und stimmen sich mit dem Support ab — Fragen vor und nach der Buchung sind ausdrücklich erwünscht.",
   },
+  {
+    question: "Welche Angaben braucht der Support für die Einrichtung?",
+    answer:
+      "Receiver-Modell, Image mit Version und – falls bekannt – die Architektur, dazu die IP-Adresse des Receivers im Heimnetz, ein aktuelles Backup und eine kurze Beschreibung, was erreicht werden soll. Läuft OSCam bereits, hilft ein Auszug aus dem Log.",
+  },
+  {
+    question: "Unterstützen Sie auch GigaBlue, Octagon oder andere Enigma2-Receiver?",
+    answer:
+      "Die Pakete sind für VU+, Dreambox, Zgemma und weitere Enigma2-Receiver gedacht. Entscheidend sind Architektur, Image und der verfügbare OSCam-Build. Nennen Sie Modell und Image vorab, dann lässt sich die Eignung konkret einschätzen.",
+  },
+  {
+    question: "Brauche ich für iCam ein bestimmtes Image?",
+    answer:
+      "Ja, Image und OSCam-Build müssen die iCam-Komponente unterstützen. Nicht jedes Enigma2-Image bringt sie im Feed mit, und nicht jede Version passt zu jeder Receiver-Generation. Klären Sie das deshalb vor der Einrichtung — Grundlagen dazu stehen auf der Seite zu iCam.",
+  },
 ];
 
 const faqJsonLd = {
@@ -372,6 +537,29 @@ const faqJsonLd = {
     "@type": "Question",
     name: item.question,
     acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+
+// Describes exactly what the visible price cards show: a technical support service
+// with four fixed-term packages. No ratings or reviews are claimed.
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${SITE_URL}${PAGE_PATH}#service`,
+  name: "OSCam und iCam Einrichtung & technischer Support",
+  serviceType: "Technischer Support für OSCam und iCam auf Enigma2-Receivern",
+  description:
+    "Persönliche Fernunterstützung bei Einrichtung, Konfiguration und Fehlersuche von OSCam und iCam auf eigenen Enigma2-Receivern. Keine Zugangsdaten, keine Serverdaten, keine Kanäle.",
+  provider: { "@id": `${SITE_URL}/#organization` },
+  areaServed: "DE",
+  availableLanguage: "de",
+  url: `${SITE_URL}${PAGE_PATH}`,
+  offers: planRows.map((p) => ({
+    "@type": "Offer",
+    name: `${p.name} (${p.period} Betreuung)`,
+    price: p.price.toFixed(2),
+    priceCurrency: "EUR",
+    url: `${SITE_URL}${PAGE_PATH}#preise`,
   })),
 };
 
@@ -406,8 +594,9 @@ export default function OscamIcamAnbieterPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
       <Breadcrumbs
-        items={[{ label: "Startseite", href: "/" }, { label: "OSCam iCam Anbieter", href: "/oscam-icam-anbieter" }]}
+        items={[{ label: "Startseite", href: "/" }, { label: "OSCam iCam Anbieter", href: PAGE_PATH }]}
       />
 
       <section className="py-16 sm:py-24">
@@ -415,26 +604,33 @@ export default function OscamIcamAnbieterPage() {
           <SectionHeading
             as="h1"
             eyebrow="Anbieter & Pakete"
-            title="OSCam iCam Anbieter – Pakete, Preise und die richtige Auswahl"
-            description="Diese Seite hilft bei der Entscheidung: Sie zeigt die aktuellen OSCam iCam Pakete und Preise, erklärt die wichtigsten Auswahlkriterien und macht deutlich, worauf es bei der technischen Kompatibilität für Enigma2-Receiver wie VU+, Dreambox und Zgemma ankommt."
+            title="OSCam iCam Anbieter – Einrichtung, Support und Preise für Enigma2"
+            description="Was ein OSCam iCam Anbieter tatsächlich leistet, was Einrichtung und Support kosten und wie Sie vorab prüfen, ob Ihr VU+-, Dreambox- oder Zgemma-Receiver passt — transparent und ohne Versprechen zu Kanälen."
           />
 
           <div className="mx-auto flex w-full max-w-3xl flex-col gap-12">
             <div className="flex flex-col gap-4 text-base leading-relaxed text-muted">
               <p>
-                Der Begriff <strong className="text-foreground">OSCam iCam Anbieter</strong> steht für
-                einen technischen Dienstleister, der bei der Einrichtung, Konfiguration und Betreuung
-                von OSCam auf Enigma2-Receivern hilft. Die OSCam-Software selbst ist quelloffen und
-                kostenlos — bezahlt wird die Dienstleistung, nicht das Programm. Wer nach{" "}
+                Ein <strong className="text-foreground">OSCam iCam Anbieter</strong> ist ein
+                technischer Dienstleister, der bei der Einrichtung, Konfiguration und Betreuung von
+                OSCam und iCam auf Enigma2-Receivern hilft. Die OSCam-Software selbst ist quelloffen
+                und kostenlos — bezahlt wird die Dienstleistung, nicht das Programm. Wer nach{" "}
                 <strong className="text-foreground">OSCam Anbieter</strong> oder{" "}
                 <strong className="text-foreground">OSCam kaufen</strong> sucht, meint in der Regel
                 genau das: professionelle Unterstützung, damit die eigene, rechtmäßig erworbene
                 Zugangsberechtigung sauber am Receiver funktioniert.
               </p>
+              <p className="rounded-2xl border border-border bg-background-elevated/40 p-4 text-sm">
+                <strong className="text-foreground">Kurz gesagt:</strong> Die Software kostet nichts,
+                bezahlt wird Zeit und Erfahrung. Die Einrichtungspakete beginnen bei{" "}
+                <strong className="text-foreground">{euro(cheapestPlan.price)}</strong> für{" "}
+                {cheapestPlan.period} Betreuung. Zugangsdaten, Server-Zugänge oder Kanäle sind bei
+                keinem Paket enthalten.
+              </p>
               <p>
-                Im Folgenden finden Sie die aktuellen Pakete mit Preisen von der Startseite, einen
-                Entscheidungsleitfaden, eine Kompatibilitäts-Checkliste und die häufigsten Fehler bei
-                der Anbieterwahl. Allgemeine Grundlagen stehen unter{" "}
+                Im Folgenden finden Sie den genauen Leistungsumfang, die aktuellen Pakete mit Preisen
+                von der Startseite, einen Kompatibilitäts-Check für Ihren Receiver und die häufigsten
+                Fehler bei Anbieterwahl und Konfiguration. Allgemeine Grundlagen stehen unter{" "}
                 <Link href="/oscam" className="text-aqua underline underline-offset-4">
                   OSCam
                 </Link>{" "}
@@ -528,27 +724,62 @@ export default function OscamIcamAnbieterPage() {
                 Zugangsberechtigung. Alles andere gehört nicht zu einer legitimen Dienstleistung.
               </p>
               <p className="text-base leading-relaxed text-muted">
-                Wichtig: Eine OSCam-Installation ist für sich genommen keine kostenpflichtige
-                Leistung. Bezahlt wird die Zeit und Erfahrung des Anbieters — für die Einrichtung, die
-                Konfiguration und den Support. Was genau möglich ist, hängt von Ihrer konkreten
-                technischen Umgebung ab. Wer die Dienstleistung geschäftlich weitergeben möchte,
-                findet Hinweise unter{" "}
+                Was genau möglich ist, hängt von Ihrer konkreten technischen Umgebung ab. Wer die
+                Dienstleistung geschäftlich weitergeben möchte, findet Hinweise unter{" "}
                 <Link href="/oscam-reseller" className="text-aqua underline underline-offset-4">
                   OSCam Reseller
                 </Link>
                 .
               </p>
-              <figure className="overflow-hidden rounded-2xl border border-border">
-                <Image
-                  src={`${imgDir}/oscam-icam-anbieter-sky-sport-bundesliga-kanalliste-enigma2-icam-enabled.webp`}
-                  alt="Enigma2-Senderliste auf einem Wohnzimmer-Fernseher, im Kopfbereich der Hinweis auf einen aktiven iCam-Status"
-                  width={1920}
-                  height={1280}
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, 700px"
-                  className="h-auto w-full object-cover"
-                />
-              </figure>
+            </section>
+
+            {/* leistungsumfang */}
+            <section id="leistungsumfang" className="flex scroll-mt-24 flex-col gap-4">
+              <h2 className="text-2xl font-semibold tracking-tight text-foreground">
+                Leistungsumfang: Was zum OSCam Service gehört – und was nicht
+              </h2>
+              <p className="text-base leading-relaxed text-muted">
+                Die wichtigste Frage vor jeder Buchung ist, was Sie für Ihr Geld konkret bekommen. Bei
+                OSCam-iCam ist der Umfang in allen Paketen gleich; die Pakete unterscheiden sich nur
+                in der Laufzeit der Betreuung.
+              </p>
+              <div className="grid gap-4 md:grid-cols-[1.4fr_1fr]">
+                <div className="flex flex-col gap-3 rounded-2xl border border-border bg-background-elevated/40 p-5">
+                  <h3 className="text-base font-semibold text-foreground">Enthalten</h3>
+                  <ul className="flex flex-col gap-2.5">
+                    {leistungEnthalten.map((item) => (
+                      <li key={item.titel} className="flex items-start gap-2.5 text-sm leading-relaxed text-muted">
+                        <span aria-hidden className="mt-0.5 text-aqua">
+                          ✓
+                        </span>
+                        <span>
+                          <strong className="text-foreground">{item.titel}</strong> {item.text}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="flex flex-col gap-3 rounded-2xl border border-border bg-background-elevated/40 p-5">
+                  <h3 className="text-base font-semibold text-foreground">Nicht enthalten</h3>
+                  <ul className="flex flex-col gap-2.5">
+                    {leistungNichtEnthalten.map((item) => (
+                      <li key={item} className="flex items-start gap-2.5 text-sm leading-relaxed text-muted">
+                        <span aria-hidden className="mt-0.5 text-muted">
+                          ✕
+                        </span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <p className="text-base leading-relaxed text-muted">
+                Für die Senderlisten-Pflege nach der Einrichtung gibt der Artikel{" "}
+                <Link href="/blog/enigma2-bouquets-epg-organisieren" className="text-aqua underline underline-offset-4">
+                  Bouquets und EPG unter Enigma2 organisieren
+                </Link>{" "}
+                praktische Tipps.
+              </p>
             </section>
 
             {/* unterschied */}
@@ -589,7 +820,14 @@ export default function OscamIcamAnbieterPage() {
                 </table>
               </div>
               <p className="text-base leading-relaxed text-muted">
-                Eine ausführliche technische Gegenüberstellung von OSCam und iCam steht im Blogartikel{" "}
+                Für die Praxis heißt das: Bei einer reinen OSCam-Einrichtung genügt meist ein Build
+                aus dem Feed Ihres Images. Soll iCam mit eingebunden werden, prüfen Sie vorab, ob Image
+                und Build die Komponente überhaupt unterstützen — wie iCam grundsätzlich arbeitet,
+                erklärt die Seite{" "}
+                <Link href="/icam" className="text-aqua underline underline-offset-4">
+                  iCam auf Enigma2
+                </Link>
+                . Eine ausführliche technische Gegenüberstellung steht im Blogartikel{" "}
                 <Link href="/blog/oscam-icam-unterschiede" className="text-aqua underline underline-offset-4">
                   OSCam und iCam im Vergleich
                 </Link>
@@ -600,7 +838,7 @@ export default function OscamIcamAnbieterPage() {
             {/* deutschland */}
             <section id="deutschland" className="flex scroll-mt-24 flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                OSCam iCam Anbieter in Deutschland – was im deutschsprachigen Raum zählt
+                OSCam iCam in Deutschland – was im deutschsprachigen Raum zählt
               </h2>
               <p className="text-base leading-relaxed text-muted">
                 Im deutschsprachigen Raum ist Enigma2 auf Sat- und Kabelreceivern besonders
@@ -628,7 +866,7 @@ export default function OscamIcamAnbieterPage() {
             {/* auswählen */}
             <section id="auswaehlen" className="flex scroll-mt-24 flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                OSCam iCam Anbieter auswählen: Darauf kommt es an
+                OSCam iCam Anbieter auswählen: zehn Kriterien
               </h2>
               <p className="text-base leading-relaxed text-muted">
                 Der Markt an technischen Dienstleistern ist unübersichtlich. Diese zehn Kriterien
@@ -659,7 +897,7 @@ export default function OscamIcamAnbieterPage() {
             <section id="preise" className="flex scroll-mt-24 flex-col gap-6">
               <div className="flex flex-col gap-4">
                 <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                  OSCam iCam Angebote und Preise – aktuelle Pakete
+                  OSCam iCam Preise – aktuelle Pakete
                 </h2>
                 <p className="text-base leading-relaxed text-muted">
                   Die folgenden Einrichtungspakete entsprechen dem aktuellen Stand der Startseite.
@@ -688,7 +926,7 @@ export default function OscamIcamAnbieterPage() {
             {/* preise verstehen */}
             <section id="preise-verstehen" className="flex scroll-mt-24 flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                OSCam iCam Preise verstehen: Laufzeit statt Verbrauch
+                OSCam Preise verstehen: Laufzeit statt Verbrauch
               </h2>
               <p className="text-base leading-relaxed text-muted">
                 Ein häufiges Missverständnis bei den Begriffen <strong className="text-foreground">OSCam
@@ -698,12 +936,53 @@ export default function OscamIcamAnbieterPage() {
                 Dauer der technische Support für Ihre Einrichtung erreichbar ist und Anpassungen
                 begleitet.
               </p>
+              <div className="w-full overflow-x-auto rounded-2xl border border-border">
+                {/* Fits a 320px phone without horizontal scrolling: below `sm` the Laufzeit
+                    column is folded into the package cell, so the per-month column stays visible. */}
+                <table className="w-full border-collapse text-left text-xs sm:text-sm">
+                  <caption className="sr-only">OSCam iCam Pakete mit Laufzeit, Gesamtpreis und rechnerischem Monatspreis</caption>
+                  <thead>
+                    <tr className="bg-background-elevated">
+                      <th scope="col" className="border-b border-border px-2.5 py-3 font-semibold text-foreground sm:px-4">
+                        Paket
+                      </th>
+                      <th scope="col" className="hidden border-b border-border px-2.5 py-3 font-semibold text-foreground sm:table-cell sm:px-4">
+                        Laufzeit
+                      </th>
+                      <th scope="col" className="border-b border-border px-2.5 py-3 text-right font-semibold text-foreground sm:px-4">
+                        Preis
+                      </th>
+                      <th scope="col" className="border-b border-border px-2.5 py-3 text-right font-semibold text-foreground sm:px-4">
+                        pro Monat*
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {planRows.map((row, index) => (
+                      <tr key={row.id} className={index % 2 === 0 ? "bg-background" : "bg-background-elevated/40"}>
+                        <td className="border-b border-border px-2.5 py-3 font-medium text-foreground sm:px-4">
+                          {row.name}
+                          <span className="block text-xs font-normal text-muted sm:hidden">{row.period}</span>
+                        </td>
+                        <td className="hidden whitespace-nowrap border-b border-border px-2.5 py-3 text-muted sm:table-cell sm:px-4">{row.period}</td>
+                        <td className="whitespace-nowrap border-b border-border px-2.5 py-3 text-right text-foreground sm:px-4">{euro(row.price)}</td>
+                        <td className="whitespace-nowrap border-b border-border px-2.5 py-3 text-right text-muted sm:px-4">{euro(row.perMonth)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-xs leading-relaxed text-muted">
+                * Rechnerischer Wert (Gesamtpreis geteilt durch Monate), gerundet — nur zur
+                Orientierung. Angegeben ist jeweils der Gesamtpreis für die genannte Laufzeit.
+              </p>
               <p className="text-base leading-relaxed text-muted">
-                Daraus ergibt sich, warum längere Laufzeiten pro Monat günstiger ausfallen: Der
-                einmalige Einrichtungsaufwand verteilt sich auf mehr Zeit. Für die Entscheidung sind
-                zwei Fragen hilfreich: Wie sicher ist Ihr Setup schon heute — und wie wahrscheinlich
-                sind in den nächsten Monaten Änderungen wie ein Image-Update oder ein neuer Receiver?
-                Je mehr sich noch ändern kann, desto eher lohnt eine längere Betreuung.
+                Die Tabelle zeigt: Bei 3 und 6 Monaten liegt der rechnerische Monatspreis gleich auf,
+                ab 12 Monaten sinkt er deutlich, weil sich der einmalige Einrichtungsaufwand auf mehr
+                Zeit verteilt. Für die Entscheidung sind zwei Fragen hilfreich: Wie sicher ist Ihr Setup
+                schon heute — und wie wahrscheinlich sind in den nächsten Monaten Änderungen wie ein
+                Image-Update oder ein neuer Receiver? Je mehr sich noch ändern kann, desto eher lohnt
+                eine längere Betreuung.
               </p>
               <p className="text-base leading-relaxed text-muted">
                 Wichtig für einen fairen Vergleich: Achten Sie auf den Gesamtpreis über die gesamte
@@ -746,7 +1025,7 @@ export default function OscamIcamAnbieterPage() {
             {/* ablauf */}
             <section id="ablauf" className="flex scroll-mt-24 flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                So läuft die Zusammenarbeit mit einem OSCam iCam Anbieter
+                Ablauf der OSCam Einrichtung: von der Anfrage bis zum Betrieb
               </h2>
               <p className="text-base leading-relaxed text-muted">
                 Bei einem seriösen Anbieter ist der Ablauf nachvollziehbar. So sieht ein typischer
@@ -770,6 +1049,32 @@ export default function OscamIcamAnbieterPage() {
                   </li>
                 ))}
               </ol>
+              <div className="flex flex-col gap-3 rounded-2xl border border-border bg-background-elevated/40 p-5">
+                <h3 className="text-base font-semibold text-foreground">
+                  Vor der Support-Anfrage: Das sollten Sie bereithalten
+                </h3>
+                <p className="text-sm leading-relaxed text-muted">
+                  Je vollständiger diese Angaben sind, desto schneller lässt sich die Eignung
+                  einschätzen und desto kürzer wird die eigentliche Einrichtung:
+                </p>
+                <ul className="grid gap-2.5 sm:grid-cols-2">
+                  {vorbereitung.map((item) => (
+                    <li key={item.was} className="flex items-start gap-2.5 text-sm leading-relaxed text-muted">
+                      <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+                      <span>
+                        <strong className="text-foreground">{item.was}</strong> — {item.hinweis}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-sm leading-relaxed text-muted">
+                  Wie Sie den Receiver vorab technisch vorbereiten, erklärt der Artikel{" "}
+                  <Link href="/blog/enigma2-receiver-oscam-vorbereiten" className="text-aqua underline underline-offset-4">
+                    Enigma2-Receiver für OSCam vorbereiten
+                  </Link>
+                  .
+                </p>
+              </div>
               <p className="text-base leading-relaxed text-muted">
                 Wichtig: Für die Fernunterstützung geben Sie Zugriff auf Ihren eigenen Receiver. Ein
                 Anbieter braucht dafür keine Zugangsdaten zu Diensten Dritter — und ein seriöser
@@ -810,54 +1115,42 @@ export default function OscamIcamAnbieterPage() {
                 Wer also „OSCam kaufen“ sucht, sucht meist ein{" "}
                 <strong className="text-foreground">Einrichtungs- oder Supportpaket</strong> — nicht die
                 Software. Ein seriöser Anbieter macht diesen Unterschied transparent und verkauft
-                keine Zugangsdaten oder Kanäle.
+                keine Zugangsdaten oder Kanäle. Was ein solides Einrichtungspaket konkret enthält,
+                steht oben im Abschnitt{" "}
+                <a href="#leistungsumfang" className="text-aqua underline underline-offset-4">
+                  Leistungsumfang
+                </a>
+                .
               </p>
-              <p className="text-base leading-relaxed text-muted">
-                Was in einem soliden Einrichtungspaket enthalten sein sollte:
-              </p>
-              <ul className="flex flex-col gap-3 text-base leading-relaxed text-muted">
-                <li>
-                  <strong className="text-foreground">Persönliche Fernunterstützung</strong> bei der
-                  OSCam- bzw. iCam-Einrichtung auf Ihrem konkreten Enigma2-Receiver.
-                </li>
-                <li>
-                  <strong className="text-foreground">Gemeinsame Konfiguration</strong> von oscam.conf,
-                  oscam.server und oscam.user — nachvollziehbar, damit Sie es später selbst pflegen
-                  können.
-                </li>
-                <li>
-                  <strong className="text-foreground">Einrichtung von Bouquets und EPG</strong>, sofern
-                  gewünscht.
-                </li>
-                <li>
-                  <strong className="text-foreground">Hilfe bei der Fehlersuche</strong> anhand Ihrer
-                  Logdateien statt Rätselraten.
-                </li>
-                <li>
-                  <strong className="text-foreground">Erreichbarer Support</strong> auf Deutsch,
-                  innerhalb der Paketlaufzeit auch für Rückfragen danach.
-                </li>
-              </ul>
             </section>
 
             {/* kompatibilität */}
             <section id="kompatibilitaet" className="flex scroll-mt-24 flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                OSCam iCam Anbieter und technische Kompatibilität
+                Kompatibilität prüfen: Receiver, Architektur, Image und Version
               </h2>
               <p className="text-base leading-relaxed text-muted">
                 Bevor Sie ein Paket buchen oder etwas an der Konfiguration ändern, sollten diese
                 Punkte geklärt sein. Sie entscheiden darüber, ob ein Anbieter Ihr Setup überhaupt
-                unterstützen kann:
+                unterstützen kann — und die meisten lassen sich in wenigen Minuten selbst
+                herausfinden:
               </p>
-              <ul className="flex flex-col gap-3 text-base leading-relaxed text-muted">
-                {kompatibilitaet.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
-                    <span>{item}</span>
+              <ol className="flex flex-col divide-y divide-border overflow-hidden rounded-2xl border border-border">
+                {kompatibilitaet.map((item, index) => (
+                  <li key={item.punkt} className="flex gap-4 bg-background-elevated/40 p-4 sm:p-5">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-aqua/50 text-xs font-semibold text-aqua">
+                      {index + 1}
+                    </span>
+                    <div className="flex min-w-0 flex-col gap-1">
+                      <h3 className="text-sm font-semibold text-foreground">{item.punkt}</h3>
+                      <p className="text-sm leading-relaxed text-muted">{item.warum}</p>
+                      <p className="break-words text-sm leading-relaxed text-muted">
+                        <strong className="text-foreground">So finden Sie es heraus:</strong> {item.finden}
+                      </p>
+                    </div>
                   </li>
                 ))}
-              </ul>
+              </ol>
               <p className="text-base leading-relaxed text-muted">
                 Können Sie einzelne Punkte nicht sicher beantworten, klären Sie sie vor der
                 Entscheidung mit dem Support ab. Wie eine Grundinstallation abläuft, zeigt die{" "}
@@ -874,50 +1167,49 @@ export default function OscamIcamAnbieterPage() {
                 </Link>
                 .
               </p>
-              <figure className="overflow-hidden rounded-2xl border border-border">
+              <figure className="flex flex-col gap-2 overflow-hidden rounded-2xl border border-border">
                 <Image
-                  src={`${imgDir}/oscam-icam-anbieter-oscam-icam-konfiguration-tutorial-zgemma-h9-twin-setup-guide.webp`}
-                  alt="Arbeitsplatz mit einem Zgemma H9 Twin Receiver, einer Fernbedienung und einem Laptop, auf dem eine OSCam- und iCam-Konfiguration bearbeitet wird"
+                  src="/images/home page/oscam-dreambox/oscam-dreambox-dm900-rueckseite-anschluesse-lan-usb-hdmi-tutorial.webp"
+                  alt="Rückseite einer Dreambox DM900 mit beschrifteten Anschlüssen für Satellit, LAN, USB und HDMI sowie die Schritte zur OSCam-Einrichtung per SSH"
                   width={1920}
                   height={1280}
                   loading="lazy"
                   sizes="(max-width: 768px) 100vw, 700px"
                   className="h-auto w-full object-cover"
                 />
+                <figcaption className="px-4 pb-3 text-xs leading-relaxed text-muted">
+                  LAN-Verbindung, SSH-Zugang und der Konfigurationspfad sind die Grundlage jeder
+                  Fernunterstützung — hier am Beispiel einer Dreambox DM900.
+                </figcaption>
               </figure>
             </section>
 
             {/* receiver */}
             <section id="receiver" className="flex scroll-mt-24 flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                Welcher OSCam Anbieter für welchen Receiver?
+                OSCam für VU+, Dreambox und Zgemma: Kompatibilität nach Receiver
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Die Marke Ihres Receivers ändert nicht das Grundprinzip, aber die Details. Was Sie je
-                Gerät prüfen sollten — und wo tiefergehende Informationen stehen:
+                Die Marke Ihres Receivers ändert nicht das Grundprinzip, aber die Details. Welche
+                Images verbreitet sind, welche Architektur vorliegt und was Sie je Gerät prüfen sollten:
               </p>
-              <div className="flex flex-col gap-4">
+              <div className="grid gap-4 sm:grid-cols-2">
                 {receiverBloecke.map((r) => (
-                  <div key={r.name} className="flex flex-col gap-1.5 rounded-2xl border border-border bg-background-elevated/40 p-5">
-                    <h3 className="text-base font-semibold text-foreground">OSCam Anbieter für {r.name}</h3>
+                  <div key={r.name} className="flex flex-col gap-3 rounded-2xl border border-border bg-background-elevated/40 p-5">
+                    <h3 className="text-base font-semibold text-foreground">{r.name}</h3>
+                    <dl className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1.5 text-sm leading-relaxed">
+                      <dt className="text-foreground">Images</dt>
+                      <dd className="text-muted">{r.images}</dd>
+                      <dt className="text-foreground">Architektur</dt>
+                      <dd className="text-muted">{r.architektur}</dd>
+                    </dl>
                     <p className="text-sm leading-relaxed text-muted">{r.text}</p>
-                    <Link href={r.href} className="w-fit text-sm font-semibold text-aqua underline underline-offset-4 transition-colors hover:text-aqua-soft">
-                      Details zu OSCam auf {r.name} →
+                    <Link href={r.href} className="mt-auto w-fit text-sm font-semibold text-aqua underline underline-offset-4 transition-colors hover:text-aqua-soft">
+                      {r.linkLabel} →
                     </Link>
                   </div>
                 ))}
               </div>
-              <figure className="overflow-hidden rounded-2xl border border-border">
-                <Image
-                  src={`${imgDir}/oscam-icam-anbieter-sky-de-icam-4k-wohnzimmer-fussball-live-bundesliga-2024.webp`}
-                  alt="Wohnzimmer mit einem großen Fernseher, der eine Enigma2-Senderliste zeigt, und einem Enigma2-Receiver auf der Media-Konsole"
-                  width={1920}
-                  height={1280}
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, 700px"
-                  className="h-auto w-full object-cover"
-                />
-              </figure>
             </section>
 
             <CtaBlock
@@ -930,7 +1222,7 @@ export default function OscamIcamAnbieterPage() {
             {/* checkliste */}
             <section id="checkliste" className="flex scroll-mt-24 flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                OSCam iCam Anbieter auswählen – Checkliste
+                Checkliste vor der Entscheidung
               </h2>
               <p className="text-base leading-relaxed text-muted">
                 Kurz zum Abhaken, bevor Sie sich für ein Paket oder einen Anbieter entscheiden:
@@ -953,8 +1245,9 @@ export default function OscamIcamAnbieterPage() {
             {/* fehler */}
             <section id="fehler" className="flex scroll-mt-24 flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                Die häufigsten Fehler bei der Auswahl eines OSCam Anbieters
+                Häufige Fehler bei Anbieterwahl und Konfiguration
               </h2>
+              <h3 className="text-base font-semibold text-foreground">Bei der Auswahl eines OSCam Anbieters</h3>
               <p className="text-base leading-relaxed text-muted">
                 Diese Fehler kosten am Ende Zeit oder Geld — und lassen sich alle vermeiden:
               </p>
@@ -968,6 +1261,19 @@ export default function OscamIcamAnbieterPage() {
                   </li>
                 ))}
               </ul>
+              <h3 className="mt-2 text-base font-semibold text-foreground">Bei der Konfiguration</h3>
+              <p className="text-base leading-relaxed text-muted">
+                Auch nach der richtigen Anbieterwahl scheitern viele Einrichtungen an denselben
+                technischen Details:
+              </p>
+              <div className="flex flex-col divide-y divide-border overflow-hidden rounded-2xl border border-border">
+                {konfigFehler.map((item) => (
+                  <div key={item.fehler} className="grid gap-1 bg-background-elevated/40 p-4 sm:grid-cols-[220px_1fr] sm:gap-4">
+                    <p className="text-sm font-semibold text-foreground">{item.fehler}</p>
+                    <p className="break-words text-sm leading-relaxed text-muted">{item.loesung}</p>
+                  </div>
+                ))}
+              </div>
               <p className="text-base leading-relaxed text-muted">
                 Wenn nach der Einrichtung etwas nicht läuft, hilft der Blogartikel{" "}
                 <Link href="/blog/oscam-fehler-loesungen" className="text-aqua underline underline-offset-4">
